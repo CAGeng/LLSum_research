@@ -1,0 +1,435 @@
+[
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void reset(byte[],int,int)>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1, 0]": "[-1, 0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param0 : field-all\n": "param-1 : [root]->bytes\nparam0 : field-all\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput$lambda_static_1__332: void <init>()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.action.search.SearchContextIdForNode: void <init>(java.lang.String,java.lang.String,org.elasticsearch.search.internal.ShardSearchContextId)>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 73,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void readBytes(byte[],int,int)>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param-1 : [root]->bytes\nparam-1 : [root]->largeSpare->length\n": "param-1 : [root]->bytes\nparam-1 : [root]->largeSpare->length\n"
+    },
+    "reuse_con": 239,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readArraySize()>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param-1 : [root]->bytes\n": "param-1 : [root]->bytes\nreturn\n"
+    },
+    "reuse_con": 239,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.IllegalArgumentException: void <init>(java.lang.String,java.lang.Throwable)>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void <init>(byte[])>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1, 0]": "[-1, 0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param-1 : field-all\nparam0 : field-all\n": "param-1 : [root]->bytes\nparam0 : field-all\n"
+    },
+    "reuse_con": 73,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput$lambda_static_0__331: void <init>()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput$lambda_static_1__332: java.util.function.Supplier bootstrap$()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 8,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: void throwOnBrokenVInt(byte,int)>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[0]": "[0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param0 : field-all\n": "param0 : field-all\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.String: boolean equals(java.lang.Object)>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[0]": "[0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param0 : field-all\n": "param0 : field-all\n"
+    },
+    "reuse_con": 73,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void reset(byte[])>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1, 0]": "[-1, 0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param0 : field-all\n": "param-1 : [root]->bytes\nparam0 : field-all\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.Object: void <clinit>()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 149,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readVIntSlow()>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param-1 : [root]->bytes\n": "param-1 : [root]->bytes\n"
+    },
+    "reuse_con": 7,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param-1 : [root]->bytes\n": "param-1 : [root]->bytes\nparam-1 : [root]->largeSpare->length\n"
+    },
+    "reuse_con": 57,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int getPosition()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 73,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.Throwable: void <clinit>()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 148,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readVInt()>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param-1 : [root]->bytes\n": "param-1 : [root]->bytes\nreturn\n"
+    },
+    "reuse_con": 68,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput$lambda_static_0__331: java.util.function.Supplier bootstrap$()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 8,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.action.search.ParsedScrollId: void <init>(java.lang.String,java.lang.String,org.elasticsearch.action.search.SearchContextIdForNode[])>",
+    "conditionalTaint": {
+      "[0]": "[-1, 0]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param0 : field-all\n": "param-1 : [root]->source\nparam0 : field-all\n"
+    },
+    "reuse_con": 73,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: long readLong()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 73,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.util.Base64$Decoder: byte[] decode(java.lang.String)>",
+    "conditionalTaint": {
+      "[0]": "[-2]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {},
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: void throwOnBrokenChar(int)>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 481,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.util.Base64: java.util.Base64$Decoder getUrlDecoder()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: void <init>()>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param-1 : field-all\n": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: void <clinit>()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 68,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readInt()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte readByte()>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param-1 : [root]->bytes\n": "param-1 : [root]->bytes\nreturn\n"
+    },
+    "reuse_con": 12,
+    "transferMapCondition": {}
+  }
+]

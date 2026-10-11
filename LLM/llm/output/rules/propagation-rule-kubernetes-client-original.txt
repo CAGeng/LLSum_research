@@ -1,0 +1,1542 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getUsername</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not have an implementation in the class `Config`.
+    - There is no data flow to analyze as there are no parameters or fields involved in this abstract method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getPassword</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no data flow to analyze within this method itself.
+    - Data flow analysis would depend on the specific implementation in subclasses.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getMasterUrl</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not have an implementation in the `Config` class.
+    - There is no data flow or propagation to analyze within this method itself.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isTrustCerts</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not have an implementation to analyze for data flow.
+    - There is no data flow within this method itself.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>launderThrowable</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.OperationInfo</ParamType>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no explicit data flow to analyze.
+    - It is likely intended to handle or transform the Throwable (p2) using OperationInfo (p1).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>launderThrowable</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This is an abstract method, and there is no observable data flow from parameter p1 to any fields, this, or return within the method itself.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultKubernetesClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.Config</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (Config) is used to initialize `this` (DefaultKubernetesClient).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HasMetadataOperationsImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>defaultContext</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.Client</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`io.fabric8.kubernetes.client.Client`) is used to create and modify an `OperationContext` object, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesSerialization</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>asJson</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the object parameter) is serialized into a JSON string and returned.
+    - The flow is no condition as this is an abstract method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Utils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNullOrEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the parameter p1 is null or empty and returns a boolean result.
+    - There is no data flow from p1 to other parameters, fields, or return.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Utils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getSystemPropertyOrEnvVar</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>System property or environment variable for p1 exists</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to retrieve a system property or environment variable, potentially affecting the return value.
+    - If the property or variable does not exist, `p2` may be returned as a default value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getConnectionTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This is an abstract method, so there is no data flow to analyze within this method itself.
+    - Any data flow would be determined by the specific implementation in a subclass.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getRequestTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not have an implementation within the `Config` class.
+    - There is no data flow to analyze as the method does not contain logic or parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultKubernetesClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>close</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not have any parameters or return values, hence there is no data flow to analyze.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesSerialization</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>unmarshal</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>com.fasterxml.jackson.core.type.TypeReference</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so no direct data flow is observable within this method itself.
+    - The method likely involves deserialization, transforming data from `p1` (`InputStream`) into an object type specified by `p2` (`TypeReference`).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesSerialization</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>unmarshal</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no data flow or conditions to analyze within this method itself.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesClientBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor does not have any observable data flow from parameters or fields to `this` or any return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesClientBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>withConfig</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.Config</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no data flow analysis possible within this context.
+    - Without implementation details, we cannot determine any data flow from parameter p1 to fields of this or the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Utils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getSystemPropertyOrEnvVar</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Boolean</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no observable data flow from parameters p1 or p2 to the return value or any fields.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for the constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the Config object, but there is no explicit data flow from parameters or fields to document.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>autoConfigure</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no direct data flow analysis possible.
+    - The actual data flow would depend on the concrete implementation of this method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConfigBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.Config</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no observable data flow from parameter p1 to fields of this or other parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PodOperationContext</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the object without any data flow involving parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LogWatchCallback</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.OutputStream</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.OperationContext</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.out</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.io.OutputStream`) is transferred into `this.out`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LogWatchCallback</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.OutputStream</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.OperationContext</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.outChannel</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.io.OutputStream`) is conditionally transferred into `this.outChannel`.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LogWatchCallback</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.OutputStream</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.OperationContext</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.serialExecutor.executor</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`io.fabric8.kubernetes.client.dsl.internal.OperationContext`) is transferred into `this.serialExecutor.executor`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LogWatchCallback</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>callAndWait</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.http.HttpClient</ParamType>
+        <ParamType>java.net.URL</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned by the method.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PodOperationUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getPodOperationsForController</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.OperationContext</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.PodOperationContext</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`OperationContext`) is indirectly transferred into the return value through `getGenericPodOperations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PodOperationUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getPodOperationsForController</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.OperationContext</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.PodOperationContext</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`PodOperationContext`) is indirectly transferred into the return value through `getGenericPodOperations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PodOperationUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getPodOperationsForController</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.OperationContext</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.PodOperationContext</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (`String`) is directly transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PodOperationUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getPodOperationsForController</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.OperationContext</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.PodOperationContext</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>3</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p4` (`Map`) is directly transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PodOperationUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>waitUntilReadyOrTerminal</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.dsl.PodResource</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the `AtomicReference` is used to store and retrieve the `Pod` object, which is then returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Utils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>interpolateString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is transformed using `p2` (the map) to produce the `return` value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no obvious data flow here as parameter p1 does not flow to other parameters, this, or return.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fromKubeconfig</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so specific data flows cannot be determined.
+    - It is assumed that `p1` (kubeconfig string) is used to configure or initialize the returned `Config` object.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Utils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>convertSystemPropertyNameToEnvVar</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (input string) is transformed and returned as a new string.
+    - The flow is no condition due to the abstract nature of the method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SSLUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>sslContext</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.Config</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (Config) potentially influences the creation of the `SSLContext` that is returned.
+    - The flow is no condition due to the abstract nature of the method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal.extensions.v1beta1</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LegacyRollableScalableResourceOperation</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>scale</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.api.model.autoscaling.v1.Scale</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.HasMetadataOperation</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`io.fabric8.kubernetes.api.model.autoscaling.v1.Scale`) is transformed and influences the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the first parameter) is likely transferred into `this.message`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.cause</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (the second parameter) is likely transferred into `this.cause`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesResourceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>sortEventListBasedOnTimestamp</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not contain any implementation details.
+    - There is no observable data flow from the parameter `p1` to other parameters, `this`, or a return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Utils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>randomString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the integer parameter) influences the length of the returned random string.
+    - The flow is no condition as the method is abstract and conditions depend on the implementation.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>NamespaceVisitFromServerGetWatchDeleteRecreateWaitApplicableListImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.dsl.internal.OperationContext</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.context</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`OperationContext`) is transferred into `this.context`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>NamespaceVisitFromServerGetWatchDeleteRecreateWaitApplicableListImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>createOrReplace</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method processes internal resources of `this` through mapping and filtering operations.
+    - There is no direct data flow involving parameters or fields of `this` to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CreateOnlyResourceOperationsImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value><init></Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.Client</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.base.ResourceDefinitionContext</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (io.fabric8.kubernetes.client.Client) is transferred into `this` through the static method and constructor invocation.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CreateOnlyResourceOperationsImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value><init></Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.Client</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.base.ResourceDefinitionContext</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (io.fabric8.kubernetes.client.dsl.base.ResourceDefinitionContext) is transferred into `this` through the constructor invocation.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CreateOnlyResourceOperationsImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value><init></Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.Client</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.base.ResourceDefinitionContext</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (java.lang.Class) is transferred into `this` through the constructor invocation.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.dsl.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CreateOnlyResourceOperationsImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value><init></Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.client.Client</ParamType>
+        <ParamType>io.fabric8.kubernetes.client.dsl.base.ResourceDefinitionContext</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>3</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p4` (java.lang.Class) is transferred into `this` through the constructor invocation.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>URLFromServiceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getServicePortByName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.api.model.Service</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!p2.isEmpty()</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (name) is used to find a matching `ServicePort` in `p1` (service) and is returned if found.
+    - The flow is conditional on `p2` not being empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>URLFromServiceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getServicePortByName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.api.model.Service</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - When `p2` is empty, the first `ServicePort` from `p1` is returned without any direct data flow from `p1` or `p2`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Serialization</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>unmarshal</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow suggests that `p1` (a string) is used to create or populate an instance of the class specified by `p2`, which is then returned.
+    - The flow is no condition due to the abstract nature of the method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpClientUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>basicCredentials</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0,1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that both `p1` and `p2` contribute to the `return` value.
+    - The flow is no condition as the method is abstract.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Serialization</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>asYaml</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input object) is converted into a YAML formatted string and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpClientUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getHttpClientFactory</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not have an implementation, hence there is no data flow to analyze.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Config</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>empty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This is an abstract method with no implementation, hence no data flow can be determined.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ApiVersionUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>joinApiGroupAndVersion</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow suggests that `p1` and `p2` are likely combined to form the return value.
+    - The flow is no condition as the method is abstract and does not specify any conditions.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubeConfigUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>persistKubeConfigIntoFile</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.fabric8.kubernetes.api.model.Config</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so no direct data flow can be analyzed without implementation details.
+    - The method likely involves persisting data from `p1` into a file specified by `p2`, but this cannot be confirmed without concrete implementation.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesSerialization</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.fasterxml.jackson.databind.ObjectMapper</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.objectMapper</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (ObjectMapper) is transferred into `this.objectMapper`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.fabric8.kubernetes.client.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KubernetesSerialization</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.fasterxml.jackson.databind.ObjectMapper</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.isEnabled</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (boolean) is transferred into `this.isEnabled`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+

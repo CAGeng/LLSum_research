@@ -1,0 +1,71 @@
+方法：<org.eclipse.jetty.ee9.nested.resource.ByteBufferRangeWriter: void close()> 一共有4个snapshots
+方法：<org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter: void close()> 一共有4个snapshots
+方法：<org.eclipse.jetty.ee9.nested.resource.InputStreamRangeWriter: void close()> 一共有4个snapshots
+方法：<org.eclipse.jetty.ee9.nested.InclusiveByteRange: java.util.List satisfiableRanges(java.util.Enumeration,long)> 一共有3个snapshots
+方法：<org.eclipse.jetty.ee9.nested.InclusiveByteRange: java.lang.String to416HeaderRangeString(long)> 一共有3个snapshots
+方法：<org.eclipse.jetty.ee9.nested.ResourceService: void writeContent(org.eclipse.jetty.http.content.HttpContent,java.io.OutputStream,long,long)> 一共有4个snapshots
+方法：<org.eclipse.jetty.ee9.nested.ResourceService: void writeContent(org.eclipse.jetty.http.content.HttpContent,java.io.OutputStream,long,long)> 一共有6个snapshots
+方法：<org.eclipse.jetty.ee9.nested.resource.ByteBufferRangeWriter: void close()> 一共有6个snapshots
+方法：<org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter: void close()> 一共有6个snapshots
+方法：<org.eclipse.jetty.ee9.nested.resource.InputStreamRangeWriter: void close()> 一共有6个snapshots
+方法：<org.eclipse.jetty.server.ResourceService$release__119: java.lang.Runnable bootstrap$(org.eclipse.jetty.http.content.HttpContent)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.ResourceService$lambda_sendData_0__120: java.util.function.Consumer bootstrap$(org.eclipse.jetty.http.MultiPartByteRanges$ContentSource,org.eclipse.jetty.http.content.HttpContent,long,org.eclipse.jetty.server.Request)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.Request: int getServerPort(org.eclipse.jetty.server.Request)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.Request: java.lang.String getServerName(org.eclipse.jetty.server.Request)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int,java.lang.String)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int,java.lang.String)> 一共有5个snapshots
+方法：<org.eclipse.jetty.server.Request: java.lang.String getServerName(org.eclipse.jetty.server.Request)> 一共有5个snapshots
+方法：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int,java.lang.String)> 一共有7个snapshots
+方法：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int,java.lang.String)> 一共有9个snapshots
+方法：<org.eclipse.jetty.util.HostPort: java.lang.String getHost()> 一共有3个snapshots
+方法：<org.eclipse.jetty.util.HostPort: int getPort(int)> 一共有3个snapshots
+方法：<org.eclipse.jetty.ee9.nested.InclusiveByteRange: java.util.List satisfiableRanges(java.util.Enumeration,long)> 一共有5个snapshots
+方法：<org.eclipse.jetty.ee9.nested.ResourceService: void writeContent(org.eclipse.jetty.http.content.HttpContent,java.io.OutputStream,long,long)> 一共有9个snapshots
+方法：<org.eclipse.jetty.ee9.nested.ResourceService: void writeContent(org.eclipse.jetty.http.content.HttpContent,java.io.OutputStream,long,long)> 一共有11个snapshots
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有20个snapshots
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有22个snapshots
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: org.eclipse.jetty.session.ManagedSession session()> 一共有3个snapshots
+方法：<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: org.eclipse.jetty.session.ManagedSession session()> 一共有5个snapshots
+方法：<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: org.eclipse.jetty.session.ManagedSession session()> 一共有7个snapshots
+方法：<org.eclipse.jetty.util.resource.Resources: boolean missing(org.eclipse.jetty.util.resource.Resource)> 一共有3个snapshots
+方法：<org.eclipse.jetty.ee9.nested.ContextHandler: org.eclipse.jetty.ee9.nested.ContextHandler getContextHandler(jakarta.servlet.ServletContext)> 一共有4个snapshots
+方法：<org.eclipse.jetty.util.TypeUtil: java.util.ListIterator listIteratorAtEnd(java.util.List)> 一共有3个snapshots
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有25个snapshots
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.eclipse.jetty.server.Request: java.lang.String getRemoteAddr(org.eclipse.jetty.server.Request)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.Request: org.eclipse.jetty.server.Request$AuthenticationState getAuthenticationState(org.eclipse.jetty.server.Request)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.Request: java.lang.String getHostName(java.net.InetSocketAddress)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.CustomRequestLog: void logLatency(java.lang.StringBuilder,org.eclipse.jetty.server.Request,java.util.concurrent.TimeUnit)> 一共有4个snapshots
+方法：<org.eclipse.jetty.server.CustomRequestLog: void append(java.lang.StringBuilder,java.lang.String,boolean)> 一共有26个snapshots
+方法：<org.eclipse.jetty.server.ResourceListing: java.lang.String hrefEncodeURI(java.lang.String)> 一共有5个snapshots
+方法：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int,java.lang.String)> 一共有12个snapshots
+方法：<org.eclipse.jetty.server.ResourceListing$getFileName__109: java.util.function.Function bootstrap$()> 一共有11个snapshots
+方法：<org.eclipse.jetty.server.ResourceListing: java.util.function.Predicate distinctBy(java.util.function.Function)> 一共有11个snapshots
+方法：<org.eclipse.jetty.server.ResourceListing$init__110: java.util.function.Supplier bootstrap$()> 一共有11个snapshots
+方法：<org.eclipse.jetty.server.ResourceListing: java.lang.String deTag(java.lang.String)> 一共有13个snapshots
+方法：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.HttpInput newHttpInput()> 一共有3个snapshots
+方法：<org.eclipse.jetty.ee9.nested.BlockingContentProducer: void reopen()> 一共有3个snapshots
+方法：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.ContextHandler getContextHandler()> 一共有8个snapshots
+方法：<org.eclipse.jetty.ee9.nested.HttpChannel: void recycle()> 一共有4个snapshots
+方法：<org.eclipse.jetty.ee9.nested.HttpChannelState: void recycle()> 一共有3个snapshots
+方法：<org.eclipse.jetty.ee9.nested.HttpInput: void recycle()> 一共有3个snapshots
+方法：<org.eclipse.jetty.ee9.nested.BlockingContentProducer: org.eclipse.jetty.util.thread.AutoLock lock()> 一共有4个snapshots
+方法：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.HttpInput newHttpInput()> 一共有5个snapshots
+方法：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.ContextHandler getContextHandler()> 一共有10个snapshots
+方法：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int,java.lang.String,java.lang.Throwable)> 一共有3个snapshots
+方法：<org.eclipse.jetty.server.handler.ContextHandler: org.eclipse.jetty.server.handler.ContextHandler getContextHandler(org.eclipse.jetty.server.Request)> 一共有6个snapshots
+方法：<org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)> 一共有70个snapshots
+方法：<org.eclipse.jetty.util.URIUtil: boolean hasScheme(java.lang.String)> 一共有11个snapshots
+方法：<org.eclipse.jetty.ee9.nested.ServletCoreResponse: boolean hasLastWrite()> 一共有4个snapshots
+方法：<org.eclipse.jetty.server.Request$add__129: java.util.function.BiConsumer bootstrap$(org.eclipse.jetty.util.Fields)> 一共有6个snapshots
+方法：<org.eclipse.jetty.server.Request$add__128: java.util.function.BiConsumer bootstrap$(org.eclipse.jetty.util.Fields)> 一共有6个snapshots
+方法：<org.eclipse.jetty.server.Request: org.eclipse.jetty.server.Request unWrap(org.eclipse.jetty.server.Request)> 一共有20个snapshots

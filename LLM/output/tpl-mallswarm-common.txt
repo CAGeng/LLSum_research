@@ -1,0 +1,17 @@
+<com.macro.mall.common.config.BaseRedisConfig: org.springframework.data.redis.serializer.RedisSerializer redisSerializer()>---><com.fasterxml.jackson.databind.ObjectMapper: void <init>()>
+<com.macro.mall.common.config.BaseRedisConfig: org.springframework.data.redis.serializer.RedisSerializer redisSerializer()>---><com.fasterxml.jackson.databind.ObjectMapper: com.fasterxml.jackson.databind.ObjectMapper setVisibility(com.fasterxml.jackson.'annotation'.PropertyAccessor,com.fasterxml.jackson.'annotation'.JsonAutoDetect$Visibility)>
+<com.macro.mall.common.config.BaseRedisConfig: org.springframework.data.redis.serializer.RedisSerializer redisSerializer()>---><com.fasterxml.jackson.databind.ObjectMapper: com.fasterxml.jackson.databind.ObjectMapper activateDefaultTyping(com.fasterxml.jackson.databind.jsontype.PolymorphicTypeValidator,com.fasterxml.jackson.databind.ObjectMapper$DefaultTyping)>
+<com.macro.mall.common.api.CommonResult: java.lang.String toString()>---><cn.hutool.json.JSONUtil: java.lang.String toJsonStr(java.lang.Object)>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><org.aspectj.lang.ProceedingJoinPoint: java.lang.Object proceed()>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><org.aspectj.lang.ProceedingJoinPoint: org.aspectj.lang.Signature getSignature()>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><org.aspectj.lang.reflect.MethodSignature: java.lang.reflect.Method getMethod()>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><jakarta.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><cn.hutool.core.util.URLUtil: java.net.URL url(java.lang.String)>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><cn.hutool.core.util.StrUtil: java.lang.String removeSuffix(java.lang.CharSequence,java.lang.CharSequence)>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><jakarta.servlet.http.HttpServletRequest: java.lang.String getRemoteUser()>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><jakarta.servlet.http.HttpServletRequest: java.lang.String getMethod()>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><org.aspectj.lang.ProceedingJoinPoint: java.lang.Object[] getArgs()>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><jakarta.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><jakarta.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><net.logstash.logback.marker.Markers: net.logstash.logback.marker.LogstashMarker appendEntries(java.util.Map)>
+<com.macro.mall.common.log.WebLogAspect: java.lang.Object doAround(org.aspectj.lang.ProceedingJoinPoint)>---><cn.hutool.json.JSONUtil: cn.hutool.json.JSON parse(java.lang.Object)>

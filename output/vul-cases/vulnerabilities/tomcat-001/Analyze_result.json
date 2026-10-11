@@ -1,0 +1,935 @@
+{
+  "TestSet-Tomcat-1": [
+    {
+      "id": 1,
+      "conditionNotSatisfy": true,
+      "conditionNotSatisfyReason": "不满足条件 Param0 == true\n",
+      "conditionSatisfyReason": "",
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "r1",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "org.apache.catalina.connector.Request"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "r2",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "javax.servlet.http.HttpServletResponse"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 2,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "2",
+            "valueStr": "r3",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.security.Principal"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 3,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "3",
+            "valueStr": "r4",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 4,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "4",
+            "valueStr": "r5",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 5,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "5",
+            "valueStr": "r6",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 6,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "6",
+            "valueStr": "z0",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "boolean"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 7,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "7",
+            "valueStr": "z1",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "boolean"
+          }
+        ],
+        "sinks": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "$r27",
+            "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+            "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+          }
+        ],
+        "hasDataFlow": true,
+        "dataPaths": null
+      },
+      "vulType": "TestSet-Tomcat-1",
+      "entryMethod": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+      "sinkMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>"
+      ],
+      "callStackMethods": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 2
+    },
+    {
+      "id": 2,
+      "conditionNotSatisfy": true,
+      "conditionNotSatisfyReason": "不满足条件 Param0 == true\n",
+      "conditionSatisfyReason": "",
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "r1",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "org.apache.catalina.connector.Request"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "r2",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "javax.servlet.http.HttpServletResponse"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 2,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "2",
+            "valueStr": "r3",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.security.Principal"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 3,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "3",
+            "valueStr": "r4",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 4,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "4",
+            "valueStr": "r5",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 5,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "5",
+            "valueStr": "r6",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 6,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "6",
+            "valueStr": "z0",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "boolean"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 7,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "7",
+            "valueStr": "z1",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "boolean"
+          }
+        ],
+        "sinks": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "$r27",
+            "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+            "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+          }
+        ],
+        "hasDataFlow": true,
+        "dataPaths": null
+      },
+      "vulType": "TestSet-Tomcat-1",
+      "entryMethod": "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+      "sinkMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>"
+      ],
+      "callStackMethods": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 2
+    },
+    {
+      "id": 3,
+      "conditionNotSatisfy": true,
+      "conditionNotSatisfyReason": "不满足条件 Param0 == true\n",
+      "conditionSatisfyReason": "",
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "r11",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void forwardToLoginPage(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,org.apache.tomcat.util.descriptor.web.LoginConfig)>",
+            "typeStr": "org.apache.catalina.connector.Request"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "r10",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void forwardToLoginPage(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,org.apache.tomcat.util.descriptor.web.LoginConfig)>",
+            "typeStr": "javax.servlet.http.HttpServletResponse"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 2,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "2",
+            "valueStr": "r2",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void forwardToLoginPage(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,org.apache.tomcat.util.descriptor.web.LoginConfig)>",
+            "typeStr": "org.apache.tomcat.util.descriptor.web.LoginConfig"
+          }
+        ],
+        "sinks": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "$r27",
+            "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+            "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+          }
+        ],
+        "hasDataFlow": true,
+        "dataPaths": null
+      },
+      "vulType": "TestSet-Tomcat-1",
+      "entryMethod": "<org.apache.catalina.authenticator.FormAuthenticator: void forwardToLoginPage(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,org.apache.tomcat.util.descriptor.web.LoginConfig)>",
+      "sinkMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: void forwardToLoginPage(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,org.apache.tomcat.util.descriptor.web.LoginConfig)>"
+      ],
+      "callStackMethods": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: void forwardToLoginPage(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,org.apache.tomcat.util.descriptor.web.LoginConfig)>",
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 2
+    },
+    {
+      "id": 4,
+      "conditionNotSatisfy": true,
+      "conditionNotSatisfyReason": "不满足条件 Param0 == true\n不满足条件 Param0 == true\n",
+      "conditionSatisfyReason": "满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n",
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "r1",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+            "typeStr": "org.apache.catalina.connector.Request"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "r2",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+            "typeStr": "javax.servlet.http.HttpServletResponse"
+          }
+        ],
+        "sinks": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "$r27",
+            "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+            "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+          }
+        ],
+        "hasDataFlow": true,
+        "dataPaths": null
+      },
+      "vulType": "TestSet-Tomcat-1",
+      "entryMethod": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+      "sinkMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>"
+      ],
+      "callStackMethods": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 2
+    },
+    {
+      "id": 5,
+      "conditionNotSatisfy": true,
+      "conditionNotSatisfyReason": "不满足条件 Param0 == true\n不满足条件 Param0 == true\n",
+      "conditionSatisfyReason": "满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n",
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "r1",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+            "typeStr": "org.apache.catalina.connector.Request"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "r2",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+            "typeStr": "javax.servlet.http.HttpServletResponse"
+          }
+        ],
+        "sinks": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "$r27",
+            "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+            "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+          }
+        ],
+        "hasDataFlow": true,
+        "dataPaths": null
+      },
+      "vulType": "TestSet-Tomcat-1",
+      "entryMethod": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+      "sinkMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>"
+      ],
+      "callStackMethods": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 2
+    },
+    {
+      "id": 6,
+      "conditionNotSatisfy": true,
+      "conditionNotSatisfyReason": "不满足条件 Param0 == true\n",
+      "conditionSatisfyReason": "满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n",
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "r1",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+            "typeStr": "org.apache.catalina.connector.Request"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "r2",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+            "typeStr": "javax.servlet.http.HttpServletResponse"
+          }
+        ],
+        "sinks": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "$r27",
+            "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+            "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+          }
+        ],
+        "hasDataFlow": true,
+        "dataPaths": [
+          [
+            {
+              "srcMessage": {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              },
+              "assignUnit": null,
+              "taintFlags_2": null,
+              "paramInd": "0",
+              "valueStr": "r1",
+              "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+              "typeStr": "org.apache.catalina.connector.Request"
+            },
+            {
+              "srcMessage": {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              },
+              "assignUnit": "virtualinvoke r0.<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>(r1, $r74)",
+              "taintFlags_2": null,
+              "paramInd": "0",
+              "valueStr": "r1",
+              "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>",
+              "typeStr": "org.apache.catalina.connector.Request"
+            },
+            {
+              "srcMessage": {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              },
+              "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+              "taintFlags_2": null,
+              "paramInd": "1",
+              "valueStr": "$r27",
+              "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+              "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+            }
+          ]
+        ]
+      },
+      "vulType": "TestSet-Tomcat-1",
+      "entryMethod": "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+      "sinkMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>"
+      ],
+      "callStackMethods": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+        "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>",
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 3
+    },
+    {
+      "id": 7,
+      "conditionNotSatisfy": true,
+      "conditionNotSatisfyReason": "不满足条件 Param0 == true\n不满足条件 Param0 == true\n",
+      "conditionSatisfyReason": "满足条件 Param0 == true\n满足条件 Param0 == true\n满足条件 Param0 == true\n",
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "r2",
+            "methodStr": "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "org.apache.catalina.connector.Request"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "r20",
+            "methodStr": "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "javax.servlet.http.HttpServletResponse"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 2,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "2",
+            "valueStr": "r4",
+            "methodStr": "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.security.Principal"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 3,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "3",
+            "valueStr": "r3",
+            "methodStr": "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 4,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "4",
+            "valueStr": "r6",
+            "methodStr": "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 5,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "5",
+            "valueStr": "r7",
+            "methodStr": "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 6,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "6",
+            "valueStr": "z1",
+            "methodStr": "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "boolean"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 7,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "7",
+            "valueStr": "z5",
+            "methodStr": "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+            "typeStr": "boolean"
+          }
+        ],
+        "sinks": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "$r27",
+            "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+            "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+          }
+        ],
+        "hasDataFlow": true,
+        "dataPaths": null
+      },
+      "vulType": "TestSet-Tomcat-1",
+      "entryMethod": "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+      "sinkMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>"
+      ],
+      "callStackMethods": [
+        "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 2
+    },
+    {
+      "id": 8,
+      "conditionNotSatisfy": true,
+      "conditionNotSatisfyReason": "不满足条件（条件不可控） Param0 == true\n",
+      "conditionSatisfyReason": "",
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "r1",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>",
+            "typeStr": "org.apache.catalina.connector.Request"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "r8",
+            "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>",
+            "typeStr": "org.apache.catalina.Session"
+          }
+        ],
+        "sinks": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "$r27",
+            "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+            "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+          }
+        ],
+        "hasDataFlow": true,
+        "dataPaths": [
+          [
+            {
+              "srcMessage": {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              },
+              "assignUnit": null,
+              "taintFlags_2": null,
+              "paramInd": "0",
+              "valueStr": "r1",
+              "methodStr": "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>",
+              "typeStr": "org.apache.catalina.connector.Request"
+            },
+            {
+              "srcMessage": {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              },
+              "assignUnit": "interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>(\"org.apache.catalina.authenticator.REQUEST\", $r27)",
+              "taintFlags_2": null,
+              "paramInd": "1",
+              "valueStr": "$r27",
+              "methodStr": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+              "typeStr": "org.apache.catalina.authenticator.SavedRequest"
+            }
+          ]
+        ]
+      },
+      "vulType": "TestSet-Tomcat-1",
+      "entryMethod": "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>",
+      "sinkMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+        "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>"
+      ],
+      "callStackMethods": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>",
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 2
+    },
+    {
+      "id": 9,
+      "conditionNotSatisfy": false,
+      "conditionNotSatisfyReason": "",
+      "conditionSatisfyReason": "",
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "complexity": 0,
+        "srcs": [],
+        "sinks": [],
+        "hasDataFlow": false,
+        "dataPaths": null
+      },
+      "vulType": "TestSet-Tomcat-1",
+      "entryMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "sinkMethod": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+        "<org.apache.catalina.authenticator.FormAuthenticator: void forwardToLoginPage(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,org.apache.tomcat.util.descriptor.web.LoginConfig)>",
+        "<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>",
+        "<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>",
+        "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>",
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackMethods": [
+        "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 1
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)>
+<org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)>
+<org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)>
+<org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)>
+<org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: jakarta.servlet.http.HttpSession renewSession(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>
+<org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)>

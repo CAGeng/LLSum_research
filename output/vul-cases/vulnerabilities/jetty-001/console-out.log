@@ -1,0 +1,788 @@
+2025-03-18 21:30:57,988 main ERROR Unable to locate appender "ROLLING_FILE" for logger config "root"
+2025-03-18 21:30:57,989 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "root"
+2025-03-18 21:30:57,989 main ERROR Unable to locate appender "WARN_ROLLING_FILE" for logger config "root"
+2025-03-18 21:30:57,989 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "exception"
+2025-03-18 21:30:58,134 main ERROR Unable to locate appender "ROLLING_FILE" for logger config "root"
+2025-03-18 21:30:58,134 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "root"
+2025-03-18 21:30:58,134 main ERROR Unable to locate appender "WARN_ROLLING_FILE" for logger config "root"
+2025-03-18 21:30:58,134 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "exception"
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.15)
+
+2025-03-18 21:30:58.155 - INFO  [           main] o.s.b.StartupInfoLogger        : Starting IFDSApplication using Java 1.8.0_362 on FortdeMacBook-Pro.local with PID 41284 (/Users/fortsun/Desktop/git/restfuzz-sast/alligator-ifds/target/classes started by fortsun in /Users/fortsun/Desktop/git/restfuzz-sast)
+2025-03-18 21:30:58.156 - INFO  [           main] o.s.b.SpringApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-03-18 21:30:58.321 - INFO  [           main] epositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-18 21:30:58.336 - INFO  [           main] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.17.2/log4j-slf4j-impl-2.17.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.core/1.0.0/sootup.core-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.java.core/1.0.0/sootup.java.core-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.java.sourcecode/1.0.0/sootup.java.sourcecode-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.java.bytecode/1.0.0/sootup.java.bytecode-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.jimple.parser/1.0.0/sootup.jimple.parser-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.callgraph/1.0.0/sootup.callgraph-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.analysis/1.0.0/sootup.analysis-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+2025-03-18 21:30:58.494 - INFO  [           main] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-18 21:30:58.517 - INFO  [           main] o.h.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-03-18 21:30:58.579 - INFO  [           main] .a.c.r.j.JavaReflectionManager : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-03-18 21:30:58.614 - INFO  [           main] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2025-03-18 21:30:58.774 - INFO  [           main] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2025-03-18 21:30:58.781 - INFO  [           main] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-03-18 21:30:59.048 - INFO  [           main] e.t.j.p.i.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-03-18 21:30:59.053 - INFO  [           main] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+class path : /Users/fortsun/Desktop/ppt/程序分析/ai/test-set/jetty-12.0.17:/Users/fortsun/Library/Java/JavaVirtualMachines/corretto-1.8.0_362/Contents/Home/jre/lib/rt.jar:/Users/fortsun/Library/Java/JavaVirtualMachines/corretto-1.8.0_362/Contents/Home/jre/lib/jce.jar:::
+total class count： 1882
+total application class count： 624
+2025-03-18 21:30:59.444 - WARN  [           main] d.k.e.s.SpringEntrySet         : 结构化payload信息提取结束
+2025-03-18 21:30:59.445 - WARN  [           main] d.k.e.s.SpringEntrySet         : 为 0个entry提取结构信息
+2025-03-18 21:30:59.445 -ERROR  [           main] d.k.e.w.ServletEntrySet        : Servlet class 总数: 0
+2025-03-18 21:30:59.623 - WARN  [           main] a.i.RuleImporter               : 我把third party core规则集里的src/sink注释了！暂时只用propagete
+2025-03-18 21:30:59.628 -ERROR  [           main] a.i.RuleImporter               : 导入source rule: 0
+2025-03-18 21:30:59.628 -ERROR  [           main] a.i.RuleImporter               : 导入sink rule: 3
+2025-03-18 21:30:59.628 -ERROR  [           main] a.i.RuleImporter               : 导入propagation rule: 529
+2025-03-18 21:30:59.805 - INFO  [           main] o.s.b.StartupInfoLogger        : Started IFDSApplication in 1.776 seconds (JVM running for 2.136)
+2025-03-18 21:30:59.806 - INFO  [           main] a.r.VulDetectRunner            : VulDetectRunner is running
+2025-03-18 21:31:41.051 - WARN  [           main] d.k.e.s.SpringEntrySet         : 结构化payload信息提取结束
+2025-03-18 21:31:41.051 - WARN  [           main] d.k.e.s.SpringEntrySet         : 为 0个entry提取结构信息
+2025-03-18 21:31:41.052 -ERROR  [           main] d.k.e.w.ServletEntrySet        : Servlet class 总数: 0
+从文件中指定的entry: 0
+2025-03-18 21:31:41.123 - INFO  [           main] d.VulDetector                  : entry count: 1055
+2025-03-18 21:31:41.125 - WARN  [           main] d.VulDetector                  : using spark
+constructCG
+Enable Spark
+constructCG finish
+指定的路径不是有效的目录: $以下4个文件必须存在，需要提前下载
+定位到的 app package 列表:
+org.eclipse.jetty.server.handler.jmx
+jakarta.servlet.annotation
+org.eclipse.jetty.ee9.nested.resource
+org.eclipse.jetty.ee9.security
+jakarta.servlet.http
+org.eclipse.jetty.server.handler
+org.eclipse.jetty.server.handler.gzip
+[root(no relative-path)]
+org.eclipse.jetty.ee9.security.authentication
+jakarta.servlet
+org.eclipse.jetty.server
+org.eclipse.jetty.ee9.nested.jmx
+org.eclipse.jetty.server.jmx
+org.eclipse.jetty.server.internal
+jakarta.servlet.descriptor
+org.eclipse.jetty.ee9.nested
+Code has been written to missed-method.txt successfully.
+2025-03-18 21:31:45.384 -ERROR  [           main] d.VulDetector                  : )))))))
+2025-03-18 21:31:45.384 - WARN  [           main] d.k.Knows                      : using rule: condition_sink_self_define  in class: detect.knowledge.sink.ConditionalSinks
+2025-03-18 21:31:45.384 - WARN  [           main] d.k.Knows                      : using rule: sink_type_generic  in class: detect.knowledge.sink.GenericSink
+2025-03-18 21:31:45.384 - WARN  [           main] d.k.Knows                      : using rule: TestSet-Tomcat-2-safe  in class: detect.knowledge.sink.GenericSink
+2025-03-18 21:31:45.385 - WARN  [           main] d.k.Knows                      : using rule: TestSet-Tomcat-2-vul  in class: detect.knowledge.sink.GenericSink
+2025-03-18 21:31:45.386 - WARN  [           main] d.k.Knows                      : using rule: TestSet-Jetty-1  in class: detect.knowledge.sink.GenericSink
+add sink: sdafadsf
+2025-03-18 21:31:45.387 - INFO  [           main] d.VulDetector                  : entry count: 1055
+2025-03-18 21:31:45.387 - INFO  [           main] d.VulDetector                  : sink count: 1
+2025-03-18 21:31:45.469 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: void logout(jakarta.servlet.ServletRequest)> add edge: INTERFACE edge: $r2 = interfaceinvoke r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(0) in <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: void logout(jakarta.servlet.ServletRequest)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.470 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: jakarta.servlet.http.HttpSession renewSession(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)> add edge: INTERFACE edge: $r1 = interfaceinvoke r0.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(0) in <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: jakarta.servlet.http.HttpSession renewSession(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.470 - INFO  [           main] b.c.CGOptimizer                : optimize method: <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: jakarta.servlet.http.HttpSession renewSession(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)> add edge: INTERFACE edge: interfaceinvoke $r1.<jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>("org.eclipse.jetty.security.sessionCreatedSecure", $r8) in <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: jakarta.servlet.http.HttpSession renewSession(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)> ==> <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:45.470 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> add edge: INTERFACE edge: $r9 = interfaceinvoke r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(0) in <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.471 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> add edge: INTERFACE edge: r40 = interfaceinvoke r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(1) in <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.471 - INFO  [           main] b.c.CGOptimizer                : optimize method: <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> add edge: INTERFACE edge: interfaceinvoke r40.<jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>($r33, $r48) in <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> ==> <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:45.473 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)> add edge: INTERFACE edge: $r6 = interfaceinvoke $r5.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(1) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.473 - INFO  [           main] b.c.CGOptimizer                : optimize method: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)> add edge: INTERFACE edge: interfaceinvoke $r6.<jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>("org.eclipse.jetty.security.UserIdentity", $r7) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)> ==> <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:45.473 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: void logout(jakarta.servlet.ServletRequest)> add edge: INTERFACE edge: $r3 = interfaceinvoke r2.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(0) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: void logout(jakarta.servlet.ServletRequest)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.473 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: void prepareRequest(jakarta.servlet.ServletRequest)> add edge: INTERFACE edge: $r2 = interfaceinvoke r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(0) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: void prepareRequest(jakarta.servlet.ServletRequest)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.473 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> add edge: INTERFACE edge: $r64 = interfaceinvoke r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(0) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.473 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> add edge: INTERFACE edge: $r9 = interfaceinvoke r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(0) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.474 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> add edge: INTERFACE edge: $r110 = interfaceinvoke r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(1) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.474 - INFO  [           main] b.c.CGOptimizer                : optimize method: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> add edge: INTERFACE edge: interfaceinvoke r111.<jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>("org.eclipse.jetty.security.form_URI", $r14) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> ==> <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:45.474 - INFO  [           main] b.c.CGOptimizer                : optimize method: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> add edge: INTERFACE edge: interfaceinvoke r111.<jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>("org.eclipse.jetty.security.form_METHOD", $r15) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> ==> <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:45.474 - INFO  [           main] b.c.CGOptimizer                : optimize method: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> add edge: INTERFACE edge: interfaceinvoke r111.<jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>("org.eclipse.jetty.security.form_POST", $r41) in <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)> ==> <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:45.482 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.nested.ServletCoreRequest: org.eclipse.jetty.server.Session getSession(boolean)> add edge: INTERFACE edge: $r2 = interfaceinvoke $r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(z0) in <org.eclipse.jetty.ee9.nested.ServletCoreRequest: org.eclipse.jetty.server.Session getSession(boolean)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.495 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <org.eclipse.jetty.ee9.nested.SessionHandler$ServletSessionApi: org.eclipse.jetty.server.Session lambda$getOrCreateSession$0(jakarta.servlet.ServletRequest,java.lang.Boolean)> add edge: INTERFACE edge: $r3 = interfaceinvoke r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>($z1) in <org.eclipse.jetty.ee9.nested.SessionHandler$ServletSessionApi: org.eclipse.jetty.server.Session lambda$getOrCreateSession$0(jakarta.servlet.ServletRequest,java.lang.Boolean)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:45.536 - INFO  [           main] b.c.CGOptimizer                : optimize method(替换一个调用): <jakarta.servlet.http.HttpServletRequestWrapper: jakarta.servlet.http.HttpSession getSession(boolean)> add edge: INTERFACE edge: $r2 = interfaceinvoke $r1.<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>(z0) in <jakarta.servlet.http.HttpServletRequestWrapper: jakarta.servlet.http.HttpSession getSession(boolean)> ==> <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+多条路径检索: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)>
+多条路径检索结果: 3
+2025-03-18 21:31:45.549 -ERROR  [           main] d.VulDetector                  : 调用链总数: 4
+2025-03-18 21:31:45.549 -ERROR  [           main] d.VulDetector                  : 去重后调用链总数: 6
+开始分割call graph(先统计每个detectContext， 1-n层调用的方法有哪些)...
+2025-03-18 21:31:45.552 -ERROR  [           main] d.d.DataFlowTrack              : WaterFallMode is on, the dataflow track will start from the entry method as a waterfall
+2025-03-18 21:31:45.559 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 5
+2025-03-18 21:31:45.561 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: login
+2025-03-18 21:31:45.565 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)>
+2025-03-18 21:31:45.568 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: void <clinit>()>
+2025-03-18 21:31:45.577 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Request getBaseRequest(jakarta.servlet.ServletRequest)>
+2025-03-18 21:31:45.581 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:45.582 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:45.583 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:45.585 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Request getRequest()>
+2025-03-18 21:31:45.587 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <jakarta.servlet.ServletRequestWrapper: jakarta.servlet.ServletRequest getRequest()>
+2025-03-18 21:31:45.589 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest getCoreRequest()>
+2025-03-18 21:31:45.590 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.SessionHandler$ServletSessionApi: java.util.function.Function getOrCreateSession(jakarta.servlet.ServletRequest)>
+2025-03-18 21:31:45.591 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.SessionHandler$ServletSessionApi$lambda_getOrCreateSession_0__207: java.util.function.Function bootstrap$(jakarta.servlet.ServletRequest)>
+2025-03-18 21:31:45.592 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.SessionHandler$ServletSessionApi$lambda_getOrCreateSession_0__207: void <init>(jakarta.servlet.ServletRequest)>
+2025-03-18 21:31:45.595 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Response getResponse()>
+2025-03-18 21:31:45.596 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>
+2025-03-18 21:31:45.598 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: jakarta.servlet.http.HttpSession renewSession(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>
+2025-03-18 21:31:45.607 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Request: void <clinit>()>
+2025-03-18 21:31:45.616 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.HttpChannel getHttpChannel()>
+2025-03-18 21:31:45.617 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest getCoreRequest()>
+2025-03-18 21:31:45.618 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.server.Response getCoreResponse()>
+2025-03-18 21:31:45.619 - INFO  [           main] d.d.DataFlowTrack              : not support this unit : virtualinvoke r2.<org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: jakarta.servlet.http.HttpSession renewSession(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>($r9, $r10)
+2025-03-18 21:31:45.621 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: java.lang.String getAuthMethod()>
+2025-03-18 21:31:45.622 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.SessionAuthentication: void <init>(java.lang.String,org.eclipse.jetty.security.UserIdentity,java.lang.Object)>
+2025-03-18 21:31:45.625 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: setAttribute
+2025-03-18 21:31:45.625 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:45.625 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 login -> setAttribute
+2025-03-18 21:31:45.625 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-03-18 21:31:45.625 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)>
+2025-03-18 21:31:45.625 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-03-18 21:31:45.626 - WARN  [           main] d.VulDetector                  : 检测完成: 1/6
+2025-03-18 21:31:45.626 -ERROR  [           main] d.d.DataFlowTrack              : WaterFallMode is on, the dataflow track will start from the entry method as a waterfall
+2025-03-18 21:31:45.628 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 20
+2025-03-18 21:31:45.628 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: validateRequest
+2025-03-18 21:31:45.699 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.ServerAuthException: void <init>(java.lang.Throwable)>
+2025-03-18 21:31:45.702 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Request: void <clinit>()>
+2025-03-18 21:31:45.709 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.Object: void <clinit>()>
+2025-03-18 21:31:45.710 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>
+2025-03-18 21:31:45.711 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: boolean isJSecurityCheck(java.lang.String)>
+2025-03-18 21:31:45.716 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Request: java.lang.String getPathInContext()>
+2025-03-18 21:31:45.717 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: boolean isLoginOrErrorPage(java.lang.String)>
+2025-03-18 21:31:45.720 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: void <clinit>()>
+2025-03-18 21:31:45.721 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication$1: void <init>()>
+2025-03-18 21:31:45.723 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication$2: void <init>()>
+2025-03-18 21:31:45.725 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: void <init>(org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator)>
+2025-03-18 21:31:45.730 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:45.731 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>
+2025-03-18 21:31:45.732 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>
+2025-03-18 21:31:45.733 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)>
+2025-03-18 21:31:45.734 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)>
+2025-03-18 21:31:45.736 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Request: void <clinit>()>
+2025-03-18 21:31:45.749 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.security.authentication.SessionAuthentication: void <init>(java.lang.String,org.eclipse.jetty.security.UserIdentity,java.lang.Object)>
+2025-03-18 21:31:45.752 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.slf4j.Logger: void debug(java.lang.String,java.lang.Object,java.lang.Object)>
+2025-03-18 21:31:45.754 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.slf4j.Logger: boolean isDebugEnabled()>
+2025-03-18 21:31:45.755 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:45.756 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.String: int length()>
+2025-03-18 21:31:45.757 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getContextPath()>
+2025-03-18 21:31:45.761 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Authentication$User: org.eclipse.jetty.security.UserIdentity getUserIdentity()>
+2025-03-18 21:31:45.761 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.security.LoginService: boolean validate(org.eclipse.jetty.security.UserIdentity)>
+2025-03-18 21:31:45.762 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.slf4j.Logger: void debug(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:45.763 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: void removeAttribute(java.lang.String)>
+2025-03-18 21:31:45.765 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:45.767 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.String getId()>
+2025-03-18 21:31:45.768 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:45.769 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>
+2025-03-18 21:31:45.770 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getQueryString()>
+2025-03-18 21:31:45.771 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>
+2025-03-18 21:31:45.773 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator$FormAuthentication: void <init>(java.lang.String,org.eclipse.jetty.security.UserIdentity)>
+2025-03-18 21:31:45.775 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getQueryString()>
+2025-03-18 21:31:45.777 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.StringBuffer: java.lang.String toString()>
+2025-03-18 21:31:45.780 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: setAttribute
+2025-03-18 21:31:45.780 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:45.785 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Request: void extractFormParameters(org.eclipse.jetty.util.Fields)>
+2025-03-18 21:31:45.789 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.ContextHandler$APIContext: org.eclipse.jetty.ee9.nested.ContextHandler getContextHandler()>
+2025-03-18 21:31:45.791 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.ContextHandler: int getMaxFormContentSize()>
+2025-03-18 21:31:45.792 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.ContextHandler: int getMaxFormKeys()>
+2025-03-18 21:31:45.793 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: int getContentLength()>
+2025-03-18 21:31:45.794 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Request: long getContentLengthLong()>
+2025-03-18 21:31:45.798 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.ServletInputStream getInputStream()>
+2025-03-18 21:31:45.802 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.server.Request$Wrapper: org.eclipse.jetty.http.HttpFields getHeaders()>
+2025-03-18 21:31:45.803 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.server.Request$Wrapper: org.eclipse.jetty.server.Request getWrapped()>
+2025-03-18 21:31:45.808 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.HttpInput: boolean isAsync()>
+2025-03-18 21:31:45.813 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request$add__242: java.util.function.BiConsumer bootstrap$(org.eclipse.jetty.util.Fields)>
+2025-03-18 21:31:45.813 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Request$add__242: void <init>(org.eclipse.jetty.util.Fields)>
+2025-03-18 21:31:45.815 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: java.lang.String getCharacterEncoding()>
+2025-03-18 21:31:45.817 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.ContextHandler$APIContext: java.lang.String getRequestCharacterEncoding()>
+2025-03-18 21:31:45.819 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.ContextHandler: java.lang.String getDefaultRequestCharacterEncoding()>
+2025-03-18 21:31:45.821 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Request: java.lang.String getContentType()>
+2025-03-18 21:31:45.835 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Response: void sendRedirect(java.lang.String,boolean)>
+2025-03-18 21:31:45.836 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Response: org.eclipse.jetty.ee9.nested.HttpChannel getHttpChannel()>
+2025-03-18 21:31:45.837 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Request getRequest()>
+2025-03-18 21:31:45.838 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.http.HttpVersion getHttpVersion()>
+2025-03-18 21:31:45.841 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Response: void sendRedirect(int,java.lang.String,boolean)>
+2025-03-18 21:31:45.847 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: org.eclipse.jetty.ee9.nested.HttpChannel getHttpChannel()>
+2025-03-18 21:31:45.847 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: void ensureConsumeAllOrNotPersistent()>
+2025-03-18 21:31:45.850 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.HttpInput getHttpInput()>
+2025-03-18 21:31:45.851 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.HttpInput: boolean consumeAll()>
+2025-03-18 21:31:45.856 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpInput: boolean isFinished()>
+2025-03-18 21:31:45.859 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpInput: boolean isError()>
+2025-03-18 21:31:45.866 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.server.Request$Wrapper: org.eclipse.jetty.server.ConnectionMetaData getConnectionMetaData()>
+2025-03-18 21:31:45.869 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.Response: org.eclipse.jetty.http.HttpFields$Mutable getHttpFields()>
+2025-03-18 21:31:45.870 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.HttpChannel$lambda_ensureConsumeAllOrNotPersistent_3__212: java.util.function.BiFunction bootstrap$()>
+2025-03-18 21:31:45.871 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpChannel$lambda_ensureConsumeAllOrNotPersistent_3__212: void <init>()>
+2025-03-18 21:31:45.874 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: boolean isMutable()>
+2025-03-18 21:31:45.878 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.server.HttpConfiguration getHttpConfiguration()>
+2025-03-18 21:31:45.879 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.server.HttpConfiguration: boolean isRelativeRedirectAllowed()>
+2025-03-18 21:31:45.880 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Request getRequest()>
+2025-03-18 21:31:45.881 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Request: java.lang.StringBuilder getRootURL()>
+2025-03-18 21:31:45.882 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.Request: java.lang.String getScheme()>
+2025-03-18 21:31:45.884 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.Request: java.lang.String getServerName()>
+2025-03-18 21:31:45.886 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.Request: java.lang.String findServerName()>
+2025-03-18 21:31:45.890 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.Request: int getServerPort()>
+2025-03-18 21:31:45.892 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.server.Request: int getServerPort(org.eclipse.jetty.server.Request)>
+2025-03-18 21:31:45.916 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Request getRequest()>
+2025-03-18 21:31:45.917 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Request: java.lang.String getRequestURI()>
+2025-03-18 21:31:45.920 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.server.handler.ContextRequest: org.eclipse.jetty.server.Context getContext()>
+2025-03-18 21:31:45.921 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.server.Context: java.lang.String getCrossContextDispatchType(org.eclipse.jetty.server.Request)>
+2025-03-18 21:31:45.925 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.server.Request$Wrapper: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:45.926 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.server.Request: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:45.934 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: void resetBuffer()>
+2025-03-18 21:31:45.936 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.HttpOutput: void resetBuffer()>
+2025-03-18 21:31:45.938 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpChannelState: org.eclipse.jetty.util.thread.AutoLock lock()>
+2025-03-18 21:31:45.940 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpOutput$Interceptor: void resetBuffer()>
+2025-03-18 21:31:45.944 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.HttpOutput: void reopen()>
+2025-03-18 21:31:45.947 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: void setHeader(org.eclipse.jetty.http.HttpHeader,java.lang.String)>
+2025-03-18 21:31:45.949 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.Response: void setContentType(java.lang.String)>
+2025-03-18 21:31:45.965 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>
+2025-03-18 21:31:45.968 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.Response: boolean isWriting()>
+2025-03-18 21:31:45.998 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: void setStatus(int)>
+2025-03-18 21:31:46.001 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: void closeOutput()>
+2025-03-18 21:31:46.011 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.HttpOutput: void close()>
+2025-03-18 21:31:46.037 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpOutput: void onWriteComplete(boolean,java.lang.Throwable)>
+2025-03-18 21:31:46.097 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpOutput: java.lang.String stateString()>
+2025-03-18 21:31:46.103 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpOutput$WriteCompleteCB: void <init>(org.eclipse.jetty.ee9.nested.HttpOutput)>
+2025-03-18 21:31:46.107 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpOutput: void channelWrite(java.nio.ByteBuffer,boolean,org.eclipse.jetty.util.Callback)>
+2025-03-18 21:31:46.118 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.ResponseWriter: void close()>
+2025-03-18 21:31:46.121 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.ResponseWriter: void setError(java.lang.Throwable)>
+2025-03-18 21:31:46.139 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator$FormRequest: void <init>(jakarta.servlet.http.HttpServletRequest)>
+2025-03-18 21:31:46.141 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.FormAuthenticator$FormResponse: void <init>(jakarta.servlet.http.HttpServletResponse)>
+2025-03-18 21:31:46.145 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>
+2025-03-18 21:31:46.148 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.StringBuffer: java.lang.String toString()>
+2025-03-18 21:31:46.151 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.String: boolean equals(java.lang.Object)>
+2025-03-18 21:31:46.158 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Request: void setContentFields(org.eclipse.jetty.util.Fields)>
+2025-03-18 21:31:46.170 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 validateRequest -> setAttribute
+2025-03-18 21:31:46.170 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 3
+2025-03-18 21:31:46.176 - WARN  [           main] d.VulDetector                  : 检测完成: 2/6
+2025-03-18 21:31:46.176 -ERROR  [           main] d.d.DataFlowTrack              : WaterFallMode is on, the dataflow track will start from the entry method as a waterfall
+2025-03-18 21:31:46.177 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 13
+2025-03-18 21:31:46.178 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: validateRequest
+2025-03-18 21:31:46.248 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Request: void <clinit>()>
+2025-03-18 21:31:46.254 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.Object: void <clinit>()>
+2025-03-18 21:31:46.256 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>
+2025-03-18 21:31:46.262 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:46.263 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>
+2025-03-18 21:31:46.263 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>
+2025-03-18 21:31:46.265 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.slf4j.Logger: void debug(java.lang.String,java.lang.Object,java.lang.Object)>
+2025-03-18 21:31:46.267 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:46.269 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getContextPath()>
+2025-03-18 21:31:46.273 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Authentication$User: org.eclipse.jetty.security.UserIdentity getUserIdentity()>
+2025-03-18 21:31:46.273 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.security.LoginService: boolean validate(org.eclipse.jetty.security.UserIdentity)>
+2025-03-18 21:31:46.274 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.slf4j.Logger: void debug(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:46.275 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: void removeAttribute(java.lang.String)>
+2025-03-18 21:31:46.276 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:46.278 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.String getId()>
+2025-03-18 21:31:46.279 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:46.281 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>
+2025-03-18 21:31:46.282 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getQueryString()>
+2025-03-18 21:31:46.285 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getQueryString()>
+2025-03-18 21:31:46.287 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: setAttribute
+2025-03-18 21:31:46.287 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:46.332 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 validateRequest -> setAttribute
+2025-03-18 21:31:46.333 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 3
+2025-03-18 21:31:46.333 - WARN  [           main] d.VulDetector                  : 检测完成: 3/6
+2025-03-18 21:31:46.333 -ERROR  [           main] d.d.DataFlowTrack              : WaterFallMode is on, the dataflow track will start from the entry method as a waterfall
+2025-03-18 21:31:46.334 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 6
+2025-03-18 21:31:46.335 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: validateRequest
+2025-03-18 21:31:46.405 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Request: void <clinit>()>
+2025-03-18 21:31:46.412 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.Object: void <clinit>()>
+2025-03-18 21:31:46.413 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>
+2025-03-18 21:31:46.420 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:46.421 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>
+2025-03-18 21:31:46.421 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>
+2025-03-18 21:31:46.423 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.slf4j.Logger: void debug(java.lang.String,java.lang.Object,java.lang.Object)>
+2025-03-18 21:31:46.425 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.util.StringUtil: java.lang.String printable(java.lang.String)>
+2025-03-18 21:31:46.426 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:46.427 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getContextPath()>
+2025-03-18 21:31:46.431 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Authentication$User: org.eclipse.jetty.security.UserIdentity getUserIdentity()>
+2025-03-18 21:31:46.432 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.security.LoginService: boolean validate(org.eclipse.jetty.security.UserIdentity)>
+2025-03-18 21:31:46.432 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.slf4j.Logger: void debug(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:46.433 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: void removeAttribute(java.lang.String)>
+2025-03-18 21:31:46.434 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)>
+2025-03-18 21:31:46.435 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:46.436 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:46.438 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.server.Session getSession(boolean)>
+2025-03-18 21:31:46.443 - WARN  [           main] d.d.DataFlowTrack              : r0 := @this: org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest
+successor: z0 := @parameter0: boolean
+2025-03-18 21:31:46.444 - WARN  [           main] d.d.DataFlowTrack              : z0 := @parameter0: boolean
+successor: $r1 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.444 - WARN  [           main] d.d.DataFlowTrack              : $r1 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: if $r1 == null goto (branch)
+2025-03-18 21:31:46.444 - WARN  [           main] d.d.DataFlowTrack              : if $r1 == null goto (branch)
+successor: $r19 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+2025-03-18 21:31:46.445 - WARN  [           main] d.d.DataFlowTrack              : $r19 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: if $r19 == null goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.445 - WARN  [           main] d.d.DataFlowTrack              : if $r19 == null goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r21 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.445 - WARN  [           main] d.d.DataFlowTrack              : $r21 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $z3 = virtualinvoke $r21.<org.eclipse.jetty.session.ManagedSession: boolean isValid()>()
+2025-03-18 21:31:46.446 - WARN  [           main] d.d.DataFlowTrack              : $z3 = virtualinvoke $r21.<org.eclipse.jetty.session.ManagedSession: boolean isValid()>()
+successor: if $z3 != 0 goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.session.ManagedSession: boolean isValid()>]
+2025-03-18 21:31:46.446 - WARN  [           main] d.d.DataFlowTrack              : if $z3 != 0 goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession> = null
+successor: $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.446 - WARN  [           main] d.d.DataFlowTrack              : r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession> = null
+successor: goto [?= (branch)]
+2025-03-18 21:31:46.446 - WARN  [           main] d.d.DataFlowTrack              : goto [?= (branch)]
+successor: if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+2025-03-18 21:31:46.447 - WARN  [           main] d.d.DataFlowTrack              : if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: return null
+2025-03-18 21:31:46.447 - WARN  [           main] d.d.DataFlowTrack              : return null
+2025-03-18 21:31:46.447 - WARN  [           main] d.d.DataFlowTrack              : $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r26 = (org.eclipse.jetty.server.Session) $r20
+2025-03-18 21:31:46.447 - WARN  [           main] d.d.DataFlowTrack              : $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r3 = virtualinvoke $r2.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+2025-03-18 21:31:46.448 - WARN  [           main] d.d.DataFlowTrack              : $r3 = virtualinvoke $r2.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+successor: $z1 = virtualinvoke $r3.<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>()
+invoke: [<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>]
+2025-03-18 21:31:46.448 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>
+2025-03-18 21:31:46.449 - WARN  [           main] d.d.DataFlowTrack              : $z1 = virtualinvoke $r3.<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>()
+successor: if $z1 == 0 goto $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+invoke: [<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>]
+2025-03-18 21:31:46.449 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>
+2025-03-18 21:31:46.450 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.HttpChannel: boolean isSendError()>
+2025-03-18 21:31:46.451 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpChannelState: boolean isSendError()>
+2025-03-18 21:31:46.454 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.HttpChannel: boolean isCommitted()>
+2025-03-18 21:31:46.455 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.HttpChannelState: boolean isResponseCommitted()>
+2025-03-18 21:31:46.460 - WARN  [           main] d.d.DataFlowTrack              : if $z1 == 0 goto $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r23 = new java.lang.IllegalStateException
+successor: $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.460 - WARN  [           main] d.d.DataFlowTrack              : $r23 = new java.lang.IllegalStateException
+successor: specialinvoke $r23.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Response is committed")
+2025-03-18 21:31:46.460 - WARN  [           main] d.d.DataFlowTrack              : $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: if $r4 != null goto $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.460 - WARN  [           main] d.d.DataFlowTrack              : if $r4 != null goto $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r24 = new java.lang.IllegalStateException
+successor: $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.461 - WARN  [           main] d.d.DataFlowTrack              : $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r5 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+2025-03-18 21:31:46.461 - WARN  [           main] d.d.DataFlowTrack              : $r5 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+successor: if $r5 != null goto $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+2025-03-18 21:31:46.462 - WARN  [           main] d.d.DataFlowTrack              : $r24 = new java.lang.IllegalStateException
+successor: specialinvoke $r24.<java.lang.IllegalStateException: void <init>(java.lang.String)>("No SessionManager")
+2025-03-18 21:31:46.463 - WARN  [           main] d.d.DataFlowTrack              : specialinvoke $r24.<java.lang.IllegalStateException: void <init>(java.lang.String)>("No SessionManager")
+successor: throw $r24
+invoke: [<java.lang.IllegalStateException: void <init>(java.lang.String)>]
+11
+2025-03-18 21:31:46.463 - WARN  [           main] d.d.DataFlowTrack              : throw $r24
+2025-03-18 21:31:46.464 - WARN  [           main] d.d.DataFlowTrack              : specialinvoke $r23.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Response is committed")
+successor: throw $r23
+invoke: [<java.lang.IllegalStateException: void <init>(java.lang.String)>]
+11
+2025-03-18 21:31:46.465 - WARN  [           main] d.d.DataFlowTrack              : throw $r23
+2025-03-18 21:31:46.465 - WARN  [           main] d.d.DataFlowTrack              : $r26 = (org.eclipse.jetty.server.Session) $r20
+successor: return $r26
+2025-03-18 21:31:46.465 - WARN  [           main] d.d.DataFlowTrack              : return $r26
+2025-03-18 21:31:46.465 - WARN  [           main] d.d.DataFlowTrack              : if $r5 != null goto $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+successor: $r22 = null
+successor: $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+2025-03-18 21:31:46.466 - WARN  [           main] d.d.DataFlowTrack              : $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+successor: $r22 = virtualinvoke $r6.<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>()
+2025-03-18 21:31:46.466 - WARN  [           main] d.d.DataFlowTrack              : $r22 = null
+successor: goto [?= $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)]
+2025-03-18 21:31:46.466 - WARN  [           main] d.d.DataFlowTrack              : goto [?= $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)]
+successor: $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+2025-03-18 21:31:46.467 - WARN  [           main] d.d.DataFlowTrack              : $r22 = virtualinvoke $r6.<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>()
+successor: $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+invoke: [<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>]
+2025-03-18 21:31:46.467 - WARN  [           main] d.d.DataFlowTrack              : $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+successor: interfaceinvoke $r7.<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>(r0, $r22, $r8)
+invoke: [<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>]
+2025-03-18 21:31:46.468 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>
+2025-03-18 21:31:46.468 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: void <init>(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>
+2025-03-18 21:31:46.470 - WARN  [           main] d.d.DataFlowTrack              : interfaceinvoke $r7.<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>(r0, $r22, $r8)
+successor: $r9 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>]
+2025-03-18 21:31:46.470 - WARN  [           main] d.d.DataFlowTrack              : $r9 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: if $r9 != null goto $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.470 - WARN  [           main] d.d.DataFlowTrack              : if $r9 != null goto $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r25 = new java.lang.IllegalStateException
+successor: $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.471 - WARN  [           main] d.d.DataFlowTrack              : $r25 = new java.lang.IllegalStateException
+successor: specialinvoke $r25.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Create session failed")
+2025-03-18 21:31:46.471 - WARN  [           main] d.d.DataFlowTrack              : $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r11 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.471 - WARN  [           main] d.d.DataFlowTrack              : $r11 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $z2 = virtualinvoke r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: boolean isSecure()>()
+2025-03-18 21:31:46.472 - WARN  [           main] d.d.DataFlowTrack              : specialinvoke $r25.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Create session failed")
+successor: throw $r25
+invoke: [<java.lang.IllegalStateException: void <init>(java.lang.String)>]
+11
+2025-03-18 21:31:46.473 - WARN  [           main] d.d.DataFlowTrack              : throw $r25
+2025-03-18 21:31:46.473 - WARN  [           main] d.d.DataFlowTrack              : $z2 = virtualinvoke r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: boolean isSecure()>()
+successor: $r12 = interfaceinvoke $r10.<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>($r11, $z2)
+invoke: [<org.eclipse.jetty.server.Request$Wrapper: boolean isSecure()>]
+2025-03-18 21:31:46.474 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.server.Request$Wrapper: boolean isSecure()>
+2025-03-18 21:31:46.475 - WARN  [           main] d.d.DataFlowTrack              : $r12 = interfaceinvoke $r10.<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>($r11, $z2)
+successor: if $r12 == null goto $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>]
+2025-03-18 21:31:46.476 - WARN  [           main] d.d.DataFlowTrack              : if $r12 == null goto $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r14 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.476 - WARN  [           main] d.d.DataFlowTrack              : $r14 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r15 = virtualinvoke $r14.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+2025-03-18 21:31:46.477 - WARN  [           main] d.d.DataFlowTrack              : $r15 = virtualinvoke $r14.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+successor: virtualinvoke $r15.<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>($r12)
+invoke: [<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>]
+2025-03-18 21:31:46.477 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>
+2025-03-18 21:31:46.478 - WARN  [           main] d.d.DataFlowTrack              : virtualinvoke $r15.<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>($r12)
+successor: $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>]
+2025-03-18 21:31:46.478 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>
+2025-03-18 21:31:46.482 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.ee9.nested.Response: void addCookie(org.eclipse.jetty.http.HttpCookie)>
+2025-03-18 21:31:46.485 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.ee9.nested.Response: org.eclipse.jetty.http.HttpCookie checkSameSite(org.eclipse.jetty.http.HttpCookie)>
+2025-03-18 21:31:46.492 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.server.HttpConfiguration: org.eclipse.jetty.http.CookieCompliance getResponseCookieCompliance()>
+2025-03-18 21:31:46.493 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.server.HttpCookieUtils$SetCookieHttpField: void <init>(org.eclipse.jetty.http.HttpCookie,org.eclipse.jetty.http.CookieCompliance)>
+2025-03-18 21:31:46.501 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.server.HttpCookieUtils$SetCookieHttpField: org.eclipse.jetty.http.HttpCookie getHttpCookie()>
+2025-03-18 21:31:46.503 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.server.HttpCookieUtils: boolean match(org.eclipse.jetty.http.HttpCookie,java.lang.String,java.lang.String,java.lang.String)>
+2025-03-18 21:31:46.505 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:         <org.eclipse.jetty.server.HttpCookieUtils: boolean match(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>
+2025-03-18 21:31:46.511 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:       <org.eclipse.jetty.server.HttpCookieUtils: boolean match(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>
+2025-03-18 21:31:46.526 - WARN  [           main] d.d.DataFlowTrack              : $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r27 = (org.eclipse.jetty.server.Session) $r13
+2025-03-18 21:31:46.526 - WARN  [           main] d.d.DataFlowTrack              : $r27 = (org.eclipse.jetty.server.Session) $r13
+successor: return $r27
+2025-03-18 21:31:46.526 - WARN  [           main] d.d.DataFlowTrack              : return $r27
+2025-03-18 21:31:46.527 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Authentication getAuthentication()>
+2025-03-18 21:31:46.529 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.server.Session: java.lang.Object setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:46.532 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.String getId()>
+2025-03-18 21:31:46.533 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>
+2025-03-18 21:31:46.534 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>
+2025-03-18 21:31:46.535 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getQueryString()>
+2025-03-18 21:31:46.538 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getQueryString()>
+2025-03-18 21:31:46.540 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: setAttribute
+2025-03-18 21:31:46.540 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:46.584 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 validateRequest -> setAttribute
+2025-03-18 21:31:46.584 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 2
+2025-03-18 21:31:46.585 - WARN  [           main] d.VulDetector                  : 检测完成: 4/6
+2025-03-18 21:31:46.585 -ERROR  [           main] d.d.DataFlowTrack              : WaterFallMode is on, the dataflow track will start from the entry method as a waterfall
+2025-03-18 21:31:46.586 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 1
+2025-03-18 21:31:46.587 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: renewSession
+2025-03-18 21:31:46.590 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 renewSession -> setAttribute
+2025-03-18 21:31:46.590 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-03-18 21:31:46.590 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: jakarta.servlet.http.HttpSession renewSession(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>
+2025-03-18 21:31:46.590 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-03-18 21:31:46.590 - WARN  [           main] d.VulDetector                  : 检测完成: 5/6
+2025-03-18 21:31:46.590 -ERROR  [           main] d.d.DataFlowTrack              : WaterFallMode is on, the dataflow track will start from the entry method as a waterfall
+2025-03-18 21:31:46.591 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-03-18 21:31:46.591 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: validateRequest
+2025-03-18 21:31:46.604 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.http.HttpHeader: java.lang.String asString()>
+2025-03-18 21:31:46.605 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>
+2025-03-18 21:31:46.606 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: java.lang.String getSpnegoToken(java.lang.String)>
+2025-03-18 21:31:46.610 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:46.612 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.server.Session getSession(boolean)>
+2025-03-18 21:31:46.617 - WARN  [           main] d.d.DataFlowTrack              : r0 := @this: org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest
+successor: z0 := @parameter0: boolean
+2025-03-18 21:31:46.617 - WARN  [           main] d.d.DataFlowTrack              : z0 := @parameter0: boolean
+successor: $r1 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.618 - WARN  [           main] d.d.DataFlowTrack              : $r1 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: if $r1 == null goto (branch)
+2025-03-18 21:31:46.618 - WARN  [           main] d.d.DataFlowTrack              : if $r1 == null goto (branch)
+successor: $r19 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+2025-03-18 21:31:46.618 - WARN  [           main] d.d.DataFlowTrack              : $r19 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: if $r19 == null goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.618 - WARN  [           main] d.d.DataFlowTrack              : if $r19 == null goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r21 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.619 - WARN  [           main] d.d.DataFlowTrack              : $r21 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $z3 = virtualinvoke $r21.<org.eclipse.jetty.session.ManagedSession: boolean isValid()>()
+2025-03-18 21:31:46.619 - WARN  [           main] d.d.DataFlowTrack              : $z3 = virtualinvoke $r21.<org.eclipse.jetty.session.ManagedSession: boolean isValid()>()
+successor: if $z3 != 0 goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.session.ManagedSession: boolean isValid()>]
+2025-03-18 21:31:46.619 - WARN  [           main] d.d.DataFlowTrack              : if $z3 != 0 goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession> = null
+successor: $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.619 - WARN  [           main] d.d.DataFlowTrack              : r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession> = null
+successor: goto [?= (branch)]
+2025-03-18 21:31:46.620 - WARN  [           main] d.d.DataFlowTrack              : goto [?= (branch)]
+successor: if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+2025-03-18 21:31:46.620 - WARN  [           main] d.d.DataFlowTrack              : if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: return null
+2025-03-18 21:31:46.620 - WARN  [           main] d.d.DataFlowTrack              : return null
+2025-03-18 21:31:46.620 - WARN  [           main] d.d.DataFlowTrack              : $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r26 = (org.eclipse.jetty.server.Session) $r20
+2025-03-18 21:31:46.621 - WARN  [           main] d.d.DataFlowTrack              : $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r3 = virtualinvoke $r2.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+2025-03-18 21:31:46.621 - WARN  [           main] d.d.DataFlowTrack              : $r3 = virtualinvoke $r2.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+successor: $z1 = virtualinvoke $r3.<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>()
+invoke: [<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>]
+2025-03-18 21:31:46.621 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>
+2025-03-18 21:31:46.622 - WARN  [           main] d.d.DataFlowTrack              : $z1 = virtualinvoke $r3.<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>()
+successor: if $z1 == 0 goto $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+invoke: [<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>]
+2025-03-18 21:31:46.622 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>
+2025-03-18 21:31:46.624 - WARN  [           main] d.d.DataFlowTrack              : if $z1 == 0 goto $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r23 = new java.lang.IllegalStateException
+successor: $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.624 - WARN  [           main] d.d.DataFlowTrack              : $r23 = new java.lang.IllegalStateException
+successor: specialinvoke $r23.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Response is committed")
+2025-03-18 21:31:46.625 - WARN  [           main] d.d.DataFlowTrack              : $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: if $r4 != null goto $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.625 - WARN  [           main] d.d.DataFlowTrack              : if $r4 != null goto $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r24 = new java.lang.IllegalStateException
+successor: $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.625 - WARN  [           main] d.d.DataFlowTrack              : $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r5 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+2025-03-18 21:31:46.626 - WARN  [           main] d.d.DataFlowTrack              : $r5 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+successor: if $r5 != null goto $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+2025-03-18 21:31:46.626 - WARN  [           main] d.d.DataFlowTrack              : $r24 = new java.lang.IllegalStateException
+successor: specialinvoke $r24.<java.lang.IllegalStateException: void <init>(java.lang.String)>("No SessionManager")
+2025-03-18 21:31:46.627 - WARN  [           main] d.d.DataFlowTrack              : specialinvoke $r24.<java.lang.IllegalStateException: void <init>(java.lang.String)>("No SessionManager")
+successor: throw $r24
+invoke: [<java.lang.IllegalStateException: void <init>(java.lang.String)>]
+11
+2025-03-18 21:31:46.628 - WARN  [           main] d.d.DataFlowTrack              : throw $r24
+2025-03-18 21:31:46.629 - WARN  [           main] d.d.DataFlowTrack              : specialinvoke $r23.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Response is committed")
+successor: throw $r23
+invoke: [<java.lang.IllegalStateException: void <init>(java.lang.String)>]
+11
+2025-03-18 21:31:46.629 - WARN  [           main] d.d.DataFlowTrack              : throw $r23
+2025-03-18 21:31:46.629 - WARN  [           main] d.d.DataFlowTrack              : $r26 = (org.eclipse.jetty.server.Session) $r20
+successor: return $r26
+2025-03-18 21:31:46.629 - WARN  [           main] d.d.DataFlowTrack              : return $r26
+2025-03-18 21:31:46.629 - WARN  [           main] d.d.DataFlowTrack              : if $r5 != null goto $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+successor: $r22 = null
+successor: $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+2025-03-18 21:31:46.630 - WARN  [           main] d.d.DataFlowTrack              : $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+successor: $r22 = virtualinvoke $r6.<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>()
+2025-03-18 21:31:46.630 - WARN  [           main] d.d.DataFlowTrack              : $r22 = null
+successor: goto [?= $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)]
+2025-03-18 21:31:46.631 - WARN  [           main] d.d.DataFlowTrack              : goto [?= $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)]
+successor: $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+2025-03-18 21:31:46.631 - WARN  [           main] d.d.DataFlowTrack              : $r22 = virtualinvoke $r6.<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>()
+successor: $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+invoke: [<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>]
+2025-03-18 21:31:46.632 - WARN  [           main] d.d.DataFlowTrack              : $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+successor: interfaceinvoke $r7.<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>(r0, $r22, $r8)
+invoke: [<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>]
+2025-03-18 21:31:46.632 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>
+2025-03-18 21:31:46.633 - WARN  [           main] d.d.DataFlowTrack              : interfaceinvoke $r7.<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>(r0, $r22, $r8)
+successor: $r9 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>]
+2025-03-18 21:31:46.634 - WARN  [           main] d.d.DataFlowTrack              : $r9 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: if $r9 != null goto $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.634 - WARN  [           main] d.d.DataFlowTrack              : if $r9 != null goto $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r25 = new java.lang.IllegalStateException
+successor: $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.634 - WARN  [           main] d.d.DataFlowTrack              : $r25 = new java.lang.IllegalStateException
+successor: specialinvoke $r25.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Create session failed")
+2025-03-18 21:31:46.634 - WARN  [           main] d.d.DataFlowTrack              : $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r11 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.635 - WARN  [           main] d.d.DataFlowTrack              : $r11 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $z2 = virtualinvoke r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: boolean isSecure()>()
+2025-03-18 21:31:46.636 - WARN  [           main] d.d.DataFlowTrack              : specialinvoke $r25.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Create session failed")
+successor: throw $r25
+invoke: [<java.lang.IllegalStateException: void <init>(java.lang.String)>]
+11
+2025-03-18 21:31:46.636 - WARN  [           main] d.d.DataFlowTrack              : throw $r25
+2025-03-18 21:31:46.637 - WARN  [           main] d.d.DataFlowTrack              : $z2 = virtualinvoke r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: boolean isSecure()>()
+successor: $r12 = interfaceinvoke $r10.<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>($r11, $z2)
+invoke: [<org.eclipse.jetty.server.Request$Wrapper: boolean isSecure()>]
+2025-03-18 21:31:46.637 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.server.Request$Wrapper: boolean isSecure()>
+2025-03-18 21:31:46.638 - WARN  [           main] d.d.DataFlowTrack              : $r12 = interfaceinvoke $r10.<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>($r11, $z2)
+successor: if $r12 == null goto $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>]
+2025-03-18 21:31:46.639 - WARN  [           main] d.d.DataFlowTrack              : if $r12 == null goto $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r14 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.639 - WARN  [           main] d.d.DataFlowTrack              : $r14 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r15 = virtualinvoke $r14.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+2025-03-18 21:31:46.640 - WARN  [           main] d.d.DataFlowTrack              : $r15 = virtualinvoke $r14.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+successor: virtualinvoke $r15.<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>($r12)
+invoke: [<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>]
+2025-03-18 21:31:46.640 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>
+2025-03-18 21:31:46.641 - WARN  [           main] d.d.DataFlowTrack              : virtualinvoke $r15.<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>($r12)
+successor: $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>]
+2025-03-18 21:31:46.641 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>
+2025-03-18 21:31:46.653 - WARN  [           main] d.d.DataFlowTrack              : $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r27 = (org.eclipse.jetty.server.Session) $r13
+2025-03-18 21:31:46.654 - WARN  [           main] d.d.DataFlowTrack              : $r27 = (org.eclipse.jetty.server.Session) $r13
+successor: return $r27
+2025-03-18 21:31:46.654 - WARN  [           main] d.d.DataFlowTrack              : return $r27
+2025-03-18 21:31:46.655 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Authentication getAuthentication()>
+2025-03-18 21:31:46.656 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.server.Session: java.lang.Object setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:46.660 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: org.eclipse.jetty.security.UserIdentity login(java.lang.String,java.lang.Object,jakarta.servlet.ServletRequest)>
+2025-03-18 21:31:46.661 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: void <clinit>()>
+2025-03-18 21:31:46.672 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.security.RoleDelegateUserIdentity: boolean isEstablished()>
+2025-03-18 21:31:46.675 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.slf4j.Logger: void debug(java.lang.String)>
+2025-03-18 21:31:46.675 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.security.RoleDelegateUserIdentity: java.security.Principal getUserPrincipal()>
+2025-03-18 21:31:46.676 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.security.SPNEGOUserPrincipal: java.lang.String getEncodedToken()>
+2025-03-18 21:31:46.676 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: void setSpnegoToken(jakarta.servlet.http.HttpServletResponse,java.lang.String)>
+2025-03-18 21:31:46.681 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: java.time.Duration getAuthenticationDuration()>
+2025-03-18 21:31:46.682 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.time.Duration: boolean isNegative()>
+2025-03-18 21:31:46.682 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+2025-03-18 21:31:46.684 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.server.Session getSession(boolean)>
+2025-03-18 21:31:46.689 - WARN  [           main] d.d.DataFlowTrack              : r0 := @this: org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest
+successor: z0 := @parameter0: boolean
+2025-03-18 21:31:46.689 - WARN  [           main] d.d.DataFlowTrack              : z0 := @parameter0: boolean
+successor: $r1 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.690 - WARN  [           main] d.d.DataFlowTrack              : $r1 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: if $r1 == null goto (branch)
+2025-03-18 21:31:46.690 - WARN  [           main] d.d.DataFlowTrack              : if $r1 == null goto (branch)
+successor: $r19 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+2025-03-18 21:31:46.690 - WARN  [           main] d.d.DataFlowTrack              : $r19 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: if $r19 == null goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.690 - WARN  [           main] d.d.DataFlowTrack              : if $r19 == null goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r21 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.691 - WARN  [           main] d.d.DataFlowTrack              : $r21 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $z3 = virtualinvoke $r21.<org.eclipse.jetty.session.ManagedSession: boolean isValid()>()
+2025-03-18 21:31:46.691 - WARN  [           main] d.d.DataFlowTrack              : $z3 = virtualinvoke $r21.<org.eclipse.jetty.session.ManagedSession: boolean isValid()>()
+successor: if $z3 != 0 goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.session.ManagedSession: boolean isValid()>]
+2025-03-18 21:31:46.691 - WARN  [           main] d.d.DataFlowTrack              : if $z3 != 0 goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession> = null
+successor: $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.691 - WARN  [           main] d.d.DataFlowTrack              : r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession> = null
+successor: goto [?= (branch)]
+2025-03-18 21:31:46.691 - WARN  [           main] d.d.DataFlowTrack              : goto [?= (branch)]
+successor: if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+2025-03-18 21:31:46.692 - WARN  [           main] d.d.DataFlowTrack              : if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: return null
+2025-03-18 21:31:46.692 - WARN  [           main] d.d.DataFlowTrack              : return null
+2025-03-18 21:31:46.692 - WARN  [           main] d.d.DataFlowTrack              : $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r26 = (org.eclipse.jetty.server.Session) $r20
+2025-03-18 21:31:46.693 - WARN  [           main] d.d.DataFlowTrack              : $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r3 = virtualinvoke $r2.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+2025-03-18 21:31:46.693 - WARN  [           main] d.d.DataFlowTrack              : $r3 = virtualinvoke $r2.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+successor: $z1 = virtualinvoke $r3.<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>()
+invoke: [<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>]
+2025-03-18 21:31:46.693 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>
+2025-03-18 21:31:46.694 - WARN  [           main] d.d.DataFlowTrack              : $z1 = virtualinvoke $r3.<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>()
+successor: if $z1 == 0 goto $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+invoke: [<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>]
+2025-03-18 21:31:46.694 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>
+2025-03-18 21:31:46.696 - WARN  [           main] d.d.DataFlowTrack              : if $z1 == 0 goto $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r23 = new java.lang.IllegalStateException
+successor: $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.696 - WARN  [           main] d.d.DataFlowTrack              : $r23 = new java.lang.IllegalStateException
+successor: specialinvoke $r23.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Response is committed")
+2025-03-18 21:31:46.697 - WARN  [           main] d.d.DataFlowTrack              : $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: if $r4 != null goto $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.697 - WARN  [           main] d.d.DataFlowTrack              : if $r4 != null goto $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r24 = new java.lang.IllegalStateException
+successor: $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.697 - WARN  [           main] d.d.DataFlowTrack              : $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r5 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+2025-03-18 21:31:46.698 - WARN  [           main] d.d.DataFlowTrack              : $r5 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+successor: if $r5 != null goto $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+2025-03-18 21:31:46.698 - WARN  [           main] d.d.DataFlowTrack              : $r24 = new java.lang.IllegalStateException
+successor: specialinvoke $r24.<java.lang.IllegalStateException: void <init>(java.lang.String)>("No SessionManager")
+2025-03-18 21:31:46.699 - WARN  [           main] d.d.DataFlowTrack              : specialinvoke $r24.<java.lang.IllegalStateException: void <init>(java.lang.String)>("No SessionManager")
+successor: throw $r24
+invoke: [<java.lang.IllegalStateException: void <init>(java.lang.String)>]
+11
+2025-03-18 21:31:46.699 - WARN  [           main] d.d.DataFlowTrack              : throw $r24
+2025-03-18 21:31:46.701 - WARN  [           main] d.d.DataFlowTrack              : specialinvoke $r23.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Response is committed")
+successor: throw $r23
+invoke: [<java.lang.IllegalStateException: void <init>(java.lang.String)>]
+11
+2025-03-18 21:31:46.701 - WARN  [           main] d.d.DataFlowTrack              : throw $r23
+2025-03-18 21:31:46.701 - WARN  [           main] d.d.DataFlowTrack              : $r26 = (org.eclipse.jetty.server.Session) $r20
+successor: return $r26
+2025-03-18 21:31:46.701 - WARN  [           main] d.d.DataFlowTrack              : return $r26
+2025-03-18 21:31:46.701 - WARN  [           main] d.d.DataFlowTrack              : if $r5 != null goto $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+successor: $r22 = null
+successor: $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+2025-03-18 21:31:46.702 - WARN  [           main] d.d.DataFlowTrack              : $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+successor: $r22 = virtualinvoke $r6.<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>()
+2025-03-18 21:31:46.702 - WARN  [           main] d.d.DataFlowTrack              : $r22 = null
+successor: goto [?= $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)]
+2025-03-18 21:31:46.702 - WARN  [           main] d.d.DataFlowTrack              : goto [?= $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)]
+successor: $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+2025-03-18 21:31:46.703 - WARN  [           main] d.d.DataFlowTrack              : $r22 = virtualinvoke $r6.<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>()
+successor: $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+invoke: [<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>]
+2025-03-18 21:31:46.704 - WARN  [           main] d.d.DataFlowTrack              : $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+successor: interfaceinvoke $r7.<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>(r0, $r22, $r8)
+invoke: [<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>]
+2025-03-18 21:31:46.704 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>
+2025-03-18 21:31:46.705 - WARN  [           main] d.d.DataFlowTrack              : interfaceinvoke $r7.<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>(r0, $r22, $r8)
+successor: $r9 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>]
+2025-03-18 21:31:46.705 - WARN  [           main] d.d.DataFlowTrack              : $r9 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: if $r9 != null goto $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.706 - WARN  [           main] d.d.DataFlowTrack              : if $r9 != null goto $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r25 = new java.lang.IllegalStateException
+successor: $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+2025-03-18 21:31:46.706 - WARN  [           main] d.d.DataFlowTrack              : $r25 = new java.lang.IllegalStateException
+successor: specialinvoke $r25.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Create session failed")
+2025-03-18 21:31:46.706 - WARN  [           main] d.d.DataFlowTrack              : $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+successor: $r11 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.706 - WARN  [           main] d.d.DataFlowTrack              : $r11 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $z2 = virtualinvoke r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: boolean isSecure()>()
+2025-03-18 21:31:46.708 - WARN  [           main] d.d.DataFlowTrack              : specialinvoke $r25.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Create session failed")
+successor: throw $r25
+invoke: [<java.lang.IllegalStateException: void <init>(java.lang.String)>]
+11
+2025-03-18 21:31:46.708 - WARN  [           main] d.d.DataFlowTrack              : throw $r25
+2025-03-18 21:31:46.709 - WARN  [           main] d.d.DataFlowTrack              : $z2 = virtualinvoke r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: boolean isSecure()>()
+successor: $r12 = interfaceinvoke $r10.<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>($r11, $z2)
+invoke: [<org.eclipse.jetty.server.Request$Wrapper: boolean isSecure()>]
+2025-03-18 21:31:46.709 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.server.Request$Wrapper: boolean isSecure()>
+2025-03-18 21:31:46.711 - WARN  [           main] d.d.DataFlowTrack              : $r12 = interfaceinvoke $r10.<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>($r11, $z2)
+successor: if $r12 == null goto $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>]
+2025-03-18 21:31:46.711 - WARN  [           main] d.d.DataFlowTrack              : if $r12 == null goto $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r14 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+2025-03-18 21:31:46.711 - WARN  [           main] d.d.DataFlowTrack              : $r14 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+successor: $r15 = virtualinvoke $r14.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+2025-03-18 21:31:46.712 - WARN  [           main] d.d.DataFlowTrack              : $r15 = virtualinvoke $r14.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+successor: virtualinvoke $r15.<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>($r12)
+invoke: [<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>]
+2025-03-18 21:31:46.713 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>
+2025-03-18 21:31:46.713 - WARN  [           main] d.d.DataFlowTrack              : virtualinvoke $r15.<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>($r12)
+successor: $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+invoke: [<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>]
+2025-03-18 21:31:46.714 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:     <org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>
+2025-03-18 21:31:46.726 - WARN  [           main] d.d.DataFlowTrack              : $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+successor: $r27 = (org.eclipse.jetty.server.Session) $r13
+2025-03-18 21:31:46.726 - WARN  [           main] d.d.DataFlowTrack              : $r27 = (org.eclipse.jetty.server.Session) $r13
+successor: return $r27
+2025-03-18 21:31:46.727 - WARN  [           main] d.d.DataFlowTrack              : return $r27
+2025-03-18 21:31:46.728 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Authentication getAuthentication()>
+2025-03-18 21:31:46.729 -ERROR  [           main] d.d.DataFlowTrack              : track recurse:   <org.eclipse.jetty.server.Session: java.lang.Object setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:46.732 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator$UserIdentityHolder: void <init>(org.eclipse.jetty.security.UserIdentity)>
+2025-03-18 21:31:46.734 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:46.734 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>
+2025-03-18 21:31:46.734 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: java.lang.String getAuthMethod()>
+2025-03-18 21:31:46.735 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.UserAuthentication: void <init>(java.lang.String,org.eclipse.jetty.security.UserIdentity)>
+2025-03-18 21:31:46.739 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.time.Duration: boolean isZero()>
+2025-03-18 21:31:46.740 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.time.Instant: void <clinit>()>
+2025-03-18 21:31:46.740 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.time.Instant: java.time.Instant now()>
+2025-03-18 21:31:46.740 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.time.Instant: java.time.Instant plus(java.time.temporal.TemporalAmount)>
+2025-03-18 21:31:46.741 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.time.Instant: boolean isAfter(java.time.Instant)>
+2025-03-18 21:31:46.742 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <jakarta.servlet.http.HttpServletRequest: java.lang.String getMethod()>
+2025-03-18 21:31:46.743 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.http.HttpMethod: boolean is(java.lang.String)>
+2025-03-18 21:31:46.748 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: void sendChallenge(jakarta.servlet.http.HttpServletResponse,java.lang.String)>
+2025-03-18 21:31:46.753 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 validateRequest -> setAttribute
+2025-03-18 21:31:46.753 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-03-18 21:31:46.753 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: org.eclipse.jetty.ee9.nested.Authentication validateRequest(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,boolean)>
+2025-03-18 21:31:46.753 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-03-18 21:31:46.753 - WARN  [           main] d.VulDetector                  : 检测完成: 6/6
+2025-03-18 21:31:46.753 - WARN  [           main] d.VulDetector                  : 有多少hazard的detectContext需要修正 0
+摘要复用次数: 0
+2025-03-18 21:31:46.787 - WARN  [           main] d.VulDetector                  : 摘要总数: 170
+2025-03-18 21:31:46.787 - INFO  [           main] i.IntelligentLogger            : LLM产生函数摘要个数： 0
+2025-03-18 21:31:46.788 - INFO  [           main] i.IntelligentLogger            : LLM产生函数摘要失败数： 0
+2025-03-18 21:31:46.788 - INFO  [           main] i.IntelligentLogger            : 涉及多个incoming的摘要个数: 0
+2025-03-18 21:31:46.788 - WARN  [           main] d.VulDetector                  : 有条件满足的链路：0
+2025-03-18 21:31:46.788 - WARN  [           main] d.VulDetector                  : 有条件和摘要比不满足的链路：0
+2025-03-18 21:31:46.788 - WARN  [           main] d.VulDetector                  : 所有有条件不满足的链路数（和摘要比，和路径约束比）：1
+2025-03-18 21:31:46.789 - WARN  [           main] d.VulDetector                  : CHA产生的假调用栈: 0
+2025-03-18 21:31:46.789 -ERROR  [           main] d.VulDetector                  : 共计调用链： 6
+2025-03-18 21:31:46.789 -ERROR  [           main] d.VulDetector                  : 有数据流： 3
+2025-03-18 21:31:46.804 - INFO  [           main] d.k.Knows                      : Destroy Knows when it's a WebApplication

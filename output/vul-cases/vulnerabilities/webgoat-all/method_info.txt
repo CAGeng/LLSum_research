@@ -1,0 +1,1295 @@
+方法名：getLogger
+方法签名：<org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>
+方法的参数个数：1
+call-site个数： 14
+
+方法名：<init>
+方法签名：<org.springframework.web.servlet.ModelAndView: void <init>()>
+方法的参数个数：0
+call-site个数： 8
+
+方法名：isEmpty
+方法签名：<org.apache.commons.lang3.StringUtils: boolean isEmpty(java.lang.CharSequence)>
+方法的参数个数：1
+call-site个数： 8
+
+方法名：parser
+方法签名：<io.jsonwebtoken.Jwts: io.jsonwebtoken.JwtParser parser()>
+方法的参数个数：0
+call-site个数： 7
+
+方法名：ok
+方法签名：<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity ok(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 7
+
+方法名：status
+方法签名：<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder status(org.springframework.http.HttpStatusCode)>
+方法的参数个数：1
+call-site个数： 7
+
+方法名：hasText
+方法签名：<org.springframework.util.StringUtils: boolean hasText(java.lang.String)>
+方法的参数个数：1
+call-site个数： 6
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: void <clinit>()>
+方法的参数个数：0
+call-site个数： 6
+
+方法名：reverse
+方法签名：<org.apache.commons.lang3.StringUtils: java.lang.String reverse(java.lang.String)>
+方法的参数个数：1
+call-site个数： 5
+
+方法名：<init>
+方法签名：<org.springframework.web.servlet.ModelAndView: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 5
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：ok
+方法签名：<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：getContext
+方法签名：<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.cryptography.CryptoUtil: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.cryptography.HashingAssignment: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：getStackTrace
+方法签名：<org.apache.commons.lang3.exception.ExceptionUtils: java.lang.String getStackTrace(java.lang.Throwable)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：signatureValid
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder signatureValid(boolean)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：encoded
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder encoded(java.lang.String)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：validPayload
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder validPayload(boolean)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：validHeader
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder validHeader(boolean)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：payload
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder payload(java.lang.String)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：newArrayList
+方法签名：<com.google.common.collect.Lists: java.util.ArrayList newArrayList()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：header
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder header(java.lang.String)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：profileToMap
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: java.util.Map profileToMap()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.springframework.http.ResponseEntity: void <init>(java.lang.Object,org.springframework.http.HttpStatusCode)>
+方法的参数个数：2
+call-site个数： 3
+
+方法名：validToken
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder validToken(boolean)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.missingac.DisplayUser: void <init>(org.owasp.webgoat.lessons.missingac.User,java.lang.String)>
+方法的参数个数：2
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.authbypass.AccountVerificationHelper: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：build
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken build()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：update
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: void update(org.owasp.webgoat.lessons.challenges.challenge7.MD5$MD5State,byte[],int,int)>
+方法的参数个数：4
+call-site个数： 2
+
+方法名：getUserId
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: java.lang.String getUserId()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getColor
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: java.lang.String getColor()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：builder
+方法签名：<io.jsonwebtoken.Jwts: io.jsonwebtoken.JwtBuilder builder()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint$CheckoutCode: void <init>(org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint,java.lang.String,int)>
+方法的参数个数：3
+call-site个数： 2
+
+方法名：<init>
+方法签名：<com.fasterxml.jackson.databind.ObjectMapper: void <init>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：parse
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken: java.util.Map parse(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：builder
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder builder()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.xss.stored.StoredXssComments: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.springframework.core.io.ClassPathResource: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: void <init>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge1.ImageServlet: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：isEmpty
+方法签名：<org.apache.logging.log4j.util.Strings: boolean isEmpty(java.lang.CharSequence)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：reset
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5$MD5State: void reset()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getRole
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: int getRole()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getUserHash
+方法签名：<org.owasp.webgoat.lessons.missingac.DisplayUser: java.lang.String getUserHash()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.jwt.JWTSecretKeyEndpoint: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<jakarta.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.jose4j.keys.HmacKey: void <init>(byte[])>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.assignments.AttackResult: void <init>(boolean,java.lang.String,java.lang.String,java.lang.String,boolean)>
+方法的参数个数：5
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItemType: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getBasicAuth
+方法签名：<org.owasp.webgoat.lessons.cryptography.EncodingAssignment: java.lang.String getBasicAuth(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.csrf.ForgedReviews: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.container.service.LabelDebugService: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getHash
+方法签名：<org.owasp.webgoat.lessons.cryptography.HashingAssignment: java.lang.String getHash(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：write
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken: java.lang.String write(java.lang.String,java.util.Map)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：accepted
+方法签名：<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder accepted()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.xxe.ContentTypeAssignment$lambda_createNewUser_0__59: java.util.function.Consumer bootstrap$(org.owasp.webgoat.lessons.xxe.ContentTypeAssignment)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_getVotes_0__63: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：verifyMessage
+方法签名：<org.owasp.webgoat.lessons.cryptography.CryptoUtil: boolean verifyMessage(java.lang.String,java.lang.String,java.security.PublicKey)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：setDateTime
+方法签名：<org.owasp.webgoat.lessons.csrf.Review: void setDateTime(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.container.service.RestartLessonService: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：builder
+方法签名：<org.owasp.webgoat.lessons.hijacksession.cas.Authentication: org.owasp.webgoat.lessons.hijacksession.cas.Authentication$AuthenticationBuilder builder()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：decode
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken decode(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.cryptography.SigningAssignment: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.webwolfintroduction.Email: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：title
+方法签名：<org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder: org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder title(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setUser
+方法签名：<org.owasp.webgoat.lessons.csrf.Review: void setUser(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：newHashMap
+方法签名：<com.google.common.collect.Maps: java.util.HashMap newHashMap()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.service.LessonProgressService$lambda_lessonOverview_0__47: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：update
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: void update(byte[],int,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：transform
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: void transform(org.owasp.webgoat.lessons.challenges.challenge7.MD5$MD5State,int[])>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.authbypass.AccountVerificationHelper: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：id
+方法签名：<org.owasp.webgoat.lessons.hijacksession.cas.Authentication$AuthenticationBuilder: org.owasp.webgoat.lessons.hijacksession.cas.Authentication$AuthenticationBuilder id(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.passwordreset.QuestionsAssignment: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：encode
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: byte[] encode(int[],int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.springframework.ui.ModelMap: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：arrayToCommaDelimitedString
+方法签名：<org.springframework.util.StringUtils: java.lang.String arrayToCommaDelimitedString(java.lang.Object[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.service.ReportCardService$ReportCard: void <init>(org.owasp.webgoat.container.service.ReportCardService)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：toBuilder
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder toBuilder()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<io.jsonwebtoken.SigningKeyResolverAdapter: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_average_3__66: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.users.Scoreboard$lambda_getRankings_1__30: void <init>(org.owasp.webgoat.container.users.Scoreboard)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint$CheckoutCodes: void <init>(org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint,java.util.List)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.users.Scoreboard$lambda_getRankings_0__29: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：contents
+方法签名：<org.owasp.webgoat.lessons.challenges.Email$EmailBuilder: org.owasp.webgoat.lessons.challenges.Email$EmailBuilder contents(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：RSA256
+方法签名：<com.auth0.jwt.algorithms.Algorithm: com.auth0.jwt.algorithms.Algorithm RSA256(java.security.interfaces.RSAKey)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setResetLink
+方法签名：<org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm: void setResetLink(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setTotalNumberOfLessons
+方法签名：<org.owasp.webgoat.container.service.ReportCardService$ReportCard: void setTotalNumberOfLessons(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setTotalNumberOfAssignments
+方法签名：<org.owasp.webgoat.container.service.ReportCardService$ReportCard: void setTotalNumberOfAssignments(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：unescapeEntities
+方法签名：<org.jsoup.parser.Parser: java.lang.String unescapeEntities(java.lang.String,boolean)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：II
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: int II(int,int,int,int,int,int,int)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：genUserHash
+方法签名：<org.owasp.webgoat.lessons.missingac.DisplayUser: java.lang.String genUserHash(java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：setName
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItem: void setName(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.container.controller.StartLesson$lambda_lessonPage_0__15: java.util.function.Predicate bootstrap$(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.container.service.LessonMenuService$getTitle__48: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：toHex
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: java.lang.String toHex(byte[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.container.service.LessonMenuService$lambda_showLeftNav_0__49: java.util.Comparator bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.webwolf.requests.Requests$lambda_get_1__5: void <init>(org.owasp.webgoat.webwolf.requests.Requests)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getCompactSerialization
+方法签名：<org.jose4j.jws.JsonWebSignature: java.lang.String getCompactSerialization()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：require
+方法签名：<com.auth0.jwt.JWT: com.auth0.jwt.interfaces.Verification require(com.auth0.jwt.algorithms.Algorithm)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.xxe.Ping: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.auth0.jwk.JwkProviderBuilder: void <init>(java.net.URL)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：parse
+方法签名：<org.jsoup.Jsoup: org.jsoup.nodes.Document parse(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：createPasswordReset
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String createPasswordReset(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.container.users.Scoreboard$lambda_getRankings_0__29: java.util.function.Predicate bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：contents
+方法签名：<org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder: org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder contents(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：validateSignature
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken: boolean validateSignature(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：reset
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: void reset()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：builder
+方法签名：<org.owasp.webgoat.lessons.challenges.Email: org.owasp.webgoat.lessons.challenges.Email$EmailBuilder builder()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：parseToken
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken parseToken(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setText
+方法签名：<org.owasp.webgoat.lessons.csrf.Review: void setText(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.csrf.Review: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint$lambda_vote_0__57: java.util.function.Consumer bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderKIDEndpoint$1: void <init>(org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderKIDEndpoint,java.lang.String[])>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：decode
+方法签名：<com.auth0.jwt.JWT: com.auth0.jwt.interfaces.DecodedJWT decode(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：build
+方法签名：<com.auth0.jwk.JwkProviderBuilder: com.auth0.jwk.JwkProvider build()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：decodeFromUrlSafeString
+方法签名：<org.springframework.util.Base64Utils: byte[] decodeFromUrlSafeString(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint$lambda_resetVotes_1__58: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.server.StartupMessage: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.nulabinc.zxcvbn.Zxcvbn: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：parseMediaType
+方法签名：<org.springframework.http.MediaType: org.springframework.http.MediaType parseMediaType(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_getVotes_1__64: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.sqlinjection.mitigation.Servers$Server: void <init>(org.owasp.webgoat.lessons.sqlinjection.mitigation.Servers,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.users.Scoreboard$lambda_getRankings_2__31: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：secretKey
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder secretKey(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setRole
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: void setRole(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getHashString
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: java.lang.String getHashString(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.pathtraversal.ProfileUploadRetrieval: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint$lambda_resetVotes_1__58: java.util.function.Consumer bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：scramble
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String scramble(java.util.Random,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：readValue
+方法签名：<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint$getAverage__56: java.util.function.ToLongFunction bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.jwt.JWTRefreshEndpoint: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint$lambda_vote_0__57: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：credentials
+方法签名：<org.owasp.webgoat.lessons.hijacksession.cas.Authentication$AuthenticationBuilder: org.owasp.webgoat.lessons.hijacksession.cas.Authentication$AuthenticationBuilder credentials(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getPrivateKeyInPEM
+方法签名：<org.owasp.webgoat.lessons.cryptography.CryptoUtil: java.lang.String getPrivateKeyInPEM(java.security.KeyPair)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.csrf.Review: void <init>(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：badRequest
+方法签名：<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder badRequest()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：nextInt
+方法签名：<org.apache.commons.lang3.RandomUtils: int nextInt(int,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：verifyAccount
+方法签名：<org.owasp.webgoat.lessons.authbypass.AccountVerificationHelper: boolean verifyAccount(java.lang.Integer,java.util.HashMap)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.webwolf.FileServer$isFile__8: java.io.FileFilter bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setLink
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItem: void setLink(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：sender
+方法签名：<org.owasp.webgoat.lessons.challenges.Email$EmailBuilder: org.owasp.webgoat.lessons.challenges.Email$EmailBuilder sender(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setSolved
+方法签名：<org.owasp.webgoat.container.service.ReportCardService$LessonStatistics: void setSolved(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.Email$EmailBuilder: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：HH
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: int HH(int,int,int,int,int,int,int)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：getChildren
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItem: java.util.List getChildren()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$lambda_encode_0__1: void <init>(org.jose4j.jws.JsonWebSignature)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.container.service.LessonProgressService$lambda_lessonOverview_0__47: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.webwolf.requests.Requests$lambda_get_0__4: java.util.function.Predicate bootstrap$(org.owasp.webgoat.webwolf.requests.Requests,org.springframework.security.core.userdetails.UserDetails)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken: void <init>(java.lang.String,java.lang.String,java.lang.String,boolean,boolean,boolean,java.lang.String,boolean)>
+方法的参数个数：8
+call-site个数： 1
+
+方法名：FF
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: int FF(int,int,int,int,int,int,int)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers$lambda_usersService_0__68: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers$lambda_usersFixed_1__69: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：fromXML
+方法签名：<com.thoughtworks.xstream.XStream: java.lang.Object fromXML(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setName
+方法签名：<org.owasp.webgoat.container.service.ReportCardService$LessonStatistics: void setName(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.webwolf.requests.Requests$lambda_get_1__5: java.util.function.Function bootstrap$(org.owasp.webgoat.webwolf.requests.Requests)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：escapeJson
+方法签名：<org.apache.commons.text.StringEscapeUtils: java.lang.String escapeJson(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.lessontemplate.SampleAttack$Item: void <init>(org.owasp.webgoat.lessons.lessontemplate.SampleAttack,java.lang.String,java.lang.String,double)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：recipient
+方法签名：<org.owasp.webgoat.lessons.challenges.Email$EmailBuilder: org.owasp.webgoat.lessons.challenges.Email$EmailBuilder recipient(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.service.RestartLessonService$lambda_restartLesson_0__50: void <init>(org.owasp.webgoat.container.service.RestartLessonService)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.service.LessonMenuService$lambda_showLeftNav_0__49: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：shaHex
+方法签名：<org.springframework.security.core.token.Sha512DigestUtils: java.lang.String shaHex(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：build
+方法签名：<org.owasp.webgoat.lessons.hijacksession.cas.Authentication$AuthenticationBuilder: org.owasp.webgoat.lessons.hijacksession.cas.Authentication build()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.hijacksession.cas.Authentication: void <init>(java.lang.String,java.lang.Object,java.lang.String)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson5a: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.webwolf.FileServer$UploadedFile: void <init>(org.owasp.webgoat.webwolf.FileServer,java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：update
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: void update(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItemType: org.owasp.webgoat.container.lessons.LessonMenuItemType[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getInputStream
+方法签名：<org.springframework.core.io.ClassPathResource: java.io.InputStream getInputStream()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.webwolf.requests.LandingPage$lambda_ok_0__6: java.util.concurrent.Callable bootstrap$(jakarta.servlet.http.HttpServletRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：decode
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: int[] decode(byte[],int,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：calculateTime
+方法签名：<org.owasp.webgoat.lessons.securepasswords.SecurePasswordsAssignment: java.lang.String calculateTime(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.springframework.web.servlet.ModelAndView: void <init>(org.springframework.web.servlet.View,java.util.Map)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setColor
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: void setColor(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.container.controller.StartLesson$lambda_lessonPage_1__16: java.util.function.Consumer bootstrap$(org.owasp.webgoat.container.controller.StartLesson,org.springframework.web.servlet.ModelAndView)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.webwolf.requests.Requests$lambda_get_0__4: void <init>(org.owasp.webgoat.webwolf.requests.Requests,org.springframework.security.core.userdetails.UserDetails)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：didUserLikelylCheat
+方法签名：<org.owasp.webgoat.lessons.authbypass.AccountVerificationHelper: boolean didUserLikelylCheat(java.util.HashMap)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getHashString
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: java.lang.String getHashString()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setSerializationView
+方法签名：<org.springframework.http.converter.json.MappingJacksonValue: void setSerializationView(java.lang.Class)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：claims
+方法签名：<io.jsonwebtoken.Jwts: io.jsonwebtoken.Claims claims()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.webwolf.FileServer: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getSize
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: java.lang.String getSize()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_average_4__67: java.util.function.IntBinaryOperator bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers$lambda_usersFixed_1__69: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：encode
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken encode(java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：GG
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: int GG(int,int,int,int,int,int,int)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.thoughtworks.xstream.XStream: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.jose4j.jwt.consumer.JwtConsumerBuilder: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：status
+方法签名：<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder status(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.passwordreset.SecurityQuestionAssignment: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getName
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: java.lang.String getName()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：encode
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: byte[] encode(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：update
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: void update(byte[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson13: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.springframework.web.servlet.view.RedirectView: void <init>(java.lang.String,boolean)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：copy
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5$MD5State: void copy(org.owasp.webgoat.lessons.challenges.challenge7.MD5$MD5State)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.controller.StartLesson$lambda_lessonPage_0__15: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.lessons.LessonInfoModel: void <init>(java.lang.String,boolean,boolean,boolean)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：sender
+方法签名：<org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder: org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder sender(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.service.LessonMenuService$getTitle__48: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.springframework.http.converter.json.MappingJacksonValue: void <init>(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setNumberOfAttempts
+方法签名：<org.owasp.webgoat.container.service.ReportCardService$LessonStatistics: void setNumberOfAttempts(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.jose4j.jws.JsonWebSignature: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setComplete
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItem: void setComplete(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_getVotes_0__63: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.container.users.Scoreboard$lambda_getRankings_2__31: java.util.Comparator bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.container.service.RestartLessonService$lambda_restartLesson_0__50: java.util.function.Consumer bootstrap$(org.owasp.webgoat.container.service.RestartLessonService)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setType
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItem: void setType(org.owasp.webgoat.container.lessons.LessonMenuItemType)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：byteCountToDisplaySize
+方法签名：<org.apache.commons.io.FileUtils: java.lang.String byteCountToDisplaySize(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.webwolf.requests.LandingPage: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.webwolf.jwt.JWTToken$lambda_encode_0__1: java.util.function.BiConsumer bootstrap$(org.jose4j.jws.JsonWebSignature)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：build
+方法签名：<org.owasp.webgoat.lessons.challenges.Email$EmailBuilder: org.owasp.webgoat.lessons.challenges.Email build()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：recipient
+方法签名：<org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder: org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder recipient(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint$getAverage__56: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_average_3__66: java.util.function.ToIntFunction bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItemType: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setStars
+方法签名：<org.owasp.webgoat.lessons.csrf.Review: void setStars(java.lang.Integer)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.hijacksession.cas.Authentication$AuthenticationBuilder: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：serialize
+方法签名：<org.jose4j.jwx.CompactSerializer: java.lang.String serialize(java.lang.String[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.webwolf.requests.LandingPage$lambda_ok_0__6: void <init>(jakarta.servlet.http.HttpServletRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setNumberOfAssignmentsSolved
+方法签名：<org.owasp.webgoat.container.service.ReportCardService$ReportCard: void setNumberOfAssignmentsSolved(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：builder
+方法签名：<org.owasp.webgoat.lessons.webwolfintroduction.Email: org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder builder()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.controller.StartLesson$lambda_lessonPage_1__16: void <init>(org.owasp.webgoat.container.controller.StartLesson,org.springframework.web.servlet.ModelAndView)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：copyToByteArray
+方法签名：<org.springframework.util.FileCopyUtils: byte[] copyToByteArray(java.io.File)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.xss.Comment: void <init>(java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：addChild
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItem: void addChild(org.owasp.webgoat.container.lessons.LessonMenuItem)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_average_2__65: java.util.function.ToIntFunction bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.idor.IDORViewOwnProfile: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setProfileFromId
+方法签名：<org.owasp.webgoat.lessons.idor.UserProfile: void setProfileFromId(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.Email: void <init>(java.time.LocalDateTime,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_average_4__67: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setNumberOfLessonsSolved
+方法签名：<org.owasp.webgoat.container.service.ReportCardService$ReportCard: void setNumberOfLessonsSolved(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.webwolf.FileServer$isFile__8: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getHash
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: byte[] getHash()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5$MD5State: void <init>(org.owasp.webgoat.lessons.challenges.challenge7.MD5)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.service.ReportCardService$LessonStatistics: void <init>(org.owasp.webgoat.container.service.ReportCardService)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：build
+方法签名：<org.owasp.webgoat.lessons.webwolfintroduction.Email$EmailBuilder: org.owasp.webgoat.lessons.webwolfintroduction.Email build()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：time
+方法签名：<org.owasp.webgoat.lessons.challenges.Email$EmailBuilder: org.owasp.webgoat.lessons.challenges.Email$EmailBuilder time(java.time.LocalDateTime)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：name
+方法签名：<org.owasp.webgoat.lessons.hijacksession.cas.Authentication$AuthenticationBuilder: org.owasp.webgoat.lessons.hijacksession.cas.Authentication$AuthenticationBuilder name(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers$lambda_usersService_0__68: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.xxe.ContentTypeAssignment$lambda_createNewUser_0__59: void <init>(org.owasp.webgoat.lessons.xxe.ContentTypeAssignment)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.container.users.Scoreboard$lambda_getRankings_1__30: java.util.function.Function bootstrap$(org.owasp.webgoat.container.users.Scoreboard)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.owasp.webgoat.lessons.clientsidefiltering.Salaries: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：accept
+方法签名：<org.owasp.webgoat.webwolf.FileServer$isFile__8: boolean accept(java.io.File)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：title
+方法签名：<org.owasp.webgoat.lessons.challenges.Email$EmailBuilder: org.owasp.webgoat.lessons.challenges.Email$EmailBuilder title(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.container.lessons.LessonMenuItem: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_getVotes_1__64: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8$lambda_average_2__65: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：notFound
+方法签名：<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$HeadersBuilder notFound()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：generateKeyPair
+方法签名：<org.owasp.webgoat.lessons.cryptography.CryptoUtil: java.security.KeyPair generateKeyPair()>
+方法的参数个数：0
+call-site个数： 1
+

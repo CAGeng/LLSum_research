@@ -1,0 +1,1 @@
+<com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>

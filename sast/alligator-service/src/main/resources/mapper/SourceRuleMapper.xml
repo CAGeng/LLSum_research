@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.foo.mapper.SourceRuleMapper">
+    <select id="findAllSourceRule" resultType="org.foo.model.db.DBSourceRule" >
+        SELECT *
+        FROM source_rule
+    </select>
+
+    <insert id="addSourceRule" parameterType="org.foo.model.db.DBSourceRule">
+        INSERT INTO  source_rule(
+            rule_id,taint_flags,namespace_name,class_name,function_name,tag_implements,tag_overrides,tag_extends,out_arguments
+        )VALUES (
+                    #{ruleID},
+                    #{taintFlags},
+                    #{namespaceName},
+                    #{className},
+                    #{functionName},
+                    #{tagImplements},
+                    #{tagOverrides},
+                    #{tagExtends},
+                    #{outArguments}
+                )
+    </insert>
+</mapper>

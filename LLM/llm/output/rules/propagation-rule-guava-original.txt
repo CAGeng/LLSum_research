@@ -1,0 +1,4735 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkNotNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred to the return value if `p1` is not null.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkState</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks the state based on `p1` (boolean) and throws an exception with a message derived from `p2` (java.lang.Object) if the state is false.
+    - There is no data propagation to fields of `this` or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Lists</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newArrayList</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of `java.util.ArrayList`.
+    - There is no data flow involving parameters or fields of `this` as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MoreObjects$ToStringHelper</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.holderTail.name</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the first parameter) is transferred into `this.holderTail.name`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MoreObjects$ToStringHelper</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.holderTail.value</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (the second parameter) is transferred into `this.holderTail.value`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MoreObjects$ToStringHelper</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (the current instance) is returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.impl</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.impl` through the `add` method of `ImmutableSet$SetBuilderImpl`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned, indicating a fluent interface pattern.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>addAll</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.contents</OutArguments>
+    <Comment>
+    - The data flow shows that elements from `p1` (`Iterable`) are potentially copied into `this.contents` if `p1` is an instance of `ImmutableCollection`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>addAll</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned, allowing method chaining.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Objects</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>equal</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if two objects, p1 and p2, are equal.
+    - There is no data flow from parameters to fields, this, or return.
+    - The return value is based on reference equality and the result of p1.equals(p2).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Objects</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>hashCode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input array) is passed to `java.util.Arrays.hashCode` and the result is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Collection</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `Collection`) is transformed into an `ImmutableList` and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.entries.key</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (first parameter) is transferred into the key of the entry in `this.entries`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.entries.value</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (second parameter) is transferred into the value of the entry in `this.entries`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (current instance) is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a static instance of RegularImmutableSet without involving any parameter or instance field data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.element</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the `element` field of the returned `SingletonImmutableSet` instance.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MoreObjects$ToStringHelper</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>this.omitNullValues || this.omitEmptyValues</Condition>
+    <InArguments>this.className</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.className` is transferred into the `StringBuilder` and affects the `return` value.
+    - The flow is conditional based on `this.omitNullValues` and `this.omitEmptyValues`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.impl</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.impl` is reviewed and potentially modified before being used to build the final `ImmutableSet`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MoreObjects</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toStringHelper</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.className</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `java.lang.Class` parameter) is used to derive a `java.lang.String` via `getSimpleName()`, which is then assigned to `return.className` of the `ToStringHelper` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>N/A</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method constructs a new instance of `ImmutableSet$Builder` and returns it.
+    - There is no parameter or field interaction as it is a static method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Collection</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof com.google.common.collect.ImmutableSet && !(p1 instanceof java.util.SortedSet) && !p1.isPartialView()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is directly returned as `ImmutableSet` if it is already an `ImmutableSet` and not a `SortedSet`, and is not a partial view.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Collection</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.util.EnumSet</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed into an `ImmutableSet` using `copyOfEnumSet()` if it is an `EnumSet`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Collection</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.isEmpty()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that an empty `ImmutableSet` is returned if `p1` is empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Collection</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is converted to an array and then to an `ImmutableSet` using `fromArrayWithExpectedSize()`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.contents</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.contents` and `this.size` are used to create the return value through `asImmutableList`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>buildOrThrow</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method `buildOrThrow()` does not involve any parameter or field propagation.
+    - It returns the result of the `build(boolean)` method, which constructs an `ImmutableMap`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a pre-initialized static instance `EMPTY` from `RegularImmutableList`.
+    - There is no data flow from parameters or instance fields as the method is static and parameterless.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.contents[this.size]</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is added to `this.contents` at the index `this.size`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.element</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter) is transferred into the field `element` of the returned `SingletonImmutableList` instance.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of ImmutableMap$Builder.
+    - There is no parameter data flow or propagation to fields or return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and initializes an instance of ImmutableList$Builder and returns it.
+    - There is no data flow from parameters to fields, this, or return values as the method is static and has no parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkArgument</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>java.lang.IllegalArgumentException.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is converted to a `String` and used as the message in an `IllegalArgumentException` when `p1` is `false`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkArgument</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`java.lang.String`) is used in the exception message when `p1` is false.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkArgument</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (`java.lang.Object`) is used in the exception message when `p1` is false.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkArgument</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>3</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p4` (`java.lang.Object`) is used in the exception message when `p1` is false.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.cache</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CacheBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newBuilder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>N/A</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method creates a new instance of `CacheBuilder` and returns it.
+    - There is no parameter data flow as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>addAll</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Iterable` parameter) is iterated over and its elements are added to the internal structure of `ImmutableCollection$Builder`.
+    - The method returns `this`, which is the `ImmutableSet$Builder` instance.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.cache</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CacheBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.google.common.cache.CacheLoader</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`com.google.common.cache.CacheLoader`) is used to initialize a `LocalCache` object within the `LocalLoadingCache` constructor.
+    - The return value is a `LocalLoadingCache` object that encapsulates the `CacheLoader` passed as `p1`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newHashMap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new HashMap instance.
+    - There is no data flow from parameters or fields to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.cache</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CacheBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>weakKeys</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is modified by setting the key strength to `WEAK` and then returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Iterable` parameter) is transferred into the return value.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Lists</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>reverse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof com.google.common.collect.ImmutableList</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is passed to the `reverse()` method of `ImmutableList`, and its result is returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Lists</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>reverse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof com.google.common.collect.Lists$ReverseList</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is passed to `getForwardList()`, and its result is returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Lists</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>reverse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.util.RandomAccess</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is passed to the constructor of `RandomAccessReverseList`, and the new object is returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Lists</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>reverse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is passed to the constructor of `ReverseList`, and the new object is returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newLinkedHashSet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of LinkedHashSet with no data flow from parameters or fields of this.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newHashSet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new HashSet instance. There is no data flow involving parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkArgument</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks the boolean parameter p1 and throws an IllegalArgumentException if it is false.
+    - There is no data flow from p1 to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkArgument</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>z0 == 0</Condition>
+    <Comment>
+    - The method checks if `p1` (`boolean`) is false and throws an `IllegalArgumentException` using `p2` (`java.lang.String`) and `p3` (`java.lang.Object`) for the message.
+    - There is no data flow to `this` or a return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>lengthof p1 == 1</Condition>
+    <InArguments>0[0]</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1[0]` (first element of the array) is transferred into the return value.
+    - The flow is conditional on the array having exactly one element.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>lengthof p1 > 1</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the entire array) is transferred into the return value.
+    - The flow is conditional on the array having more than one element.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a pre-initialized static instance of ImmutableMap.
+    - There is no parameter or field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof com.google.common.collect.ImmutableMap && !(p1 instanceof java.util.SortedMap) && !p1.isPartialView()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is directly returned if it is an `ImmutableMap`, not a `SortedMap`, and not a partial view.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.util.EnumMap</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed via `copyOfEnumMap` if it is an `EnumMap` and then returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1.entrySet()` is transformed via `copyOf(java.lang.Iterable)` and then returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkNotNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred to the return value.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableCollection</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>asList</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method converts an `ImmutableCollection` to an `ImmutableList` based on its size.
+    - There is no parameter data flow as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newLinkedHashMap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new LinkedHashMap instance.
+    - There is no data flow from parameters to return or fields as there are no parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method initializes the ImmutableList$Builder instance and sets up its fields.
+    - There is no parameter data flow to other parameters, fields of this, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MoreObjects$ToStringHelper</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.holderTail.name</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into `this.holderTail.name` after null check.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MoreObjects$ToStringHelper</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.holderTail.value</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`boolean`) is converted to `String` and transferred into `this.holderTail.value`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MoreObjects$ToStringHelper</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned as the result of the method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HashMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>create</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of HashMultimap.
+    - There is no parameter input or field modification that propagates beyond the local scope of the method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Iterables</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getOnlyElement</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Iterable`) is transformed into an `Iterator`, and the single element obtained is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are added to a set builder and then used to build an `ImmutableSet`, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.cache</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CacheLoader</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>from</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.google.common.base.Function</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.computingFunction</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (com.google.common.base.Function) is transferred into the field `computingFunction` of the returned object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableListMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no data flow involving parameters, fields, or return values in this method.
+    - The method returns a static instance of EmptyImmutableListMultimap.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>immutableEntry</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.key</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred to the `key` field of the returned `ImmutableEntry` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>immutableEntry</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return.value</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred to the `value` field of the returned `ImmutableEntry` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input array) is used to construct an `ImmutableSet` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Lists</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newArrayList</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Iterable`) is transferred into the `return` (`java.util.ArrayList`).
+    - The flow is no condition as the method handles both `Collection` and `Iterator` cases.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0,1,2,3,4,5,6</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that all parameters (`p1` to `p6` and elements of `p7`) are transferred into the returned `ImmutableSet`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>transformValues</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+        <ParamType>com.google.common.base.Function</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.fromMap</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input map) is transferred into the `fromMap` field of the returned `Maps$TransformedEntriesMap`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>transformValues</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+        <ParamType>com.google.common.base.Function</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return.transformer</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (the input function) is transferred into the `transformer` field of the returned `Maps$TransformedEntriesMap`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.cache</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CacheBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>weakValues</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (the current `CacheBuilder` instance) is passed to the `setValueStrength` method and the result is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LinkedHashMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>create</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of LinkedHashMultimap.
+    - There are no parameters, and the return value is a newly created object.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>asMap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.map</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.map` is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method constructs and returns a new instance of ImmutableMultimap$Builder.
+    - There is no parameter or field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMultimap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.builderMap</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used as a key in `this.builderMap`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMultimap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.builderMap[p1]</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is added to the collection associated with `p1` in `this.builderMap`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMultimap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned by the method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMultimap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>this.builderMap != null</Condition>
+    <InArguments>this.builderMap</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.builderMap` is transformed into the return value when it is not null.
+    - The flow involves sorting and mapping operations based on `this.keyComparator` and `this.valueComparator`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayListMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>create</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of ArrayListMultimap.
+    - There is no parameter data flow as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the fields of the ImmutableMap$Builder object.
+    - There is no parameter or return value data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>putAll</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.entries</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (Map) entries are transferred into `this.entries`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Equivalence</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>equivalent</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if `p1` is equal to `p2`, and if not, it checks if either is null.
+    - If both are non-null, it calls `doEquivalent` to determine equivalence.
+    - There is no direct data propagation to fields or return values that affect external state.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Throwables</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getStackTraceAsString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Throwable` object) is used to generate a stack trace string, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Strings</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>repeat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 == 1</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r0`) is returned directly when `p2` (`i0`) is 1.
+    - The flow is conditional on `p2 == 1`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Strings</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>repeat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 > 1</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r0`) is used to construct a new repeated string when `p2` (`i0`) is greater than 1.
+    - The flow is conditional on `p2 > 1`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HashMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.map</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used as a key in `this.map` and `p2` is added to the collection associated with `p1`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HashMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.totalSize</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is added to a collection, and if successful, `this.totalSize` is incremented.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HashMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>asMap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is used to invoke a series of methods that ultimately return a `Map` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>keySet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if `this.keySet` is initialized and returns it if not null.
+    - If `this.keySet` is null, it initializes it using `createKeySet()` and returns the result.
+    - The flow involves internal state management without direct parameter propagation.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0,1,2</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1`, `p2`, and `p3` are added to a builder and contribute to the construction of the `ImmutableSet` that is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>difference</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Set</ParamType>
+        <ParamType>java.util.Set</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.val$set1</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `return.val$set1`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>difference</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Set</ParamType>
+        <ParamType>java.util.Set</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return.val$set2</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `return.val$set2`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Optional</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>absent</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a singleton instance of `Absent`, which is a subclass of `Optional`.
+    - There is no parameter data flow as the method does not accept any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Iterables</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>concat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableCollection</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toArray</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is directly modified and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableCollection</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toArray</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>lengthof p1 < size()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>0</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is potentially replaced with a new array if its length is insufficient.
+    - The flow is conditional on `lengthof p1 < size()`
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newHashSetWithExpectedSize</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 >= 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the initial capacity of the `HashSet`.
+    - The flow is conditional on `p1` being non-negative, as enforced by `checkNonnegative`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkState</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>1, 2, 3</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (java.lang.String) and an array containing `p3` and `p4` are used to format a string for an exception message.
+    - The flow is conditional on `p1` being false.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkState</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`java.lang.String`) and `p3` (`java.lang.Object`) are used in constructing the exception message.
+    - The flow is conditional on `p1` being false.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Joiner$MapJoiner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>appendTo</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.StringBuilder</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`Map`) entries are iterated and appended to `p1` (`StringBuilder`).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Joiner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>on</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.separator</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (parameter `java.lang.String`) is transferred into `this.separator` of the `Joiner` object.
+    - The flow is no condition as the null check is handled internally.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Joiner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>withKeyValueSeparator</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.keyValueSeparator</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input parameter) is transferred into the `keyValueSeparator` field of the returned `Joiner$MapJoiner` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MapMaker</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes fields `initialCapacity` and `concurrencyLevel` to `-1`.
+    - There is no data flow from parameters or to return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MapMaker</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>weakKeys</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (the current instance of `MapMaker`) is modified by setting the key strength to `WEAK` and is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MapMaker</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>makeMap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method conditionally creates and returns either a ConcurrentHashMap or a MapMakerInternalMap based on the field this.useCustomMap.
+    - There are no parameter data flows as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Streams</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>stream</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.util.Collection</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Iterable`) is converted to a `Stream` directly if it is an instance of `java.util.Collection`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Streams</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>stream</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p1 instanceof java.util.Collection)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Iterable`) is converted to a `Spliterator` and then to a `Stream` if it is not an instance of `java.util.Collection`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the `ImmutableSet$Builder` instance.
+    - It sets the `impl` field based on the integer parameter passed to the overloaded constructor.
+    - There is no parameter or return data flow to capture.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Lists</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>transform</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+        <ParamType>com.google.common.base.Function</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input list) is used to create a transforming list, which is then returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Lists</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>transform</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+        <ParamType>com.google.common.base.Function</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return.function</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (the function) is used to create a transforming list, which is then returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MultimapBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>linkedHashKeys</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>8</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the constant integer `8` is used to initialize the `val$expectedKeys` field of the `MultimapBuilder$2` instance.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MultimapBuilder$MultimapBuilderWithKeys</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>arrayListValues</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method `arrayListValues()` does not propagate any data from parameters or fields to the return value.
+    - The return value is a newly constructed instance of `MultimapBuilder$ListMultimapBuilder`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Ordering</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>'from'</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Comparator</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof com.google.common.collect.Ordering</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter) is transferred into the return value if it is an instance of `Ordering`.
+    - The flow is conditional on `p1` being an instance of `Ordering`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Ordering</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>'from'</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Comparator</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p1 instanceof com.google.common.collect.Ordering)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter) is used to initialize a new `ComparatorOrdering`, which is then returned.
+    - The flow is conditional on `p1` not being an instance of `Ordering`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Ordering</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>lexicographical</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return.elementOrder</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (the current `Ordering` instance) is transferred into the `elementOrder` field of the returned `LexicographicalOrdering` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Ordering</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>sortedCopy</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.Iterable) is transformed into an `Object[]` array, sorted, converted to a `List`, and finally into an `ArrayList` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>filterValues</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+        <ParamType>com.google.common.base.Predicate</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `Map`) is filtered using a transformed version of `p2` (the input `Predicate`), and the resulting `Map` is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkNotNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred to the return value if `p1` is not null.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newIdentityHashMap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of IdentityHashMap.
+    - There is no data flow involving parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newConcurrentHashSet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments/>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the return value is directly derived from the static method call to <java.util.concurrent.ConcurrentHashMap: java.util.concurrent.ConcurrentHashMap$KeySetView newKeySet()>.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Multimaps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>filterKeys</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.google.common.collect.ListMultimap</ParamType>
+        <ParamType>com.google.common.base.Predicate</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (ListMultimap) and `p2` (Predicate) are used to construct and return a new FilteredKeyListMultimap.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableListMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.google.common.collect.Multimap</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!p1.isEmpty() && !(p1 instanceof com.google.common.collect.ImmutableListMultimap && p1.isPartialView())</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`com.google.common.collect.Multimap`) is transformed into a `com.google.common.collect.ImmutableListMultimap` through the method logic.
+    - The flow is conditional on `p1` not being empty and not being a non-partial view `ImmutableListMultimap`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that each parameter (p1, p2, p3, p4, p5) is added to the ImmutableSet and contributes to the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Stopwatch</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>createUnstarted</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>N/A</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method creates a new `Stopwatch` instance and returns it.
+    - The `ticker` field of the `Stopwatch` is initialized with a `Ticker` obtained from `systemTicker()`.
+    - There is no parameter input, and the output is the newly created `Stopwatch` object.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Iterable`) is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableListMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>flatteningToImmutableListMultimap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.function.Function</ParamType>
+        <ParamType>java.util.function.Function</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are used as inputs to a static method, and the result is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Equivalence</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>wrap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.reference</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Object`) is transferred into the `reference` field of the returned `Equivalence$Wrapper` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1`, `p2`, and `p3` are collected into an array and used to construct the return `ImmutableList`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Suppliers</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>memoize</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.google.common.base.Supplier</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof com.google.common.base.Suppliers$NonSerializableMemoizingSupplier || p1 instanceof com.google.common.base.Suppliers$MemoizingSupplier</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is returned directly if it is already a memoizing supplier.
+    - The flow is conditional on `p1` being an instance of `NonSerializableMemoizingSupplier` or `MemoizingSupplier`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Suppliers</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>memoize</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.google.common.base.Supplier</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.io.Serializable</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is wrapped in a `MemoizingSupplier` and returned if it is serializable.
+    - The flow is conditional on `p1` being an instance of `java.io.Serializable`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Suppliers</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>memoize</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.google.common.base.Supplier</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p1 instanceof java.io.Serializable)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is wrapped in a `NonSerializableMemoizingSupplier` and returned if it is not serializable.
+    - The flow is conditional on `p1` not being an instance of `java.io.Serializable`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableList</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toImmutableList</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method does not involve any parameter data flow.
+    - The return value is directly obtained from a static field in another class.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.primitives</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Primitives</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>allWrapperTypes</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a set of keys from the static map WRAPPER_TO_PRIMITIVE_TYPE.
+    - There is no parameter or instance field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>filterKeys</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+        <ParamType>com.google.common.base.Predicate</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (Map) is transferred into the return value.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>filterKeys</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+        <ParamType>com.google.common.base.Predicate</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (Predicate) is transformed and used to affect the return value.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Ordering</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>natural</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a static instance of NaturalOrdering without involving any parameter or field data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Splitter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>splitToList</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `java.lang.CharSequence`) is processed by an iterator and its elements are added to a list, which is then returned as an unmodifiable list.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HashMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>removeAll</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to remove elements from a map and the resulting collection is returned as a set.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Joiner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>join</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (an `Iterable`) is transformed into a `String` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Splitter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>on</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>char</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `char` parameter) is used to create a `CharMatcher` which is then used to create a `Splitter` object that is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Joiner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>on</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>char</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.separator</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (char c0) is converted to a `String` and assigned to `this.separator` in the returned `Joiner` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkState</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>1, 2, 3, 4</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p2`, `p3`, `p4`, and `p5` are formatted into a string used in the exception message.
+    - The flow is conditional on `p1` being `false`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1`, `p2`, `p3`, and `p4` are added to the builder and are part of the final `ImmutableSet` that is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newLinkedHashSet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.util.Collection</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `r0`) is transferred into the return value when `p1` is an instance of `java.util.Collection`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newLinkedHashSet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p1 instanceof java.util.Collection)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `r0`) is transferred into the return value when `p1` is not an instance of `java.util.Collection`, through the `addAll` method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>values</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns an `ImmutableCollection` derived from the internal state of the `ImmutableMultimap`.
+    - There is no parameter or field data flow to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newHashSet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.util.Collection</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `Iterable`) is transferred into the `return` `HashSet`.
+    - The flow is conditional on `p1` being an instance of `java.util.Collection`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newHashSet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p1 instanceof java.util.Collection)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `Iterable`) is transferred into the `return` `HashSet`.
+    - The flow is conditional on `p1` not being an instance of `java.util.Collection`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableMultimap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>entries</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method retrieves or creates an ImmutableCollection of entries from the ImmutableMultimap.
+    - The data flow involves creating a new ImmutableMultimap$EntryCollection if the entries are not already initialized.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Optional</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fromNullable</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.reference</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the `reference` field of a `Present` object when `p1` is not null.
+    - The return value is conditionally influenced by `p1`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Optional</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.reference</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input object) is transferred into the `reference` field of the returned `Present` object.
+    - The flow is no condition as the null check is handled internally and does not affect the flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkState</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks the state of the boolean parameter p1.
+    - If p1 is false, an IllegalStateException is thrown.
+    - There is no data flow from p1 to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.cache</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CacheBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>removalListener</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.google.common.cache.RemovalListener</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.removalListener</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r2`) is transferred into `this.removalListener`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.cache</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CacheBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>removalListener</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.google.common.cache.RemovalListener</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned by the method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.cache</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CacheBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (`CacheBuilder`) is used to configure the `LocalCache`, which is then encapsulated in the `LocalCache$LocalManualCache` returned by the method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LinkedHashMultiset</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>create</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates a new instance of LinkedHashMultiset and returns it.
+    - There is no parameter or field data flow to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkArgument</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>z0 == false</Condition>
+    <InArguments>1, 2, 3, 4</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.String) and `p2`, `p3`, `p4` (java.lang.Object) are used to create the exception message.
+    - The flow is conditional on `z0 == false`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.cache</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CacheBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>softValues</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.valueStrength</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method sets `this.valueStrength` to `SOFT` and returns `this`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Maps</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newLinkedHashMap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `java.util.Map`) is used to initialize the returned `LinkedHashMap`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>add</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (array of objects) is transferred into the internal state of `this` (the builder instance) through the `add` operations.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Iterables</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getOnlyElement</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.size() == 1</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Iterable`) is converted to an `Iterator`, and if it contains exactly one element, that element is returned.
+    - If the `Iterable` is empty, `p2` is returned.
+    - If the `Iterable` contains more than one element, an exception is thrown.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectArrays</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>concat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are concatenated into the return array.
+    - `p3` is used to determine the type of the return array.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Iterables</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getLast</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Iterable`) is used to determine the last element, which is returned.
+    - The flow is no condition as it handles both List and non-List Iterables.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImmutableSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toImmutableSet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method does not involve any parameter or field data flow.
+    - It returns the result of another method call without modification.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.collect</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Sets</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newTreeSet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new TreeSet object.
+    - There is no parameter data flow as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Strings</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNullOrEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value through null and empty checks.
+    - The flow is no condition as it directly checks the properties of `p1`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkArgument</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`java.lang.String`) is used in constructing the exception message when `p1` is false.
+    - The flow is conditional on `p1` being false.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Preconditions</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>checkArgument</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (`int`) is converted to `Integer` and used in constructing the exception message when `p1` is false.
+    - The flow is conditional on `p1` being false.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.google.common.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MoreObjects</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toStringHelper</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.className</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `Object`) is used to derive a `String` representing its class name, which is then assigned to the `className` field of the returned `ToStringHelper` instance.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+

@@ -1,0 +1,5631 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>format</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 isEmpty || p1 isBlank</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.CharSequence`) is transferred into the return value when `p2` is empty or `p1` is blank.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>format</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p2 isEmpty || p1 isBlank)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that both `p1` (`java.lang.CharSequence`) and `p2` (`java.lang.Object[]`) are involved in the return value when `p2` is not empty and `p1` is not blank.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IoUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>close</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.Closeable</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no significant data flow as parameter p1 does not flow to other parameters, fields of this, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isBlank</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the parameter `p1` (CharSequence) is blank by evaluating its length and characters.
+    - There is no data flow from `p1` to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FileUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>file</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed into an absolute path string and then into a `java.io.File` object which is returned.
+    - The flow is conditional on `p1` being not null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000006</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNotBlank</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isBlank(p1)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is evaluated to determine if it is not blank, affecting the return value.
+    - The flow is conditional on the result of `isBlank(p1)`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000007</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Assert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>notNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>p1 == null</Condition>
+    <InArguments>1,2</InArguments>
+    <OutArguments>exception</OutArguments>
+    <Comment>
+    - The data flow shows that if `p1` is null, an exception is thrown using `p2` and `p3`.
+    - If `p1` is not null, it is returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000008</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Assert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>notNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is returned if it is not null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000009</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if `p1` is `null` or has a length of zero and returns a boolean value.
+    - There is no data propagation from `p1` to other parameters, fields of `this`, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000010</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNotNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if parameter p1 is not null and returns a boolean value.
+    - There is no data flow from p1 to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000011</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Assert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isTrue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>p1 == false</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` and `p3` are used to format a message for an `IllegalArgumentException`.
+    - The flow is conditional on `p1` being false.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000012</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that if `p1` is `null`, the method returns `true`.
+    - The flow is conditional on `p1` being `null`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000013</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.lang.CharSequence</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that if `p1` is an instance of `java.lang.CharSequence`, the method delegates to `StrUtil.isEmpty`.
+    - The flow is conditional on `p1` being an instance of `java.lang.CharSequence`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000014</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.util.Map</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that if `p1` is an instance of `java.util.Map`, the method delegates to `MapUtil.isEmpty`.
+    - The flow is conditional on `p1` being an instance of `java.util.Map`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000015</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.lang.Iterable</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that if `p1` is an instance of `java.lang.Iterable`, the method delegates to `IterUtil.isEmpty`.
+    - The flow is conditional on `p1` being an instance of `java.lang.Iterable`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000016</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.util.Iterator</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that if `p1` is an instance of `java.util.Iterator`, the method delegates to `IterUtil.isEmpty`.
+    - The flow is conditional on `p1` being an instance of `java.util.Iterator`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000017</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>ArrayUtil.isArray(p1)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that if `p1` is an array, the method delegates to `ArrayUtil.isEmpty`.
+    - The flow is conditional on `p1` being an array.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000018</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNotEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isEmpty(p1)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is evaluated for emptiness and the result influences the return value.
+    - The flow is conditional on `p1` not being empty according to various checks in `isEmpty`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000019</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the parameter `p1` (an array) is null or has a length of zero to determine the return value.
+    - There is no data propagation from `p1` to other parameters, fields, or objects.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000020</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>convert</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred through a series of method calls and is eventually returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000021</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CollUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Collection</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>p1 == null || p1.isEmpty()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the state of `p1` (`java.util.Collection`) is used to determine the return value.
+    - The flow is conditional on `p1` being `null` or `p1.isEmpty()` returning `true`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000022</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNotEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p1.length() &gt; 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is checked for non-nullity and non-zero length, and this determines the return value.
+    - The flow is conditional on `p1` being not null and having a length greater than 0.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000023</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>insert</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>isEmpty(p3)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is returned if `p3` is empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000024</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>insert</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>isEmpty(p1)</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` is returned if `p1` is empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000025</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>insert</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isEmpty(p1) &amp;&amp; !isEmpty(p3)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that elements from both `p1` and `p3` are combined and returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000026</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReflectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newInstance</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the class type) is used to create an instance, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000027</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReflectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newInstance</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!ArrayUtil.isEmpty(p2)</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (the object array) is used to create an instance, which is returned.
+    - The flow is conditional on `p2` not being empty
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000028</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RandomUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>randomInt</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input integer) is used to determine the upper bound for the random integer generation and directly influences the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000029</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IoUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>readUtf8</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`InputStream`) is read into a byte array, which is then converted into a `String` using `UTF-8` charset, and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000030</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReflectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getFields</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the class object) is used to retrieve and return its fields.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000031</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>format</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Date</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isBlank(p2) &amp;&amp; !isCustomFormat(p2)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.util.Date`) is formatted using `p2` (`java.lang.String`) and the result is returned.
+    - The flow is conditional on `p2` not being blank and not being a custom format.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000032</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>format</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Date</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isBlank(p2) &amp;&amp; isCustomFormat(p2)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.util.Date`) is formatted using `p2` (`java.lang.String`) as a custom format and the result is returned.
+    - The flow is conditional on `p2` not being blank and being a custom format.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000033</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CollUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNotEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Collection</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the collection `p1` is not empty by calling `isEmpty(p1)`.
+    - The return value is a boolean indicating the non-emptiness of `p1`.
+    - There is no direct data flow from `p1` to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000034</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Dict</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>set</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is potentially transformed by `customKey` and used as a key in the `put` method of `LinkedHashMap`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000035</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Dict</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>set</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`java.lang.Object`) is used as a value in the `put` method of `LinkedHashMap`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000036</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>current</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns the current time in milliseconds using System.currentTimeMillis().
+    - There is no data flow involving parameters or fields of this.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000037</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.map</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WeakConcurrentMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>this.raw</OutArguments>
+    <Comment>
+    - The data flow shows that a new instance of `SafeConcurrentHashMap` is created and passed through the constructor chain.
+    - It is eventually assigned to the `raw` field of `ReferenceConcurrentMap`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000038</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toArray</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Collection</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (Collection) is converted to an array and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000039</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>contains</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the first parameter (p1) contains the second parameter (p2) after converting p1 to a String.
+    - There is no data propagation from parameters to fields or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000040</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>now</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method constructs a DateTime object, formats it, and returns the formatted string.
+    - There is no data flow from parameters to fields or return values as there are no parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000041</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>defaultIfNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == null</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into the return value if `p1` is null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000042</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>defaultIfNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the return value if `p1` is not null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000043</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>subBefore</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.CharSequence) is converted to a string and potentially returned directly or as a substring.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000044</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Snowflake</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>nextId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method generates a unique ID based on internal state without any parameter or external object data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000045</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>GlobalCustomFormat.isCustomFormat(p2)</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are used to create a `java.util.Date` object, which initializes `this`.
+    - The flow is conditional on `GlobalCustomFormat.isCustomFormat(p2)`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000046</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IoUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copy</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>java.io.OutputStream</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.io.InputStream`) and `p2` (`java.io.OutputStream`) are used in the copy process, and the result is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000047</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UUID</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>randomUUID</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method `randomUUID()` does not have any parameter or field propagation.
+    - It calls `randomUUID(boolean)` with a constant value and returns the result.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000048</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UUID</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a string representation of the UUID object.
+    - The data flow involves the fields `this.mostSigBits` and `this.leastSigBits` being used to construct the return value.
+    - There is no direct parameter or field propagation to the return value in this method itself.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000049</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>removeSuffix</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>isEmpty(p1) || isEmpty(p2) || !p1.toString().endsWith(p2.toString())</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the return value when `p1` is empty, `p2` is empty, or `p1` does not end with `p2`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000050</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>removeSuffix</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.toString().endsWith(p2.toString())</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed by removing the suffix `p2` and transferred into the return value when `p1` ends with `p2`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000051</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.img</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImgUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toBase64</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.awt.Image</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (Image) is indirectly used to generate the return value through byte array conversion and Base64 encoding.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000052</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.img</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImgUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toBase64</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.awt.Image</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (String) is indirectly used to generate the return value through byte array conversion and Base64 encoding.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000053</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.img</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImgUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toBase64DataUri</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.awt.Image</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is used in constructing the MIME type and is passed to `toBase64`, influencing the final data URI.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000054</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.img</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImgUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toBase64DataUri</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.awt.Image</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is involved in the image-to-Base64 conversion process, influencing the final data URI.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000055</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the parameter `p1` is `null` or logically equivalent to `null` using the `equals` method.
+    - The return value is a boolean indicating the null status of `p1`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000056</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ExceptionUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getMessage</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Throwable` object) is used to extract its class name and message, which are then formatted into a string and returned.
+    - The flow is conditional on `p1` not being `null`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000057</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toDBC</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isBlank(p1)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed and returned if it is not blank.
+    - If `p1` is blank, it is returned directly without transformation.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000058</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UtilException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>super</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) and `p2` (`java.lang.Object[]`) are used to create a formatted string which is passed to the superclass constructor.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000059</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UtilException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>super</OutArguments>
+    <Comment>
+    - The data flow shows that `p0` (`java.lang.Throwable`) is directly passed to the superclass constructor.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000060</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Console</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>error</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>System.err</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Throwable`) is transferred to `System.err` if `p1` is not null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000061</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Console</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>error</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>System.err</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`java.lang.String`) is used to create a formatted string that is transferred to `System.err`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000062</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Console</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>error</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>System.err</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (`java.lang.Object[]`) is used to create a formatted string that is transferred to `System.err`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000063</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.map</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SafeConcurrentHashMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the SafeConcurrentHashMap by invoking the superclass constructor.
+    - There is no data flow involving parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000064</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.thread</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ThreadUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newExecutor</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 &gt; 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.corePoolSize</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input integer) is transferred into the `corePoolSize` of the `ExecutorBuilder`, which is then used to construct the `ThreadPoolExecutor`.
+    - The flow is conditional on `p1 > 0`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000065</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.thread</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ThreadUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>sleep</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Number</ParamType>
+        <ParamType>java.util.concurrent.TimeUnit</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>1</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.Number) is converted to a `long` and passed to `p2` (java.util.concurrent.TimeUnit) in the `sleep(long)` method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000066</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>bytes</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.nio.charset.Charset</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is converted to a `String` and then to a `byte[]` which is returned.
+    - The flow is conditional on `p1` not being `null`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000067</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>bytes</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.nio.charset.Charset</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p2 != null</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is used as the charset in `getBytes(p2)` to convert the `String` to a `byte[]` which is returned.
+    - The flow is conditional on both `p1` and `p2` not being `null`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000068</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.CharSequence) is used to initialize the returned DateTime object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000069</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (java.lang.String) is used to initialize the returned DateTime object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000070</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>join</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (array of objects) is transformed into a `String` and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000071</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>convertQuietly</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (java.lang.Object) is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000072</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toInt</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Integer</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.Object) is transferred into the return value of `toInt`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000073</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toLong</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Object`) is converted and returned as `java.lang.Long`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000074</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toBool</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000075</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toBool</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is potentially used as a fallback and transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000076</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReflectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getFieldName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.reflect.Field</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the field) is used to determine the return value.
+    - If the field has an `Alias` annotation, the annotation's value is returned.
+    - If there is no `Alias` annotation, the field's name is returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000077</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDateTimeUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Date</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof cn.hutool.core.date.DateTime</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.util.Date`) is converted to `Instant` and `ZoneId` if it is an instance of `cn.hutool.core.date.DateTime`, and then to `LocalDateTime`.
+    - The flow is conditional on `p1` being an instance of `cn.hutool.core.date.DateTime`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000078</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDateTimeUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Date</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p1 instanceof cn.hutool.core.date.DateTime)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.util.Date`) is converted to `Instant` and then to `LocalDateTime`.
+    - The flow is conditional on `p1` not being an instance of `cn.hutool.core.date.DateTime`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000079</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>join</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.CharSequence) and `p2` (java.lang.Object[]) are used to construct the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000080</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConcurrentHashSet</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes a ConcurrentHashSet and assigns a new SafeConcurrentHashMap to its map field.
+    - There is no data flow involving parameters, this, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000081</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>of</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isEmpty(p1)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (array of objects) is converted to a list and returned as an unmodifiable list.
+    - The flow is conditional on `p1` not being empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000082</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReflectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getFieldValue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; !StrUtil.isBlank(p2)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are used to retrieve a field value, which is then returned.
+    - The flow is conditional on `p1` not being null and `p2` not being blank.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000083</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StrUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new StringBuilder object.
+    - There is no data flow from parameters or fields to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000084</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `java.lang.CharSequence[]`) is transferred into the `StringBuilder` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000085</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RandomUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>randomInt</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are used to compute the return value through a nested call.
+    - The flow is no condition due to fixed boolean parameters in the nested call.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000086</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Singleton</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>get</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Class`) and `p2` (`java.lang.Object[]`) are used to derive the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000087</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ExceptionUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>wrapRuntime</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.lang.RuntimeException</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is directly returned if it is an instance of `java.lang.RuntimeException`.
+    - The flow is conditional on `p1` being an instance of `java.lang.RuntimeException`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000088</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ExceptionUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>wrapRuntime</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p1 instanceof java.lang.RuntimeException)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is wrapped in a new `RuntimeException` and returned.
+    - The flow is conditional on `p1` not being an instance of `java.lang.RuntimeException`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000089</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IoUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>readLines</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>java.nio.charset.Charset</ParamType>
+        <ParamType>java.util.Collection</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (Collection) is modified and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000090</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>empty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a static empty list using `Collections.emptyList()`.
+    - There is no data flow from parameters, as there are none.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000091</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IdUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fastSimpleUUID</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method generates a UUID and returns its string representation.
+    - There is no parameter to return data flow as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000092</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FileUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getSuffix</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.File</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.io.File`) is processed through a series of method calls to derive the file extension, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000093</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RandomUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getRandom</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a `ThreadLocalRandom` instance obtained from a static method call.
+    - There is no parameter data flow as there are no parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000094</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StrUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>str</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>byte[]</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`byte[]`) is used to create the final `String` that is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000095</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StrUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>str</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>byte[]</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`java.lang.String`) is used to determine the charset, which influences the creation of the final `String`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000096</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StrUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>str</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.nio.charset.Charset</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Object`) is transferred into the return value.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000097</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Assert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` and `p3` are used to format an exception message if `p1` is not null.
+    - The flow is conditional on `p1` being non-null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000098</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PrimitiveArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>byte[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == null || lengthof(p1) == 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (byte array) is checked for null or zero length and the result is transferred into 'return'
+    - The flow is conditional on p1 being null or having a length of 0
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000099</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FileUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>loopFiles</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.lang.String`) is transformed through several method calls into a `java.util.List` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000100</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UUID</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean) influences the format of the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000101</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UUID</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fastUUID</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method `fastUUID` does not involve any parameter or field data flow.
+    - It simply returns the result of the `randomUUID(false)` method call.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000102</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Assert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>notEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!cn.hutool.core.util.StrUtil.isEmpty(p1)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the return value if `p1` is not empty.
+    - The flow is conditional on `p1` not being empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000103</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FastStringWriter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the FastStringWriter with a default size of 16 for the StrBuilder.
+    - There is no parameter or return data flow as it is a constructor.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000104</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FastStringWriter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method `toString()` returns a `String` representation of the internal `StrBuilder` state.
+    - There is no parameter or field propagation involved in this method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000105</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>startWithAnyIgnoreCase</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.CharSequence[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if `p1` starts with any element in `p2` (case-insensitive).
+    - There is no direct data propagation from `p1` or `p2` to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000106</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DesensitizedUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>address</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!StrUtil.isBlank(p1)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the return value when it is not blank.
+    - The flow is conditional on `!StrUtil.isBlank(p1)`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000107</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DesensitizedUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>idCardNum</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!StrUtil.isBlank(p1) &amp;&amp; (p2 + p3) &amp;lt;= length(p1) &amp;&amp; p2 &amp;gt;= 0 &amp;&amp; p3 &amp;gt;= 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is processed and transferred into the return value.
+    - The flow is conditional on `p1` not being blank, and valid indices `p2` and `p3`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000108</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>contains</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p2 != null</Condition>
+    <InArguments>0,1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are used to determine the return value.
+    - The flow is conditional on both p1 and p2 being non-null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000109</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.codec</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Base64</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>decode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>byte[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (input byte array) is directly passed to the return value after being processed by the Base64Decoder.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000110</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.map</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MapUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNotEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the input parameter `p1` (a Map) is not null and not empty, and returns a boolean value based on this check.
+    - There is no data flow from `p1` to other parameters, fields, or return values beyond this check.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000111</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CollUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNotEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the map) is checked for null and emptiness, and the result of these checks is returned.
+    - The flow is no condition other than the inherent checks on the map.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000112</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BeanUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyProperties</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.String[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to populate the properties of the newly created object of type `p2`.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000113</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BeanUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copyProperties</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.String[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that if `p1` is null, the method returns null.
+    - This flow is conditional on `p1` being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000114</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isAssignable</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0,1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow involves checking if `p1` is assignable from `p2`, considering both direct assignability and primitive-wrapper conversions.
+    - The flow is no condition as it directly returns based on the checks.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000115</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getClassName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Class` object) is transformed into the return value.
+    - The flow is conditional on `p1` not being `null`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000116</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReflectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getFieldValue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.reflect.Field</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0,1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (object) and `p2` (field) are used to retrieve a value, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000117</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>sub</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (input list) is processed to produce the `return` (sublist).
+    - The flow is no condition in the caller method, but conditions are handled in the callee method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000118</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FileUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>extName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p1.contains(".")</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is processed to extract the file extension and is returned.
+    - The flow is conditional on `p1` not being null and containing a period `.`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000119</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>delAll</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.regex.Pattern</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == null || cn.hutool.core.util.StrUtil.isEmpty(p2)</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is converted to a `String` and returned if `p1` is null or `p2` is empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000120</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>delAll</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.regex.Pattern</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p1 == null || cn.hutool.core.util.StrUtil.isEmpty(p2))</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is processed by `p1` and the result is returned if `p1` is not null and `p2` is not empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000121</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FileUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getTmpDirPath</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method retrieves the system's temporary directory path using System.getProperty("java.io.tmpdir") and returns it.
+    - There is no parameter or field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000122</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ExceptionUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>stacktraceToString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (Throwable) is used to generate a stack trace string, which is then returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000123</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UtilException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into the constructor of the superclass `RuntimeException`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000124</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io.resource</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ResourceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getStreamSafe</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!cn.hutool.core.io.resource.NoResourceException</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.lang.String`) is used to create a `Resource` object, which is then used to obtain an `InputStream` that is returned.
+    - The flow is conditional on the absence of a `NoResourceException`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000125</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>repeat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>char</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 &gt; 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (char) is used to fill a character array, which is then converted to a `String` and returned.
+    - The flow is conditional on `p2 > 0`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000126</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>repeatAndJoin</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 &gt; 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (first parameter) and `p3` (third parameter) are transferred into the return value.
+    - The flow is conditional on `p2` (second parameter) being greater than 0.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000127</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Assert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>notNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the return value if `p1` is not null.
+    - If `p1` is null, an exception is thrown, interrupting the flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000128</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Dict</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>create</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method `create` initializes and returns a new `Dict` object.
+    - There is no parameter data flow since the method is static and parameterless.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000129</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StrUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>format</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.CharSequence) is transformed and potentially modified based on `p2` (java.util.Map) entries, and the result is returned as a java.lang.String.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000130</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang.ansi</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AnsiEncoder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>encode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (an array of objects) is used to build a `StringBuilder`, which is then converted to a `String` and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000131</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getShortClassName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>null == split(p1, '.') || split(p1, '.').size() &lt; 2</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is directly returned if the list obtained from splitting `p1` is null or has less than 2 elements.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000132</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getShortClassName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>split(p1, '.').size() &amp;gt;= 2</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed into a short class name format and returned if the list obtained from splitting `p1` has 2 or more elements.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000133</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang.caller</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CallerUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getCallerCaller</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method does not involve parameter or field data flow propagation.
+    - It retrieves a `Class` object from a `Caller` instance and returns it.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000134</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ServiceLoaderUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>loadFirstAvailable</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Class` parameter) is used to load the first available service implementation, which is returned by the method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000135</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io.resource</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ResourceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getResource</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is processed to ensure it is not null and then used to retrieve a resource URL.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000136</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>append</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>isEmpty(p1)</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is directly returned when `p1` is empty.
+    - The flow is conditional on `p1` being empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000137</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>append</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isEmpty(p1)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are combined into a new array, which is returned.
+    - The flow is conditional on `p1` not being empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000138</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isMatch</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no obvious data flow here as parameters p1 and p2 do not flow to other parameters, fields, or return in a way that would be captured by a PropagationRule.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000139</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isMatch</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.regex.Pattern</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the pattern `p1` matches the character sequence `p2`.
+    - The data flow involves using `p1` and `p2` to create a `Matcher` and determine the return value, but there is no direct propagation to the return.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000140</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.thread</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ThreadUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>execute</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Runnable</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>cn.hutool.core.thread.GlobalThreadPool.executor</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (Runnable) is transferred into the GlobalThreadPool's executor for execution.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000141</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>convertQuietly</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is attempted to be converted to the type specified by `p1`, with `p3` as a fallback.
+    - The flow is conditional on the success of the conversion process.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000142</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toDouble</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Double</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Object`) is converted and transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000143</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toFloat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.Float</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Object`) is transferred into the return value.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000144</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CollUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newArrayList</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.Object[]) is transferred into the return value as a java.util.ArrayList.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000145</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toUnderlineCase</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed into the return value through a series of method calls.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000146</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>filter</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[]</ParamType>
+        <ParamType>cn.hutool.core.lang.Filter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p2 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that elements of `p1` are filtered and potentially modified by `p2`, resulting in a new array that is returned.
+    - The flow is conditional on both `p1` and `p2` being non-null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000147</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReflectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getFieldsDirectly</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the class) is used to retrieve its fields and potentially its superclasses' fields, which are accumulated and returned.
+    - The flow is conditional on `p2` being true to include superclass fields.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000148</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseDate</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.CharSequence`) is transformed through normalization and parsing to produce the return value, a `DateTime` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000149</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io.resource</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ResourceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getResourceObj</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>StrUtil.isNotBlank(p1) &amp;&amp; (p1.startsWith("file:") || FileUtil.isAbsolutePath(p1))</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the `FileResource` object when it starts with "file:" or is an absolute path.
+    - The flow is conditional on `StrUtil.isNotBlank(p1) && (p1.startsWith("file:") || FileUtil.isAbsolutePath(p1))`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000150</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io.resource</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ResourceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getResourceObj</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>StrUtil.isNotBlank(p1) &amp;&amp; !(p1.startsWith("file:") || FileUtil.isAbsolutePath(p1))</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the `ClassPathResource` object when it does not start with "file:" and is not an absolute path.
+    - The flow is conditional on `StrUtil.isNotBlank(p1) && !(p1.startsWith("file:") || FileUtil.isAbsolutePath(p1))`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000151</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io.resource</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Resource</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getReader</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.nio.charset.Charset</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`Charset`) is transferred into the `BufferedReader` if it is not null.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000152</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io.resource</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ResourceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getResources</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.lang.String`) is used to retrieve resources and is eventually transformed into a `java.util.List` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000153</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassScanner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>cn.hutool.core.lang.Filter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.packageName</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.packageName`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000154</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassScanner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>cn.hutool.core.lang.Filter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.packageNameWithDot</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.packageNameWithDot`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000155</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassScanner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>cn.hutool.core.lang.Filter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.packageDirName</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.packageDirName`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000156</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassScanner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>cn.hutool.core.lang.Filter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.packagePath</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.packagePath`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000157</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassScanner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>cn.hutool.core.lang.Filter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.classFilter</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `this.classFilter`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000158</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassScanner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.packageName</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed using `nullToEmpty` and assigned to `this.packageName`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000159</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassScanner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.packageNameWithDot</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed using `addSuffixIfNot` and assigned to `this.packageNameWithDot`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000160</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassScanner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.packageDirName</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed using `replace` and assigned to `this.packageDirName`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000161</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassScanner</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.packagePath</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed using `replace` and assigned to `this.packagePath`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000162</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>EnumerationIter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Enumeration</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.e</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.util.Enumeration`) is transferred into `this.e`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000163</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.collection</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IterableIter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>iterator</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (the current instance of `IterableIter`) is transferred into 'return'
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000164</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConverterRegistry</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>N/A</InArguments>
+    <OutArguments>this.defaultConverterMap</OutArguments>
+    <Comment>
+    - The method initializes the `ConverterRegistry` instance by setting up a default converter map and adding custom converters via SPI.
+    - The data flow involves setting the `defaultConverterMap` field of `this` (`ConverterRegistry`).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000165</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConverterRegistry</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getInstance</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a singleton instance of ConverterRegistry.
+    - There is no parameter data flow as it is a static method returning a static field.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000166</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>lowerFirst</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p1.length() &gt; 0 &amp;&amp; Character.isUpperCase(p1.charAt(0))</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed and returned as a `String` with the first character converted to lowercase if it was uppercase.
+    - The flow is conditional on `p1` being non-null, having a length greater than 0, and the first character being uppercase.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000167</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>lowerFirst</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p1.length() &gt; 0 &amp;&amp; !Character.isUpperCase(p1.charAt(0))</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is returned as a `String` without modification if the first character is not uppercase.
+    - The flow is conditional on `p1` being non-null and having a length greater than 0, but the first character not being uppercase.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000168</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>lowerFirst</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The data flow shows that `p1` is returned as `null` if `p1` is `null`.
+    - The flow is conditional on `p1` being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000169</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReflectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setFieldValue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>0.field</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (the third parameter) is transferred into a field of `p1` (the first parameter).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000170</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.map</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SafeConcurrentHashMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>computeIfAbsent</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.util.function.Function</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>cn.hutool.core.util.JdkUtil.IS_JDK8</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are used to compute a value that is returned.
+    - The flow is conditional on the JDK version being 8.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000171</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.map</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SafeConcurrentHashMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>computeIfAbsent</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.util.function.Function</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!cn.hutool.core.util.JdkUtil.IS_JDK8</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are used to compute a value that is returned.
+    - The flow is conditional on the JDK version not being 8.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000172</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Assert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>notBlank</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isBlank(p1)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.CharSequence`) is returned if it is not blank.
+    - The flow is conditional on `!isBlank(p1)`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000173</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Assert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>notBlank</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>isBlank(p1)</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>Exception</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`java.lang.String`) and `p3` (`java.lang.Object[]`) are used to create an `IllegalArgumentException` if `p1` is blank.
+    - The flow is conditional on `isBlank(p1)`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000174</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>loadClass</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is used to load a class, and the resulting `java.lang.Class` object is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000175</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDateTimeUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>between</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.time.LocalDateTime</ParamType>
+        <ParamType>java.time.LocalDateTime</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0,1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are transferred into the return value through the `TemporalUtil.between` method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000176</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDateTimeUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>now</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments></InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the result of the static method call `java.time.LocalDateTime.now()` is transferred into 'return'
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000177</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isArray</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the parameter `p1` is an array and returns a boolean value.
+    - There is no data propagation from `p1` to other parameters, fields, or return values beyond this check.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000178</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FileTypeUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getType</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.io.InputStream`) and `p2` (`java.lang.String`) are transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000179</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>addAll</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[][]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>lengthof p1 == 1</Condition>
+    <InArguments>0[0]</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1[0]` is directly returned when `p1` has a length of 1.
+    - The flow is conditional on the length of `p1` being 1.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000180</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ArrayUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>addAll</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object[][]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>isNotEmpty(p1[i]) for any i</Condition>
+    <InArguments>0[i]</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that elements from each non-empty array in `p1` are copied into the return array.
+    - The flow is conditional on the arrays being non-empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000181</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IoUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>readBytes</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (InputStream) is read and converted into a byte array which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000182</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io.file</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FileNameUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getSuffix</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.File</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.io.File`) is transformed into a string representing the file's suffix and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000183</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CharSequenceUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>subAfter</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>java.lang.CharSequence</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isEmpty(p1) &amp;&amp; p2 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r0`) and `p2` (`r1`) are used to derive the return value.
+    - The flow is conditional on `p1` not being empty and `p2` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000184</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Assert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isFalse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Condition>p1 == true</Condition>
+    <InArguments>1, 2</InArguments>
+    <OutArguments>exception.message</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` and `p3` are used to format a message for an exception.
+    - The flow is conditional on `p1` being true.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000185</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.thread</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ThreadUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newExecutor</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates a new ThreadPoolExecutor using a series of method calls on ExecutorBuilder.
+    - There is no parameter or field data flow as the method is static and parameterless.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000186</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.date</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDateTimeUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isSameDay</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.time.LocalDateTime</ParamType>
+        <ParamType>java.time.LocalDateTime</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if two LocalDateTime instances represent the same day by converting them to LocalDate and comparing them.
+    - There is no direct data flow from parameters to fields or return values; the method returns a boolean based on the comparison.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000187</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FileUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>readString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.File</ParamType>
+        <ParamType>java.nio.charset.Charset</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.io.File`) and `p2` (`java.nio.charset.Charset`) are used to create a `FileReader`.
+    - The `FileReader` reads the file and converts it to a `String` using the `Charset`, which is then returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000188</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.io</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>FileUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>writeString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.io.File</ParamType>
+        <ParamType>java.nio.charset.Charset</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (File) is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000189</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.convert</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Convert</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toStr</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.Object) is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000190</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.net</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>URLEncodeUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>encodeQuery</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (input string) is passed to another method with a charset and the result is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000191</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StrFormatter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>format</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!isBlank(p1) &amp;&amp; !isBlank("{}") &amp;&amp; !isEmpty(p2)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the return value if `p1` is not blank, `"{}"` is not blank, and `p2` is not empty.
+    - The flow is conditional on the non-blank and non-empty checks.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000192</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StrFormatter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>format</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>isBlank(p1) || isBlank("{}") || isEmpty(p2)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is directly returned if `p1` is blank, `"{}"` is blank, or `p2` is empty.
+    - The flow is conditional on the blank or empty checks.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000193</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AntPathMatcher</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the AntPathMatcher instance with default settings.
+    - It sets up internal caches and the path separator.
+    - There is no parameter data flow to fields or return values in this constructor.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000194</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.text</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AntPathMatcher</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>match</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0,1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are used to determine the boolean return value through a series of matching operations.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000195</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>cloneByStream</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof java.io.Serializable</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is serialized and deserialized, resulting in a cloned object being returned.
+    - The flow is conditional on `p1` being an instance of `java.io.Serializable`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000196</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.map</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReferenceConcurrentMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>computeIfAbsent</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>cn.hutool.core.lang.func.Func0</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used as a key in the map operation and affects the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000197</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.map</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ReferenceConcurrentMap</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>computeIfAbsent</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>cn.hutool.core.lang.func.Func0</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is encapsulated in a `Function` object and affects the return value if the key is absent.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000198</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getDeclaredField</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; !StrUtil.isBlank(p2)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (java.lang.Class) and `p2` (java.lang.String) are used to determine the return value.
+    - The flow is conditional on `p1` not being null and `p2` not being blank.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000199</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClassUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getDeclaredFields</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input class) is used to invoke `getDeclaredFields()`, and the result is returned.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000200</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.codec</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Base62</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>encode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>byte[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (byte[]) is transformed and used to construct the return value (java.lang.String).
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000201</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.codec</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Base62</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>decode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>byte[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (byte[]) is transferred directly to the return value through a series of method calls.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000202</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IdcardUtil</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isValidCard18</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used in various checks and influences the return value.
+    - The flow is no condition as the return is directly influenced by the checks on `p1`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000203</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ParameterizedTypeImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.reflect.Type[]</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.actualTypeArguments</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (first parameter) is transferred into `this.actualTypeArguments`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000204</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ParameterizedTypeImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.reflect.Type[]</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.ownerType</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (second parameter) is transferred into `this.ownerType`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000205</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ParameterizedTypeImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.reflect.Type[]</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>this.rawType</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (third parameter) is transferred into `this.rawType`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000206</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Snowflake</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.workerId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (first `long` parameter) is transferred into `this.workerId`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000207</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Snowflake</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.dataCenterId</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (second `long` parameter) is transferred into `this.dataCenterId`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000208</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.hutool.core.lang</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Snowflake</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>this.useSystemClock</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (boolean parameter) is transferred into `this.useSystemClock`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+

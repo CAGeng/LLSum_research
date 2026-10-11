@@ -1,0 +1,5586 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the fields of the ConnectionFactory object with default values or instances.
+    - There is no parameter or return data flow to analyze.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newConnection</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.host</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.host` and `this.port` are used to create an `Address` object, which is then used to establish a `Connection`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setUsername</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.credentialsProvider.username</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.credentialsProvider.username`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setPassword</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.credentialsProvider.password</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (password) is transferred into `this.credentialsProvider.password`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setHost</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.host</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.host`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.contentType</InArguments>
+    <OutArguments>return.contentType</OutArguments>
+    <Comment>
+    - The data flow shows that `this.contentType` is transferred into `return.contentType`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.contentEncoding</InArguments>
+    <OutArguments>return.contentEncoding</OutArguments>
+    <Comment>
+    - The data flow shows that `this.contentEncoding` is transferred into `return.contentEncoding`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.headers</InArguments>
+    <OutArguments>return.headers</OutArguments>
+    <Comment>
+    - The data flow shows that `this.headers` is transferred into `return.headers`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<!-- Additional rules for each field would follow the same pattern -->
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setPort</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.port</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the integer parameter) is transferred into `this.port`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Address</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this._host</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the first parameter) is transferred into `this._host`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Address</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this._port</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (the second parameter) is transferred into `this._port`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setVirtualHost</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.virtualHost</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.virtualHost`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setAutomaticRecoveryEnabled</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.automaticRecovery</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.automaticRecovery`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setConnectionTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 >= 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.connectionTimeout</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.connectionTimeout` when `p1` is non-negative.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getHeaders</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.headers</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.headers` is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setRequestedHeartbeat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.requestedHeartbeat</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the integer parameter) is transformed by `ensureUnsignedShort` and then assigned to `this.requestedHeartbeat`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>useNio</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method sets the field `this.nio` to `1`, indicating a configuration change to use NIO.
+    - There is no parameter or return data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the object without any parameter or data flow propagation.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>useSslProtocol</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>javax.net.ssl.SSLContext</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.sslContextFactory</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`SSLContext`) is used to create an `SslContextFactory` which is assigned to `this.sslContextFactory`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>useSslProtocol</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>javax.net.ssl.SSLContext</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.socketFactory</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`SSLContext`) is used to obtain a `SSLSocketFactory` which is assigned to `this.socketFactory`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getDeliveryMode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.deliveryMode</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.deliveryMode` is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no data flow in this constructor as it does not manipulate any parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>headers</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.headers</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.util.Map`) is transferred into `this.headers`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>headers</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned by the method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setUri</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.host, this.port, this.credentialsProvider, this.virtualHost</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (URI string) is transferred into a `URI` object and then influences the fields `host`, `port`, `credentialsProvider`, and `virtualHost` of `this` (`ConnectionFactory`).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setRequestedChannelMax</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.requestedChannelMax</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input integer) is transformed by `ensureUnsignedShort` and then assigned to `this.requestedChannelMax`.
+    - The flow is no condition as the transformation is always applied.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>deliveryMode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Integer</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.deliveryMode</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.Integer`) is transferred into `this.deliveryMode`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>priority</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Integer</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.priority</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter of type `java.lang.Integer`) is transferred into `this.priority`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>correlationId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.correlationId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.correlationId`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>correlationId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>NOC</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method returns the current object instance `this`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>replyTo</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.replyTo</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input parameter) is transferred into `this.replyTo`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>replyTo</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (the current object instance) is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setNetworkRecoveryInterval</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.networkRecoveryInterval</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the integer parameter) is converted to a `long` and assigned to `this.networkRecoveryInterval`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setClientProperties</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this._clientProperties</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `java.util.Map` parameter) is transferred into `this._clientProperties`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setHandshakeTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 >= 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.handshakeTimeout</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `int`) is transferred into `this.handshakeTimeout` if `p1` is non-negative.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setSaslConfig</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.rabbitmq.client.SaslConfig</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.saslConfig</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (SaslConfig) is transferred into `this.saslConfig`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setCredentialsProvider</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.rabbitmq.client.impl.CredentialsProvider</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.credentialsProvider</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (CredentialsProvider) is transferred into `this.credentialsProvider`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setMetricsCollector</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.rabbitmq.client.MetricsCollector</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.metricsCollector</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (MetricsCollector) is transferred into `this.metricsCollector`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newConnection</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is transferred into the `newConnection` method and influences the returned `Connection` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>contentType</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.contentType</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (parameter `java.lang.String`) is transferred into `this.contentType`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>contentEncoding</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.contentEncoding</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.contentEncoding`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>contentEncoding</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns the current instance `this`, but there is no data flow from parameters to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>expiration</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.expiration</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.expiration`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>messageId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.messageId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into `this.messageId`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>timestamp</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Date</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.timestamp</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `java.util.Date` parameter) is transferred into `this.timestamp`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>type</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.type</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.type`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>userId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.userId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.userId`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>appId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.appId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.appId`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$BasicProperties$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>clusterId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.clusterId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.clusterId`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>QueueingConsumer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.rabbitmq.client.Channel</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no explicit data flow documented as the parameter p1 does not flow to other parameters, this, or return in the abstract method context.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setThreadFactory</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.concurrent.ThreadFactory</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.threadFactory</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.util.concurrent.ThreadFactory`) is transferred into `this.threadFactory`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setUri</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.net.URI</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.getScheme().equalsIgnoreCase("amqps")</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.port</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`URI`) is used to set `this.port` to 5671 when the scheme is "amqps".
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setUri</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.net.URI</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.getHost() != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.host</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`URI`) is used to set `this.host` when the host is not null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setUri</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.net.URI</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.getRawUserInfo() != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.credentialsProvider</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`URI`) is used to set `this.credentialsProvider` when raw user info is present.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setUri</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.net.URI</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.getPath() != null && p1.getPath().length() > 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.virtualHost</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`URI`) is used to set `this.virtualHost` when the path is valid.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setUri</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.net.URI</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.getRawQuery() != null && p1.getRawQuery().length() > 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`URI`) is used to set query parameters on `this` when the raw query is present.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setRequestedFrameMax</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.requestedFrameMax</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.requestedFrameMax`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>useSslProtocol</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>computeDefaultTlsProtocol.return</InArguments>
+    <OutArguments>this.sslContextFactory</OutArguments>
+    <Comment>
+    - The data flow shows that the computed TLS protocol string is used to initialize an SSLContext, which is then set on the ConnectionFactory.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>useSslProtocol</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.sslContextFactory</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used to create an `SSLContext`, which is then used to set `this.sslContextFactory`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>useSslProtocol</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.socketFactory</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used to create an `SSLContext`, which is then used to set `this.socketFactory`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>useSslProtocol</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>javax.net.ssl.TrustManager</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.sslContextFactory</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used to create an `SSLContext`, which is then used to set `this.sslContextFactory`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>useSslProtocol</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>javax.net.ssl.TrustManager</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.socketFactory</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used to create an `SSLContext`, which is then used to set `this.socketFactory`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setExceptionHandler</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.rabbitmq.client.ExceptionHandler</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.exceptionHandler</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (ExceptionHandler) is transferred into `this.exceptionHandler` when `p1` is not null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Address</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseAddresses</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is split and each part is processed into an `Address` object, which is collected into an array that is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes fields with constant values and does not involve any data flow from parameters or external sources.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>queue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.queue</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.queue`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>durable</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.durable</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.durable`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>exclusive</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.exclusive</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.exclusive`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>autoDelete</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.autoDelete</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.autoDelete`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>arguments</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input parameter) is assigned to `this.arguments`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ticket</InArguments>
+    <OutArguments>return.ticket</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ticket` is transferred into `return.ticket`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.queue</InArguments>
+    <OutArguments>return.queue</OutArguments>
+    <Comment>
+    - The data flow shows that `this.queue` is transferred into `return.queue`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.passive</InArguments>
+    <OutArguments>return.passive</OutArguments>
+    <Comment>
+    - The data flow shows that `this.passive` is transferred into `return.passive`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.durable</InArguments>
+    <OutArguments>return.durable</OutArguments>
+    <Comment>
+    - The data flow shows that `this.durable` is transferred into `return.durable`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.exclusive</InArguments>
+    <OutArguments>return.exclusive</OutArguments>
+    <Comment>
+    - The data flow shows that `this.exclusive` is transferred into `return.exclusive`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000006</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.autoDelete</InArguments>
+    <OutArguments>return.autoDelete</OutArguments>
+    <Comment>
+    - The data flow shows that `this.autoDelete` is transferred into `return.autoDelete`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000007</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.nowait</InArguments>
+    <OutArguments>return.nowait</OutArguments>
+    <Comment>
+    - The data flow shows that `this.nowait` is transferred into `return.nowait`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000008</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.arguments</InArguments>
+    <OutArguments>return.arguments</OutArguments>
+    <
+=== system ===
+
+You are a professional program analysis aid to summarize what the target method is doing and
+what kind of data flow there in relates to the target method. 
+=== user ===
+
+
+Please adhere to the following conventions in your summary:
+
+(1)Parameter Notation: Use p1,p2,p3 to represent the first, second, third parameters of the method
+E.g.: 'p1' represents 'a', 'p2' represents 'b', there are no 'p3 or p4'
+private void assignValue(String a, String b){
+    a = b
+}
+
+(2)Object Reference: Use this to refer to the current object instance.
+E.g.: 'this' represents the current object instantiated through class A
+public class A{
+    String name;
+    private void setValue(String a){
+        this.name = a;
+    }
+}
+
+(3)Field Access: Use dot notation to represent nested fields, e.g., this.labelA.labelB
+refers to field labelB within labelA of this.
+E.g.: this.foo.name
+public class A{
+    Foo foo;
+    private void assignValue(String a){
+        this.foo.name = a;
+    }
+    
+    class Foo{
+        String name;
+    }
+}
+
+
+A summary for a leaf procedure has been provided as a comment on the
+corresponding call-site line within the code. You should:
+(1)Evaluate the Condition: First, determine whether the condition specified in the
+comment is satisfied within the current code context.
+(2)Generate Summary: If the condition is satisfied, use it to help generate a
+summary for the current code block.
+(3)Ignore Irrelevant Dataflows: If the condition is not satisfied, disregard this
+dataflow in your summary.
+(4)Handle Uncertainty: If you are unsure whether the condition is satisfied,
+reorganize and reinterpret the condition in a manner that aligns with the input
+states of the current code.
+
+
+
+
+Here is a few examples，and the analysis result will provide a summary in the form of annotations above the method.
+Data Flow Summary and conditions should only contains the flow about param, field of the param, this, filed of this, ret, 
+field of the ret which should not include local variables in the method. （Please pay attention to this rule!!!）.
+
+Also,InArguments and OutArguments will only contain one element. If there are multiple elements, please create a PropagationRule to represent them separately!!!
+
+
+Example 1 :
+
+Method to be analyzed: <com.test.A: java.lang.String call(java.lang.String,com.test.Foo,int)>
+
+package com.test;
+public class A{
+    Flag flag;
+    String call(String a, Foo b, int c){
+        String tmp1 = a + "test1";
+        String tmp2 = a + "test2";
+        String finalStr = a + "user";
+        if (!flag.value.equals("ABC")){
+            if (flag.name.equals(b.name)){
+                assignValueMethodA(tmp1, b); // This line involves a dataflow from 'p1(tmp1) to p2(b).name
+            }
+        }
+        assignValueMethodB(tmp2, b); // This line involves a dataflow from p1(tmp2) to p2(b).content
+        if (c != 0){
+            this.flag.score = c;
+        }else{
+            this.flag.score = 1000;
+        }
+        return finalStr
+    }
+    class Flag{
+        String value;
+        String name;
+        int score;
+    }
+}
+
+package com.test;
+public Foo{
+    String name;
+    String content;
+}
+
+
+[Positive Analysis Result]: Please pay more attention to !!! [If there are multiple parameter data streams, they should be recorded separately, such as p1-->this.f1, p2-->this.f2, there will be two PropagationRule xml records. <InArguments>This tag can only have one parameter</InArguments>] 
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-JHKLIBGFFG000008</RuleID>  # This RuleID should be randomly generated.The prefix "RULE-ID-PROPAGATION-" remains unchanged.
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>com.test.Foo</ParamType>
+                <ParamType>int</ParamType>
+            </Parameters>
+            <HasPropagation>true</HasPropagation>
+            <Condition>!this.flag.value.equals(p1) && this.flag.name.equals(p1.name)</Condition>
+            <InArguments>0</InArguments> # If there are multiple parameter data streams, they should be recorded separately, such as p1-->this.f1, p2-->this.f2, there will be two PropagationRule xml records
+            <OutArguments>1.name</OutArguments>
+            <Comment>
+            - The data flow shows that `p1` (`a`) is transferred into the `tmp1`, and the `tmp1` is transferred into 'p2'('b').name  
+            - The flow is conditional on !this.flag.value.equals("ABC") && this.flag.name.equals(p2.name)
+            </Comment>
+</PropagationRule>
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>com.test.Foo</ParamType>
+                <ParamType>int</ParamType>
+            </Parameters>
+            <HasPropagation>true</HasPropagation>
+            <Condition>NOC</Condition>
+            <InArguments>0</InArguments>
+            <OutArguments>1.content</OutArguments>
+            <Comment>
+            - The data flow shows that `p1` (`a`) is transferred into the `tmp2`, and the `tmp2` is transferred into 'p2'('b').content
+            - The flow is no condition
+            </Comment>
+</PropagationRule>
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>com.test.Foo</ParamType>
+                <ParamType>int</ParamType>
+            </Parameters>
+            <HasPropagation>true</HasPropagation>
+            <Condition> p3!=0 </Condition> # p3 means the third parm
+            <InArguments>2</InArguments>
+            <OutArguments>this.flag.score</OutArguments>
+            <Comment>
+            - The data flow shows that `p3` (`c`) is transferred into this.flag.score
+            - The flow is no condition
+            </Comment>
+</PropagationRule>
+
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>com.test.Foo</ParamType>
+                <ParamType>int</ParamType>
+            </Parameters>
+            <HasPropagation>true</HasPropagation>
+            <Condition>NOC</Condition>
+            <InArguments>0</InArguments>
+            <OutArguments>return</OutArguments>
+            <Comment>
+            - The data flow shows that `p1` (`a`) is transferred into 'return'
+            - The flow is no condition
+            </Comment>
+</PropagationRule>
+
+
+Example 2 :
+
+Method to be analyzed: <com.test:A void call(java.lang.String)>
+
+package com.test;
+public class A{
+    void call(String a){
+        String tmp1 = a + "test1";
+        System.out.println(tmp1);
+    }
+}
+
+
+[Positive Analysis Result]: 
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+            </Parameters>
+            <HasPropagation>false</HasPropagation>
+            <Comment>
+            - There is no obvious data flow here as parameter p1 does not flow to other parameters, this, or return.
+            </Comment>
+</PropagationRule>
+
+Now the final question, tell me the summary of this method.
+(1)Please provide the analysis results strictly in this XML format according to the example. 
+(2)Don't forget to merge the result (p1-->a-->b--->p2 should be p1 --> p2)
+(3)Please think step by step and provide the detailed analysis results for each step. 
+
+Method to be analyzed:<com.rabbitmq.client.AMQP$BasicProperties: com.rabbitmq.client.AMQP$BasicProperties$Builder builder()>
+Related methods: 16
+caller is : <reactor.rabbitmq.Sender$PublishConfirmSubscriber: com.rabbitmq.client.AMQP$BasicProperties addReactorRabbitMQDeliveryTag(com.rabbitmq.client.AMQP$BasicProperties,long)>
+callee is : <com.rabbitmq.client.AMQP$BasicProperties: com.rabbitmq.client.AMQP$BasicProperties$Builder builder()>
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties: com.rabbitmq.client.AMQP$BasicProperties$Builder builder()>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder builder()
+    {
+        java.util.Date $r20;
+        java.lang.Integer $r8, $r10;
+        java.util.Map $r6;
+        com.rabbitmq.client.AMQP$BasicProperties$Builder $r0, $r3, $r5, $r7, $r9, $r11, $r13, $r15, $r17, $r19, $r21, $r23, $r25, $r27, $r29;
+        java.lang.String $r2, $r4, $r12, $r14, $r16, $r18, $r22, $r24, $r26, $r28;
+        com.rabbitmq.client.AMQP$BasicProperties r1;
+
+        r1 := @this: com.rabbitmq.client.AMQP$BasicProperties;
+
+        $r0 = new com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        specialinvoke $r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: void <init>()>();
+
+        $r2 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String contentType>;
+
+        $r3 = virtualinvoke $r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder contentType(java.lang.String)>($r2);
+
+        $r4 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String contentEncoding>;
+
+        $r5 = virtualinvoke $r3.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder contentEncoding(java.lang.String)>($r4);
+
+        $r6 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.util.Map headers>;
+
+        $r7 = virtualinvoke $r5.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder headers(java.util.Map)>($r6);
+
+        $r8 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.Integer deliveryMode>;
+
+        $r9 = virtualinvoke $r7.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder deliveryMode(java.lang.Integer)>($r8);
+
+        $r10 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.Integer priority>;
+
+        $r11 = virtualinvoke $r9.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder priority(java.lang.Integer)>($r10);
+
+        $r12 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String correlationId>;
+
+        $r13 = virtualinvoke $r11.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder correlationId(java.lang.String)>($r12);
+
+        $r14 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String replyTo>;
+
+        $r15 = virtualinvoke $r13.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder replyTo(java.lang.String)>($r14);
+
+        $r16 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String expiration>;
+
+        $r17 = virtualinvoke $r15.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder expiration(java.lang.String)>($r16);
+
+        $r18 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String messageId>;
+
+        $r19 = virtualinvoke $r17.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder messageId(java.lang.String)>($r18);
+
+        $r20 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.util.Date timestamp>;
+
+        $r21 = virtualinvoke $r19.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder timestamp(java.util.Date)>($r20);
+
+        $r22 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String type>;
+
+        $r23 = virtualinvoke $r21.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder type(java.lang.String)>($r22);
+
+        $r24 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String userId>;
+
+        $r25 = virtualinvoke $r23.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder userId(java.lang.String)>($r24);
+
+        $r26 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String appId>;
+
+        $r27 = virtualinvoke $r25.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder appId(java.lang.String)>($r26);
+
+        $r28 = r1.<com.rabbitmq.client.AMQP$BasicProperties: java.lang.String clusterId>;
+
+        $r29 = virtualinvoke $r27.<com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder clusterId(java.lang.String)>($r28);
+
+        return $r29;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: void <init>()>
+    public void <init>()
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder clusterId(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder clusterId(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String clusterId> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder appId(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder appId(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String appId> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder userId(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder userId(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String userId> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder type(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder type(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String type> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder timestamp(java.util.Date)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder timestamp(java.util.Date)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.util.Date r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.util.Date;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.util.Date timestamp> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder messageId(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder messageId(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String messageId> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder expiration(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder expiration(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String expiration> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder replyTo(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder replyTo(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String replyTo> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder correlationId(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder correlationId(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String correlationId> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder priority(java.lang.Integer)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder priority(java.lang.Integer)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.Integer r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.Integer;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.Integer priority> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder deliveryMode(java.lang.Integer)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder deliveryMode(java.lang.Integer)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.Integer r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.Integer;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.Integer deliveryMode> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder headers(java.util.Map)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder headers(java.util.Map)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.util.Map r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.util.Map;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.util.Map headers> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder contentEncoding(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder contentEncoding(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String contentEncoding> = r1;
+
+        return r0;
+    }
+
+Method: <com.rabbitmq.client.AMQP$BasicProperties$Builder: com.rabbitmq.client.AMQP$BasicProperties$Builder contentType(java.lang.String)>
+    public com.rabbitmq.client.AMQP$BasicProperties$Builder contentType(java.lang.String)
+    {
+        com.rabbitmq.client.AMQP$BasicProperties$Builder r0;
+        java.lang.String r1;
+
+        r0 := @this: com.rabbitmq.client.AMQP$BasicProperties$Builder;
+
+        r1 := @parameter0: java.lang.String;
+
+        r0.<com.rabbitmq.client.AMQP$BasicProperties$Builder: java.lang.String contentType> = r1;
+
+        return r0;
+    }
+
+-----------
+=== assistant ===
+To analyze the method `<com.rabbitmq.client.AMQP$BasicProperties: com.rabbitmq.client.AMQP$BasicProperties$Builder builder()>`, we need to examine the data flow from the fields of the `AMQP$BasicProperties` object to the `AMQP$BasicProperties$Builder` object. The method initializes a new `AMQP$BasicProperties$Builder` object and sets its fields using the values from the `AMQP$BasicProperties` object. Here's the step-by-step analysis:
+
+1. **Initialization**:
+   - A new `AMQP$BasicProperties$Builder` object is created and initialized.
+
+2. **Field Assignments**:
+   - The method retrieves various fields from the `AMQP$BasicProperties` object (`this`) and assigns them to the corresponding fields in the `AMQP$BasicProperties$Builder` object. The fields include:
+     - `contentType`
+     - `contentEncoding`
+     - `headers`
+     - `deliveryMode`
+     - `priority`
+     - `correlationId`
+     - `replyTo`
+     - `expiration`
+     - `messageId`
+     - `timestamp`
+     - `type`
+     - `userId`
+     - `appId`
+     - `clusterId`
+
+3. **Return**:
+   - The method returns the `AMQP$BasicProperties$Builder` object with all the fields set.
+
+Given this analysis, the data flow can be summarized as follows:
+
+- Each field from `this` (`AMQP$BasicProperties`) is transferred to the corresponding field in the `AMQP$BasicProperties$Builder` object.
+- There is no conditional logic affecting the data flow; all fields are transferred unconditionally.
+
+Here is the XML representation of the data flow:
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setNetworkRecoveryInterval</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.networkRecoveryInterval</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.networkRecoveryInterval`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setCredentialsRefreshService</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.rabbitmq.client.impl.CredentialsRefreshService</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.credentialsRefreshService</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `com.rabbitmq.client.impl.CredentialsRefreshService`) is transferred to `this.credentialsRefreshService`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newConnection</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.util.List`) is used to create an `AddressResolver`, which is then used in the connection creation process.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newConnection</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (a `java.lang.String`) is passed through to the connection creation process.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newConnection</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.rabbitmq.client.Address[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`Address[]`) is transformed into a `List`, then into an `AddressResolver`, and finally contributes to the creation of the `Connection` returned by the method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Address</Value>
+        </ClassName>
+        <FunctionName>
+            <Value><init></Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this._host</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `java.lang.String`) is transferred into `this._host`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setShutdownTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.shutdownTimeout</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `int`) is transferred into `this.shutdownTimeout`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setChannelRpcTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 >= 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.channelRpcTimeout</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (timeout value) is transferred into `this.channelRpcTimeout`
+    - The flow is conditional on `p1` being non-negative
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Confirm$SelectOk$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no data flow involving parameters, fields of parameters, this, fields of this, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Confirm$SelectOk$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no data flow involving parameters, fields of this, or return values that affect other parameters or fields.
+    - The method simply creates and returns a new instance of AMQImpl$Confirm$SelectOk.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setTopologyRecoveryEnabled</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.topologyRecovery</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the boolean parameter) is transferred into `this.topologyRecovery`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setConnectionRecoveryTriggeringCondition</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.function.Predicate</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.connectionRecoveryTriggeringCondition</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Predicate` parameter) is transferred into `this.connectionRecoveryTriggeringCondition`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setRecoveryDelayHandler</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.rabbitmq.client.RecoveryDelayHandler</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.recoveryDelayHandler</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`com.rabbitmq.client.RecoveryDelayHandler`) is transferred into `this.recoveryDelayHandler`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ConnectionFactory</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setSharedExecutor</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.concurrent.ExecutorService</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.sharedExecutor</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `ExecutorService` parameter) is transferred into `this.sharedExecutor`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>passive</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.passive</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean) is transferred into `this.passive`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes fields of the object but does not involve any parameter data flow or return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>queue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.queue</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.queue`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>ifUnused</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.ifUnused</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean) is transferred into `this.ifUnused`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>ifUnused</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>ifEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.ifEmpty</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.ifEmpty`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ticket</InArguments>
+    <OutArguments>return.ticket</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ticket` is transferred into `return.ticket`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.queue</InArguments>
+    <OutArguments>return.queue</OutArguments>
+    <Comment>
+    - The data flow shows that `this.queue` is transferred into `return.queue`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ifUnused</InArguments>
+    <OutArguments>return.ifUnused</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ifUnused` is transferred into `return.ifUnused`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ifEmpty</InArguments>
+    <OutArguments>return.ifEmpty</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ifEmpty` is transferred into `return.ifEmpty`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.nowait</InArguments>
+    <OutArguments>return.nowait</OutArguments>
+    <Comment>
+    - The data flow shows that `this.nowait` is transferred into `return.nowait`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This constructor initializes fields of the AMQP$Exchange$Declare$Builder instance with default values.
+    - There is no parameter-based data flow to track.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>exchange</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.exchange</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.exchange`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>type</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.type</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.type`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>durable</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.durable</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.durable`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>autoDelete</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.autoDelete</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.autoDelete`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>internal</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.internal</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.internal`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>passive</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.passive</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.passive`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>passive</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (current object instance) is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>arguments</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.util.Map`) is transferred into `this.arguments`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ticket</InArguments>
+    <OutArguments>return.ticket</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ticket` is transferred into `return.ticket`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.exchange</InArguments>
+    <OutArguments>return.exchange</OutArguments>
+    <Comment>
+    - The data flow shows that `this.exchange` is transferred into `return.exchange`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.type</InArguments>
+    <OutArguments>return.type</OutArguments>
+    <Comment>
+    - The data flow shows that `this.type` is transferred into `return.type`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.passive</InArguments>
+    <OutArguments>return.passive</OutArguments>
+    <Comment>
+    - The data flow shows that `this.passive` is transferred into `return.passive`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.durable</InArguments>
+    <OutArguments>return.durable</OutArguments>
+    <Comment>
+    - The data flow shows that `this.durable` is transferred into `return.durable`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000006</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.autoDelete</InArguments>
+    <OutArguments>return.autoDelete</OutArguments>
+    <Comment>
+    - The data flow shows that `this.autoDelete` is transferred into `return.autoDelete`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000007</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.internal</InArguments>
+    <OutArguments>return.internal</OutArguments>
+    <Comment>
+    - The data flow shows that `this.internal` is transferred into `return.internal`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000008</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Declare$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.nowait</InArguments>
+    <OutArguments>return.nowait</OutArguments>
+    <Comment>
+    - The data flow shows that `this.nowait` is transferred into `return.nowait`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+
+=== system ===
+
+You are a professional program analysis aid to summarize what the target method is doing and
+what kind of data flow there in relates to the target method. 
+=== user ===
+
+
+Please adhere to the following conventions in your summary:
+
+(1)Parameter Notation: Use p1,p2,p3 to represent the first, second, third parameters of the method
+E.g.: 'p1' represents 'a', 'p2' represents 'b', there are no 'p3 or p4'
+private void assignValue(String a, String b){
+    a = b
+}
+
+(2)Object Reference: Use this to refer to the current object instance.
+E.g.: 'this' represents the current object instantiated through class A
+public class A{
+    String name;
+    private void setValue(String a){
+        this.name = a;
+    }
+}
+
+(3)Field Access: Use dot notation to represent nested fields, e.g., this.labelA.labelB
+refers to field labelB within labelA of this.
+E.g.: this.foo.name
+public class A{
+    Foo foo;
+    private void assignValue(String a){
+        this.foo.name = a;
+    }
+    
+    class Foo{
+        String name;
+    }
+}
+
+
+A summary for a leaf procedure has been provided as a comment on the
+corresponding call-site line within the code. You should:
+(1)Evaluate the Condition: First, determine whether the condition specified in the
+comment is satisfied within the current code context.
+(2)Generate Summary: If the condition is satisfied, use it to help generate a
+summary for the current code block.
+(3)Ignore Irrelevant Dataflows: If the condition is not satisfied, disregard this
+dataflow in your summary.
+(4)Handle Uncertainty: If you are unsure whether the condition is satisfied,
+reorganize and reinterpret the condition in a manner that aligns with the input
+states of the current code.
+
+
+
+
+Here is a few examples，and the analysis result will provide a summary in the form of annotations above the method.
+Data Flow Summary and conditions should only contains the flow about param, field of the param, this, filed of this, ret, 
+field of the ret which should not include local variables in the method. （Please pay attention to this rule!!!）.
+
+Also,InArguments and OutArguments will only contain one element. If there are multiple elements, please create a PropagationRule to represent them separately!!!
+
+
+Example 1 :
+
+Method to be analyzed: <com.test.A: java.lang.String call(java.lang.String,com.test.Foo,int)>
+
+package com.test;
+public class A{
+    Flag flag;
+    String call(String a, Foo b, int c){
+        String tmp1 = a + "test1";
+        String tmp2 = a + "test2";
+        String finalStr = a + "user";
+        if (!flag.value.equals("ABC")){
+            if (flag.name.equals(b.name)){
+                assignValueMethodA(tmp1, b); // This line involves a dataflow from 'p1(tmp1) to p2(b).name
+            }
+        }
+        assignValueMethodB(tmp2, b); // This line involves a dataflow from p1(tmp2) to p2(b).content
+        if (c != 0){
+            this.flag.score = c;
+        }else{
+            this.flag.score = 1000;
+        }
+        return finalStr
+    }
+    class Flag{
+        String value;
+        String name;
+        int score;
+    }
+}
+
+package com.test;
+public Foo{
+    String name;
+    String content;
+}
+
+
+[Positive Analysis Result]: Please pay more attention to !!! [If there are multiple parameter data streams, they should be recorded separately, such as p1-->this.f1, p2-->this.f2, there will be two PropagationRule xml records. <InArguments>This tag can only have one parameter</InArguments>] 
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-JHKLIBGFFG000008</RuleID>  # This RuleID should be randomly generated.The prefix "RULE-ID-PROPAGATION-" remains unchanged.
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>com.test.Foo</ParamType>
+                <ParamType>int</ParamType>
+            </Parameters>
+            <HasPropagation>true</HasPropagation>
+            <Condition>!this.flag.value.equals(p1) && this.flag.name.equals(p1.name)</Condition>
+            <InArguments>0</InArguments> # If there are multiple parameter data streams, they should be recorded separately, such as p1-->this.f1, p2-->this.f2, there will be two PropagationRule xml records
+            <OutArguments>1.name</OutArguments>
+            <Comment>
+            - The data flow shows that `p1` (`a`) is transferred into the `tmp1`, and the `tmp1` is transferred into 'p2'('b').name  
+            - The flow is conditional on !this.flag.value.equals("ABC") && this.flag.name.equals(p2.name)
+            </Comment>
+</PropagationRule>
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>com.test.Foo</ParamType>
+                <ParamType>int</ParamType>
+            </Parameters>
+            <HasPropagation>true</HasPropagation>
+            <Condition>NOC</Condition>
+            <InArguments>0</InArguments>
+            <OutArguments>1.content</OutArguments>
+            <Comment>
+            - The data flow shows that `p1` (`a`) is transferred into the `tmp2`, and the `tmp2` is transferred into 'p2'('b').content
+            - The flow is no condition
+            </Comment>
+</PropagationRule>
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>com.test.Foo</ParamType>
+                <ParamType>int</ParamType>
+            </Parameters>
+            <HasPropagation>true</HasPropagation>
+            <Condition> p3!=0 </Condition> # p3 means the third parm
+            <InArguments>2</InArguments>
+            <OutArguments>this.flag.score</OutArguments>
+            <Comment>
+            - The data flow shows that `p3` (`c`) is transferred into this.flag.score
+            - The flow is no condition
+            </Comment>
+</PropagationRule>
+
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>com.test.Foo</ParamType>
+                <ParamType>int</ParamType>
+            </Parameters>
+            <HasPropagation>true</HasPropagation>
+            <Condition>NOC</Condition>
+            <InArguments>0</InArguments>
+            <OutArguments>return</OutArguments>
+            <Comment>
+            - The data flow shows that `p1` (`a`) is transferred into 'return'
+            - The flow is no condition
+            </Comment>
+</PropagationRule>
+
+
+Example 2 :
+
+Method to be analyzed: <com.test:A void call(java.lang.String)>
+
+package com.test;
+public class A{
+    void call(String a){
+        String tmp1 = a + "test1";
+        System.out.println(tmp1);
+    }
+}
+
+
+[Positive Analysis Result]: 
+
+<PropagationRule>
+            <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.test</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>A</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>call</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+            </Parameters>
+            <HasPropagation>false</HasPropagation>
+            <Comment>
+            - There is no obvious data flow here as parameter p1 does not flow to other parameters, this, or return.
+            </Comment>
+</PropagationRule>
+
+Now the final question, tell me the summary of this method.
+(1)Please provide the analysis results strictly in this XML format according to the example. 
+(2)Don't forget to merge the result (p1-->a-->b--->p2 should be p1 --> p2)
+(3)Please think step by step and provide the detailed analysis results for each step. 
+
+Method to be analyzed:<com.rabbitmq.client.AMQP$Exchange$Delete$Builder: void <init>()>
+Related methods: 1
+caller is : <reactor.rabbitmq.Sender: reactor.core.publisher.Mono deleteExchange(reactor.rabbitmq.ExchangeSpecification,boolean,reactor.rabbitmq.ResourceManagementOptions)>
+callee is : <com.rabbitmq.client.AMQP$Exchange$Delete$Builder: void <init>()>
+
+Method: <com.rabbitmq.client.AMQP$Exchange$Delete$Builder: void <init>()>
+    public void <init>()
+    {
+        com.rabbitmq.client.AMQP$Exchange$Delete$Builder r0;
+
+        r0 := @this: com.rabbitmq.client.AMQP$Exchange$Delete$Builder;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<com.rabbitmq.client.AMQP$Exchange$Delete$Builder: int ticket> = 0;
+
+        r0.<com.rabbitmq.client.AMQP$Exchange$Delete$Builder: boolean ifUnused> = 0;
+
+        r0.<com.rabbitmq.client.AMQP$Exchange$Delete$Builder: boolean nowait> = 0;
+
+        return;
+    }
+
+-----------
+=== assistant ===
+To analyze the method `<com.rabbitmq.client.AMQP$Exchange$Delete$Builder: void <init>()>`, we need to understand the data flow and any parameter or field interactions. Let's break down the steps:
+
+1. **Method Initialization**:
+   - The method is a constructor for the class `AMQP$Exchange$Delete$Builder`.
+   - The `@this` reference (`r0`) is initialized as an instance of `AMQP$Exchange$Delete$Builder`.
+
+2. **Field Initialization**:
+   - The fields `ticket`, `ifUnused`, and `nowait` of the `this` instance (`r0`) are initialized to `0`.
+
+3. **Data Flow Analysis**:
+   - There are no parameters (`p1`, `p2`, etc.) involved in this constructor.
+   - The fields of `this` are set to constant values (`0`), and there is no data flow from parameters or other fields.
+   - There is no return value or propagation of data from this constructor.
+
+4. **Related Methods**:
+   - The constructor is called by `<reactor.rabbitmq.Sender: reactor.core.publisher.Mono deleteExchange(reactor.rabbitmq.ExchangeSpecification,boolean,reactor.rabbitmq.ResourceManagementOptions)>`, but this does not affect the internal data flow of the constructor itself.
+
+5. **Conclusion**:
+   - Since there are no parameters or complex data flows, the constructor does not propagate any data from parameters or fields to other fields or return values.
+
+Based on the above analysis, the XML summary for this method is as follows:
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>exchange</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.exchange</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.exchange`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>ifUnused</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.ifUnused</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.ifUnused`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>ifUnused</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned by the method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ticket</InArguments>
+    <OutArguments>return.ticket</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ticket` is transferred into `return.ticket`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.exchange</InArguments>
+    <OutArguments>return.exchange</OutArguments>
+    <Comment>
+    - The data flow shows that `this.exchange` is transferred into `return.exchange`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ifUnused</InArguments>
+    <OutArguments>return.ifUnused</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ifUnused` is transferred into `return.ifUnused`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Delete$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.nowait</InArguments>
+    <OutArguments>return.nowait</OutArguments>
+    <Comment>
+    - The data flow shows that `this.nowait` is transferred into `return.nowait`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This constructor initializes the fields of the instance with constant values.
+    - There is no data flow from parameters to fields, this, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>exchange</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.exchange</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.exchange`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>queue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.queue</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (parameter) is transferred into `this.queue`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>queue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method returns the current instance `this`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>routingKey</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.routingKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.routingKey`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>arguments</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.util.Map`) is transferred into `this.arguments`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>arguments</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ticket</InArguments>
+    <OutArguments>return.ticket</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ticket` is transferred into `return.ticket`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.queue</InArguments>
+    <OutArguments>return.queue</OutArguments>
+    <Comment>
+    - The data flow shows that `this.queue` is transferred into `return.queue`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.exchange</InArguments>
+    <OutArguments>return.exchange</OutArguments>
+    <Comment>
+    - The data flow shows that `this.exchange` is transferred into `return.exchange`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.routingKey</InArguments>
+    <OutArguments>return.routingKey</OutArguments>
+    <Comment>
+    - The data flow shows that `this.routingKey` is transferred into `return.routingKey`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.arguments</InArguments>
+    <OutArguments>return.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `this.arguments` is transferred into `return.arguments`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes fields of the object with constant values or null.
+    - There is no data flow from parameters as there are no parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>source</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.source</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (parameter) is transferred into `this.source`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>destination</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.destination</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.destination`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>routingKey</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.routingKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.routingKey`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>arguments</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `java.util.Map` parameter) is transferred into `this.arguments`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ticket</InArguments>
+    <OutArguments>return.ticket</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ticket` is transferred into `return.ticket`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.destination</InArguments>
+    <OutArguments>return.destination</OutArguments>
+    <Comment>
+    - The data flow shows that `this.destination` is transferred into `return.destination`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.source</InArguments>
+    <OutArguments>return.source</OutArguments>
+    <Comment>
+    - The data flow shows that `this.source` is transferred into `return.source`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.routingKey</InArguments>
+    <OutArguments>return.routingKey</OutArguments>
+    <Comment>
+    - The data flow shows that `this.routingKey` is transferred into `return.routingKey`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.nowait</InArguments>
+    <OutArguments>return.nowait</OutArguments>
+    <Comment>
+    - The data flow shows that `this.nowait` is transferred into `return.nowait`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000006</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Unbind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.arguments</InArguments>
+    <OutArguments>return.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `this.arguments` is transferred into `return.arguments`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This constructor initializes fields of the `this` object but does not involve any parameter data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>exchange</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.exchange</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.exchange`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>queue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.queue</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter) is transferred into `this.queue`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>queue</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method returns `this` after setting `this.queue`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>routingKey</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.routingKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.routingKey`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>arguments</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the Map parameter) is transferred into `this.arguments`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ticket</InArguments>
+    <OutArguments>return.ticket</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ticket` is transferred into `return.ticket`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.queue</InArguments>
+    <OutArguments>return.queue</OutArguments>
+    <Comment>
+    - The data flow shows that `this.queue` is transferred into `return.queue`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.exchange</InArguments>
+    <OutArguments>return.exchange</OutArguments>
+    <Comment>
+    - The data flow shows that `this.exchange` is transferred into `return.exchange`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.routingKey</InArguments>
+    <OutArguments>return.routingKey</OutArguments>
+    <Comment>
+    - The data flow shows that `this.routingKey` is transferred into `return.routingKey`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.nowait</InArguments>
+    <OutArguments>return.nowait</OutArguments>
+    <Comment>
+    - The data flow shows that `this.nowait` is transferred into `return.nowait`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000006</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Queue$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.arguments</InArguments>
+    <OutArguments>return.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `this.arguments` is transferred into `return.arguments`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes fields with constant values and does not involve any data flow from parameters, as there are none.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>source</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.source</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into `this.source`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>destination</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.destination</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.destination`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>routingKey</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.routingKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r1`) is transferred into `this.routingKey`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>arguments</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Map` parameter) is transferred into `this.arguments`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.ticket</InArguments>
+    <OutArguments>return.ticket</OutArguments>
+    <Comment>
+    - The data flow shows that `this.ticket` is transferred into `return.ticket`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.destination</InArguments>
+    <OutArguments>return.destination</OutArguments>
+    <Comment>
+    - The data flow shows that `this.destination` is transferred into `return.destination`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.source</InArguments>
+    <OutArguments>return.source</OutArguments>
+    <Comment>
+    - The data flow shows that `this.source` is transferred into `return.source`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.routingKey</InArguments>
+    <OutArguments>return.routingKey</OutArguments>
+    <Comment>
+    - The data flow shows that `this.routingKey` is transferred into `return.routingKey`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.nowait</InArguments>
+    <OutArguments>return.nowait</OutArguments>
+    <Comment>
+    - The data flow shows that `this.nowait` is transferred into `return.nowait`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000006</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AMQP$Exchange$Bind$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.arguments</InArguments>
+    <OutArguments>return.arguments</OutArguments>
+    <Comment>
+    - The data flow shows that `this.arguments` is transferred into `return.arguments`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AlreadyClosedException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.rabbitmq.client.ShutdownSignalException</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`ShutdownSignalException`) is used to initialize fields and construct messages in `AlreadyClosedException`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Envelope</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this._deliveryTag</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (long) is transferred into `this._deliveryTag`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Envelope</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this._redeliver</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (boolean) is transferred into `this._redeliver`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Envelope</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>this._exchange</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (java.lang.String) is transferred into `this._exchange`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.rabbitmq.client</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Envelope</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>boolean</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>3</InArguments>
+    <OutArguments>this._routingKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p4` (java.lang.String) is transferred into `this._routingKey`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+

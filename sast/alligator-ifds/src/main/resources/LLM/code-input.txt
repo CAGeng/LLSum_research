@@ -1,0 +1,56 @@
+public AttackResult sendPasswordResetLink(@RequestParam String email, HttpServletRequest request)
+throws URISyntaxException {
+if (StringUtils.hasText(email)) {
+String username = email.substring(0, email.indexOf("@"));
+if (StringUtils.hasText(username)) {
+URI uri = new URI(request.getRequestURL().toString());
+Email mail =
+Email.builder()
+.title("Your password reset link for challenge 7")
+.contents(
+String.format(
+TEMPLATE,
+uri.getScheme() + "://" + uri.getHost(),
+new PasswordResetLink().createPasswordReset(username, "webgoat")))
+.sender("password-reset@webgoat-cloud.net")
+.recipient(username)
+.time(LocalDateTime.now())
+.build();
+restTemplate.postForEntity(webWolfMailURL, mail, Object.class);
+}
+}
+return success(this).feedback("email.send").feedbackArgs(email).build();
+}
+
+
+---------------调用链上其它方法-------------
+
+---------------其他调用的方法-------------
+
+
+
+* @since 8/20/17.
+  */
+  @Builder
+  @Data
+  public class Email implements Serializable {
+
+* @since 8/17/17.
+  */
+  public class PasswordResetLink {
+
+public String createPasswordReset(String username, String key) {
+
+
+
+
+
+
+public String createPasswordReset(String username, String key) {
+Random random = new Random();
+if (username.equalsIgnoreCase("admin")) {
+// Admin has a fix reset link
+random.setSeed(key.length());
+}
+return scramble(random, scramble(random, scramble(random, MD5.getHashString(username))));
+}

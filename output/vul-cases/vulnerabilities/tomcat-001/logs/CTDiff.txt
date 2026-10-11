@@ -1,0 +1,93 @@
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有8个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有10个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: java.lang.String getContextPath()> 一共有4个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有14个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: java.lang.String getParameter(java.lang.String)> 一共有5个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有16个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有18个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)> 一共有6个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有21个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)> 一共有9个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有23个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有25个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有27个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: java.lang.String getDecodedRequestURI()> 一共有5个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()> 一共有7个snapshots
+方法：<org.apache.catalina.connector.Request: java.lang.String getServletPath()> 一共有4个snapshots
+方法：<org.apache.catalina.connector.Request: java.lang.String getPathInfo()> 一共有4个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有29个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: java.lang.String getQueryString()> 一共有7个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void <init>()> 一共有7个snapshots
+方法：<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] getCookies()> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()> 一共有7个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void addCookie(javax.servlet.http.Cookie)> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: java.util.Enumeration getHeaderNames()> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: java.util.Enumeration getLocales()> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: java.util.Enumeration getHeaders(java.lang.String)> 一共有3个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void addLocale(java.util.Locale)> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector getConnector()> 一共有3个snapshots
+方法：<org.apache.tomcat.util.buf.ByteChunk: void <init>()> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: javax.servlet.ServletInputStream getInputStream()> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: java.lang.String getContentType()> 一共有3个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setContentType(java.lang.String)> 一共有3个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setBody(org.apache.tomcat.util.buf.ByteChunk)> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: java.lang.String getMethod()> 一共有5个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setMethod(java.lang.String)> 一共有7个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setQueryString(java.lang.String)> 一共有3个snapshots
+方法：<org.apache.catalina.connector.Request: java.lang.String getRequestURI()> 一共有5个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setRequestURI(java.lang.String)> 一共有7个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setDecodedRequestURI(java.lang.String)> 一共有7个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setOriginalMaxInactiveInterval(int)> 一共有3个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void addHeader(java.lang.String,java.lang.String)> 一共有3个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void <init>()> 一共有9个snapshots
+方法：<org.apache.catalina.connector.Request: void setCharacterEncoding(java.lang.String)> 一共有4个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有31个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()> 一共有5个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setMethod(java.lang.String)> 一共有9个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setRequestURI(java.lang.String)> 一共有9个snapshots
+方法：<org.apache.catalina.authenticator.SavedRequest: void setDecodedRequestURI(java.lang.String)> 一共有9个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有33个snapshots
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.apache.catalina.connector.Request: java.lang.String getProtocol()> 一共有4个snapshots

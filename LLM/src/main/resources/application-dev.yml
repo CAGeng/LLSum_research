@@ -1,0 +1,107 @@
+soot:
+  output:
+    path: /Users/luca/dev/research/output
+    filename: Analyze_result.json
+    insFilename: Instructions.json
+  additional:
+    path: /
+  rt:
+    dir:
+  jce:
+    dir:
+
+list:
+  sootInputPaths:
+    - /Users/luca/dev/2025/pterosaur/lib/demo-0.0.1-SNAPSHOT.jar
+    # mall
+#    - /Users/luca/dev/2025/mall-swarm/mall-admin/target/classes
+#    - /Users/luca/dev/2025/mall-swarm/mall-auth/target/classes
+#    - /Users/luca/dev/2025/mall-swarm/mall-common/target/classes
+#    - /Users/luca/dev/2025/mall-swarm/mall-demo/target/classes
+#    - /Users/luca/dev/2025/mall-swarm/mall-gateway/target/classes
+#    - /Users/luca/dev/2025/mall-swarm/mall-mbg/target/classes
+#    - /Users/luca/dev/2025/mall-swarm/mall-monitor/target/classes
+#    - /Users/luca/dev/2025/mall-swarm/mall-portal/target/classes
+    - /Users/luca/dev/2025/pterosaur/output/popular-components/hutool-core/downstream
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/hutool-core/downstream-1
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/hutool-core/downstream-2
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/hutool-core/test
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/fastjson/downstream
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/aliyun-java-sdk-core/downstream
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/amqp-client/downstream
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/aws-java-sdk-core/downstream
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/guava/downstream
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/kubernetes-client/downstream
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/minio/downstream
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/weixin-java-miniapp/downstream
+#    - /Users/luca/dev/2025/pterosaur/output/popular-components/joda-time/downstream
+    # newbee
+#    - /Users/luca/dev/2025/newbee-mall/target/classes
+  scannedMybatisXmlDirs:
+    - /Users/luca/dev/research/micro_service_seclab-main/src/main/resources/mappers
+  tplPackages:
+#    - org.elasticsearch
+#    - com.rabbitmq
+#    - org.apache
+    - com.example
+  appPackages:
+    - cn.hutool.http
+  targetPackages:
+    - cn.hutool.core
+#    - com.alibaba.fastjson
+#    - com.aliyuncs.auth
+#    - com.aliyuncs.endpoint
+#    - com.aliyuncs.exceptions
+#    - com.aliyuncs.http
+#    - com.aliyuncs.policy
+#    - com.aliyuncs.profile
+#    - com.aliyuncs.reader
+#    - com.aliyuncs.regions
+#    - com.aliyuncs.transform
+#    - com.aliyuncs.unmarshaller
+#    - com.aliyuncs.utils
+#    - com.rabbitmq
+#    - com.amazonaws
+#    - com.google.common
+#    - com.google.thirdparty
+#    - io.fabric8.kubernetes.client
+#    - io.minio
+#    - cn.binarywang.wx.miniapp
+#    - org.joda.time
+logging:
+  config: classpath:log4j2.yml
+
+
+rules:
+  core:
+    path: rules/core.xml
+    pathSwitcher: on
+    thirdPartyPath: rules/java-core.xml
+    thirdPartyPathSwitcher: off
+  extend:
+    path: rules/extend.xml
+    pathSwitcher: off
+    thirdPartyPath: rules/java-extend.xml
+    thirdPartyPathSwitcher: off
+  conditional: off
+  taintFlag: off
+
+
+analysis:
+  taintSanitizeSwitcher: off
+  simpleDataPathSwitcher: off
+  onlyDataflowCallStackInter: off
+  fieldSensitiveSwitcher: on
+  sparkSwitcher: off
+  conditionSummarySwitcher: on
+  onlyOneCallee: off
+
+vulexp:
+  downstream:
+        jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package/arthas-tunnel-server-3.7.1-fatjar.jar
+  upstream:
+        jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package/arthas-tunnel-server-3.7.1-fatjar.jar
+
+
+sink:
+  classPath: /Users/luca/dev/2025/pterosaur/output/popular-components/z-sink-class/sink-hutool-core.jar

@@ -1,0 +1,76 @@
+r10 := @this: org.apache.catalina.authenticator.FormAuthenticator
+r1 := @parameter0: org.apache.catalina.connector.Request
+r8 := @parameter1: org.apache.catalina.Session
+$r27 = new org.apache.catalina.authenticator.SavedRequest
+specialinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void <init>()>()
+$r2 = virtualinvoke r1.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] getCookies()>()
+if $r2 == null goto $r3 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.util.Enumeration getHeaderNames()>()
+i6 = lengthof $r2
+i7 = 0
+if i7 >= i6 goto $r3 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.util.Enumeration getHeaderNames()>()
+r19 = $r2[i7]
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void addCookie(javax.servlet.http.Cookie)>(r19)
+i7 = i7 + 1
+goto [?= (branch)]
+$r3 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.util.Enumeration getHeaderNames()>()
+$z3 = interfaceinvoke $r3.<java.util.Enumeration: boolean hasMoreElements()>()
+if $z3 == 0 goto $r4 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.util.Enumeration getLocales()>()
+$r4 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.util.Enumeration getLocales()>()
+$r16 = interfaceinvoke $r3.<java.util.Enumeration: java.lang.Object nextElement()>()
+r20 = (java.lang.String) $r16
+$r17 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.util.Enumeration getHeaders(java.lang.String)>(r20)
+$z0 = interfaceinvoke $r4.<java.util.Enumeration: boolean hasMoreElements()>()
+if $z0 == 0 goto $r5 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>()
+$r5 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>()
+$r15 = interfaceinvoke $r4.<java.util.Enumeration: java.lang.Object nextElement()>()
+$r6 = <org.apache.coyote.ContinueResponseTiming: org.apache.coyote.ContinueResponseTiming ALWAYS>
+r22 = (java.util.Locale) $r15
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void addLocale(java.util.Locale)>(r22)
+virtualinvoke $r5.<org.apache.catalina.connector.Response: void sendAcknowledgement(org.apache.coyote.ContinueResponseTiming)>($r6)
+$r7 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector getConnector()>()
+$i0 = virtualinvoke $r7.<org.apache.catalina.connector.Connector: int getMaxSavePostSize()>()
+if $i0 == 0 goto $r23 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getMethod()>()
+goto [?= $z0 = interfaceinvoke $r4.<java.util.Enumeration: boolean hasMoreElements()>()]
+$r28 = new org.apache.tomcat.util.buf.ByteChunk
+specialinvoke $r28.<org.apache.tomcat.util.buf.ByteChunk: void <init>()>()
+virtualinvoke $r28.<org.apache.tomcat.util.buf.ByteChunk: void setLimit(int)>($i0)
+r12 = newarray (byte)[4096]
+$r13 = virtualinvoke r1.<org.apache.catalina.connector.Request: javax.servlet.ServletInputStream getInputStream()>()
+$r29 = (java.io.InputStream) $r13
+$i4 = virtualinvoke $r29.<java.io.InputStream: int read(byte[])>(r12)
+if $i4 < 0 goto $i5 = virtualinvoke $r28.<org.apache.tomcat.util.buf.ByteChunk: int getLength()>()
+virtualinvoke $r28.<org.apache.tomcat.util.buf.ByteChunk: void append(byte[],int,int)>(r12, 0, $i4)
+goto [?= $r29 = (java.io.InputStream) $r13]
+$i5 = virtualinvoke $r28.<org.apache.tomcat.util.buf.ByteChunk: int getLength()>()
+if $i5 <= 0 goto $r23 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getMethod()>()
+$r14 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getContentType()>()
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void setContentType(java.lang.String)>($r14)
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void setBody(org.apache.tomcat.util.buf.ByteChunk)>($r28)
+$r23 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getMethod()>()
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void setMethod(java.lang.String)>($r23)
+$r24 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getQueryString()>()
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void setQueryString(java.lang.String)>($r24)
+$r25 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getRequestURI()>()
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void setRequestURI(java.lang.String)>($r25)
+$r26 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getDecodedRequestURI()>()
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void setDecodedRequestURI(java.lang.String)>($r26)
+$z4 = r8 instanceof javax.servlet.http.HttpSession
+if $z4 == 0 goto interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>("org.apache.catalina.authenticator.REQUEST", $r27)
+$r9 = (javax.servlet.http.HttpSession) r8
+$z1 = interfaceinvoke $r9.<javax.servlet.http.HttpSession: boolean isNew()>()
+if $z1 == 0 goto interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>("org.apache.catalina.authenticator.REQUEST", $r27)
+$i1 = interfaceinvoke r8.<org.apache.catalina.Session: int getMaxInactiveInterval()>()
+$i2 = virtualinvoke r10.<org.apache.catalina.authenticator.FormAuthenticator: int getAuthenticationSessionTimeout()>()
+if $i1 <= $i2 goto interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>("org.apache.catalina.authenticator.REQUEST", $r27)
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void setOriginalMaxInactiveInterval(int)>($i1)
+$i3 = virtualinvoke r10.<org.apache.catalina.authenticator.FormAuthenticator: int getAuthenticationSessionTimeout()>()
+interfaceinvoke r8.<org.apache.catalina.Session: void setMaxInactiveInterval(int)>($i3)
+interfaceinvoke r8.<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>("org.apache.catalina.authenticator.REQUEST", $r27)
+return
+$z2 = interfaceinvoke $r17.<java.util.Enumeration: boolean hasMoreElements()>()
+if $z2 == 0 goto (branch)
+$r18 = interfaceinvoke $r17.<java.util.Enumeration: java.lang.Object nextElement()>()
+r21 = (java.lang.String) $r18
+virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void addHeader(java.lang.String,java.lang.String)>(r20, r21)
+goto [?= $z3 = interfaceinvoke $r3.<java.util.Enumeration: boolean hasMoreElements()>()]
+goto [?= $z2 = interfaceinvoke $r17.<java.util.Enumeration: boolean hasMoreElements()>()]

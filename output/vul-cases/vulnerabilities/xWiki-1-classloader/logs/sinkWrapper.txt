@@ -1,0 +1,4 @@
+<com.xpn.xwiki.util.Util: java.net.URL getResource(java.lang.String)> || classLoader_getResource ||(calling) <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+<com.xpn.xwiki.internal.skin.ClassLoaderSkin: java.net.URL getResourceURL(java.lang.String)> || classLoader_getResource ||(calling) <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+<com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)> || classLoader_getResource ||(calling) <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+<com.xpn.xwiki.internal.store.hibernate.HibernateStore: java.net.URL getHibernateConfigurationURL()> || classLoader_getResource ||(calling) <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>

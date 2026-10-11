@@ -1,0 +1,2751 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BaseArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the `BaseArgs` instance created in `newInstance()` is processed and returned by the `build()` method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BucketArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>bucket</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used in the method but does not propagate to fields or return values.
+    - The flow involves validation and transformation into a Consumer object, but no direct propagation to `this` or return.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>object</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is validated and then used to create a consumer object which is added to `this.operations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>putObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.PutObjectArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`PutObjectArgs`) is transferred into the `asyncClient` and results in an `ObjectWriteResponse` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PutObjectArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of io.minio.PutObjectArgs$Builder.
+    - There is no data flow from parameters or fields of this to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PutObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>stream</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The parameters are used to create consumer operations within the method, but there is no direct data flow propagation to fields or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of MinioClient$Builder.
+    - There is no data flow involving parameters or fields of 'this'.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.asyncClientBuilder</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.asyncClientBuilder` is used to build a `MinioAsyncClient`, which is then used to construct a `MinioClient`.
+    - The `MinioClient` is returned from the method.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.GetObjectArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`GetObjectArgs`) is transferred into the return value (`GetObjectResponse`).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>endpoint</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.asyncClientBuilder.endpoint</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.asyncClientBuilder.endpoint(p1)`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>endpoint</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns `this`, which is the current instance of `MinioClient$Builder`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>credentials</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.asyncClientBuilder.credentials.accessKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.asyncClientBuilder.credentials.accessKey`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>credentials</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.asyncClientBuilder.credentials.secretKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `this.asyncClientBuilder.credentials.secretKey`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>GetObjectArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method initializes and returns a new instance of io.minio.GetObjectArgs$Builder.
+    - There is no parameter or field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BucketExistsArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of io.minio.BucketExistsArgs$Builder.
+    - There is no data flow involving parameters or fields.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>bucketExists</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.BucketExistsArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`io.minio.BucketExistsArgs`) is used to check the bucket existence asynchronously.
+    - The result of this check is returned as a boolean.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this static method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of `io.minio.ListObjectsArgs$Builder`.
+    - There is no data flow from parameters or fields of `this` as it is a static method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>listObjects</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.ListObjectsArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`io.minio.ListObjectsArgs`) is transferred through various methods and influences the return value.
+    - The flow is conditional based on checks within `MinioAsyncClient`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MakeBucketArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method does not involve any parameter data flow as it does not take any parameters.
+    - It constructs and returns a new instance of MakeBucketArgs$Builder.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>makeBucket</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.MakeBucketArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.asyncClient</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`MakeBucketArgs`) is passed to `this.asyncClient.makeBucket`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StatObjectArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of io.minio.StatObjectArgs$Builder.
+    - There is no data flow from parameters or fields of 'this' since the method is static and has no parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Result</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>get</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>this.ex == null</Condition>
+    <InArguments>this.type</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.type` is transferred into the return value when `this.ex` is null.
+    - The flow is conditional on `this.ex` being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>prefix</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is encapsulated in a `Consumer` object and added to `this.operations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>prefix</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>removeObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.RemoveObjectArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.asyncClient.removeObject</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`RemoveObjectArgs`) is transferred into the `removeObject` method of `this.asyncClient`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>PutObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>contentType</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>io.minio.PutObjectArgs$Builder$lambda_contentType_4__4845.cap0</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into the field `cap0` of a new instance of `io.minio.PutObjectArgs$Builder$lambda_contentType_4__4845`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>recursive</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean) is used to create a Consumer object which is added to `this.operations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>recursive</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method returns `this`, which is `r0`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RemoveObjectArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method constructs and returns a new instance of `io.minio.RemoveObjectArgs$Builder`.
+    - There is no data flow from parameters or fields of `this` to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getPresignedObjectUrl</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.GetPresignedObjectUrlArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`io.minio.GetPresignedObjectUrlArgs`) is transferred into the `getPresignedObjectUrl` method of `MinioAsyncClient` and the result is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>validateNotNull</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if `p1` is null and uses `p2` to construct an error message if `p1` is null.
+    - There is no data propagation to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>GetPresignedObjectUrlArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of `io.minio.GetPresignedObjectUrlArgs$Builder`.
+    - There is no data flow from parameters or fields to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>region</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.asyncClientBuilder.region</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into `this.asyncClientBuilder.region`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>region</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>GetPresignedObjectUrlArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>expiry</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The parameter `p1` is used to modify the internal state of `this` by adding a `Consumer` object to the `operations` list.
+    - The method returns `this`, but there is no direct propagation of `p1` to `this` or `return`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>includeUserMetadata</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is used to create a `Consumer` object, which is added to `this.operations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>httpClient</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>okhttp3.OkHttpClient</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.asyncClientBuilder.httpClient</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`okhttp3.OkHttpClient`) is transferred into `this.asyncClientBuilder.httpClient`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>httpClient</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>okhttp3.OkHttpClient</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method returns `this`, which is the current instance of `MinioClient$Builder`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectWriteArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>userMetadata</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.util.Map`) is transformed into a `SetMultimap` and affects the state of `this`.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectWriteArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>headers</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `Map`) is converted into a `Multimap` and stored in a `Consumer` object, which is then added to the `operations` list of `this`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UploadObjectArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method constructs and returns a new instance of `UploadObjectArgs$Builder`.
+    - There is no parameter or field data flow involved in this method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UploadObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>filename</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`filename`) is used to create a `Path` and calculate file size.
+    - The filename is added to a list of operations within the builder.
+    - The method returns the builder instance (`this`).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>uploadObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.UploadObjectArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`UploadObjectArgs`) is transferred into the return value (`ObjectWriteResponse`).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>useApiVersion1</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into the field `cap0` of a new instance of `io.minio.ListObjectsArgs$Builder$lambda_useApiVersion1_12__4713`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>endpoint</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The parameters `p1` (`java.lang.String`), `p2` (`int`), and `p3` (`boolean`) are passed to the `endpoint` method of `io.minio.MinioAsyncClient$Builder`.
+    - There is no direct data flow to fields of `this` or the return value within this method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>listBuckets</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method retrieves a list of buckets using an asynchronous client.
+    - The data flow involves retrieving a `CompletableFuture` from the `asyncClient` and obtaining a `List` from it.
+    - There is no parameter or field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CopySource</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method constructs and returns a new instance of `io.minio.CopySource$Builder`.
+    - There is no parameter or field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CopyObjectArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method constructs and returns a new instance of io.minio.CopyObjectArgs$Builder.
+    - There is no parameter or field data flow to capture.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CopyObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>source</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.CopySource</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`io.minio.CopySource`) is indirectly propagated to `this` (`io.minio.CopyObjectArgs$Builder`) through a lambda object added to the `operations` list.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>GetPresignedObjectUrlArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>expiry</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+        <ParamType>java.util.concurrent.TimeUnit</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (int) is converted to seconds using `p2` (TimeUnit) and affects `this.operations` list.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>asyncClient.setTimeout.p1</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred directly to `asyncClient.setTimeout`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>asyncClient.setTimeout.p2</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred directly to `asyncClient.setTimeout`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>asyncClient.setTimeout.p3</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` is transferred directly to `asyncClient.setTimeout`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>GetObjectTagsArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method constructs and returns a new instance of io.minio.GetObjectTagsArgs$Builder.
+    - There is no parameter or field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getObjectTags</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.GetObjectTagsArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`GetObjectTagsArgs`) is transferred into the `getObjectTags` method of `MinioAsyncClient`, and the result is returned as `Tags`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioProperties</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getDefaultUserAgent</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.version</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.version` is retrieved and used to construct the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>S3Escaper</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>encode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed through an escape operation and then converted into the return value.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getBaseUrl</Value>
+        </FunctionName>
+        <ApplyTo implements="false" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 is a valid URL or hostname/IP</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to create or parse an `HttpUrl` object which is returned.
+    - The flow is conditional on `p1` being a valid URL or hostname/IP.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.credentials</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StaticProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.credentials.accessKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.credentials.accessKey`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.credentials</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StaticProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.credentials.secretKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `this.credentials.secretKey`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.credentials</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StaticProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>this.credentials.sessionToken</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` is transferred into `this.credentials.sessionToken`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MakeBucketArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>objectLock</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>io.minio.MakeBucketArgs$Builder$lambda_objectLock_0__4718.cap0</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into the field `cap0` of the instance `io.minio.MakeBucketArgs$Builder$lambda_objectLock_0__4718`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MakeBucketArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>objectLock</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (current instance of `io.minio.MakeBucketArgs$Builder`) is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BucketArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>region</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the `this.operations` list via a Consumer object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>startAfter</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is passed through the method chain and assigned to the field `cap0` of an instance of `io.minio.ListObjectsArgs$Builder$lambda_startAfter_4__4705`.
+    - The method returns `this`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DownloadObjectArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of `io.minio.DownloadObjectArgs$Builder`.
+    - There is no data flow from parameters or fields of `this` to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DownloadObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>filename</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (filename) is used to create a `Consumer` which is added to `this.operations`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>S3Escaper</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>encodePath</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (input string) is processed and transformed into the `return` value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getHostHeader</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>okhttp3.HttpUrl</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0.host</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`okhttp3.HttpUrl`) host is transferred into 'return'
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Digest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>sha256Hash</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>byte[]</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (byte array) is transformed into a SHA-256 hash, encoded in base16, and converted to a lowercase string, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Signer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>signV4S3</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>okhttp3.Request</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`okhttp3.Request`) is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setTimeout</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>okhttp3.OkHttpClient</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (okhttp3.OkHttpClient) is transformed into a new okhttp3.OkHttpClient with timeouts set by `p2`, `p3`, and `p4`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>disableCertCheck</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>okhttp3.OkHttpClient</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `okhttp3.OkHttpClient`) is transformed into a new `okhttp3.OkHttpClient` that is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>validateUrl</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>okhttp3.HttpUrl</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the encoded path of `p1` (`okhttp3.HttpUrl`) equals "/". If not, it throws an `IllegalArgumentException`.
+    - There is no data flow from `p1` to other parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newDefaultHttpClient</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`l0`) is used in configuring the `OkHttpClient` and influences the return object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newDefaultHttpClient</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`l1`) is used in configuring the `OkHttpClient` and influences the return object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newDefaultHttpClient</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (`l2`) is used in configuring the `OkHttpClient` and influences the return object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>includeVersions</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into a new instance's field `cap0`, which is then added to `this.operations`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>delimiter</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into the field `cap0` of an instance of `io.minio.ListObjectsArgs$Builder$lambda_delimiter_0__4701`.
+    - The method returns `this`, which is the instance of `io.minio.ListObjectsArgs$Builder`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ListObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>maxKeys</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>1 <= p1 <= 1000</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`i0`) is used to create a `Consumer` object which is added to `this.operations`.
+    - The flow is conditional on `1 <= p1 <= 1000`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RemoveObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>bypassGovernanceMode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into a `Consumer` instance and added to `this.operations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RemoveObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>bypassGovernanceMode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method returns `this`, which is the current instance of `RemoveObjectArgs$Builder`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectVersionArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>versionId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into the `cap0` field of a new `io.minio.ObjectVersionArgs$Builder$lambda_versionId_0__4693` object, which is then added to `this.operations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SetBucketPolicyArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of `io.minio.SetBucketPolicyArgs$Builder`.
+    - There is no data flow from parameters or fields to the return value as the method is static and parameterless.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SetBucketPolicyArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>config</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.operations` through the lambda creation and list addition.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SetBucketPolicyArgs$Builder$lambda_config_0__4852</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>bootstrap$</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>cap0</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `cap0` in the lambda instance.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BaseArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>extraHeaders</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.util.Map`) is transformed into a `Multimap` and used to create a `Consumer` which is added to `this.operations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BaseArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>extraHeaders</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the method returns `this`, the current object instance.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RemoveBucketArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of io.minio.RemoveBucketArgs$Builder.
+    - There is no data flow involving parameters or fields of this.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectConditionalReadArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>offset</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the field `cap0` of a lambda object and subsequently added to `this.operations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectConditionalReadArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>length</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null && p1.longValue() > 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.Long`) is validated and then used to create a lambda instance, which is added to `this.operations`.
+    - The flow is conditional on `p1` being non-null and greater than zero.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ComposeSource</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of `io.minio.ComposeSource$Builder`.
+    - There is no parameter data flow as the method does not accept any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ComposeObjectArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method constructs and returns a new instance of ComposeObjectArgs$Builder.
+    - There is no data flow from parameters or fields to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ComposeObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>sources</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is encapsulated in a `Consumer` object and added to `this.operations`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ComposeObjectArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>sources</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>NOC</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method returns `this`, which is `r0`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>credentialsProvider</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.credentials.Provider</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.asyncClientBuilder.provider</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`io.minio.credentials.Provider`) is transferred into `this.asyncClientBuilder.provider`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>credentialsProvider</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.credentials.Provider</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (`io.minio.MinioClient$Builder`) is returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>enableVirtualStyleEndpoint</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no direct data flow involving parameters or return values in the method `enableVirtualStyleEndpoint`.
+    - The method indirectly affects the `useVirtualStyle` field of `S3Base` through the `MinioAsyncClient` instance.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SetObjectTagsArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method initializes and returns a new instance of `io.minio.SetObjectTagsArgs$Builder`.
+    - There is no parameter or field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SetObjectTagsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>tags</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Map` parameter) is transferred into `this.operations` via a `Consumer`.
+    - The flow is no condition as the `validateNotNull` method only ensures non-nullity.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MinioClient</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setObjectTags</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>io.minio.SetObjectTagsArgs</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.asyncClient</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`SetObjectTagsArgs`) is transferred into the `asyncClient` method calls, facilitating asynchronous operations.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RemoveObjectsArgs</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments></InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method creates and initializes a new instance of `RemoveObjectsArgs$Builder` and returns it.
+    - There is no parameter or field data flow involved, only the return of the newly created object.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RemoveObjectsArgs$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>objects</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Iterable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.operations</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `Iterable` parameter) is transferred into `this.operations` through a lambda object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>io.minio.messages</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DeleteObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.name</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.name`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+

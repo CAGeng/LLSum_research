@@ -1,0 +1,14 @@
+com.github.binarywang:weixin-java-open
+io.xiaper:xiaper-spring-boot-wechat
+org.t-io:tio-site-service
+cn.wekture:fastapi-wechat
+org.t-io:tio-mg-service
+com.vwkit:matrix-module-pay-starter
+com.chuangshios:chuangshi-os-common
+com.faasadmin:wx-business
+com.github.binarywang:wx-java-open-solon-plugin
+com.haoxuer.bigworld:bigworld-weixin
+com.vwkit:matrix-business-starter-pay
+io.github.teascloud:upms-spring-boot-starter
+org.noear:weixin-java-open-solon-plugin
+top.eocs:wwcz-core

@@ -1,0 +1,1687 @@
+{
+  "boundary_check": [
+    {
+      "id": 1,
+      "conditionNotSatisfy": false,
+      "conditionSatisfy": false,
+      "conditionNotSatisfyReason": "",
+      "conditionSatisfyReason": "",
+      "method_argInd_to_CT": {},
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "conditionNodes": [
+          {
+            "badConditionFlag": false,
+            "methodSig": "<java.lang.Throwable: void <clinit>()>",
+            "values": [],
+            "paramInds": [],
+            "defSources": [
+              "$z0 = virtualinvoke $r0.<java.lang.Class: boolean desiredAssertionStatus()>()"
+            ],
+            "constants": {
+              "int": "0"
+            },
+            "comparison": "NO_EQUAL_TO",
+            "basic": false,
+            "usedSite": {
+              "key": "java.lang.Throwable",
+              "value": 115
+            },
+            "satisfyFlag": true,
+            "type": 0,
+            "hashCode": 1055521679,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": true,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: void <clinit>()>",
+            "values": [],
+            "paramInds": [],
+            "defSources": [
+              "$z1 = staticinvoke <java.util.Arrays: boolean equals(java.lang.Object[],java.lang.Object[])>($r20, $r12)"
+            ],
+            "constants": {
+              "int": "0"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 1241
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 1761001373,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readVIntSlow()>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "short": "short"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": -1
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 962094665,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readVIntSlow()>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "short": "short"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": -1
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 1991496839,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readVIntSlow()>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "short": "short"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": -1
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 1186289001,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readVIntSlow()>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "short": "short"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": -1
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 1276907921,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readVIntSlow()>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "short": "short"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": -1
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 1276636795,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: void throwOnBrokenVInt(byte,int)>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "int": "int"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": -1
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 685096804,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": true,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readArraySize()>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [
+              "$i1 = <org.apache.lucene.util.ArrayUtil: int MAX_ARRAY_LENGTH>"
+            ],
+            "constants": {},
+            "comparison": "SMALLER_OR_EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 1218
+            },
+            "satisfyFlag": true,
+            "type": 0,
+            "hashCode": 945808473,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": true,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: int readArraySize()>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "int": "0"
+            },
+            "comparison": "SMALLER",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 1221
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 1918371530,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "int": "1024"
+            },
+            "comparison": "SMALLER_OR_EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 408
+            },
+            "satisfyFlag": true,
+            "type": 0,
+            "hashCode": 1521866191,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>",
+            "values": [
+              null
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "null_type": "null"
+            },
+            "comparison": "NO_EQUAL_TO",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 409
+            },
+            "satisfyFlag": true,
+            "type": 0,
+            "hashCode": 1052732710,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>",
+            "values": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [
+              "$i46 = lengthof $r9"
+            ],
+            "constants": {},
+            "comparison": "BIGGER_OR_EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 411
+            },
+            "satisfyFlag": true,
+            "type": 0,
+            "hashCode": 951597232,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": true,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>",
+            "values": [],
+            "paramInds": [],
+            "defSources": [
+              "i3 = $i2 - i51",
+              "i53 = $i45 - 1",
+              "i53 = i1",
+              "i1 = $i0 - i49"
+            ],
+            "constants": {},
+            "comparison": "SMALLER",
+            "basic": true,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 440
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 1261992394,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": true,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>",
+            "values": [],
+            "paramInds": [],
+            "defSources": [
+              "i51 = i51 - i50"
+            ],
+            "constants": {
+              "int": "2"
+            },
+            "comparison": "BIGGER",
+            "basic": true,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 455
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 580275984,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": true,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>",
+            "values": [],
+            "paramInds": [],
+            "defSources": [
+              "$z0 = <org.elasticsearch.common.io.stream.StreamInput: boolean $assertionsDisabled>"
+            ],
+            "constants": {
+              "int": "0"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 455
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 703305136,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": true,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [
+              "i49 = i49 + 1",
+              "i49 = i49 + 1",
+              "i49 = i49 + 1",
+              "i49 = i49 + 1",
+              "i49 = 0",
+              "i49 = i49 + 1"
+            ],
+            "constants": {
+              "int": "0"
+            },
+            "comparison": "BIGGER_OR_EQUAL",
+            "basic": true,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 426
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 47453212,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": true,
+            "methodSig": "<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>",
+            "values": [],
+            "paramInds": [],
+            "defSources": [
+              "i50 = i50 + 1",
+              "i50 = 0",
+              "i50 = i50 + 1",
+              "i50 = 0",
+              "i50 = i61 + 1"
+            ],
+            "constants": {
+              "int": "0"
+            },
+            "comparison": "BIGGER",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.common.io.stream.StreamInput",
+              "value": 444
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 718002164,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<org.elasticsearch.action.search.TransportSearchHelper: org.elasticsearch.action.search.ParsedScrollId parseScrollId(java.lang.String)>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {},
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "org.elasticsearch.action.search.TransportSearchHelper",
+              "value": 70
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 1377277077,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<java.lang.String: boolean equals(java.lang.Object)>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [
+              0
+            ],
+            "defSources": [
+              "$z0 = r1 instanceof java.lang.String"
+            ],
+            "constants": {
+              "class soot.RefType": "java.lang.String",
+              "int": "0"
+            },
+            "comparison": "NO_EQUAL_TO",
+            "basic": false,
+            "usedSite": {
+              "key": "java.lang.String",
+              "value": 980
+            },
+            "satisfyFlag": true,
+            "type": 0,
+            "hashCode": 1084732510,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<java.lang.String: boolean equals(java.lang.Object)>",
+            "values": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "java.lang.String": "java.lang.String"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "java.lang.String",
+              "value": 981
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 242522192,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<java.lang.String: boolean equals(java.lang.Object)>",
+            "values": [
+              null
+            ],
+            "paramInds": [],
+            "defSources": [
+              "i4 = lengthof $r3",
+              "$i0 = lengthof $r4"
+            ],
+            "constants": {},
+            "comparison": "NO_EQUAL_TO",
+            "basic": false,
+            "usedSite": {
+              "key": "java.lang.String",
+              "value": 983
+            },
+            "satisfyFlag": true,
+            "type": 0,
+            "hashCode": 589922940,
+            "complexity": 1,
+            "ctinfo": null
+          },
+          {
+            "badConditionFlag": false,
+            "methodSig": "<java.lang.String: boolean equals(java.lang.Object)>",
+            "values": [
+              null
+            ],
+            "paramInds": [],
+            "defSources": [],
+            "constants": {
+              "int": "int"
+            },
+            "comparison": "EQUAL",
+            "basic": false,
+            "usedSite": {
+              "key": "java.lang.String",
+              "value": -1
+            },
+            "satisfyFlag": false,
+            "type": 0,
+            "hashCode": 731650352,
+            "complexity": 1,
+            "ctinfo": null
+          }
+        ],
+        "conditionHashCodes": [
+          1261992394,
+          580275984,
+          47453212
+        ],
+        "usedSiteRecords": [
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 74,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.action.search.TransportSearchHelper",
+            "site": 70,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "java.lang.String",
+            "site": 985,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 204,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 411,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 506,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 214,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 211,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 40,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 90,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 486,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 205,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 411,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 413,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 479,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 84,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 216,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 210,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "java.lang.String",
+            "site": -1,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 1219,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 413,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 415,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 411,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 410,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 90,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 89,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "java.lang.String",
+            "site": 983,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 31,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 84,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "java.lang.String",
+            "site": 988,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 1217,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 413,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 72,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": -1,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 54,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 84,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 84,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 195,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 30,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 1222,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 427,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 89,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 411,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 227,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 84,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 409,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 199,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "java.lang.String",
+            "site": 983,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 406,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.action.search.TransportSearchHelper",
+            "site": 72,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 84,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": -1,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 52,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 514,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 215,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 90,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "java.lang.String",
+            "site": 980,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 90,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 409,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": -1,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "java.lang.String",
+            "site": 983,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 413,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 419,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 201,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 84,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "java.lang.String",
+            "site": 981,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": -1,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 223,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 89,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 483,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 40,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": -1,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 53,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.action.search.TransportSearchHelper",
+            "site": 69,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 415,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 1227,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.action.search.TransportSearchHelper",
+            "site": 77,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.action.search.TransportSearchHelper",
+            "site": 65,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 209,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 219,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 200,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 89,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 527,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 220,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.action.search.TransportSearchHelper",
+            "site": 66,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 410,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.action.search.TransportSearchHelper",
+            "site": 77,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 221,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 89,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "java.lang.String",
+            "site": 985,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 464,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": -1,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 419,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 425,
+            "srcMessages": [
+              null
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.action.search.TransportSearchHelper",
+            "site": 75,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 206,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.StreamInput",
+            "site": 410,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 84,
+            "srcMessages": [
+              null,
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "org.elasticsearch.common.io.stream.ByteArrayStreamInput",
+            "site": 90,
+            "srcMessages": [
+              {
+                "entryParamId": 0,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          }
+        ],
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 0,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "r1",
+            "methodStr": "<org.elasticsearch.action.search.TransportSearchHelper: org.elasticsearch.action.search.ParsedScrollId parseScrollId(java.lang.String)>",
+            "typeStr": "java.lang.String"
+          }
+        ],
+        "sinks": [],
+        "hasDataFlow": true,
+        "hasBoundaryCheck": true,
+        "boundaryCheckConditionNode": null,
+        "dataPaths": null
+      },
+      "vulType": "boundary_check",
+      "entryMethod": "<org.elasticsearch.action.search.TransportSearchHelper: org.elasticsearch.action.search.ParsedScrollId parseScrollId(java.lang.String)>",
+      "sinkMethod": "<dummy.dos.array: null_type 'newarray'(int)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<org.elasticsearch.action.search.TransportSearchHelper: org.elasticsearch.action.search.ParsedScrollId parseScrollId(java.lang.String)>"
+      ],
+      "callStackMethods": [
+        "<org.elasticsearch.action.search.TransportSearchHelper: org.elasticsearch.action.search.ParsedScrollId parseScrollId(java.lang.String)>",
+        "<dummy.dos.array: null_type 'newarray'(int)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "callStackLength": 2,
+      "llmexpRank": -1
+    }
+  ]
+}

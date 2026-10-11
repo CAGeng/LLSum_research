@@ -1,0 +1,14 @@
+方法：<org.eclipse.jetty.util.StringUtil: java.lang.String printable(java.lang.String)> 一共有4个snapshots
+方法：<org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)> 一共有7个snapshots
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有13个snapshots
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有16个snapshots
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有18个snapshots
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有2个incoming CT states
+incoming CT: param0-CT2-0
+incoming CT: param0-CT2-1

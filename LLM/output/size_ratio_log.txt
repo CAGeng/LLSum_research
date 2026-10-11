@@ -1,0 +1,5 @@
+2024-11-01 12:46:13 | 文件夹1: /Users/luca/dev/2025/mall-swarm/mall-admin/target/a/BOOT-INF/classes (大小: 470351 字节) | 文件夹2: /Users/luca/dev/2025/mall-swarm/mall-admin/target/a/BOOT-INF/lib (大小: 104592293 字节) | 大小比例: 0.0045
+2024-11-01 12:46:13 | 文件夹1: /Users/luca/dev/2025/mall-swarm/mall-auth/target/a/BOOT-INF/classes (大小: 12382 字节) | 文件夹2: /Users/luca/dev/2025/mall-swarm/mall-auth/target/a/BOOT-INF/lib (大小: 65125257 字节) | 大小比例: 0.0002
+2024-11-01 12:46:13 | 文件夹1: /Users/luca/dev/2025/mall-swarm/mall-monitor/target/a/BOOT-INF/classes (大小: 13973 字节) | 文件夹2: /Users/luca/dev/2025/mall-swarm/mall-monitor/target/a/BOOT-INF/lib (大小: 56850556 字节) | 大小比例: 0.0002
+2024-11-01 12:46:13 | 文件夹1: /Users/luca/dev/2025/mall-swarm/mall-portal/target/a/BOOT-INF/classes (大小: 306696 字节) | 文件夹2: /Users/luca/dev/2025/mall-swarm/mall-portal/target/a/BOOT-INF/lib (大小: 125877573 字节) | 大小比例: 0.0024
+2024-11-01 12:46:13 | 文件夹1: /Users/luca/dev/2025/mall-swarm/mall-search/target/a/BOOT-INF/classes (大小: 56687 字节) | 文件夹2: /Users/luca/dev/2025/mall-swarm/mall-search/target/a/BOOT-INF/lib (大小: 89600435 字节) | 大小比例: 0.0006

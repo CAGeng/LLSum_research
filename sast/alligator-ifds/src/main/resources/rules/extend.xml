@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rules>
+    <SinkRules>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">apache/xmlgraphics-batik</Group>
+            </MetaInfo>
+            <RuleID>467DCCCF-D988-4CE4-8941-XBJAHS1</RuleID>
+            <VulnCategory>XXE</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.xml.sax</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>XMLReader</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>parse</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">apache/commons-jxpath</Group>
+            </MetaInfo>
+            <RuleID>467DCCCF-D988-4CE4-8941-XBJAHS2</RuleID>
+            <VulnCategory>Express Injection</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.commons.jxpath.ri.compiler</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ExtensionFunction</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>computeValue</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">apache/commons-jxpath</Group>
+            </MetaInfo>
+            <RuleID>467DCCCF-D988-4CE4-8941-XBJAHS11</RuleID>
+            <VulnCategory>Express Injection</VulnCategory>
+            <Sink>
+                <InArguments>-1,0,1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.commons.jxpath.functions</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>MethodFunction</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>invoke</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">geotools/geotools</Group>
+            </MetaInfo>
+            <RuleID>467DCCCF-D988-4CE4-8941-XBJAHS3</RuleID>
+            <VulnCategory>Express Injection</VulnCategory>
+            <Sink>
+                <InArguments>1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.commons.jxpath.ri</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>JXPathContextReferenceImpl</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getValue</Value>
+                </FunctionName>
+                <Parameters>
+                    <ParamType>java.lang.String</ParamType>
+                </Parameters>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">jenkinsci/jx-resources-plugin</Group>
+            </MetaInfo>
+            <RuleID>467DCCCF-D988-4CE4-8941-XBJAHS8</RuleID>
+            <VulnCategory>Unauthorized Access</VulnCategory>
+            <Sink>
+                <InArguments>1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.jenkinsci.plugins.jx.resources</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>KubernetesUtils</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getKubernetesClient</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">alibaba/fastjson</Group>
+            </MetaInfo>
+            <RuleID>467DCCCF-D988-4CE4-8941-XBJAHS5</RuleID>
+            <VulnCategory>Java Deserialization</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.alibaba.fastjson</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>JSON</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>parseObject</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+    </SinkRules>
+</Rules>

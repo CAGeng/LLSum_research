@@ -1,0 +1,9 @@
+<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>
+<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>
+<org.apache.catalina.authenticator.FormAuthenticator: void forwardToLoginPage(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,org.apache.tomcat.util.descriptor.web.LoginConfig)>
+<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>
+<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>
+<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>
+<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>
+<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>
+<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>

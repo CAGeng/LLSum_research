@@ -1,0 +1,10 @@
+P: -1 <org.springframework.http.MediaType: org.springframework.http.MediaType parseMediaType(java.lang.String)> 0 1 -1 11
+P: -1 <org.apache.commons.lang3.RandomUtils: int nextInt(int,int)> 0 1 -1 66
+P: -1 <org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String createPasswordReset(java.lang.String,java.lang.String)> 0 1 -1 47
+P: -1 <org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String scramble(java.util.Random,java.lang.String)> 0 1 -1 47
+P: -1 <org.apache.commons.lang3.StringUtils: boolean isEmpty(java.lang.CharSequence)> 0 1 -1 69
+P: -1 <org.owasp.webgoat.lessons.cryptography.EncodingAssignment: java.lang.String getBasicAuth(java.lang.String,java.lang.String)> 0 1 -1 115
+P: -1 <org.owasp.webgoat.lessons.challenges.Email$EmailBuilder: org.owasp.webgoat.lessons.challenges.Email$EmailBuilder title(java.lang.String)> 0 1 -1 86
+P: -1 <org.owasp.webgoat.lessons.challenges.challenge7.MD5: java.lang.String getHashString(java.lang.String)> 0 1 -1 86
+P: -1 <org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder encoded(java.lang.String)> 0 1 -1 73
+P: -1 <org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder validToken(boolean)> 0 1 -1 73

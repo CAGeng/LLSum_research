@@ -1,0 +1,2 @@
+<cn.hutool.core.convert.Convert: java.lang.Byte toByte(java.lang.Object,java.lang.Byte)><---<cn.hutool.setting.dialect.Props: java.lang.Byte getByte(java.lang.String,java.lang.Byte)>
+<cn.hutool.core.convert.Convert: int byteToUnsignedInt(byte)><---<cn.hutool.core.convert.ConvertTest: void intAndByteConvertTest()>

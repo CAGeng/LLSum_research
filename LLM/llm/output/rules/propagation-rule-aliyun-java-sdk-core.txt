@@ -1,0 +1,1530 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultProfile</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getProfile</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.regionId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (first parameter) is transferred into `regionId` of the returned `DefaultProfile` object.
+    - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultProfile</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getProfile</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return.credential.accessKeyId</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (second parameter) is transferred into `accessKeyId` of the `credential` field of the returned `DefaultProfile` object.
+    - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultProfile</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getProfile</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>return.credential.accessSecret</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (third parameter) is transferred into `accessSecret` of the `credential` field of the returned `DefaultProfile` object.
+    - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into `this` (the current object instance) via the superclass constructor (`Exception`).
+    - The flow is unconditional (NOC).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="false" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.errCode</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` (`r2`) is assigned to `this.errCode`.
+        - There is no condition affecting this data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000006</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="false" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.errMsg</OutArguments>
+    <Comment>
+        - The data flow shows that `p2` (`r5`) is assigned to `this.errMsg`.
+        - There is no condition affecting this data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000007</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="false" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>NOC</InArguments>
+    <OutArguments>this.errorType</OutArguments>
+    <Comment>
+        - The data flow shows that the constant `ErrorType.Client` is assigned to `this.errorType`.
+        - There is no condition affecting this data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000008</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultProfile</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>addEndpoint</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>null == <com.aliyuncs.profile.DefaultProfile: java.util.List endpoints> &amp;&amp; null == $r2</Condition>
+    <InArguments>0,1,2,3</InArguments>
+    <OutArguments>this.endpoints</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` (`r5`), `p2` (`r1`), `p3` (`r3`), and `p4` (`r4`) are transferred to `this.endpoints` via the static method `addEndpoint_`.
+        - The flow is conditional on the `endpoints` field and `$r2` being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000009</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultProfile</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>addEndpoint</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>null != $r2</Condition>
+    <InArguments>1,2,3</InArguments>
+    <OutArguments>1.regionIds,1.productDomains</OutArguments>
+    <Comment>
+        - The data flow shows that `p2` (`r1`), `p3` (`r3`), and `p4` (`r4`) are transferred to `1.regionIds` and `1.productDomains` fields of the `$r2` object via the `updateEndpoint` method.
+        - The flow is conditional on `$r2` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000010</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getMessage</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.requestId</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.requestId` is accessed through `getRequestId()` and contributes to the final return value.
+    - Additionally, `this.getMessage()` result is appended to the return value.
+    - The flow has no conditions.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000011</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpResponse</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getStatus</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.status</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.status` is transferred into the return value.
+    - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000012</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="false" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.url</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input parameter `java.lang.String`) is transferred into `this.url`.
+    - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000013</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.utils</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StringUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.CharSequence</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == null || p1.length() == 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r0`) is checked for null or its length.
+    - The result is transferred to the return value (`ret`) based on these conditions.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-ENCODE-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AcsURLEncoder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>encode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input parameter) is transferred into the static method `<java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>` as its first argument.
+    - The result of the static method is directly returned, creating a flow from `p1` to the method's return value.
+    - The flow is unconditional (NOC).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000014</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpResponse</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getResponse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.aliyuncs.http.HttpRequest</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.content</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` (`HttpRequest.content`) contributes to setting `this.content` (`HttpResponse.content`) through intermediate parsing methods.
+        - The flow occurs during the call to `pasrseHttpConn`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000015</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpResponse</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getResponse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.aliyuncs.http.HttpRequest</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0.url</InArguments>
+    <OutArguments>this.url</OutArguments>
+    <Comment>
+        - The data flow shows that `p1.url` (HttpRequest URL) is used to initialize `this.url` (`HttpResponse.url`) through the constructor of `HttpResponse`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000016</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpResponse</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getResponse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.aliyuncs.http.HttpRequest</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` (`HttpRequest`) is indirectly used to construct the return value `HttpResponse`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000017</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpResponse</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getResponse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.aliyuncs.http.HttpRequest</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>Exception</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+        - In case of exceptions, a new `HttpResponse` is constructed using `p1.url`, and the flow is redirected to this alternative return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000018</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.transform</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UnmarshallerContext</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This is a constructor for the class `UnmarshallerContext`.
+    - The method only invokes the superclass constructor `<java.lang.Object: void &lt;init&gt;()>` using `this`.
+    - There is no parameter input, no propagation, and no return data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000019</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.transform</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UnmarshallerContext</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setResponseMap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.responseMap</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input parameter `r1`) is transferred into the field `this.responseMap`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000020</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RoaSignatureComposer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>replaceOccupiedParameters</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1.key</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2.key` contributes to the intermediate string matching logic but does not propagate directly to the return.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000021</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RoaSignatureComposer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>replaceOccupiedParameters</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1.value</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2.value` contributes to replacing substrings in `p1` and propagates into the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000022</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RoaSignatureComposer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>replaceOccupiedParameters</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` flows into the return value, with modifications based on the replacements specified in `p2`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000023</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BasicCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.accessKeyId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred to `this.accessKeyId` if `p1` is not null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000024</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BasicCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 != null</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.accessKeySecret</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred to `this.accessKeySecret` if `p2` is not null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000025</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KeyPairCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p2 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.publicKeyId</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` (the first parameter) is transferred into `this.publicKeyId`.
+        - The flow is conditional on both `p1` and `p2` being non-null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000026</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>KeyPairCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>init</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p2 != null</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.privateKeySecret</OutArguments>
+    <Comment>
+        - The data flow shows that `p2` (the second parameter) is transferred into `this.privateKeySecret`.
+        - The flow is conditional on both `p1` and `p2` being non-null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000027</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StaticCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="false" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.aliyuncs.auth.AlibabaCloudCredentials</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.credentials</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`com.aliyuncs.auth.AlibabaCloudCredentials`) is transferred into `this.credentials`.
+    - The flow is unconditional (NOC).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000028</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth.sts</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+        - The data flow shows that the current object (`this`) is initialized by invoking the superclass constructor.
+        - The protocol for `this` is set to `HTTPS`.
+        - No conditions are associated with this data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000029</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth.sts</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setRoleArn</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.roleArn</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` flows to `this.roleArn`.
+        - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000030</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.AcsRequest</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AcsRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>putQueryParameter</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.queryParameters</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` flows into `this.queryParameters`.
+        - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000031</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth.sts</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setRoleSessionName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.roleSessionName</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` propagates into the field `this.roleSessionName`.
+    - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000032</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth.sts</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setRoleSessionName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.queryParameters["RoleSessionName"]</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` propagates into `this.queryParameters["RoleSessionName"]` through a chain of method calls.
+    - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000033</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth.sts</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setDurationSeconds</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.durationSeconds</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.lang.Long` parameter) is assigned to `this.durationSeconds`.
+    - The flow has no additional conditions.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000034</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth.sts</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setDurationSeconds</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.queryParameters["DurationSeconds"]</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.lang.Long` parameter) is converted to a `String` and added to `this.queryParameters` with the key "DurationSeconds".
+    - The flow has no additional conditions.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000035</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>X509TrustAll</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>ignoreSSLCertificate</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+        - No data flow involving parameters (`p1`, `p2`, etc.), `this`, or return value is observed.
+        - This method configures global SSL settings by modifying default `SSLSocketFactory` and `HostnameVerifier` without using parameters or returning values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-DEFAULTPROFILE-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultProfile</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getProfile</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments/>
+    <OutArguments>return</OutArguments>
+    <Comment>
+        - The method retrieves the static field `<com.aliyuncs.profile.DefaultProfile: com.aliyuncs.profile.DefaultProfile profile>` and returns it.
+        - If the static field is `null`, a new `DefaultProfile` object is instantiated, initialized, and assigned to this static field.
+        - The return value is the static field `<com.aliyuncs.profile.DefaultProfile: com.aliyuncs.profile.DefaultProfile profile>`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-DEFAULTPROFILE-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultProfile</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getProfile</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>profile == null</Condition>
+    <InArguments/>
+    <OutArguments>this.profile</OutArguments>
+    <Comment>
+        - When the static field `<com.aliyuncs.profile.DefaultProfile: com.aliyuncs.profile.DefaultProfile profile>` is `null`, a new instance of `DefaultProfile` is created and assigned to this field.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000036</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ServerException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.errCode</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` flows into `this.errCode` via the second-level constructor.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000037</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ServerException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.errMsg</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` flows into `this.errMsg` via the second-level constructor.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000038</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ServerException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>this.requestId</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` flows into `this.requestId` via the `setRequestId` method.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000039</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ServerException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>constant("Server")</Condition>
+    <InArguments>constant</InArguments>
+    <OutArguments>this.errorType</OutArguments>
+    <Comment>
+    - A constant value "Server" is assigned to `this.errorType` via the second-level constructor.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000040</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.errCode</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` propagates into `this.errCode`.
+        - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000041</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.errMsg</OutArguments>
+    <Comment>
+        - The data flow shows that `p2` propagates into `this.errMsg`.
+        - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000042</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.exceptions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>this.requestId</OutArguments>
+    <Comment>
+        - The data flow shows that `p3` propagates into `this.requestId`.
+        - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000043</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.regions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Endpoint</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>findProductDomain</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p2 != null &amp;&amp; p3 != null &amp;&amp; p3.iterator().hasNext() &amp;&amp; p1 in r5.getRegionIds()</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+        - The data flow shows that `p3` (the input list) is iterated, and elements are cast to `Endpoint`.
+        - `p1` is checked against `getRegionIds()` of each `Endpoint`.
+        - If the condition is satisfied, the method invokes `findProductDomainByProduct` with the `getProductDomains()` result and `p2`.
+        - The return value of `findProductDomainByProduct` is propagated as the method's return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000044</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.regions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Endpoint</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>findProductDomainByProduct</Value>
+        </FunctionName>
+        <ApplyTo implements="false" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null &amp;&amp; p1.iterator().hasNext() &amp;&amp; p2.equalsIgnoreCase(r3.getProductName())</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` (list) is iterated to match `getProductName()` of `ProductDomain` with `p2`.
+        - The matching `ProductDomain` object is propagated as the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000045</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.transform</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UnmarshallerContext</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setHttpResponse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.aliyuncs.http.HttpResponse</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.httpResponse</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r1`) is directly transferred into `this.httpResponse`.
+    - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000046</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>OssSignatureComposer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getComposer</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.composer</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the static field `composer` is returned as the output of this method.
+    - If `composer` is null, a new instance of `OssSignatureComposer` is created, assigned to `composer`, and returned.
+    - The flow is unconditional (no specific condition).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000047</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.url</OutArguments>
+    <Comment>
+        - The data flow shows that `p1` (`java.lang.String`) is transferred into `this.url`.
+        - The flow is unconditional.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000048</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.http</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>HttpRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 != null</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.headers</OutArguments>
+    <Comment>
+        - The data flow shows that `p2` (`java.util.Map`) is transferred into `this.headers`.
+        - The flow occurs only if `p2` is not null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000049</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RoaSignatureComposer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getComposer</Value>
+        </FunctionName>
+        <ApplyTo implements="false" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>this.composer == null</Condition>
+    <InArguments>this.composer</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+        - If the static field `composer` is null, it is assigned a new instance of `RoaSignatureComposer`.
+        - The static field `composer` is then returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000050</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RoaSignatureComposer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getComposer</Value>
+        </FunctionName>
+        <ApplyTo implements="false" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.composer</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+        - If the static field `composer` is not null, it is directly returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000051</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RpcSignatureComposer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getComposer</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this static method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>null != <com.aliyuncs.auth.RpcSignatureComposer: com.aliyuncs.auth.ISignatureComposer composer></Condition>
+    <InArguments>staticField.composer</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+        - The data flow shows that the static field `composer` is propagated to the return value (`ret`).
+        - If `composer` is `null`, it is initialized with a new instance of `RpcSignatureComposer` before being returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000052</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.regions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProductDomain</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="false" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.productName</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`@parameter0`) is transferred into `this.productName`.
+    - The flow is unconditional (NOC).
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000053</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.aliyuncs.regions</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProductDomain</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="false" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.domianName</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`@parameter1`) is transferred into `this.domianName`.
+    - The flow is unconditional (NOC).
+    </Comment>
+</PropagationRule>
+

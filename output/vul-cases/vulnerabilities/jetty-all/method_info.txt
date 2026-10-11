@@ -1,0 +1,4235 @@
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.Handler$Abstract: void <clinit>()>
+方法的参数个数：0
+call-site个数： 81
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.Request: void <clinit>()>
+方法的参数个数：0
+call-site个数： 59
+
+方法名：getLogger
+方法签名：<org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>
+方法的参数个数：1
+call-site个数： 58
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.AbstractHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 34
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.CustomRequestLog: void <clinit>()>
+方法的参数个数：0
+call-site个数： 29
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.AbstractHandlerContainer: void <clinit>()>
+方法的参数个数：0
+call-site个数： 29
+
+方法名：append
+方法签名：<org.eclipse.jetty.server.CustomRequestLog: void append(java.lang.StringBuilder,java.lang.String,boolean)>
+方法的参数个数：3
+call-site个数： 24
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.Request: void <clinit>()>
+方法的参数个数：0
+call-site个数： 20
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.ScopedHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 19
+
+方法名：getWrapped
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: org.eclipse.jetty.server.Request getWrapped()>
+方法的参数个数：0
+call-site个数： 17
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.EventsHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 16
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 16
+
+方法名：getBaseRequest
+方法签名：<org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Request getBaseRequest(jakarta.servlet.ServletRequest)>
+方法的参数个数：1
+call-site个数： 16
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ContextHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 15
+
+方法名：<clinit>
+方法签名：<jakarta.servlet.DispatcherType: void <clinit>()>
+方法的参数个数：0
+call-site个数： 14
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 14
+
+方法名：getPathInContext
+方法签名：<org.eclipse.jetty.server.Request: java.lang.String getPathInContext(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 13
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.FormFields: void <clinit>()>
+方法的参数个数：0
+call-site个数： 13
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: void <init>(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 12
+
+方法名：addPaths
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String addPaths(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 11
+
+方法名：writeError
+方法签名：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int)>
+方法的参数个数：4
+call-site个数： 10
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.Authentication: void <clinit>()>
+方法的参数个数：0
+call-site个数： 9
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ConditionalHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 9
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator: void <clinit>()>
+方法的参数个数：0
+call-site个数： 9
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Response$Wrapper: void <init>(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response)>
+方法的参数个数：2
+call-site个数： 8
+
+方法名：build
+方法签名：<org.eclipse.jetty.http.HttpURI: org.eclipse.jetty.http.HttpURI$Mutable build(org.eclipse.jetty.http.HttpURI)>
+方法的参数个数：1
+call-site个数： 8
+
+方法名：sanitizeXmlString
+方法签名：<org.eclipse.jetty.util.StringUtil: java.lang.String sanitizeXmlString(java.lang.String)>
+方法的参数个数：1
+call-site个数： 8
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: void <clinit>()>
+方法的参数个数：0
+call-site个数： 8
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.ResourceService: void <clinit>()>
+方法的参数个数：0
+call-site个数： 7
+
+方法名：<clinit>
+方法签名：<jakarta.servlet.ServletOutputStream: void <clinit>()>
+方法的参数个数：0
+call-site个数： 7
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.UserAuthentication: void <init>(java.lang.String,org.eclipse.jetty.security.UserIdentity)>
+方法的参数个数：2
+call-site个数： 7
+
+方法名：<clinit>
+方法签名：<jakarta.servlet.GenericServlet: void <clinit>()>
+方法的参数个数：0
+call-site个数： 6
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: void <clinit>()>
+方法的参数个数：0
+call-site个数： 6
+
+方法名：unWrap
+方法签名：<org.eclipse.jetty.server.Request: org.eclipse.jetty.server.Request unWrap(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 6
+
+方法名：getServerName
+方法签名：<org.eclipse.jetty.server.Request: java.lang.String getServerName(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 6
+
+方法名：getContentBytesWritten
+方法签名：<org.eclipse.jetty.server.Response: long getContentBytesWritten(org.eclipse.jetty.server.Response)>
+方法的参数个数：1
+call-site个数： 6
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.Attributes$Synthetic: void <init>(org.eclipse.jetty.util.Attributes)>
+方法的参数个数：1
+call-site个数： 6
+
+方法名：writeError
+方法签名：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int,java.lang.String)>
+方法的参数个数：5
+call-site个数： 6
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.PreEncodedHttpField: void <init>(org.eclipse.jetty.http.HttpHeader,java.lang.String)>
+方法的参数个数：2
+call-site个数： 6
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: void <clinit>()>
+方法的参数个数：0
+call-site个数： 6
+
+方法名：isDeferred
+方法签名：<org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)>
+方法的参数个数：1
+call-site个数： 5
+
+方法名：values
+方法签名：<org.eclipse.jetty.http.HttpHeader: org.eclipse.jetty.http.HttpHeader[] values()>
+方法的参数个数：0
+call-site个数： 5
+
+方法名：<clinit>
+方法签名：<jakarta.servlet.http.HttpServlet: void <clinit>()>
+方法的参数个数：0
+call-site个数： 5
+
+方法名：getWrapped
+方法签名：<org.eclipse.jetty.server.Response$Wrapper: org.eclipse.jetty.server.Response getWrapped()>
+方法的参数个数：0
+call-site个数： 5
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ConnectHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 5
+
+方法名：addEncodedPaths
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String addEncodedPaths(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 5
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.Fields: void <init>(boolean)>
+方法的参数个数：1
+call-site个数： 5
+
+方法名：<init>
+方法签名：<jakarta.servlet.AsyncEvent: void <init>(jakarta.servlet.AsyncContext,jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,java.lang.Throwable)>
+方法的参数个数：4
+call-site个数： 5
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 5
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: void <init>(org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator)>
+方法的参数个数：1
+call-site个数： 5
+
+方法名：writeError
+方法签名：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int,java.lang.String,java.lang.Throwable)>
+方法的参数个数：6
+call-site个数： 5
+
+方法名：from
+方法签名：<org.eclipse.jetty.server.HttpChannel: org.eclipse.jetty.server.HttpChannel 'from'(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 5
+
+方法名：getHeaders
+方法签名：<org.eclipse.jetty.server.Response$Wrapper: org.eclipse.jetty.http.HttpFields$Mutable getHeaders()>
+方法的参数个数：0
+call-site个数： 5
+
+方法名：getContentBytesRead
+方法签名：<org.eclipse.jetty.server.Request: long getContentBytesRead(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$State: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：getMessage
+方法签名：<org.eclipse.jetty.http.HttpStatus: java.lang.String getMessage(int)>
+方法的参数个数：1
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.Dispatcher: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：addCompletionListener
+方法签名：<org.eclipse.jetty.server.Request: void addCompletionListener(org.eclipse.jetty.server.Request,java.util.function.Consumer)>
+方法的参数个数：2
+call-site个数： 4
+
+方法名：lock
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: org.eclipse.jetty.util.thread.AutoLock lock()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.Response$EncodingFrom: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$RequestState: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：encodePath
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String encodePath(java.lang.String)>
+方法的参数个数：1
+call-site个数： 4
+
+方法名：isBlank
+方法签名：<org.eclipse.jetty.util.StringUtil: boolean isBlank(java.lang.String)>
+方法的参数个数：1
+call-site个数： 4
+
+方法名：as
+方法签名：<org.eclipse.jetty.server.Request: java.lang.Object as(org.eclipse.jetty.server.Request,java.lang.Class)>
+方法的参数个数：2
+call-site个数： 4
+
+方法名：since
+方法签名：<org.eclipse.jetty.util.NanoTime: long since(long)>
+方法的参数个数：1
+call-site个数： 4
+
+方法名：newURI
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String newURI(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)>
+方法的参数个数：5
+call-site个数： 4
+
+方法名：getConnectionMetaData
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: org.eclipse.jetty.server.ConnectionMetaData getConnectionMetaData()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback$GZState: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ServletRequestHttpWrapper: void <init>(jakarta.servlet.ServletRequest)>
+方法的参数个数：1
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.Response: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.thread.AutoLock: void <init>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：getContextAttribute
+方法签名：<org.eclipse.jetty.server.FormFields: int getContextAttribute(org.eclipse.jetty.server.Context,java.lang.String,int)>
+方法的参数个数：3
+call-site个数： 4
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ServletResponseHttpWrapper: void <init>(jakarta.servlet.ServletResponse)>
+方法的参数个数：1
+call-site个数： 4
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ServletCoreResponse: void <init>(org.eclipse.jetty.server.Request,jakarta.servlet.http.HttpServletResponse,org.eclipse.jetty.ee9.nested.Response,org.eclipse.jetty.server.Response,boolean)>
+方法的参数个数：5
+call-site个数： 3
+
+方法名：getFormEncodedCharset
+方法签名：<org.eclipse.jetty.server.FormFields: java.nio.charset.Charset getFormEncodedCharset(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.Attributes$Wrapper: void <init>(org.eclipse.jetty.util.Attributes)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput$State: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.ErrorHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$OutputState: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.CookieCache: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：toDetailString
+方法签名：<org.eclipse.jetty.util.BufferUtil: java.lang.String toDetailString(java.nio.ByteBuffer)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ServletCoreRequest: void <init>(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest,jakarta.servlet.http.HttpServletRequest,org.eclipse.jetty.util.Attributes)>
+方法的参数个数：3
+call-site个数： 3
+
+方法名：isNotBlank
+方法签名：<org.eclipse.jetty.util.StringUtil: boolean isNotBlank(java.lang.String)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：extractQueryParameters
+方法签名：<org.eclipse.jetty.server.Request: org.eclipse.jetty.util.Fields extractQueryParameters(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<init>
+方法签名：<jakarta.servlet.ServletException: void <init>(java.lang.Throwable)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.QoSHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：serveAs
+方法签名：<org.eclipse.jetty.server.Request: org.eclipse.jetty.server.Request serveAs(org.eclipse.jetty.server.Request,org.eclipse.jetty.http.HttpURI)>
+方法的参数个数：2
+call-site个数： 3
+
+方法名：getContentTypeWithoutCharset
+方法签名：<org.eclipse.jetty.http.MimeTypes: java.lang.String getContentTypeWithoutCharset(java.lang.String)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：getContext
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: org.eclipse.jetty.server.Context getContext()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.UserDataConstraint: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.SecurityHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：logLatency
+方法签名：<org.eclipse.jetty.server.CustomRequestLog: void logLatency(java.lang.StringBuilder,org.eclipse.jetty.server.Request,java.util.concurrent.TimeUnit)>
+方法的参数个数：3
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.ServerAuthException: void <init>(java.lang.Throwable)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.DelayedHandler$DelayedProcess: void <init>(org.eclipse.jetty.server.Handler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback)>
+方法的参数个数：4
+call-site个数： 3
+
+方法名：listIteratorAtEnd
+方法签名：<org.eclipse.jetty.util.TypeUtil: java.util.ListIterator listIteratorAtEnd(java.util.List)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContentProducer: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput$ApiState: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<init>
+方法签名：<jakarta.servlet.ServletOutputStream: void <init>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：from
+方法签名：<org.eclipse.jetty.server.FormFields: java.util.concurrent.CompletableFuture 'from'(org.eclipse.jetty.io.Content$Source,org.eclipse.jetty.util.thread.Invocable$InvocationType,org.eclipse.jetty.util.Attributes,java.nio.charset.Charset,int,int)>
+方法的参数个数：6
+call-site个数： 3
+
+方法名：getAttribute
+方法签名：<jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.ResourceListing: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.Response$OutputType: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$Source: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：isEmpty
+方法签名：<org.eclipse.jetty.util.BufferUtil: boolean isEmpty(java.nio.ByteBuffer)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$InputState: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpInput: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：getServerPort
+方法签名：<org.eclipse.jetty.server.Request: int getServerPort(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$AttributesWrapper: void <init>(org.eclipse.jetty.server.Request,org.eclipse.jetty.util.Attributes)>
+方法的参数个数：2
+call-site个数： 3
+
+方法名：writeError
+方法签名：<org.eclipse.jetty.server.Response: void writeError(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,java.lang.Throwable)>
+方法的参数个数：4
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.BlockingContentProducer: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.QuotedCSV: void <init>(boolean,java.lang.String[])>
+方法的参数个数：2
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipRequest: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：values
+方法签名：<org.eclipse.jetty.http.MimeTypes$Type: org.eclipse.jetty.http.MimeTypes$Type[] values()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：from
+方法签名：<org.eclipse.jetty.util.Callback: org.eclipse.jetty.util.Callback 'from'(org.eclipse.jetty.util.Callback,java.lang.Runnable)>
+方法的参数个数：2
+call-site个数： 3
+
+方法名：write
+方法签名：<org.eclipse.jetty.server.Response$Wrapper: void write(boolean,java.nio.ByteBuffer,org.eclipse.jetty.util.Callback)>
+方法的参数个数：3
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：writeTo
+方法签名：<org.eclipse.jetty.util.BufferUtil: void writeTo(java.nio.ByteBuffer,java.io.OutputStream)>
+方法的参数个数：2
+call-site个数： 3
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseEnd__181: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：checkUriCompliance
+方法签名：<org.eclipse.jetty.http.UriCompliance: java.lang.String checkUriCompliance(org.eclipse.jetty.http.UriCompliance,org.eclipse.jetty.http.HttpURI,org.eclipse.jetty.http.ComplianceViolation$Listener)>
+方法的参数个数：3
+call-site个数： 2
+
+方法名：<init>
+方法签名：<jakarta.servlet.ServletRequestEvent: void <init>(jakarta.servlet.ServletContext,jakarta.servlet.ServletRequest)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：newSeekableByteChannel
+方法签名：<org.eclipse.jetty.ee9.nested.resource.HttpContentRangeWriter$lambda_newRangeWriter_0__251: java.nio.channels.SeekableByteChannel newSeekableByteChannel()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：normalizeHost
+方法签名：<org.eclipse.jetty.util.HostPort: java.lang.String normalizeHost(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.DelayedHandler$1: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ServletCoreRequest$ServletAttributes: void <init>(jakarta.servlet.http.HttpServletRequest)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getState
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.HttpChannelState getState()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getCookies
+方法签名：<org.eclipse.jetty.server.Request: java.util.List getCookies(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<jakarta.servlet.ServletRequestWrapper: void <init>(jakarta.servlet.ServletRequest)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getOrCreateSession
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$ServletSessionApi: java.util.function.Function getOrCreateSession(jakarta.servlet.ServletRequest)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.InclusiveByteRange: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：newSeekableByteChannel
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$lambda_writeContent_1__237: java.nio.channels.SeekableByteChannel newSeekableByteChannel()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：lock
+方法签名：<org.eclipse.jetty.ee9.nested.BlockingContentProducer: org.eclipse.jetty.util.thread.AutoLock lock()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.LoggedOutAuthentication: void <init>(org.eclipse.jetty.ee9.security.authentication.LoginAuthenticator)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest$lambda_static_0__205: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.HostPortHttpField: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.content.PreCompressedHttpContent: void <init>(org.eclipse.jetty.http.content.HttpContent,org.eclipse.jetty.http.content.HttpContent,org.eclipse.jetty.http.CompressedContentFormat)>
+方法的参数个数：3
+call-site个数： 2
+
+方法名：lock
+方法签名：<org.eclipse.jetty.util.thread.AutoLock: org.eclipse.jetty.util.thread.AutoLock lock()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<jakarta.servlet.http.HttpServletResponseWrapper: void <init>(jakarta.servlet.http.HttpServletResponse)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter: void <init>(org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter$ChannelSupplier)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Dispatcher: void <init>(org.eclipse.jetty.ee9.nested.ContextHandler,org.eclipse.jetty.http.HttpURI,java.lang.String)>
+方法的参数个数：3
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestContentEnd__188: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.HttpFields$Mutable$Wrapper: void <init>(org.eclipse.jetty.http.HttpFields$Mutable)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getContextHandler
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.ContextHandler getContextHandler()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：checkUriViolations
+方法签名：<org.eclipse.jetty.ee9.nested.Dispatcher: void checkUriViolations(org.eclipse.jetty.http.HttpURI,org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：copy
+方法签名：<org.eclipse.jetty.util.IO: void copy(java.io.InputStream,java.io.OutputStream,long)>
+方法的参数个数：3
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseCommit__183: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getCurrentContext
+方法签名：<org.eclipse.jetty.server.handler.ContextHandler: org.eclipse.jetty.server.Context getCurrentContext()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestEnd__186: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.HttpField: void <init>(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：isCommitted
+方法签名：<org.eclipse.jetty.server.Response$Wrapper: boolean isCommitted()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：unwrap
+方法签名：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpServletRequest unwrap(jakarta.servlet.ServletRequest)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：decodePath
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String decodePath(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：clearToFill
+方法签名：<org.eclipse.jetty.util.BufferUtil: void clearToFill(java.nio.ByteBuffer)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$ContextStatus: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：parseCookies
+方法签名：<org.eclipse.jetty.server.CookieCache: void parseCookies(org.eclipse.jetty.http.HttpFields,org.eclipse.jetty.http.ComplianceViolation$Listener)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：getHeaders
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipRequest: org.eclipse.jetty.http.HttpFields getHeaders()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.BadMessageException: void <init>(java.lang.String,java.lang.Throwable)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onAfterDispatch__190: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getVersion
+方法签名：<org.eclipse.jetty.server.Server: java.lang.String getVersion()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<jakarta.servlet.ServletException: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ContextRequest: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.CookieCache: void <init>(org.eclipse.jetty.http.CookieCompliance)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.HostPortHttpField: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：isEmpty
+方法签名：<org.eclipse.jetty.util.StringUtil: boolean isEmpty(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getHttpConfiguration
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.server.HttpConfiguration getHttpConfiguration()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getContextPath
+方法签名：<org.eclipse.jetty.server.Request: java.lang.String getContextPath(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getContextHandler
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler: org.eclipse.jetty.ee9.nested.ContextHandler getContextHandler(jakarta.servlet.ServletContext)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：setStatus
+方法签名：<org.eclipse.jetty.server.Response$Wrapper: void setStatus(int)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：parseToEpoch
+方法签名：<org.eclipse.jetty.http.HttpDateTime: long parseToEpoch(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：priority
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$Source: int priority()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：setForbidden
+方法签名：<org.eclipse.jetty.ee9.security.RoleInfo: void setForbidden(boolean)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：writeTo
+方法签名：<org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter: void writeTo(java.io.OutputStream,long,long)>
+方法的参数个数：3
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.HostPort: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：close
+方法签名：<org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter: void close()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getTimeStamp
+方法签名：<org.eclipse.jetty.server.Request: long getTimeStamp(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getWriter
+方法签名：<jakarta.servlet.ServletResponseWrapper: java.io.PrintWriter getWriter()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：setContentLength
+方法签名：<jakarta.servlet.ServletResponseWrapper: void setContentLength(int)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getAsXHTML
+方法签名：<org.eclipse.jetty.server.ResourceListing: java.lang.String getAsXHTML(org.eclipse.jetty.util.resource.Resource,java.lang.String,boolean,java.lang.String)>
+方法的参数个数：4
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseBegin__184: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：normalizePortForScheme
+方法签名：<org.eclipse.jetty.util.URIUtil: int normalizePortForScheme(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：setUserDataConstraint
+方法签名：<org.eclipse.jetty.ee9.security.RoleInfo: void setUserDataConstraint(org.eclipse.jetty.ee9.security.UserDataConstraint)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：isHeldByCurrentThread
+方法签名：<org.eclipse.jetty.util.thread.AutoLock: boolean isHeldByCurrentThread()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：get
+方法签名：<org.eclipse.jetty.server.Request: java.lang.Object get(org.eclipse.jetty.server.Request,java.lang.Class,java.util.function.Function)>
+方法的参数个数：3
+call-site个数： 2
+
+方法名：length
+方法签名：<org.eclipse.jetty.util.BufferUtil: int length(java.nio.ByteBuffer)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.DigestAuthenticator: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getServerPort
+方法签名：<jakarta.servlet.ServletRequestWrapper: int getServerPort()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestBegin__193: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：callback
+方法签名：<org.eclipse.jetty.util.Blocker: org.eclipse.jetty.util.Blocker$Callback callback()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：asInputStream
+方法签名：<org.eclipse.jetty.io.IOResources: java.io.InputStream asInputStream(org.eclipse.jetty.util.resource.Resource)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：from
+方法签名：<org.eclipse.jetty.server.FormFields: java.util.concurrent.CompletableFuture 'from'(org.eclipse.jetty.server.Request,java.nio.charset.Charset,int,int)>
+方法的参数个数：4
+call-site个数： 2
+
+方法名：<init>
+方法签名：<jakarta.servlet.ServletResponseWrapper: void <init>(jakarta.servlet.ServletResponse)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.HttpField: void <init>(org.eclipse.jetty.http.HttpHeader,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：getHttpURI
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: org.eclipse.jetty.http.HttpURI getHttpURI()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：assertLocked
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContentProducer: void assertLocked()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getContextHandler
+方法签名：<org.eclipse.jetty.server.handler.ContextHandler: org.eclipse.jetty.server.handler.ContextHandler getContextHandler(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ShutdownHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.io.ByteBufferOutputStream: void <init>(java.nio.ByteBuffer)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getHostName
+方法签名：<org.eclipse.jetty.server.Request: java.lang.String getHostName(java.net.InetSocketAddress)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.FormAuthenticator: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onBeforeDispatch__192: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onComplete__179: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getRemotePort
+方法签名：<org.eclipse.jetty.server.Request: int getRemotePort(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getCurrentContext
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler: org.eclipse.jetty.ee9.nested.ContextHandler$APIContext getCurrentContext()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：gzip
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback: void gzip(boolean,org.eclipse.jetty.util.Callback,java.nio.ByteBuffer)>
+方法的参数个数：3
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.AbstractUserAuthentication: void <init>(java.lang.String,org.eclipse.jetty.security.UserIdentity)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ContextRequest: void <init>(org.eclipse.jetty.server.handler.ContextHandler$ScopedContext,org.eclipse.jetty.server.Request)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestTrailers__187: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getHeaders
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: org.eclipse.jetty.http.HttpFields getHeaders()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：now
+方法签名：<org.eclipse.jetty.util.NanoTime: long now()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getOutputStream
+方法签名：<jakarta.servlet.ServletResponseWrapper: jakarta.servlet.ServletOutputStream getOutputStream()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.StaticException: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getDispatcherType
+方法签名：<jakarta.servlet.ServletRequestWrapper: jakarta.servlet.DispatcherType getDispatcherType()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getCharsetFromContentType
+方法签名：<org.eclipse.jetty.http.MimeTypes: java.lang.String getCharsetFromContentType(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getCurrentSecurityHandler
+方法签名：<org.eclipse.jetty.ee9.security.SecurityHandler: org.eclipse.jetty.ee9.security.SecurityHandler getCurrentSecurityHandler()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getStatusStringLocked
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: java.lang.String getStatusStringLocked()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：values
+方法签名：<jakarta.servlet.DispatcherType: jakarta.servlet.DispatcherType[] values()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：toRedirectURI
+方法签名：<org.eclipse.jetty.server.Response: java.lang.String toRedirectURI(org.eclipse.jetty.server.Request,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.Callback$Nested: void <init>(org.eclipse.jetty.util.Callback)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getRemoteAddr
+方法签名：<org.eclipse.jetty.server.Request: java.lang.String getRemoteAddr(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getScheme
+方法签名：<jakarta.servlet.ServletRequestWrapper: java.lang.String getScheme()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_0__194: void onRequest(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：unwrap
+方法签名：<org.eclipse.jetty.ee9.nested.Response: jakarta.servlet.http.HttpServletResponse unwrap(jakarta.servlet.ServletResponse)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：succeeded
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse: void succeeded()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：failed
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse: void failed(java.lang.Throwable)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getMethod
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: java.lang.String getMethod()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getStatus
+方法签名：<org.eclipse.jetty.server.Response$Wrapper: int getStatus()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getServerName
+方法签名：<jakarta.servlet.ServletRequestWrapper: java.lang.String getServerName()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：build
+方法签名：<org.eclipse.jetty.http.HttpURI: org.eclipse.jetty.http.HttpURI$Mutable build(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：apply
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$CoreToNestedHandler$getHttpChannel__200: java.lang.Object apply(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication$2: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：write
+方法签名：<org.eclipse.jetty.io.Content$Sink: void write(org.eclipse.jetty.io.Content$Sink,boolean,java.lang.String,org.eclipse.jetty.util.Callback)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ContextResponse: void <init>(org.eclipse.jetty.server.handler.ContextHandler$ScopedContext,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ErrorHandler$lambda_writeErrorJson_0__209: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.DelayedHandler$UntilContentDelayedProcess: void <init>(org.eclipse.jetty.server.Handler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：get
+方法签名：<org.eclipse.jetty.server.CookieCache: org.eclipse.jetty.http.HttpCookie get(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.ResourceListing$getFileName__109: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getPathInfo
+方法签名：<org.eclipse.jetty.ee9.nested.ServletRequestHttpWrapper: java.lang.String getPathInfo()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：parentPath
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String parentPath(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.CrossContextDispatcher$ForwardRequest: void <init>(org.eclipse.jetty.ee9.nested.CrossContextDispatcher,org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest,org.eclipse.jetty.ee9.nested.Request,jakarta.servlet.http.HttpServletRequest)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler$lambda_getRemote_1__203: void <init>(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：reopen
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContentProducer: void reopen()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$lambda_writeErrorJson_1__29: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：commit
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback: void commit(boolean,org.eclipse.jetty.util.Callback,java.nio.ByteBuffer)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$InputState: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestTrailers_6__155: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.SessionAuthentication: void <init>(java.lang.String,org.eclipse.jetty.security.UserIdentity,java.lang.Object)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseFailure__180: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$asyncError__225: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannelState)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContextState$WrappedAsyncListener: void <init>(jakarta.servlet.AsyncListener,jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：combine
+方法签名：<org.eclipse.jetty.ee9.security.RoleInfo: void combine(org.eclipse.jetty.ee9.security.RoleInfo)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$lambda_doScope_0__224: void <init>(org.eclipse.jetty.ee9.nested.ContextHandler,java.lang.String,org.eclipse.jetty.ee9.nested.Request,jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.QuotedCSVParser: void <init>(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.GracefulHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getResponseHttpFields
+方法签名：<org.eclipse.jetty.server.internal.HttpChannelState$ChannelResponse: org.eclipse.jetty.server.internal.ResponseHttpFields getResponseHttpFields(org.eclipse.jetty.server.internal.HttpChannelState)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.IdleTimeoutHandler$1: void <init>(org.eclipse.jetty.ee9.nested.IdleTimeoutHandler,org.eclipse.jetty.ee9.nested.HttpChannel,long)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.ResourceService$lambda_sendData_0__120: java.util.function.Consumer bootstrap$(org.eclipse.jetty.http.MultiPartByteRanges$ContentSource,org.eclipse.jetty.http.content.HttpContent,long,org.eclipse.jetty.server.Request)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：bySize
+方法签名：<org.eclipse.jetty.util.resource.ResourceCollators: java.util.Comparator bySize(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getAuthority
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$Forwarded: org.eclipse.jetty.server.ForwardedRequestCustomizer$MutableHostPort getAuthority()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.internal.HttpChannelState$ChannelResponse: void <init>(org.eclipse.jetty.server.internal.HttpChannelState$ChannelRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：lambda$newRangeWriter$0
+方法签名：<org.eclipse.jetty.ee9.nested.resource.HttpContentRangeWriter: java.nio.channels.SeekableByteChannel lambda$newRangeWriter$0(java.nio.file.Path)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：iterator
+方法签名：<org.eclipse.jetty.http.QuotedCSV: java.util.Iterator iterator()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：asBufferedSink
+方法签名：<org.eclipse.jetty.server.Response: org.eclipse.jetty.io.Content$Sink asBufferedSink(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：combine
+方法签名：<org.eclipse.jetty.util.ExceptionUtil: java.lang.Throwable combine(java.lang.Throwable,java.lang.Throwable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.FormAuthenticator$FormRequest: void <init>(jakarta.servlet.http.HttpServletRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：recycle
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput: void recycle()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：build
+方法签名：<org.eclipse.jetty.http.HttpFields: org.eclipse.jetty.http.HttpFields$Mutable build(org.eclipse.jetty.http.HttpFields,org.eclipse.jetty.http.HttpField)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$lambda_getRemote_2__21: void <init>(org.eclipse.jetty.server.Request,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$Remote: void <init>(java.util.concurrent.Executor,java.lang.String,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<jakarta.servlet.http.NoBodyOutputStream: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$RequestState: org.eclipse.jetty.ee9.nested.HttpChannelState$RequestState[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$AsyncDispatchable: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$CoreSessionManager$getHttpChannel__253: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent$lambda_static_0__206: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.BufferedResponseHandler$BufferedResponse: void <init>(org.eclipse.jetty.server.handler.BufferedResponseHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$1: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.resource.HttpContentRangeWriter$lambda_newRangeWriter_1__250: void <init>(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestEnd_7__156: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getIdleTimeout
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: long getIdleTimeout()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：hasScheme
+方法签名：<org.eclipse.jetty.util.URIUtil: boolean hasScheme(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：writeContent
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService: void writeContent(org.eclipse.jetty.http.content.HttpContent,java.io.OutputStream,long,long)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：write
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse: void write(boolean,java.nio.ByteBuffer,org.eclipse.jetty.util.Callback)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：apply
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$CoreSessionManager$getHttpChannel__253: java.lang.Object apply(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$lambda_onConditionsMet_1__20: void <init>(org.eclipse.jetty.server.handler.ThreadLimitHandler,org.eclipse.jetty.server.handler.ThreadLimitHandler$Remote)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$2: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.AtomicBiInteger: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$lambda_writeContent_1__237: void <init>(java.nio.file.Path)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler$lambda_getRemote_1__203: java.util.function.BiFunction bootstrap$(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getComponents
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: org.eclipse.jetty.server.Components getComponents()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_4__196: void <init>(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.SecurityHandler$3: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.MultiPartByteRanges$ContentSource: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.QoSHandler$lambda_suspend_0__61: java.util.function.BiFunction bootstrap$(org.eclipse.jetty.server.handler.QoSHandler,int,org.eclipse.jetty.server.handler.QoSHandler$Entry)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ErrorHandler$lambda_writeErrorJson_0__209: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$1: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getHeaderNames
+方法签名：<org.eclipse.jetty.ee9.nested.ServletRequestHttpWrapper: java.util.Enumeration getHeaderNames()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestBegin_0__149: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：deTag
+方法签名：<org.eclipse.jetty.server.ResourceListing: java.lang.String deTag(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：onFields
+方法签名：<org.eclipse.jetty.server.FormFields: void onFields(org.eclipse.jetty.server.Request,org.eclipse.jetty.util.Promise$Invocable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ResponseUtils$lambda_ensureNotPersistent_8__136: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestFailure_8__157: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：combine
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure combine(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：permittedSuccess
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse: void permittedSuccess(org.eclipse.jetty.server.handler.ThreadLimitHandler$Permit)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.security.UserDataConstraint: org.eclipse.jetty.ee9.security.UserDataConstraint[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：onHandlingCompleted
+方法签名：<org.eclipse.jetty.server.handler.DebugHandler$HandlingCallback: void onHandlingCompleted(java.lang.Throwable)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.SecurityHandler$2: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: void <init>(org.eclipse.jetty.session.ManagedSession,java.lang.String,boolean)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$Source: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：newInstance
+方法签名：<org.eclipse.jetty.http.SetCookieParser: org.eclipse.jetty.http.SetCookieParser newInstance()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_1__195: void <init>(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.ServerAuthException: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：decodeTo
+方法签名：<org.eclipse.jetty.util.UrlEncoded: void decodeTo(java.lang.String,java.util.function.BiConsumer,java.nio.charset.Charset)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpInput$SpecialContent: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：recycle
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: void recycle()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.InetAccessSet$AccessTuple: void <init>(java.lang.String,java.net.InetAddress,java.lang.String)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：getContextPath
+方法签名：<org.eclipse.jetty.ee9.nested.ServletRequestHttpWrapper: java.lang.String getContextPath()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setPort
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$MutableHostPort: void setPort(int,org.eclipse.jetty.server.ForwardedRequestCustomizer$Source)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$HandlerCallback: void <init>(org.eclipse.jetty.server.handler.StateTrackingHandler,org.eclipse.jetty.server.handler.StateTrackingHandler$StateInfo,org.eclipse.jetty.util.Callback)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.internal.HttpChannelState$ChannelResponse: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.UserDataConstraint: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Authentication$4: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：handle
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedRequest: void handle()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.ResourceListing$init__110: java.util.function.Supplier bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：copy
+方法签名：<org.eclipse.jetty.io.Content: void copy(org.eclipse.jetty.io.Content$Source,org.eclipse.jetty.io.Content$Sink,org.eclipse.jetty.util.Callback)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.nested.Response$EncodingFrom: org.eclipse.jetty.ee9.nested.Response$EncodingFrom[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.HostHeaderCustomizer$1: void <init>(org.eclipse.jetty.server.HostHeaderCustomizer,org.eclipse.jetty.server.Request,org.eclipse.jetty.http.HttpURI,org.eclipse.jetty.http.HttpFields)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：getAsyncContextEvent
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: org.eclipse.jetty.ee9.nested.AsyncContextEvent getAsyncContextEvent()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$ServletSessionApi$lambda_getOrCreateSession_0__207: java.util.function.Function bootstrap$(jakarta.servlet.ServletRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.internal.HttpChannelState: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$lambda_generateResponse_0__27: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onDispatchFailure__191: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseEnd_12__161: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：matches
+方法签名：<org.eclipse.jetty.http.EtagUtils: boolean matches(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<jakarta.servlet.http.NoBodyOutputStream: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.Request$lambda_addCompletionListener_0__124: java.util.function.Function bootstrap$(java.util.function.Consumer)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：logCompletion
+方法签名：<org.eclipse.jetty.server.handler.DebugHandler$HandlingCallback: void logCompletion(java.lang.Throwable)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getContentLength
+方法签名：<jakarta.servlet.http.NoBodyOutputStream: int getContentLength()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.SecureRequestCustomizer: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.DefaultAuthenticatorFactory: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$CoreSessionManager$lambda_addSessionStreamWrapper_0__252: java.util.function.Function bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ResourceService$lambda_sendData_0__120: void <init>(org.eclipse.jetty.http.MultiPartByteRanges$ContentSource,org.eclipse.jetty.http.content.HttpContent,long,org.eclipse.jetty.server.Request)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.StatisticsHandler$MinimumDataRateHandler$MinimumDataRateResponse: void <init>(org.eclipse.jetty.server.handler.StatisticsHandler$MinimumDataRateHandler,org.eclipse.jetty.server.handler.StatisticsHandler$MinimumDataRateHandler$MinimumDataRateRequest,org.eclipse.jetty.server.Response)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onAfterDispatch_3__152: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：skipTo
+方法签名：<org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter: void skipTo(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：ensureNotPersistent
+方法签名：<org.eclipse.jetty.server.ResponseUtils: void ensureNotPersistent(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$NoopPermit: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getPort
+方法签名：<org.eclipse.jetty.util.HostPort: int getPort(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Response$EncodingFrom: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$lambda_getLocales_1__127: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback: void <init>(org.eclipse.jetty.server.handler.gzip.GzipHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：hasLastWrite
+方法签名：<org.eclipse.jetty.ee9.nested.ServletCoreResponse: boolean hasLastWrite()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$CoreSessionManager$lambda_addSessionStreamWrapper_0__252: void <init>(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput$WriteBlocker: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：build
+方法签名：<org.eclipse.jetty.http.HttpURI: org.eclipse.jetty.http.HttpURI$Mutable build(org.eclipse.jetty.http.HttpURI,java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$1: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$lambda_generateResponse_0__27: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：close
+方法签名：<org.eclipse.jetty.ee9.nested.resource.InputStreamRangeWriter: void close()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getBeginNanoTime
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: long getBeginNanoTime()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：asReadOnly
+方法签名：<org.eclipse.jetty.server.Request: org.eclipse.jetty.server.Request asReadOnly(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：newLockedSemaphore
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContentProducer: org.eclipse.jetty.ee9.nested.AsyncContentProducer$LockedSemaphore newLockedSemaphore()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：cancelTimeout
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: void cancelTimeout()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setDispatchContext
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContextEvent: void setDispatchContext(jakarta.servlet.ServletContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.resource.InputStreamRangeWriter: void <init>(org.eclipse.jetty.ee9.nested.resource.InputStreamRangeWriter$InputStreamSupplier)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpInput: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$CoreSessionManager$getHttpChannel__253: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：logRequestAuthentication
+方法签名：<org.eclipse.jetty.server.CustomRequestLog: void logRequestAuthentication(java.lang.StringBuilder,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,boolean)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.internal.ResponseHttpFields$PersistentPreEncodedHttpField: void <init>(org.eclipse.jetty.http.HttpHeader,java.lang.String,org.eclipse.jetty.http.HttpField)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：size
+方法签名：<org.eclipse.jetty.server.CookieCache: int size()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ServletCoreResponse$1: void <init>(org.eclipse.jetty.ee9.nested.ServletCoreResponse,org.eclipse.jetty.http.HttpFields$Mutable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：copy
+方法签名：<org.eclipse.jetty.io.IOResources: void copy(org.eclipse.jetty.util.resource.Resource,org.eclipse.jetty.io.Content$Sink,org.eclipse.jetty.io.ByteBufferPool,int,boolean,long,long,org.eclipse.jetty.util.Callback)>
+方法的参数个数：8
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$2: void <init>(org.eclipse.jetty.server.ForwardedRequestCustomizer,org.eclipse.jetty.server.Request,org.eclipse.jetty.util.Attributes,org.eclipse.jetty.http.HttpURI,org.eclipse.jetty.http.HttpFields,boolean,org.eclipse.jetty.server.ConnectionMetaData)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：millisSince
+方法签名：<org.eclipse.jetty.util.NanoTime: long millisSince(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.TryPathsHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getServletPath
+方法签名：<org.eclipse.jetty.ee9.nested.ServletRequestHttpWrapper: java.lang.String getServletPath()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$toString__235: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：toNonSatisfiableHeaderValue
+方法签名：<org.eclipse.jetty.http.ByteRange: java.lang.String toNonSatisfiableHeaderValue(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：toBuffer
+方法签名：<org.eclipse.jetty.util.BufferUtil: java.nio.ByteBuffer toBuffer(byte[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$onIdleTimeout__215: void <init>(org.eclipse.jetty.ee9.nested.HttpChannelState)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Dispatcher$ForwardAttributes: void <init>(org.eclipse.jetty.ee9.nested.Dispatcher,org.eclipse.jetty.util.Attributes,java.lang.String,java.lang.String,java.lang.String,org.eclipse.jetty.ee9.nested.ServletPathMapping,java.lang.String)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：run
+方法签名：<org.eclipse.jetty.server.handler.ContextHandler$ScopedContext$lambda_execute_0__64: void run()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getFor
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$RFC7239: java.lang.String getFor()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getAuthenticationState
+方法签名：<org.eclipse.jetty.server.Request: org.eclipse.jetty.server.Request$AuthenticationState getAuthenticationState(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Dispatcher$IncludeAttributes: void <init>(org.eclipse.jetty.ee9.nested.Dispatcher,org.eclipse.jetty.util.Attributes,org.eclipse.jetty.ee9.nested.Request,org.eclipse.jetty.ee9.nested.ContextHandler$APIContext,org.eclipse.jetty.ee9.nested.ServletPathMapping,java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：8
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestContentEnd__188: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：newInputStream
+方法签名：<org.eclipse.jetty.ee9.nested.resource.HttpContentRangeWriter$lambda_newRangeWriter_1__250: java.io.InputStream newInputStream()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：logContinuation
+方法签名：<org.eclipse.jetty.server.handler.DebugHandler$HandlingCallback: void logContinuation()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：from
+方法签名：<org.eclipse.jetty.server.FormFields: java.util.concurrent.CompletableFuture 'from'(org.eclipse.jetty.server.Request,int,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：overlaps
+方法签名：<org.eclipse.jetty.ee9.nested.InclusiveByteRange: boolean overlaps(org.eclipse.jetty.ee9.nested.InclusiveByteRange)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback$GzipBufferCB: void <init>(org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback,boolean,org.eclipse.jetty.util.Callback,java.nio.ByteBuffer)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$Source: org.eclipse.jetty.server.ForwardedRequestCustomizer$Source[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.resource.ByteBufferRangeWriter: void <init>(java.nio.ByteBuffer)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$getETagValue__233: void <init>(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getRequestURI
+方法签名：<org.eclipse.jetty.ee9.nested.ServletRequestHttpWrapper: java.lang.String getRequestURI()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.SharedBlockingCallback: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onDispatchFailure__191: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getCompletionThreadInfo
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$HandlerCallback: org.eclipse.jetty.server.handler.StateTrackingHandler$ThreadInfo getCompletionThreadInfo()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：byFileName
+方法签名：<org.eclipse.jetty.util.resource.ResourceCollators: java.util.Comparator byFileName(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.FormAuthenticator$FormAuthentication: void <init>(java.lang.String,org.eclipse.jetty.security.UserIdentity)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：include
+方法签名：<org.eclipse.jetty.ee9.nested.Dispatcher: void include(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpInput$ErrorContent: void <init>(java.lang.Throwable)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：writeTo
+方法签名：<org.eclipse.jetty.ee9.nested.resource.InputStreamRangeWriter: void writeTo(java.io.OutputStream,long,long)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest$lambda_static_0__205: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.ResourceService$release__119: java.lang.Runnable bootstrap$(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.QoSHandler$resume__60: void <init>(org.eclipse.jetty.server.handler.QoSHandler)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput$ApiState: org.eclipse.jetty.ee9.nested.HttpOutput$ApiState[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$nonNull__28: java.util.function.Predicate bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：sendRedirect
+方法签名：<org.eclipse.jetty.server.Response: void sendRedirect(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int,java.lang.String,boolean)>
+方法的参数个数：6
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ResponseUtils$lambda_ensureNotPersistent_2__137: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestEnd__186: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$Forwarded: void <init>(org.eclipse.jetty.server.ForwardedRequestCustomizer,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.HttpConfiguration)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$add__129: void <init>(org.eclipse.jetty.util.Fields)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestFailure__185: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.MultiPartByteRanges$Part: void <init>(java.lang.String,org.eclipse.jetty.util.resource.Resource,org.eclipse.jetty.http.ByteRange,long,org.eclipse.jetty.io.ByteBufferPool)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：getHeaders
+方法签名：<org.eclipse.jetty.ee9.nested.ServletRequestHttpWrapper: java.util.Enumeration getHeaders(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Request: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel,org.eclipse.jetty.ee9.nested.HttpInput)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：build
+方法签名：<org.eclipse.jetty.http.HttpURI: org.eclipse.jetty.http.HttpURI$Mutable build()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.DateCache: void <init>(java.lang.String,java.util.Locale)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$RequestDispatchable: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.ResponseUtils$lambda_ensureNotPersistent_2__137: java.util.function.BiFunction bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseEnd_12__161: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.Request$forLanguageTag__125: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput$ApiState: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：etagGzip
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback: java.lang.String etagGzip(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.StatisticsHandler$MinimumDataRateHandler$MinimumDataRateRequest: void <init>(org.eclipse.jetty.server.handler.StatisticsHandler$MinimumDataRateHandler,org.eclipse.jetty.server.Request)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：forward
+方法签名：<org.eclipse.jetty.ee9.nested.Dispatcher: void forward(jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,jakarta.servlet.DispatcherType)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：normalizePathQuery
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String normalizePathQuery(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：reopen
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput: void reopen()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getInvocationType
+方法签名：<org.eclipse.jetty.server.Request$2: org.eclipse.jetty.util.thread.Invocable$InvocationType getInvocationType()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$nonNull__28: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getCookies
+方法签名：<org.eclipse.jetty.server.CookieCache: java.util.List getCookies(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseFailure__180: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: void <init>(org.eclipse.jetty.ee9.nested.ContextHandler,org.eclipse.jetty.server.ConnectionMetaData)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<jakarta.servlet.ServletContextEvent: void <init>(jakarta.servlet.ServletContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipRequest$GzipTransformer: void <init>(org.eclipse.jetty.io.Content$Source,org.eclipse.jetty.server.handler.gzip.GzipRequest$Decoder)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$lambda_handle_0__62: java.util.function.Consumer bootstrap$(org.eclipse.jetty.server.handler.StateTrackingHandler,org.eclipse.jetty.server.Request)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.HttpStream$Wrapper: void <init>(org.eclipse.jetty.server.HttpStream)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：addSuppressedIfNotAssociated
+方法签名：<org.eclipse.jetty.util.ExceptionUtil: void addSuppressedIfNotAssociated(java.lang.Throwable,java.lang.Throwable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：lambda$newRangeWriter$1
+方法签名：<org.eclipse.jetty.ee9.nested.resource.HttpContentRangeWriter: java.io.InputStream lambda$newRangeWriter$1(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestTrailers_6__155: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipRequest$Decoder: void <init>(org.eclipse.jetty.util.compression.InflaterPool,org.eclipse.jetty.io.ByteBufferPool,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestContentEnd_5__154: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：addIdleTimeoutListener
+方法签名：<org.eclipse.jetty.server.handler.ContextRequest: void addIdleTimeoutListener(java.util.function.Predicate)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.BlockingContentProducer: void <init>(org.eclipse.jetty.ee9.nested.AsyncContentProducer)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：recycle
+方法签名：<org.eclipse.jetty.ee9.nested.BlockingContentProducer: void recycle()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.Request$isKnownLocale__126: java.util.function.Predicate bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$StateInfo: void <init>(org.eclipse.jetty.server.handler.StateTrackingHandler,org.eclipse.jetty.server.Request)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$CoreToNestedHandler$getHttpChannel__200: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.EventsHandler$EventsRequest: void <init>(org.eclipse.jetty.server.handler.EventsHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Request)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestContentEnd__188: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：asInputStream
+方法签名：<org.eclipse.jetty.io.Content$Source: java.io.InputStream asInputStream(org.eclipse.jetty.io.Content$Source)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：close
+方法签名：<org.eclipse.jetty.ee9.nested.resource.ByteBufferRangeWriter: void close()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$lambda_wrapRequest_0__248: void <init>(org.eclipse.jetty.server.Request,org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：generateBoundary
+方法签名：<org.eclipse.jetty.http.MultiPart: java.lang.String generateBoundary(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setSecure
+方法签名：<org.eclipse.jetty.ee9.nested.Request: void setSecure(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse$permittedSuccess__30: void <init>(org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$1: void <init>(org.eclipse.jetty.ee9.nested.ResourceService,jakarta.servlet.AsyncContext,org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$lambda_writeContent_1__237: org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter$ChannelSupplier bootstrap$(java.nio.file.Path)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.CrossContextDispatcher$IncludeResponse: void <init>(org.eclipse.jetty.ee9.nested.CrossContextDispatcher,org.eclipse.jetty.ee9.nested.ServletCoreRequest,jakarta.servlet.http.HttpServletResponse,org.eclipse.jetty.ee9.nested.Response,org.eclipse.jetty.server.Response)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ConnectHandler$1: void <init>(org.eclipse.jetty.server.handler.ConnectHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$ErrorRequest: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$AllocatedPermit: void <init>(org.eclipse.jetty.server.handler.ThreadLimitHandler$Remote)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.SessionAuthentication: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：ensureConsumeAvailableOrNotPersistent
+方法签名：<org.eclipse.jetty.server.ResponseUtils: void ensureConsumeAvailableOrNotPersistent(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.resource.HttpContentRangeWriter$lambda_newRangeWriter_1__250: org.eclipse.jetty.ee9.nested.resource.InputStreamRangeWriter$InputStreamSupplier bootstrap$(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setIdleTimeout
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: void setIdleTimeout(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.BadMessageException: void <init>(int,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContentProducer: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$lambda_handle_0__62: void <init>(org.eclipse.jetty.server.handler.StateTrackingHandler,org.eclipse.jetty.server.Request)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：getRequest
+方法签名：<org.eclipse.jetty.server.Response$Wrapper: org.eclipse.jetty.server.Request getRequest()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：lambda$combine$0
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners: void lambda$combine$0(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest,org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onBeforeDispatch_1__150: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.resource.HttpContentRangeWriter$lambda_newRangeWriter_0__251: void <init>(java.nio.file.Path)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$lambda_writeErrorJson_1__29: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setHostPort
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$MutableHostPort: void setHostPort(java.lang.String,int,org.eclipse.jetty.server.ForwardedRequestCustomizer$Source)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$SessionStreamWrapper: void <init>(org.eclipse.jetty.server.HttpStream,org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$ErrorRequest$1: void <init>(org.eclipse.jetty.util.Attributes,java.lang.String,java.lang.Throwable,int)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.CookieCache$onComplianceViolation__122: java.util.function.Consumer bootstrap$(org.eclipse.jetty.http.ComplianceViolation$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$toString__236: java.util.function.Supplier bootstrap$(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：decodeUtf8To
+方法签名：<org.eclipse.jetty.util.UrlEncoded: boolean decodeUtf8To(java.lang.String,int,int,java.util.function.BiConsumer,boolean,boolean,boolean)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：build
+方法签名：<org.eclipse.jetty.http.HttpFields: org.eclipse.jetty.http.HttpFields$Mutable build(org.eclipse.jetty.http.HttpFields)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.io.Retainable$ReferenceCounter: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onBeforeDispatch__192: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse$lambda_failed_0__31: void <init>(org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse,java.lang.Throwable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestBegin__193: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onComplete_14__163: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：lambda$static$0
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest: void lambda$static$0(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$add__128: void <init>(org.eclipse.jetty.util.Fields)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.CrossContextDispatcher$IncludeRequest: void <init>(org.eclipse.jetty.ee9.nested.CrossContextDispatcher,org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest,org.eclipse.jetty.ee9.nested.Request,jakarta.servlet.http.HttpServletRequest)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<init>
+方法签名：<jakarta.servlet.http.NoBodyResponse: void <init>(jakarta.servlet.http.HttpServletResponse)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getLocalAddr
+方法签名：<org.eclipse.jetty.server.Request: java.lang.String getLocalAddr(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getResponse
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setContentLength
+方法签名：<jakarta.servlet.http.NoBodyResponse: void setContentLength(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$ContextStatus: org.eclipse.jetty.ee9.nested.ContextHandler$ContextStatus[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：builder
+方法签名：<org.eclipse.jetty.util.QuotedStringTokenizer: org.eclipse.jetty.util.QuotedStringTokenizer$Builder builder()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$HandlerCallback$lambda_new_0__6: org.eclipse.jetty.util.thread.Scheduler$Task bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$RFC7239: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onBeforeDispatch_1__150: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：distinctBy
+方法签名：<org.eclipse.jetty.server.ResourceListing: java.util.function.Predicate distinctBy(java.util.function.Function)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestBegin__193: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ResourceListing$getFileName__109: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler$ServletSessionApi$lambda_getOrCreateSession_0__207: void <init>(jakarta.servlet.ServletRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.DebugHandler$HandlingCallback: void <init>(org.eclipse.jetty.server.handler.DebugHandler,org.eclipse.jetty.util.Callback,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：dump
+方法签名：<org.eclipse.jetty.util.component.Dumpable: void dump(org.eclipse.jetty.util.component.Dumpable,java.lang.Appendable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseCommit_10__159: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.ResponseUtils$1: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getCurrentContextHandler
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler: org.eclipse.jetty.ee9.nested.ContextHandler getCurrentContextHandler()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ResourceService$release__119: void <init>(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：decodeUtf8To
+方法签名：<org.eclipse.jetty.util.UrlEncoded: void decodeUtf8To(java.lang.String,int,int,org.eclipse.jetty.util.Fields)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ContextRequest$lambda_addIdleTimeoutListener_0__56: java.util.function.Predicate bootstrap$(org.eclipse.jetty.server.handler.ContextRequest,java.util.function.Predicate)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ProxyCustomizer$ProxyRequest: void <init>(org.eclipse.jetty.server.Request,java.net.SocketAddress,java.net.SocketAddress)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：fallbackSkipTo
+方法签名：<org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter: void fallbackSkipTo(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：completed
+方法签名：<org.eclipse.jetty.server.handler.GracefulHandler$ShutdownTrackingCallback: void completed()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$getETagValue__234: java.util.function.Supplier bootstrap$(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：recycle
+方法签名：<org.eclipse.jetty.ee9.nested.Request: void recycle()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.internal.HttpChannelState$ChannelRequest: void <init>(org.eclipse.jetty.server.internal.HttpChannelState,org.eclipse.jetty.http.MetaData$Request)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$3: void <init>(org.eclipse.jetty.server.Request,org.eclipse.jetty.http.HttpURI)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpInput$Content: void <init>(java.nio.ByteBuffer)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：newRangeWriter
+方法签名：<org.eclipse.jetty.ee9.nested.resource.HttpContentRangeWriter: org.eclipse.jetty.ee9.nested.resource.RangeWriter newRangeWriter(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$DemandTask: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getAttribute
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: java.lang.Object getAttribute(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestBegin_0__149: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onComplete_14__163: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContentProducer$LockedSemaphore: void <init>(org.eclipse.jetty.ee9.nested.AsyncContentProducer)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.GracefulHandler$ShutdownTrackingCallback: void <init>(org.eclipse.jetty.server.handler.GracefulHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.internal.HttpChannelState$ChannelCallback: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.ResponseUtils$lambda_ensureNotPersistent_8__136: java.util.function.BiFunction bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler$lambda_handle_0__202: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.Request,jakarta.servlet.AsyncContext)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：getApiCookies
+方法签名：<org.eclipse.jetty.server.CookieCache: java.lang.Object[] getApiCookies(java.lang.Class,java.util.function.Function)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.CrossOriginHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication$1: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.io.content.ContentSourceTransformer: void <init>(org.eclipse.jetty.io.Content$Source)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.internal.HttpChannelState$ChannelCallback: void <init>(org.eclipse.jetty.server.internal.HttpChannelState$ChannelRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.Request$add__129: java.util.function.BiConsumer bootstrap$(org.eclipse.jetty.util.Fields)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestContent_4__153: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.InclusiveByteRange: void <init>(long,long)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.SessionHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$1: void <init>(org.eclipse.jetty.ee9.nested.HttpChannelState,java.util.List,org.eclipse.jetty.ee9.nested.AsyncContextEvent)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseBegin__184: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：isLockHeldByCurrentThread
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: boolean isLockHeldByCurrentThread()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.CrossContextDispatcher$ForwardRequest$1: void <init>(org.eclipse.jetty.util.Attributes,org.eclipse.jetty.ee9.nested.CrossContextDispatcher,jakarta.servlet.http.HttpServletRequest)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：serviceStream
+方法签名：<org.eclipse.jetty.util.TypeUtil: java.util.stream.Stream serviceStream(java.util.ServiceLoader)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$getETagValue__234: void <init>(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$asyncError__225: void <init>(org.eclipse.jetty.ee9.nested.HttpChannelState)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback$GZState: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedRequest$handle__8: void <init>(org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getHttpChannelState
+方法签名：<org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.HttpChannelState getHttpChannelState()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<jakarta.servlet.ServletException: void <init>(java.lang.String,java.lang.Throwable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：getRequest
+方法签名：<jakarta.servlet.ServletRequestWrapper: jakarta.servlet.ServletRequest getRequest()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_2__198: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.GZIPContentDecoder: void <init>(org.eclipse.jetty.util.compression.InflaterPool,org.eclipse.jetty.io.ByteBufferPool,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：getBaseType
+方法签名：<org.eclipse.jetty.http.MimeTypes: org.eclipse.jetty.http.MimeTypes$Type getBaseType(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$OutputState: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.BufferedResponseHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Authentication$5: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getHeadersNanoTime
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: long getHeadersNanoTime()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.EventsHandler$EventsResponse: void <init>(org.eclipse.jetty.server.handler.EventsHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：isSecure
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: boolean isSecure()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ServletCoreResponse$HttpServletResponseHttpFields: void <init>(jakarta.servlet.http.HttpServletResponse)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.nested.Response$OutputType: org.eclipse.jetty.ee9.nested.Response$OutputType[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ContextRequest$lambda_addIdleTimeoutListener_0__56: void <init>(org.eclipse.jetty.server.handler.ContextRequest,java.util.function.Predicate)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<jakarta.servlet.SessionTrackingMode: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.DelayedHandler$UntilMultipartDelayedProcess: void <init>(org.eclipse.jetty.server.Handler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,java.lang.String,org.eclipse.jetty.http.MultiPartConfig)>
+方法的参数个数：6
+call-site个数： 1
+
+方法名：newHttpOutput
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.HttpOutput newHttpOutput()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ShutdownHandler$lambda_handle_0__53: java.lang.Runnable bootstrap$(org.eclipse.jetty.server.handler.ShutdownHandler)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：reopen
+方法签名：<org.eclipse.jetty.ee9.nested.BlockingContentProducer: void reopen()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.QoSHandler$resume__60: java.util.function.Consumer bootstrap$(org.eclipse.jetty.server.handler.QoSHandler)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：writeTo
+方法签名：<org.eclipse.jetty.ee9.nested.resource.ByteBufferRangeWriter: void writeTo(java.io.OutputStream,long,long)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.Attributes$Lazy: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.MetaData$Request: void <init>(long,java.lang.String,org.eclipse.jetty.http.HttpURI,org.eclipse.jetty.http.HttpVersion,org.eclipse.jetty.http.HttpFields)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：asBuffered
+方法签名：<org.eclipse.jetty.io.Content$Sink: org.eclipse.jetty.io.Content$Sink asBuffered(org.eclipse.jetty.io.Content$Sink,org.eclipse.jetty.io.ByteBufferPool,boolean,int,int)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：getLocalPort
+方法签名：<org.eclipse.jetty.server.Request: int getLocalPort(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：addHttpStreamWrapper
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: void addHttpStreamWrapper(java.util.function.Function)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：from
+方法签名：<org.eclipse.jetty.util.Callback: org.eclipse.jetty.util.Callback 'from'(java.lang.Runnable)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.SecureRequestCustomizer$SecureRequestWithSslSessionData: void <init>(org.eclipse.jetty.server.SecureRequestCustomizer,org.eclipse.jetty.server.Request,org.eclipse.jetty.io.EndPoint$SslSessionData)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$ErrorRequest: void <init>(org.eclipse.jetty.server.Request,int,java.lang.String,java.lang.Throwable)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContextState: void <init>(org.eclipse.jetty.ee9.nested.HttpChannelState)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$1: void <init>(org.eclipse.jetty.server.ForwardedRequestCustomizer,org.eclipse.jetty.server.ConnectionMetaData,java.net.InetSocketAddress,org.eclipse.jetty.http.HostPortHttpField)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：getFields
+方法签名：<org.eclipse.jetty.server.FormFields: org.eclipse.jetty.util.Fields getFields(org.eclipse.jetty.server.Request,int,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：normalizePath
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String normalizePath(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseContent_11__160: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.ServletAttributes: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ConnectionMetaData$Wrapper: void <init>(org.eclipse.jetty.server.ConnectionMetaData)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：sendRedirect
+方法签名：<org.eclipse.jetty.server.Response: void sendRedirect(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,java.lang.String,boolean)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.HttpConfiguration: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setAnyAuth
+方法签名：<org.eclipse.jetty.ee9.security.RoleInfo: void setAnyAuth(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.CustomRequestLog$lambda_static_0__118: java.util.function.Supplier bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<jakarta.servlet.http.HttpServletRequestWrapper: void <init>(jakarta.servlet.http.HttpServletRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：newHttpInput
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.HttpInput newHttpInput()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContextEvent: void <init>(org.eclipse.jetty.ee9.nested.ContextHandler$APIContext,org.eclipse.jetty.ee9.nested.AsyncContextState,org.eclipse.jetty.ee9.nested.HttpChannelState,org.eclipse.jetty.ee9.nested.Request,jakarta.servlet.ServletRequest,jakarta.servlet.ServletResponse,org.eclipse.jetty.http.HttpURI)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseContent__182: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getValueParameters
+方法签名：<org.eclipse.jetty.http.HttpField: java.lang.String getValueParameters(java.lang.String,java.util.Map)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：lambda$writeContent$1
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService: java.nio.channels.SeekableByteChannel lambda$writeContent$1(java.nio.file.Path)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.DigestAuthenticator$Digest: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ContextHandler$ScopedContext$lambda_execute_0__64: void <init>(org.eclipse.jetty.server.handler.ContextHandler$ScopedContext,java.lang.Runnable,org.eclipse.jetty.server.Request)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.SecureRequestCustomizer$SecureRequestWithSslSessionData: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：build
+方法签名：<org.eclipse.jetty.http.HttpFields: org.eclipse.jetty.http.HttpFields$Mutable build(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.Server: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getHost
+方法签名：<org.eclipse.jetty.util.HostPort: java.lang.String getHost()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.PreEncodedHttpField: void <init>(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler$1$lambda_requestDestroyed_0__218: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：parse
+方法签名：<org.eclipse.jetty.http.ByteRange: java.util.List parse(java.util.List,long)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.QoSHandler$lambda_suspend_0__61: void <init>(org.eclipse.jetty.server.handler.QoSHandler,int,org.eclipse.jetty.server.handler.QoSHandler$Entry)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseBegin__184: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：reopen
+方法签名：<org.eclipse.jetty.ee9.nested.HttpInput: void reopen()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.CountingCallback: void <init>(org.eclipse.jetty.util.Callback,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.MultiPartOutputStream: void <init>(java.io.OutputStream)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：toStringLocked
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: java.lang.String toStringLocked()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getHttpOutput
+方法签名：<org.eclipse.jetty.ee9.nested.Response: org.eclipse.jetty.ee9.nested.HttpOutput getHttpOutput()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setAttribute
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: java.lang.Object setAttribute(java.lang.String,java.lang.Object)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$onIdleTimeout__215: java.util.function.Predicate bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannelState)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput$State: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：hrefEncodeURI
+方法签名：<org.eclipse.jetty.server.ResourceListing: java.lang.String hrefEncodeURI(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：cancelTimeout
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: void cancelTimeout(org.eclipse.jetty.ee9.nested.AsyncContextEvent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$3: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestTrailers__187: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$1: void <init>(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestContentEnd_5__154: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure$lambda_static_0__249: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Response: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel,org.eclipse.jetty.ee9.nested.HttpOutput)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseCommit__183: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipHandler$1: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.CustomRequestLog$lambda_static_0__118: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：convert
+方法签名：<org.eclipse.jetty.server.CookieCache: java.lang.Object[] convert(java.lang.Class,java.util.function.Function)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseBegin_9__158: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：onFields
+方法签名：<org.eclipse.jetty.server.FormFields: void onFields(org.eclipse.jetty.server.Request,java.nio.charset.Charset,org.eclipse.jetty.util.Promise$Invocable)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseBegin_9__158: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<jakarta.servlet.ServletInputStream: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback$GZState: org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback$GZState[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.FormAuthenticator$FormResponse: void <init>(jakarta.servlet.http.HttpServletResponse)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$ContextStatus: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：newParser
+方法签名：<org.eclipse.jetty.http.CookieParser: org.eclipse.jetty.http.CookieParser newParser(org.eclipse.jetty.http.CookieParser$Handler,org.eclipse.jetty.http.CookieCompliance,org.eclipse.jetty.http.ComplianceViolation$Listener)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：rewriteWithSuffix
+方法签名：<org.eclipse.jetty.http.EtagUtils: java.lang.String rewriteWithSuffix(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse$permittedSuccess__30: java.util.function.Consumer bootstrap$(org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setTimeStamp
+方法签名：<org.eclipse.jetty.ee9.nested.Request: void setTimeStamp(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure$lambda_static_0__249: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.EventsHandler$lambda_handle_0__18: void <init>(org.eclipse.jetty.server.handler.EventsHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.handler.EventsHandler$EventsResponse)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onComplete__179: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：from
+方法签名：<org.eclipse.jetty.server.FormFields: java.util.concurrent.CompletableFuture 'from'(org.eclipse.jetty.server.Request)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.DigestAuthenticator$Nonce: void <init>(java.lang.String,long,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.ResourceListing$lambda_distinctBy_0__111: java.util.function.Predicate bootstrap$(java.util.HashSet,java.util.function.Function)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：isReadableFile
+方法签名：<org.eclipse.jetty.util.resource.Resources: boolean isReadableFile(org.eclipse.jetty.util.resource.Resource)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：addIdleTimeoutListener
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: void addIdleTimeoutListener(java.util.function.Predicate)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onAfterDispatch__190: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_4__196: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：missing
+方法签名：<org.eclipse.jetty.util.resource.Resources: boolean missing(org.eclipse.jetty.util.resource.Resource)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ResourceService$WelcomeAction: void <init>(java.lang.String,org.eclipse.jetty.server.ResourceService$WelcomeMode)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setHost
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$MutableHostPort: void setHost(java.lang.String,org.eclipse.jetty.server.ForwardedRequestCustomizer$Source)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest$lambda_static_0__205: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.IdleTimeoutHandler$lambda_handle_0__26: java.lang.Runnable bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseContent_11__160: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler$RFC7239: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：drainPermits
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContentProducer$LockedSemaphore: void drainPermits()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.thread.ThreadIdPool: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$isKnownLocale__126: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Response$OutputType: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：isSpecial
+方法签名：<org.eclipse.jetty.ee9.nested.HttpInput$SpecialContent: boolean isSpecial()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$lambda_onConditionsMet_1__20: java.lang.Runnable bootstrap$(org.eclipse.jetty.server.handler.ThreadLimitHandler,org.eclipse.jetty.server.handler.ThreadLimitHandler$Remote)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipRequest$1: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.security.Credential: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$3: void <init>(org.eclipse.jetty.server.ForwardedRequestCustomizer,org.eclipse.jetty.util.Attributes,org.eclipse.jetty.io.EndPoint$SslSessionData)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipRequest: void <init>(org.eclipse.jetty.server.Request,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$OutputState: org.eclipse.jetty.ee9.nested.HttpChannelState$OutputState[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.SecureRequestCustomizer$SecureRequestWithSslSessionData$1: void <init>(org.eclipse.jetty.util.Attributes,org.eclipse.jetty.server.SecureRequestCustomizer,org.eclipse.jetty.io.EndPoint$SslSessionData)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$ResponseWrapper: void <init>(org.eclipse.jetty.server.handler.StateTrackingHandler,org.eclipse.jetty.server.handler.StateTrackingHandler$StateInfo,org.eclipse.jetty.server.Response)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$InputState: org.eclipse.jetty.ee9.nested.HttpChannelState$InputState[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler$1$lambda_requestDestroyed_0__218: java.util.function.BiFunction bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：recycle
+方法签名：<org.eclipse.jetty.ee9.nested.HttpInput: void recycle()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：recycle
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContentProducer: void recycle()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<jakarta.servlet.DispatcherType: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：addQueries
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String addQueries(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_1__195: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyFailure)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ContextHandlerCollection: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ServletAttributes: void <init>(org.eclipse.jetty.util.Attributes)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseEnd__181: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestContent_4__153: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedRequest: void <init>(org.eclipse.jetty.server.handler.ThreadLimitHandler$Remote,org.eclipse.jetty.server.Request$Handler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：to416HeaderRangeString
+方法签名：<org.eclipse.jetty.ee9.nested.InclusiveByteRange: java.lang.String to416HeaderRangeString(long)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<jakarta.servlet.http.NoBodyResponse: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：consumeAvailable
+方法签名：<org.eclipse.jetty.server.Request$Wrapper: boolean consumeAvailable()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：startPart
+方法签名：<org.eclipse.jetty.util.MultiPartOutputStream: void startPart(java.lang.String,java.lang.String[])>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.QuotedQualityCSV: void <init>(java.util.List)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: void <init>(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.handler.ContextHandler$ScopedContext,org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.Request$lambda_getParametersAsync_2__130: java.util.function.Function bootstrap$(org.eclipse.jetty.util.Fields)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：forCharset
+方法签名：<org.eclipse.jetty.util.CharsetStringBuilder: org.eclipse.jetty.util.CharsetStringBuilder forCharset(java.nio.charset.Charset)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseFailure_13__162: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Authentication$2: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：compactPath
+方法签名：<org.eclipse.jetty.util.URIUtil: java.lang.String compactPath(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$CoreToNestedHandler$getHttpChannel__200: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$lambda_getParametersAsync_2__130: void <init>(org.eclipse.jetty.util.Fields)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getMetaData
+方法签名：<org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.http.MetaData$Request getMetaData()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：byLastModified
+方法签名：<org.eclipse.jetty.util.resource.ResourceCollators: java.util.Comparator byLastModified(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.ResourceService$1: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$State: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：onRequestBegin
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners: void onRequestBegin(org.eclipse.jetty.ee9.nested.Request)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.Request$add__128: java.util.function.BiConsumer bootstrap$(org.eclipse.jetty.util.Fields)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners: void <init>(java.util.Collection)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：values
+方法签名：<org.eclipse.jetty.http.HttpVersion: org.eclipse.jetty.http.HttpVersion[] values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.DelayedHandler$UntilFormDelayedProcess: void <init>(org.eclipse.jetty.server.Handler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,java.lang.String)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.io.content.ContentSourceCompletableFuture: void <init>(org.eclipse.jetty.io.Content$Source,org.eclipse.jetty.util.thread.Invocable$InvocationType)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：isReadableDirectory
+方法签名：<org.eclipse.jetty.util.resource.Resources: boolean isReadableDirectory(org.eclipse.jetty.util.resource.Resource)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler$1: void <init>(org.eclipse.jetty.ee9.nested.ThreadLimitHandler,org.eclipse.jetty.ee9.nested.ThreadLimitHandler$Remote)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$RequestWrapper: void <init>(org.eclipse.jetty.server.handler.StateTrackingHandler,org.eclipse.jetty.server.handler.StateTrackingHandler$StateInfo)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.io.WriterOutputStream: void <init>(java.io.Writer)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse$lambda_failed_0__31: java.util.function.Consumer bootstrap$(org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse,java.lang.Throwable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.Request$lambda_getLocales_1__127: java.util.function.Predicate bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：copy
+方法签名：<org.eclipse.jetty.io.IOResources: void copy(org.eclipse.jetty.util.resource.Resource,org.eclipse.jetty.io.Content$Sink,org.eclipse.jetty.io.ByteBufferPool,int,boolean,org.eclipse.jetty.util.Callback)>
+方法的参数个数：6
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ResourceListing$init__110: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.ErrorHandler$1: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getBaseResponse
+方法签名：<org.eclipse.jetty.ee9.nested.Response: org.eclipse.jetty.ee9.nested.Response getBaseResponse(jakarta.servlet.ServletResponse)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getInetAddress
+方法签名：<org.eclipse.jetty.server.handler.ConditionalHandler$InetAddressPatternPredicate: java.net.InetAddress getInetAddress(java.net.SocketAddress)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：lockedReleaseBuffer
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput: void lockedReleaseBuffer(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：combine
+方法签名：<org.eclipse.jetty.ee9.security.UserDataConstraint: org.eclipse.jetty.ee9.security.UserDataConstraint combine(org.eclipse.jetty.ee9.security.UserDataConstraint)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseContent__182: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onComplete__179: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：close
+方法签名：<org.eclipse.jetty.util.IO: void close(java.lang.AutoCloseable)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_0__194: void <init>(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setHandled
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$HandlerCallback: void setHandled(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator$UserIdentityHolder: void <init>(org.eclipse.jetty.security.UserIdentity)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：combine
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent combine(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.io.EofException: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestFailure_8__157: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.PathMappingsHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：newHttpURIFrom
+方法签名：<org.eclipse.jetty.server.Request: org.eclipse.jetty.http.HttpURI newHttpURIFrom(org.eclipse.jetty.server.Request,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.internal.ResponseHttpFields$PersistentPreEncodedHttpField: void <init>(org.eclipse.jetty.http.HttpHeader,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$lambda_addCompletionListener_0__124: void <init>(java.util.function.Consumer)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.RoleInfo: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：handle
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedRequest: void handle(org.eclipse.jetty.server.handler.ThreadLimitHandler$Permit)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.StateTrackingHandler$HandlerCallback$lambda_new_0__6: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_2__198: void <init>(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseEnd__181: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<jakarta.servlet.SessionTrackingMode: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setChecked
+方法签名：<org.eclipse.jetty.ee9.security.RoleInfo: void setChecked(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_3__197: void <init>(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ResourceListing$lambda_distinctBy_0__111: void <init>(java.util.HashSet,java.util.function.Function)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：allocate
+方法签名：<org.eclipse.jetty.util.BufferUtil: java.nio.ByteBuffer allocate(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestTrailers__187: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.SecurityHandler$1: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：lock
+方法签名：<org.eclipse.jetty.ee9.nested.AsyncContentProducer: org.eclipse.jetty.util.thread.AutoLock lock()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：write
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback: void write(boolean,java.nio.ByteBuffer,org.eclipse.jetty.util.Callback)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.internal.HttpChannelState$InitializedCompositeComplianceViolationListener: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：combine
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest combine(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onDispatchFailure_2__151: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onAfterDispatch_3__152: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.CookieCache$onComplianceViolation__122: void <init>(org.eclipse.jetty.http.ComplianceViolation$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.HttpStream: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：recycle
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: void recycle()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$toString__236: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter: void <init>(java.nio.channels.SeekableByteChannel,org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter$ChannelSupplier)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse: void <init>(org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedRequest,org.eclipse.jetty.server.Response)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setAnyRole
+方法签名：<org.eclipse.jetty.ee9.security.RoleInfo: void setAnyRole(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$MutableHostPort: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.IdleTimeoutHandler$lambda_handle_0__26: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$Remote: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.security.SecurityHandler$add__145: java.util.function.Consumer bootstrap$(java.util.List)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestFailure__185: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onRequestEnd_7__156: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseCommit_10__159: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.nested.DebugListener: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_3__197: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：sendRedirect
+方法签名：<org.eclipse.jetty.server.Response: void sendRedirect(org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,java.lang.String)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$lambda_combine_0__194: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest,org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onDispatchFailure_2__151: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：replace
+方法签名：<org.eclipse.jetty.util.StringUtil: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$toString__235: java.util.function.Supplier bootstrap$(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.QuotedQualityCSV: void <init>(java.lang.String[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.QoSHandler$Entry: void <init>(org.eclipse.jetty.server.handler.QoSHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response,org.eclipse.jetty.util.Callback,int)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestContent__189: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.SizeLimitHandler$SizeLimitResponseWrapper: void <init>(org.eclipse.jetty.server.handler.SizeLimitHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.Response)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.security.SecurityHandler$add__145: void <init>(java.util.List)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：build
+方法签名：<org.eclipse.jetty.http.HttpFields: org.eclipse.jetty.http.HttpFields$Mutable build()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Authentication$1: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：destroy
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipRequest: void destroy()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：session
+方法签名：<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: org.eclipse.jetty.session.ManagedSession session()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ShutdownHandler$lambda_handle_0__53: void <init>(org.eclipse.jetty.server.handler.ShutdownHandler)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：recycle
+方法签名：<org.eclipse.jetty.ee9.nested.Response: void recycle()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.resource.HttpContentRangeWriter$lambda_newRangeWriter_0__251: org.eclipse.jetty.ee9.nested.resource.SeekableByteChannelRangeWriter$ChannelSupplier bootstrap$(java.nio.file.Path)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$lambda_doScope_0__224: org.eclipse.jetty.util.thread.Invocable$Callable bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler,java.lang.String,org.eclipse.jetty.ee9.nested.Request,jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel$TransientListeners$lambda_onResponseFailure_13__162: java.util.function.Function bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：ensure
+方法签名：<org.eclipse.jetty.util.component.Environment: org.eclipse.jetty.util.component.Environment ensure(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onAfterDispatch__190: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onBeforeDispatch__192: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getFor
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler$RFC7239: java.lang.String getFor()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：isSecure
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$Forwarded: boolean isSecure()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestEnd__186: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyRequest bootstrap$(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getOriginalResponse
+方法签名：<org.eclipse.jetty.server.Response: org.eclipse.jetty.server.Response getOriginalResponse(org.eclipse.jetty.server.Response)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$2: void <init>(org.eclipse.jetty.util.Promise$Invocable,org.eclipse.jetty.util.Fields)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.ErrorHandler$WriteErrorCallback: void <init>(org.eclipse.jetty.util.Callback,org.eclipse.jetty.io.ByteBufferPool,org.eclipse.jetty.io.RetainableByteBuffer)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：onFields
+方法签名：<org.eclipse.jetty.server.FormFields: void onFields(org.eclipse.jetty.server.Request,java.nio.charset.Charset,int,int,org.eclipse.jetty.util.Promise$Invocable)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：hasFor
+方法签名：<org.eclipse.jetty.server.ForwardedRequestCustomizer$Forwarded: boolean hasFor()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.DefaultAuthenticatorFactory: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onRequestContent__189: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ResourceService$getETagValue__233: java.util.function.Supplier bootstrap$(org.eclipse.jetty.http.content.HttpContent)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$State: org.eclipse.jetty.ee9.nested.HttpChannelState$State[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：asOutputStream
+方法签名：<org.eclipse.jetty.io.Content$Sink: java.io.OutputStream asOutputStream(org.eclipse.jetty.io.Content$Sink)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.IteratingNestedCallback: void <init>(org.eclipse.jetty.util.Callback)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState$RequestState: void <init>(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：hasNoBody
+方法签名：<org.eclipse.jetty.http.HttpStatus: boolean hasNoBody(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.ReHandlingErrorHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.MultiPartConfig$Builder: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.CrossContextDispatcher$IncludeRequest$1: void <init>(org.eclipse.jetty.util.Attributes,org.eclipse.jetty.ee9.nested.CrossContextDispatcher,jakarta.servlet.http.HttpServletRequest)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：isRedirection
+方法签名：<org.eclipse.jetty.http.HttpStatus: boolean isRedirection(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ContextHandler$ScopedContext$lambda_execute_0__64: java.lang.Runnable bootstrap$(org.eclipse.jetty.server.handler.ContextHandler$ScopedContext,java.lang.Runnable,org.eclipse.jetty.server.Request)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：setContentLength
+方法签名：<jakarta.servlet.http.NoBodyResponse: void setContentLength()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.Authentication$3: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：ifExceptionThrowAs
+方法签名：<org.eclipse.jetty.util.ExceptionUtil: void ifExceptionThrowAs(java.lang.Class,java.lang.Throwable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：noCompression
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipResponseAndCallback: void noCompression()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：close
+方法签名：<org.eclipse.jetty.util.IO: void close(java.io.Closeable)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedRequest$handle__8: java.util.function.Consumer bootstrap$(org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：from
+方法签名：<org.eclipse.jetty.http.HttpURI: org.eclipse.jetty.http.HttpURI$Immutable 'from'(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.ee9.security.authentication.ConfigurableSpnegoAuthenticator$UserIdentityHolder: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：$values
+方法签名：<org.eclipse.jetty.ee9.nested.HttpOutput$State: org.eclipse.jetty.ee9.nested.HttpOutput$State[] $values()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$lambda_getRemote_2__21: java.util.function.BiFunction bootstrap$(org.eclipse.jetty.server.Request,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.SizeLimitHandler$SizeLimitResponseWrapper$1: void <init>(org.eclipse.jetty.server.handler.SizeLimitHandler$SizeLimitResponseWrapper,org.eclipse.jetty.http.HttpFields$Mutable,org.eclipse.jetty.server.handler.SizeLimitHandler)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.internal.HttpChannelState$ChannelRequest: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.Request: void onRequest(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextHandler$lambda_wrapRequest_0__248: java.util.function.Consumer bootstrap$(org.eclipse.jetty.server.Request,org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.Request$forLanguageTag__125: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<org.eclipse.jetty.server.handler.BufferedResponseHandler: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：onRequest
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannel: void onRequest(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getQueryString
+方法签名：<org.eclipse.jetty.ee9.nested.ServletRequestHttpWrapper: java.lang.String getQueryString()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：flipToFlush
+方法签名：<org.eclipse.jetty.util.BufferUtil: void flipToFlush(java.nio.ByteBuffer,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$onResponseCommit__183: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel$Listener)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：satisfiableRanges
+方法签名：<org.eclipse.jetty.ee9.nested.InclusiveByteRange: java.util.List satisfiableRanges(java.util.Enumeration,long)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.ThreadLimitHandler$lambda_handle_0__202: void <init>(org.eclipse.jetty.ee9.nested.Request,jakarta.servlet.AsyncContext)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.http.ComplianceViolation$Event: void <init>(org.eclipse.jetty.http.ComplianceViolation$Mode,org.eclipse.jetty.http.ComplianceViolation,java.lang.String)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.handler.SizeLimitHandler$SizeLimitRequestWrapper: void <init>(org.eclipse.jetty.server.handler.SizeLimitHandler,org.eclipse.jetty.server.Request)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.server.handler.EventsHandler$lambda_handle_0__18: java.util.function.Consumer bootstrap$(org.eclipse.jetty.server.handler.EventsHandler,org.eclipse.jetty.server.Request,org.eclipse.jetty.server.handler.EventsHandler$EventsResponse)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：printable
+方法签名：<org.eclipse.jetty.util.StringUtil: java.lang.String printable(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.server.FormFields: void <init>(org.eclipse.jetty.io.Content$Source,org.eclipse.jetty.util.thread.Invocable$InvocationType,java.nio.charset.Charset,int,int)>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent$lambda_static_0__206: org.eclipse.jetty.ee9.nested.HttpChannelListeners$NotifyContent bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：updateRequestFields
+方法签名：<org.eclipse.jetty.server.handler.gzip.GzipRequest: org.eclipse.jetty.http.HttpFields updateRequestFields(org.eclipse.jetty.server.Request,boolean)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：permittedFailure
+方法签名：<org.eclipse.jetty.server.handler.ThreadLimitHandler$LimitedResponse: void permittedFailure(org.eclipse.jetty.server.handler.ThreadLimitHandler$Permit,java.lang.Throwable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：extractQueryParameters
+方法签名：<org.eclipse.jetty.server.Request: org.eclipse.jetty.util.Fields extractQueryParameters(org.eclipse.jetty.server.Request,java.nio.charset.Charset)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：promise
+方法签名：<org.eclipse.jetty.util.Blocker: org.eclipse.jetty.util.Blocker$Promise promise()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：onParameters
+方法签名：<org.eclipse.jetty.server.Request: void onParameters(org.eclipse.jetty.server.Request,org.eclipse.jetty.util.Promise$Invocable)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.ee9.nested.HttpChannelState: void <init>(org.eclipse.jetty.ee9.nested.HttpChannel)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.eclipse.jetty.util.compression.InflaterPool: void <init>(int,boolean)>
+方法的参数个数：2
+call-site个数： 1
+

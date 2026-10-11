@@ -1,0 +1,29 @@
+optimize method: <com.xpn.xwiki.util.Util: java.net.URL getResource(java.lang.String)> add edge: VIRTUAL edge: $r6 = virtualinvoke $r5.<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>(r1) in <com.xpn.xwiki.util.Util: java.net.URL getResource(java.lang.String)> ==> <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+optimize method: <com.xpn.xwiki.internal.skin.ClassLoaderSkin: java.net.URL getResourceURL(java.lang.String)> add edge: VIRTUAL edge: $r3 = virtualinvoke $r2.<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>(r1) in <com.xpn.xwiki.internal.skin.ClassLoaderSkin: java.net.URL getResourceURL(java.lang.String)> ==> <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+optimize method: <com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)> add edge: VIRTUAL edge: $r7 = virtualinvoke r6.<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>($r2) in <com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)> ==> <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+optimize method: <com.xpn.xwiki.internal.store.hibernate.HibernateStore: java.net.URL getHibernateConfigurationURL()> add edge: VIRTUAL edge: $r8 = virtualinvoke $r7.<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>($r2) in <com.xpn.xwiki.internal.store.hibernate.HibernateStore: java.net.URL getHibernateConfigurationURL()> ==> <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+init method: <com.xpn.xwiki.monitor.api.MonitorPlugin: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.web.LegacyActionServlet: void init()>
+init method: <com.xpn.xwiki.web.XWikiURLFactoryServiceImpl: void init(com.xpn.xwiki.XWiki)>
+init method: <com.xpn.xwiki.web.ExportURLFactory: void init(java.util.Collection,java.io.File,org.xwiki.url.filesystem.FilesystemExportContext,com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.web.XWikiURLFactory: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.web.XWikiServletURLFactory: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.web.HomePageRedirectServlet: void init()>
+init method: <com.xpn.xwiki.web.XWikiContextInitializationFilter: void init(javax.servlet.FilterConfig)>
+init method: <com.xpn.xwiki.web.ActionFilter: void init(javax.servlet.FilterConfig)>
+init method: <com.xpn.xwiki.plugin.svg.SVGPlugin: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.plugin.packaging.PackagePlugin: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.plugin.fileupload.FileUploadPlugin: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.plugin.rightsmanager.RightsManagerPlugin: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.plugin.XWikiPluginInterface: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.plugin.mail.MailPlugin: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.plugin.XWikiDefaultPlugin: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.internal.template.InternalTemplateManager$DefaultTemplateContent: void init()>
+init method: <com.xpn.xwiki.internal.query.ConfiguredQueryExecutorProvider: void init()>
+init method: <com.xpn.xwiki.pdf.impl.PdfURLFactory: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.user.impl.xwiki.XWikiGroupServiceImpl: void init(com.xpn.xwiki.XWiki,com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.user.impl.xwiki.XWikiAuthenticator: void init(javax.servlet.FilterConfig,org.securityfilter.config.SecurityConfig)>
+init method: <com.xpn.xwiki.user.api.XWikiGroupService: void init(com.xpn.xwiki.XWiki,com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.doc.XWikiDocument: void init(org.xwiki.model.reference.DocumentReference)>
+init method: <com.xpn.xwiki.stats.impl.XWikiStatsServiceImpl: void init(com.xpn.xwiki.XWikiContext)>
+init method: <com.xpn.xwiki.stats.api.XWikiStatsService: void init(com.xpn.xwiki.XWikiContext)>

@@ -1,0 +1,99 @@
+check bad condition: TranModel.datastruct.ConditionNode@d85fb83 is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@1d12f964 is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@625bce1c is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@21c53388 is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@6a26a79e is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@4a06b37d is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@6dcafb0c is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@6a28c046 is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@1b44512b is satisfied?
+related incoming: CT2-1
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@46b9300e is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@114bc64 is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@2810a4a0 is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@7003774f is satisfied?
+related incoming: CT2-1
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@5917c7d4 is satisfied?
+related incoming: CT2-1
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@31386321 is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@4616a8b2 is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@2ea3fea6 is satisfied?
+related incoming: CT2-1
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@4ada9b6c is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@4ad04997 is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@7fa6a609 is satisfied?
+related incoming: CT2-1
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@c3b8c51 is satisfied?
+related incoming: CT2-1
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@4651004f is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@6385926b is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@709a66fc is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@362660d3 is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@532e2338 is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@ae7d301 is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@3e7e260 is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@7e3e6a49 is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@7ad266b3 is satisfied?
+related incoming: CT2-0
+bad condition satisfied
+check bad condition: TranModel.datastruct.ConditionNode@41a0c2a9 is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@61f42734 is satisfied?
+related incoming: CT2-1
+bad condition not satisfied
+check bad condition: TranModel.datastruct.ConditionNode@634b1ffb is satisfied?
+related incoming: CT2-0
+bad condition satisfied

@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rules>
+    <EntryRules>
+        <EntryRule language="java">
+            <RuleID>javax.servlet.http.HttpServlet.doGet</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>javax.servlet.http</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>HttpServlet</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>doGet</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArguments>0</OutArguments> <!--污点的参数索引规则-->
+            <OutArgumentTypes> <!--根据类型生成污点-->
+                <ParamType>javax.servlet.http.HttpServletRequest</ParamType>
+            </OutArgumentTypes>
+        </EntryRule>
+        <EntryRule language="java">
+            <RuleID>org.apache.dubbo.remoting.Codec2.decode</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.dubbo.remoting</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Codec2</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>decode</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArguments>0</OutArguments> <!--污点的参数索引规则-->
+        </EntryRule>
+        <EntryRule language="java">
+            <RuleID>org.geoserver.wfs.WebFeatureService20.getFeature</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.geoserver.wfs</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>WebFeatureService20</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getFeature</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArguments>0</OutArguments> <!--污点的参数索引规则-->
+        </EntryRule>
+        <EntryRule language="java">
+            <RuleID>org.geoserver.wfs.WebFeatureService20.getCapabilities</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.geoserver.wfs</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>WebFeatureService20</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getCapabilities</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArguments>0</OutArguments> <!--污点的参数索引规则-->
+        </EntryRule>
+        <EntryRule language="java">
+            <RuleID>org.geoserver.wfs.WebFeatureService20.describeFeatureType</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.geoserver.wfs</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>WebFeatureService20</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>describeFeatureType</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArguments>0</OutArguments> <!--污点的参数索引规则-->
+        </EntryRule>
+        <EntryRule language="java">
+            <RuleID>org.geoserver.wfs.WebFeatureService20.getPropertyValue</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.geoserver.wfs</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>WebFeatureService20</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getPropertyValue</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArguments>0</OutArguments> <!--污点的参数索引规则-->
+        </EntryRule>
+        <EntryRule language="java">
+            <RuleID>org.geoserver.wfs.WebFeatureService20.transaction</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.geoserver.wfs</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>WebFeatureService20</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>transaction</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArguments>0</OutArguments> <!--污点的参数索引规则-->
+        </EntryRule>
+        <EntryRule language="java">
+            <RuleID>org.geoserver.wfs.WebFeatureService20.lockFeature</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.geoserver.wfs</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>WebFeatureService20</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>lockFeature</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArguments>0</OutArguments> <!--污点的参数索引规则-->
+        </EntryRule>
+        <EntryRule language="java">
+            <RuleID>org.apache.mina.core.filterchain.IoFilter.messageReceived</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.mina.core.filterchain</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>IoFilter</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>messageReceived</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArgumentTypes>
+                <ParamType>java.lang.Object</ParamType>
+            </OutArgumentTypes>
+        </EntryRule>
+        <EntryRule language="java">
+            <RuleID>org.apache.mina.core.filterchain.IoFilter.messageReceived</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.mina.core.filterchain</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>IoFilter</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>messageReceived</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <!--如果同时存在 OutArguments 和 OutArgumentTypes 规则，则进行交集判断-->
+            <OutArgumentTypes>
+                <ParamType>java.lang.Object</ParamType>
+            </OutArgumentTypes>
+        </EntryRule>
+    </EntryRules>
+    <SourceRules>
+        <SourceRule language="java">
+            <RuleID>467DCCCF-D988-4CE4-8941-81A7D9E08E57</RuleID>
+            <TaintFlags>+PROPERTY</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.util</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Properties</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>load</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>this</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>3FC580A0-2485-4CE1-A3F5-E518B2643A9F</RuleID>
+            <TaintFlags>+STREAM</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Reader</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>read</Value>
+                </FunctionName>
+                <Parameters>
+                    <ParamType>char[]</ParamType>
+                    <ParamType>int</ParamType>
+                    <ParamType>int</ParamType>
+                </Parameters>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>0</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>C49C6238-E0FE-46FF-B556-C62A05F17A3A</RuleID>
+            <TaintFlags>+ZIP_ENTRY_NAME</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.util.zip</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ZipEntry</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getName</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>92CAA9A2-435A-425D-A32F-F09A61DED21D</RuleID>
+            <TaintFlags>+SYSTEMINFO</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.lang</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ClassLoader</Value>
+                </ClassName>
+                <FunctionName>
+                    <Pattern>findLibrary|findResource(s)?|getResource(s)?|getSystemResource(s)?|getSystemResourceAsStream|getPackage(s)?</Pattern>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>CB71E144-24E4-4F5E-B1D2-20AEA9E8379C</RuleID>
+            <TaintFlags>+STREAM</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Pattern>InputStream|RandomAccessFile</Pattern>
+                </ClassName>
+                <FunctionName>
+                    <Pattern>read|readAllBytes</Pattern>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>5BCAB759-C8BA-48A6-89A9-E2E135DC259D</RuleID>
+            <TaintFlags>+PRIVATE</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.security</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>KeyStore$PasswordProtection</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getPassword</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>467FFFFF-D988-4CE4-8941-81Q7D9E08E57</RuleID>
+            <TaintFlags>+PROPERTY</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.l4yn3.microserviceseclab.controller.common</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Dataflow</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>source</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>this</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>467FFFFF-D988-4CE4-8941-81Q7D9E08E58</RuleID>
+            <TaintFlags>+PROPERTY</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.net</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Socket</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getInputStream</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+    </SourceRules>
+    <SinkRules>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">apache/xmlgraphics-batik</Group>
+            </MetaInfo>
+            <RuleID>CVE-2017-5662-parse</RuleID>
+            <VulnCategory>XXE</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.xml.sax</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>XMLReader</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>parse</Value>
+                </FunctionName>
+                <ApplyTo implements="false" overrides="false" extends="false"/>
+            </FunctionIdentifier>
+            <Protection>CVE-2017-5662-P1</Protection>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">apache/commons-jxpath</Group>
+            </MetaInfo>
+            <RuleID>CVE-2024-36404-computeValue</RuleID>
+            <VulnCategory>Express Injection</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.commons.jxpath.ri.compiler</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ExtensionFunction</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>computeValue</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">apache/commons-jxpath</Group>
+            </MetaInfo>
+            <RuleID>CVE-2024-36404-invoke</RuleID>
+            <VulnCategory>Express Injection</VulnCategory>
+            <Sink>
+                <InArguments>-1,0,1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.commons.jxpath.functions</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>MethodFunction</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>invoke</Value>
+                </FunctionName>
+                <ApplyTo implements="false" overrides="false" extends="false"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">geotools/geotools</Group>
+            </MetaInfo>
+            <RuleID>CVE-2024-36404-getSingleXPathValue</RuleID>
+            <VulnCategory>Express Injection</VulnCategory>
+            <Sink>
+                <InArguments>1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.geotools.appschema.util</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>XmlXpathUtilites</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getSingleXPathValue</Value>
+                </FunctionName>
+                <ApplyTo implements="false" overrides="false" extends="false"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">geotools/geotools</Group>
+            </MetaInfo>
+            <RuleID>CVE-2024-36404-getValue</RuleID>
+            <VulnCategory>Express Injection</VulnCategory>
+            <Sink>
+                <InArguments>1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.commons.jxpath.ri</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>JXPathContextReferenceImpl</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getValue</Value>
+                </FunctionName>
+                <Parameters>
+                    <ParamType>java.lang.String</ParamType>
+                </Parameters>
+                <ApplyTo implements="false" overrides="false" extends="false"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">geotools/geotools</Group>
+            </MetaInfo>
+            <RuleID>CVE-2024-36404-evaluate</RuleID>
+            <VulnCategory>Express Injection</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.geotools.filter</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>AttributeExpressionImpl</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>evaluate</Value>
+                </FunctionName>
+                <ApplyTo implements="false" overrides="false" extends="false"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">java/rt</Group>
+            </MetaInfo>
+            <RuleID>CVE-2020-9484-File</RuleID>
+            <VulnCategory>Path Traversal</VulnCategory>
+            <Sink>
+                <InArguments>1</InArguments>
+                <Conditional>
+                    <And>
+                        <TaintFlagSet taintFlag="PT"/>
+                        <Not>
+                            <TaintFlagSet taintFlag="VALIDATED_COMMAND_INJECTION"/>
+                        </Not>
+                    </And>
+                </Conditional>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>File</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>init</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Protection>CVE-2021-25329-P1</Protection>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">jenkinsci/jx-resources-plugin</Group>
+            </MetaInfo>
+            <RuleID>CVE-2019-10339-getKubernetesClient</RuleID>
+            <VulnCategory>Unauthorized Access</VulnCategory>
+            <Sink>
+                <InArguments>1</InArguments>
+                <Conditional>
+                    <And>
+                        <TaintFlagSet taintFlag="PT"/>
+                        <Not>
+                            <TaintFlagSet taintFlag="VALIDATED_COMMAND_INJECTION"/>
+                        </Not>
+                    </And>
+                </Conditional>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.jenkinsci.plugins.jx.resources</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>KubernetesUtils</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getKubernetesClient</Value>
+                </FunctionName>
+                <ApplyTo implements="false" overrides="false" extends="false"/>
+            </FunctionIdentifier>
+            <Protection>CVE-2019-10339-P1</Protection>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">alibaba/fastjson</Group>
+            </MetaInfo>
+            <RuleID>CVE-2017-18349-parseObject</RuleID>
+            <VulnCategory>Java Deserialization</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.alibaba.fastjson</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>JSON</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>parseObject</Value>
+                </FunctionName>
+                <ApplyTo implements="false" overrides="false" extends="false"/>
+            </FunctionIdentifier>
+            <Protection>CVE-2017-18349-P1</Protection>
+        </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">alibaba/fastjson</Group>
+            </MetaInfo>
+            <RuleID>JDK-readObject</RuleID>
+            <VulnCategory>Java Deserialization</VulnCategory>
+            <Sink>
+                <InArguments>-1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ObjectInput</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>readObject</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <Protection>CVE-2017-18349-P1</Protection>
+        </SinkRule>
+    </SinkRules>
+    <PropagationRules>
+    </PropagationRules>
+</Rules>

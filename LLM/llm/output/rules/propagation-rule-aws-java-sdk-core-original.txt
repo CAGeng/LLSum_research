@@ -1,0 +1,1689 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>StringUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>isNullOrEmpty</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method checks if the input parameter p1 is null or empty and returns a boolean result.
+    - There is no data flow from p1 to other parameters, fields, or return values that affects other objects or fields.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IOUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>closeQuietly</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.Closeable</ParamType>
+        <ParamType>org.apache.commons.logging.Log</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no significant data flow between parameters, fields, or return values in this method.
+    - The method primarily handles resource closing and logging without propagating data.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SdkClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into `this` through the constructor chain.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SdkClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Throwable</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`java.lang.Throwable`) is transferred into `this` through the constructor chain.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SdkClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter of `SdkClientException.<init>`) is transferred through the constructor chain to `RuntimeException.<init>`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AmazonClientException</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.lang.String`) is transferred into `this` (the current instance of `AmazonClientException`).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectMetadata</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getUserMetadata</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This is an abstract method; hence, there is no data flow to analyze within this method itself.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AWSStaticCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.amazonaws.auth.AWSCredentials</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.credentials</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`AWSCredentials`) is validated and then assigned to `this.credentials`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BasicSessionCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.awsAccessKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.awsAccessKey`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BasicSessionCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.awsSecretKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `this.awsSecretKey`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BasicSessionCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>this.sessionToken</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` is transferred into `this.sessionToken`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.util.json</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Jackson</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>jsonNodeOf</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a JSON string) is transformed into a `JsonNode` object, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BasicAWSCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null && p2 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.accessKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.accessKey`.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BasicAWSCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 != null</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.secretKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `this.secretKey`.
+    - The flow is conditional on `p2` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.client.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AwsClientBuilder$EndpointConfiguration</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.serviceEndpoint</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.serviceEndpoint`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.client.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AwsClientBuilder$EndpointConfiguration</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.signingRegion</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `this.signingRegion`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectMetadata</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setContentType</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no direct data flow to analyze.
+    - Typically, this method would set a field within the ObjectMetadata instance, but without implementation, this cannot be confirmed.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CopyObjectRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.field1</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.field1`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CopyObjectRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.field2</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `this.field2`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CopyObjectRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>this.field3</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` is transferred into `this.field3`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CopyObjectRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>3</InArguments>
+    <OutArguments>this.field4</OutArguments>
+    <Comment>
+    - The data flow shows that `p4` is transferred into `this.field4`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>CopyObjectRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setNewObjectMetadata</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.amazonaws.services.s3.model.ObjectMetadata</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, and there is no implementation provided to analyze data flow.
+    - No data flow from parameter p1 to fields of this or return value can be observed.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectMetadata</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setUserMetadata</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Map</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, and there is no direct data flow within this method itself.
+    - The parameter p1 (Map) is intended for setting user metadata, but the exact flow is determined by subclasses or implementations.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.securitytoken</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AWSSecurityTokenServiceClientBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>standard</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not have an implementation, thus there is no data flow to analyze.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshift</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AmazonRedshiftClientBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>standard</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not provide an implementation, hence no data flow can be determined.
+    - It returns an instance of AmazonRedshiftClientBuilder without any parameter or field involvement.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshift.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DescribeClustersRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no data flow as the constructor is abstract and does not involve parameters or field initialization in the provided context.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshift.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DescribeCustomDomainAssociationsRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor is abstract and does not contain any implementation details.
+    - There is no data flow involving parameters, fields, or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshift.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DescribeCustomDomainAssociationsRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getCustomDomainName</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This is an abstract method, so there is no data flow to analyze.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AmazonS3Client</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.amazonaws.auth.AWSCredentials</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no obvious data flow here as parameter p1 does not flow to other parameters, this, or return.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ObjectMetadata</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor does not involve any data flow from parameters to fields, this, or return values as it does not accept any parameters or return any value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.s3.iterable</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>S3Objects</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>inBucket</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.amazonaws.services.s3.AmazonS3</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This is an abstract method, so there is no concrete data flow to analyze.
+    - Typically, parameters might be used to configure the return object, but this cannot be confirmed without implementation details.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshiftserverless</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AWSRedshiftServerlessClientBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>standard</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, and there is no data flow observed as there is no implementation provided.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshiftserverless.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>GetWorkgroupRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes a new instance of GetWorkgroupRequest.
+    - There is no parameter data flow as the constructor does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshiftserverless.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>GetCredentialsRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor is abstract and does not have an implementation to analyze.
+    - There are no parameters, fields, or return values involved in data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProcessCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method initializes and returns a new instance of ProcessCredentialsProvider$Builder.
+    - There is no parameter data flow as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProcessCredentialsProvider$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>withCommand</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.command</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.command`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProcessCredentialsProvider$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>withCommand</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProcessCredentialsProvider$Builder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the fields of `this` (`Builder`) are used to initialize a new `ProcessCredentialsProvider` instance.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProcessCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getCredentials</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>this.credentialsNeedUpdating()</Condition>
+    <InArguments>this.credentials</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.credentials` is potentially updated by `refresh()` if `credentialsNeedUpdating()` returns true, and then returned.
+    - The flow is conditional on `credentialsNeedUpdating()` returning true.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProcessCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getCredentialExpirationTime</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns the field 'credentialExpirationTime' from the 'this' object.
+    - There is no parameter data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth.profile.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProfileStaticCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.amazonaws.auth.profile.internal.BasicProfile</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.profile</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `BasicProfile` parameter) is directly assigned to `this.profile`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth.profile.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProfileStaticCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.amazonaws.auth.profile.internal.BasicProfile</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.credentialsProvider</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `BasicProfile` parameter) indirectly influences `this.credentialsProvider` through the `fromStaticCredentials` method.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth.profile.internal</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProfileStaticCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getCredentials</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.credentialsProvider</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.credentialsProvider` is used to obtain the credentials which are then returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.securitytoken.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor is abstract and does not contain any data flow operations.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshift.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DescribeAuthenticationProfilesRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor does not have parameters, and without implementation details, no data flow can be determined.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProfileCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.amazonaws.auth.profile.ProfilesConfigFile</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.profilesConfigFile</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (ProfilesConfigFile) is transferred into `this.profilesConfigFile`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProfileCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.amazonaws.auth.profile.ProfilesConfigFile</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 != null</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.profileName</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (String) is transferred into `this.profileName`.
+    - The flow is conditional on `p2` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth.profile</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ProfileCredentialsProvider</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.amazonaws.auth.profile.ProfilesConfigFile</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p2 == null</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.profileName</OutArguments>
+    <Comment>
+    - The data flow shows that if `p2` is null, `this.profileName` is set by the result of `loadProfileName()`.
+    - The flow is conditional on `p2` being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultAWSCredentialsProviderChain</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method initializes an array of AWSCredentialsProvider instances and passes it to the AWSCredentialsProviderChain constructor.
+    - There is no parameterized data flow or return value involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshift.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>GetClusterCredentialsRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor is abstract and does not contain any data flow logic within itself.
+    - There is no propagation of data from parameters or fields in this abstract constructor.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.redshift.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>GetClusterCredentialsWithIAMRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for the constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor is abstract and does not contain any data flow or parameter manipulation.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientConfiguration</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the fields of the `ClientConfiguration` instance with default values and new object instances.
+    - There is no data flow from parameters or to return values, as this is a constructor with no arguments.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID> <!-- Randomly generated ID -->
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientConfiguration</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setProxyHost</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition> <!-- No condition -->
+    <InArguments>0</InArguments>
+    <OutArguments>this.proxyHost</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (parameter `java.lang.String`) is transferred into `this.proxyHost`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientConfiguration</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setNonProxyHosts</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.nonProxyHosts</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.nonProxyHosts`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ClientConfiguration</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setProxyPort</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.proxyPort</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `int`) is transferred into `this.proxyPort`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IOUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input stream) is converted into a byte array and then into a `String` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.util</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>IOUtils</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>copy</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>java.io.OutputStream</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>1</OutArguments>
+    <Comment>
+    - The data flow shows that data from `p1` (`java.io.InputStream`) is transferred to `p2` (`java.io.OutputStream`).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.ssooidc</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AWSSSOOIDCClientBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>standard</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not provide any implementation details.
+    - There is no data flow from parameters to fields or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.ssooidc.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>RegisterClientRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes an instance of RegisterClientRequest but does not involve parameter or return value data flow.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.securitytoken.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleWithSAMLRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no obvious data flow here as the constructor does not have parameters or explicit field assignments documented in this context.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.securitytoken.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleWithSAMLRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setSAMLAssertion</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not contain any data flow within itself.
+    - The data flow would be determined by the concrete implementation and the context in which it is called.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.securitytoken.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleWithSAMLRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setRoleArn</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract and does not have an implementation to analyze data flow.
+    - No data propagation can be determined from this method alone.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.securitytoken.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleWithSAMLRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setPrincipalArn</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, and there is no implementation to analyze for data flow.
+    - Potential data flow could involve setting a field within the object, but this is speculative without implementation details.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.services.securitytoken.model</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AssumeRoleWithSAMLRequest</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setDurationSeconds</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Integer</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no direct data flow to analyze.
+    - Typically, a setter method would assign the parameter to a field, but this cannot be confirmed without implementation.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AnonymousAWSCredentials</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.providerName</OutArguments>
+    <Comment>
+    - The data flow shows that the parameter of `<init>(java.lang.String)` is transferred into `this.providerName`.
+    - The flow is no condition as the parameter is `null`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.amazonaws.auth</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DefaultAWSCredentialsProviderChain</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getInstance</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this static method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a static instance of DefaultAWSCredentialsProviderChain.
+    - There is no parameter or `this` data flow involved.
+    </Comment>
+</PropagationRule>
+

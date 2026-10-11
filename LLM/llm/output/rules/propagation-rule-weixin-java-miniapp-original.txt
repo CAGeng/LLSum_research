@@ -1,0 +1,1398 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.json</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaGsonBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>create</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method initializes and returns a static Gson instance.
+    - There is no parameter data flow as the method does not take any parameters.
+    - The return value is the static field GSON_INSTANCE.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.api.impl</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaServiceImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>service fields in service implementations</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (instance of `BaseWxMaServiceImpl`) is transferred into the `service` fields of various service implementations.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>rule</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return.routerBuilder</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (`WxMaMessageRouter`) is transferred into the `routerBuilder` field of the returned `WxMaMessageRouterRule` instance.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouterRule</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>handler</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>cn.binarywang.wx.miniapp.message.WxMaMessageHandler</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.handlers</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is added to `this.handlers`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouterRule</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>handler</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>cn.binarywang.wx.miniapp.message.WxMaMessageHandler</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouterRule</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>async</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.async</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (boolean parameter) is transferred into `this.async`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouterRule</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>async</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned by the method.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouterRule</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>content</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.content</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.content`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouterRule</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>content</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouterRule</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>end</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>this.routerBuilder.rules</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is added to `this.routerBuilder.rules`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouterRule</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>end</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.routerBuilder</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.routerBuilder` is returned by the method
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BaseBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toUser</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.toUser</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.toUser`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BaseBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toUser</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the returned object.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.config.impl</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaDefaultConfigImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the instance fields of the class.
+    - There is no data flow involving parameters or return values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.config.impl</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaDefaultConfigImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setAppid</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.appid</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred directly into `this.appid`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.config.impl</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaDefaultConfigImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setSecret</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.secret</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.secret`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.config.impl</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaDefaultConfigImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setToken</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.token</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.token`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.config.impl</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaDefaultConfigImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setAesKey</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.aesKey</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter `java.lang.String`) is transferred into `this.aesKey`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.config.impl</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaDefaultConfigImpl</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setMsgDataFormat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.msgDataFormat</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.msgDataFormat`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaKefuMessage</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newTextBuilder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of `TextMessageBuilder`.
+    - There is no data flow from parameters or fields of `this` to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>TextMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>content</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.content</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.content`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>TextMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>content</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>TextMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.content</InArguments>
+    <OutArguments>return.text.content</OutArguments>
+    <Comment>
+    - The data flow shows that `this.content` is transferred into `return.text.content` through the creation of a `KfText` object.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BaseBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.msgType</InArguments>
+    <OutArguments>return.msgType</OutArguments>
+    <Comment>
+    - The data flow shows that `this.msgType` is transferred into `return.msgType`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BaseBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.toUser</InArguments>
+    <OutArguments>return.toUser</OutArguments>
+    <Comment>
+    - The data flow shows that `this.toUser` is transferred into `return.toUser`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaKefuMessage</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>newImageBuilder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of ImageMessageBuilder with msgType set to "image".
+    - There is no parameter or field data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImageMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>mediaId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.mediaId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (parameter) is transferred into `this.mediaId`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.builder</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ImageMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.mediaId</InArguments>
+    <OutArguments>return.image.mediaId</OutArguments>
+    <Comment>
+    - The data flow shows that `this.mediaId` is transferred into `return.image.mediaId`
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>cn.binarywang.wx.miniapp.api.WxMaService</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.wxMaService</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`cn.binarywang.wx.miniapp.api.WxMaService`) is transferred into `this.wxMaService`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.message</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessageRouterRule</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>next</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method sets the `reEnter` field of `this` to `1`.
+    - The method calls `end()` which adds `this` to the `rules` list of `routerBuilder`.
+    - The `routerBuilder` is returned from `end()` and subsequently from `next()`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessage</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fromJson</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the JSON string) is converted into a `WxMaMessage` object and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessage</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fromXml</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to create a `WxMaMessage` object which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessage</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fromXml</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.setAllFieldsMap</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to create a `Map` which is then used to set fields in the `WxMaMessage` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessage</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fromEncryptedJson</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>cn.binarywang.wx.miniapp.config.WxMaConfig</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the first parameter) is transformed and eventually flows into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaMessage</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fromEncryptedXml</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>cn.binarywang.wx.miniapp.config.WxMaConfig</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0, 2, 3, 4</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1`, `p3`, `p4`, and `p5` are used in the decryption process, and the decrypted result is parsed into a `WxMaMessage` object, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>builder</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method creates and returns a new instance of WxMaSubscribeMessageBuilder.
+    - There is no data flow from parameters or fields of this to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>templateId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.templateId</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.templateId`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>templateId</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` is returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$MsgData</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.name</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.name`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$MsgData</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.value</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `this.value`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>data</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.data</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.util.List`) is transferred into `this.data`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>data</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.List</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method returns `this`, indicating a builder pattern.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toUser</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.toUser</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input parameter) is assigned to `this.toUser`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toUser</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (the current object) is returned.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.toUser</InArguments>
+    <OutArguments>return.toUser</OutArguments>
+    <Comment>
+    - The data flow shows that `this.toUser` is transferred into `return.toUser`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.templateId</InArguments>
+    <OutArguments>return.templateId</OutArguments>
+    <Comment>
+    - The data flow shows that `this.templateId` is transferred into `return.templateId`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.page</InArguments>
+    <OutArguments>return.page</OutArguments>
+    <Comment>
+    - The data flow shows that `this.page` is transferred into `return.page`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.data</InArguments>
+    <OutArguments>return.data</OutArguments>
+    <Comment>
+    - The data flow shows that `this.data` is transferred into `return.data`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.miniprogramState</InArguments>
+    <OutArguments>return.miniprogramState</OutArguments>
+    <Comment>
+    - The data flow shows that `this.miniprogramState` is transferred into `return.miniprogramState`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000006</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaSubscribeMessage$WxMaSubscribeMessageBuilder</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>build</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.lang</InArguments>
+    <OutArguments>return.lang</OutArguments>
+    <Comment>
+    - The data flow shows that `this.lang` is transferred into `return.lang`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaJscode2SessionResult</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fromJson</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the JSON string) is transformed into the return value, which is an instance of `WxMaJscode2SessionResult`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.bean</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>WxMaAuditMediaUploadResult</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>fromJson</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (input JSON string) is used to create an instance of `WxMaAuditMediaUploadResult` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>cn.binarywang.wx.miniapp.executor</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>UploadAuthMaterialRequestExecutor</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>create</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>me.chanjar.weixin.common.util.http.RequestHttp</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.getRequestType() determines the type of RequestExecutor</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.requestHttp</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is encapsulated within the `requestHttp` field of the returned `RequestExecutor` instance.
+    - The flow is conditional on the `HttpType` of `p1`.
+    </Comment>
+</PropagationRule>
+

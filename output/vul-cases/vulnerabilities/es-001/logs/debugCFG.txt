@@ -1,0 +1,52 @@
+r0 := @this: org.elasticsearch.common.io.stream.StreamInput
+$i0 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: int readVInt()>()
+$i1 = <org.apache.lucene.util.ArrayUtil: int MAX_ARRAY_LENGTH>
+if $i0 <= $i1 goto (branch)
+$r6 = new java.lang.IllegalStateException
+$r7 = new java.lang.StringBuilder
+specialinvoke $r7.<java.lang.StringBuilder: void <init>()>()
+$r8 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("array length must be <= to ")
+if $i0 >= 0 goto virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: void ensureCanReadBytes(int)>($i0)
+virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: void ensureCanReadBytes(int)>($i0)
+return $i0
+$r1 = new java.lang.NegativeArraySizeException
+$r2 = new java.lang.StringBuilder
+specialinvoke $r2.<java.lang.StringBuilder: void <init>()>()
+$r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("array size must be positive but was: ")
+$i2 = <org.apache.lucene.util.ArrayUtil: int MAX_ARRAY_LENGTH>
+$r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0)
+$r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>()
+$r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i2)
+$r10 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" but was: ")
+$r11 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0)
+$r12 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>()
+specialinvoke $r6.<java.lang.IllegalStateException: void <init>(java.lang.String)>($r12)
+throw $r6
+specialinvoke $r1.<java.lang.NegativeArraySizeException: void <init>(java.lang.String)>($r5)
+throw $r1
+r0 := @this: org.elasticsearch.common.io.stream.StreamInput
+$i0 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: int readVInt()>()
+$i1 = <org.apache.lucene.util.ArrayUtil: int MAX_ARRAY_LENGTH>
+if $i0 <= $i1 goto (branch)
+$r6 = new java.lang.IllegalStateException
+$r7 = new java.lang.StringBuilder
+specialinvoke $r7.<java.lang.StringBuilder: void <init>()>()
+$r8 = virtualinvoke $r7.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("array length must be <= to ")
+if $i0 >= 0 goto virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: void ensureCanReadBytes(int)>($i0)
+virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: void ensureCanReadBytes(int)>($i0)
+return $i0
+$r1 = new java.lang.NegativeArraySizeException
+$r2 = new java.lang.StringBuilder
+specialinvoke $r2.<java.lang.StringBuilder: void <init>()>()
+$r3 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("array size must be positive but was: ")
+$i2 = <org.apache.lucene.util.ArrayUtil: int MAX_ARRAY_LENGTH>
+$r4 = virtualinvoke $r3.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0)
+$r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>()
+$r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i2)
+$r10 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" but was: ")
+$r11 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0)
+$r12 = virtualinvoke $r11.<java.lang.StringBuilder: java.lang.String toString()>()
+specialinvoke $r6.<java.lang.IllegalStateException: void <init>(java.lang.String)>($r12)
+throw $r6
+specialinvoke $r1.<java.lang.NegativeArraySizeException: void <init>(java.lang.String)>($r5)
+throw $r1

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<EntryRules>
+    <EntryRule language="java">
+        <RuleID>es-1-scrollId</RuleID>
+        <stageTag>COMM_CLASS_DRIVEN</stageTag>
+        <FunctionIdentifier>
+            <NamespaceName>
+                <Value>org.elasticsearch.action.search</Value>
+            </NamespaceName>
+            <ClassName>
+                <Value>TransportSearchHelper</Value>
+            </ClassName>
+            <FunctionName>
+                <Value>parseScrollId</Value>
+            </FunctionName>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+            </Parameters>
+            <ApplyTo implements="false" overrides="false" extends="false" />
+        </FunctionIdentifier>
+        <InputTaintArguments>
+            <ParamType>0</ParamType>
+        </InputTaintArguments>
+    </EntryRule>
+
+    <EntryRule language="java">
+        <RuleID>xwiki-1-getResource</RuleID>
+        <stageTag>COMM_CLASS_DRIVEN</stageTag>
+        <FunctionIdentifier>
+            <NamespaceName>
+                <Value>com.xpn.xwiki.internal.template</Value>
+            </NamespaceName>
+            <ClassName>
+                <Value>InternalTemplateManager</Value>
+            </ClassName>
+            <FunctionName>
+                <Value>getClassloaderTemplate</Value>
+            </FunctionName>
+            <Parameters>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>java.lang.String</ParamType>
+                <ParamType>java.lang.String</ParamType>
+            </Parameters>
+            <ApplyTo implements="false" overrides="false" extends="false" />
+        </FunctionIdentifier>
+        <InputTaintArguments>
+            <ParamType>1</ParamType>
+            <ParamType>2</ParamType>
+        </InputTaintArguments>
+    </EntryRule>
+</EntryRules>

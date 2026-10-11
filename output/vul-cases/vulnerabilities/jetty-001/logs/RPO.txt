@@ -1,0 +1,160 @@
+detectContext是：1
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+detectContext是：2
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+detectContext是：2
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+branch_depth: 1
+这个detextContext中branch_depth为此的方法个数: 5
+detectContext是：3
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+detectContext是：3
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+branch_depth: 1
+这个detextContext中branch_depth为此的方法个数: 5
+detectContext是：4
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+detectContext是：4
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+branch_depth: 1
+这个detextContext中branch_depth为此的方法个数: 5
+detectContext是：5
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+detectContext是：5
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+branch_depth: 1
+这个detextContext中branch_depth为此的方法个数: 2
+detectContext是：6
+方法depencency
+branch_depth: 0
+这个detextContext中branch_depth为此的方法个数: 2
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 3通过这个 method: <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 4通过这个 method: <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 6通过这个 method: <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 4通过这个 method: <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 6通过这个 method: <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 4 context2: 6通过这个 method: <org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 3通过这个 method: <jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 4通过这个 method: <jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 5通过这个 method: <jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 4通过这个 method: <jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 5通过这个 method: <jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 4 context2: 5通过这个 method: <jakarta.servlet.ServletRequestWrapper: java.lang.Object getAttribute(java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 3通过这个 method: <org.eclipse.jetty.util.URIUtil: java.lang.String addPaths(java.lang.String,java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 4通过这个 method: <org.eclipse.jetty.util.URIUtil: java.lang.String addPaths(java.lang.String,java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 4通过这个 method: <org.eclipse.jetty.util.URIUtil: java.lang.String addPaths(java.lang.String,java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 3通过这个 method: <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Request getBaseRequest(jakarta.servlet.ServletRequest)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 4通过这个 method: <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Request getBaseRequest(jakarta.servlet.ServletRequest)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 5通过这个 method: <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Request getBaseRequest(jakarta.servlet.ServletRequest)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 4通过这个 method: <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Request getBaseRequest(jakarta.servlet.ServletRequest)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 5通过这个 method: <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Request getBaseRequest(jakarta.servlet.ServletRequest)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 4 context2: 5通过这个 method: <org.eclipse.jetty.ee9.nested.Request: org.eclipse.jetty.ee9.nested.Request getBaseRequest(jakarta.servlet.ServletRequest)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 3通过这个 method: <org.eclipse.jetty.util.StringUtil: java.lang.String printable(java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 4通过这个 method: <org.eclipse.jetty.util.StringUtil: java.lang.String printable(java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 4通过这个 method: <org.eclipse.jetty.util.StringUtil: java.lang.String printable(java.lang.String)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 3通过这个 method: <jakarta.servlet.ServletRequestWrapper: jakarta.servlet.ServletRequest getRequest()>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 4通过这个 method: <jakarta.servlet.ServletRequestWrapper: jakarta.servlet.ServletRequest getRequest()>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 5通过这个 method: <jakarta.servlet.ServletRequestWrapper: jakarta.servlet.ServletRequest getRequest()>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 4通过这个 method: <jakarta.servlet.ServletRequestWrapper: jakarta.servlet.ServletRequest getRequest()>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 5通过这个 method: <jakarta.servlet.ServletRequestWrapper: jakarta.servlet.ServletRequest getRequest()>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 4 context2: 5通过这个 method: <jakarta.servlet.ServletRequestWrapper: jakarta.servlet.ServletRequest getRequest()>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 1 context2: 2通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 1 context2: 3通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 1 context2: 4通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 1 context2: 5通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 1 context2: 6通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 3通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 4通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 5通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 2 context2: 6通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 4通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 5通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 3 context2: 6通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 4 context2: 5通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 4 context2: 6通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+现在开始考虑detectContext之间的依赖关系, 此时不确定方法归属，所以先记录context1,2通过方法m相互依赖，将来确定归属后，context1,2形成偏序
+context1: 5 context2: 6通过这个 method: <org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)>
+detectContext: 1最后冒险点的排序
+最后冒险点的hang_depth 0
+detectContext: 2最后冒险点的排序
+最后冒险点的hang_depth 0
+detectContext: 3最后冒险点的排序
+最后冒险点的hang_depth 0
+detectContext: 4最后冒险点的排序
+最后冒险点的hang_depth 0
+detectContext: 5最后冒险点的排序
+最后冒险点的hang_depth 0
+detectContext: 6最后冒险点的排序
+最后冒险点的hang_depth 0
+[RPO] 足够的incoming states可以摘要 ：<org.eclipse.jetty.util.StringUtil: java.lang.String printable(java.lang.String)> 4
+在detectContext: 4
+[RPO] 足够的incoming states可以摘要 ：<org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)> 7
+在detectContext: 4
+[RPO] 足够的incoming states可以摘要 ：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 13
+在detectContext: 4
+[RPO] 足够的incoming states可以摘要 ：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 16
+在detectContext: 6
+[RPO] 足够的incoming states可以摘要 ：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 18
+在detectContext: 6

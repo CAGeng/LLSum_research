@@ -1,0 +1,1048 @@
+[
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getMethod()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void notifyAttributeRemoved(java.lang.String,java.lang.Object)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "param-1 : [root]->applicationRequest\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.tomcat.util.ExceptionUtils: void handleThrowable(java.lang.Throwable)>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getServletPath()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void setCharacterEncoding(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void convertCookies()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "return\n"
+    },
+    "reuse_con": 3,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void setMethod(java.lang.String)>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 2,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.util.Enumeration getHeaders(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 2,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: org.apache.coyote.Request getCoyoteRequest()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : field-all\n": "return\n"
+    },
+    "reuse_con": 3,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void setDecodedRequestURI(java.lang.String)>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 2,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void setAuthType(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1, 0]": "[-1, 0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : field-all\nparam0 : field-all\n": "param-1 : [root]->authType\nparam0 : field-all\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]",
+      "[0]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty",
+      "LLM"
+    ],
+    "detailedTransferMap": {
+      "": "return\n",
+      "param-1 : field-all\n": "param-1 : field-all\nreturn\n",
+      "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n": "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\nreturn\n"
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {
+      "c0->r-1": {
+        "paramIndex": 0,
+        "operator": "==",
+        "rightValue": true
+      }
+    }
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void removeAttribute(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "param-1 : [root]->applicationRequest\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.Object getAttribute(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n": "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getPathInfo()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void notifyAttributeAssigned(java.lang.String,java.lang.Object,java.lang.Object)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->applicationRequest\n": "param-1 : [root]->applicationRequest\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getProtocol()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void setContentType(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void addLocale(java.util.Locale)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]",
+      "[0]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty",
+      "LLM"
+    ],
+    "detailedTransferMap": {
+      "": "return\n"
+    },
+    "reuse_con": 6,
+    "transferMapCondition": {
+      "c0->r-1": {
+        "paramIndex": 0,
+        "operator": "==",
+        "rightValue": true
+      }
+    }
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void addHeader(java.lang.String,java.lang.String)>",
+    "conditionalTaint": {
+      "[0]": "[-1]"
+    },
+    "tags": [
+      "CHANGE",
+      "NotEmpty",
+      "LLM"
+    ],
+    "detailedTransferMap": {},
+    "reuse_con": 1,
+    "transferMapCondition": {
+      "c0->r-1": {
+        "paramIndex": 0,
+        "operator": "==",
+        "rightValue": true
+      }
+    }
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void <init>()>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 2,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void removeNote(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n": "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void setRequestURI(java.lang.String)>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 2,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void parseLocalesHeader(java.lang.String,java.util.TreeMap)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.util.Enumeration getHeaderNames()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: javax.servlet.ServletInputStream getInputStream()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "return\n"
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void setQueryString(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.StringBuilder: void <init>(java.lang.String)>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.StringBuilder: java.lang.StringBuilder append(char)>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "return\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void setAttribute(java.lang.String,java.lang.Object)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "param-1 : [root]->applicationRequest\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.Session: void setNote(java.lang.String,java.lang.Object)>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 12,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: javax.security.auth.Subject newSubject(java.security.Principal)>",
+    "conditionalTaint": {
+      "[-1, 0]": "[-1, 0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->authType\nparam0 : field-all\n": "param-1 : [root]->authType\nparam0 : field-all\n"
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getQueryString()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 3,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void setNote(java.lang.String,java.lang.Object)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n": "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void addCookie(javax.servlet.http.Cookie)>",
+    "conditionalTaint": {
+      "[-1, 0]": "[-1, 0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param0 : field-all\n": "param0 : field-all\n"
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: org.apache.tomcat.util.http.CookieProcessor getCookieProcessor()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void setBody(org.apache.tomcat.util.buf.ByteChunk)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.StringBuilder: void <init>()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 14,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getContextPath()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : field-all\n": "return\n"
+    },
+    "reuse_con": 6,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.String: boolean equals(java.lang.Object)>",
+    "conditionalTaint": {
+      "[]": "[]",
+      "[0]": "[0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "",
+      "param0 : field-all\n": "param0 : field-all\n"
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void addLocale(java.util.Locale)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getRequestURI()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.tomcat.util.buf.ByteChunk: void <init>()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] getCookies()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "return\n"
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest getRequest()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "param-1 : [root]->applicationRequest\nreturn\n"
+    },
+    "reuse_con": 5,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>",
+    "conditionalTaint": {
+      "[0, 1]": "[0, 1]",
+      "[0]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty",
+      "LLM"
+    ],
+    "detailedTransferMap": {
+      "param1 : field-all\n": "param1 : field-all\n"
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {
+      "c0->r-1": {
+        "paramIndex": 0,
+        "operator": "==",
+        "rightValue": true
+      }
+    }
+  },
+  {
+    "methodSig": "<java.lang.Boolean: boolean equals(java.lang.Object)>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String unescape(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 3,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getParameter(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : field-all\n": ""
+    },
+    "reuse_con": 2,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.Object getNote(java.lang.String)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n": "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void setUserPrincipal(java.security.Principal)>",
+    "conditionalTaint": {
+      "[-1, 0]": "[-1, 0]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->authType\nparam0 : field-all\n": "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\nparam0 : field-all\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getAuthType()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n": "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\nreturn\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void parseCookies()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: javax.servlet.http.HttpSession getSession(boolean)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->authType\n": "param-1 : [root]->authType\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getContentType()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getDecodedRequestURI()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : field-all\n": ""
+    },
+    "reuse_con": 2,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<java.lang.StringBuilder: java.lang.String toString()>",
+    "conditionalTaint": {
+      "[]": "[]"
+    },
+    "tags": [
+      "SAST"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getRemoteUser()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n": "param-1 : [root]->authType\nparam-1 : [root]->userPrincipal\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector getConnector()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "return\n"
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()>",
+    "conditionalTaint": {
+      "[-1]": "[-2, -1]"
+    },
+    "tags": [
+      "SAST",
+      "CHANGE",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": "return\n"
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: java.util.Enumeration getLocales()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.authenticator.SavedRequest: void setOriginalMaxInactiveInterval(int)>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 1,
+    "transferMapCondition": {}
+  },
+  {
+    "methodSig": "<org.apache.catalina.connector.Request: void parseLocales()>",
+    "conditionalTaint": {
+      "[-1]": "[-1]"
+    },
+    "tags": [
+      "SAST",
+      "NotEmpty"
+    ],
+    "detailedTransferMap": {
+      "": ""
+    },
+    "reuse_con": 0,
+    "transferMapCondition": {}
+  }
+]

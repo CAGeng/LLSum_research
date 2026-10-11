@@ -1,0 +1,4 @@
+project,total,mapped,mapping_rate,CT1,CT2,CT3,CT4,CT5,Other,Unresolved,overall_coverage
+Tomcat,1605,1542,96.07,251,800,32,184,275,0,63,96.07
+Jetty,824,747,90.66,191,402,4,99,51,0,77,90.66
+Elasticsearch,2123,1946,91.66,277,1079,60,165,365,0,177,91.66

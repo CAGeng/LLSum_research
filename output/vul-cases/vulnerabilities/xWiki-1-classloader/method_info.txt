@@ -1,0 +1,1300 @@
+方法名：getLogger
+方法签名：<org.slf4j.LoggerFactory: org.slf4j.Logger getLogger(java.lang.Class)>
+方法的参数个数：1
+call-site个数： 25
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.web.Utils: void <clinit>()>
+方法的参数个数：0
+call-site个数： 22
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.XWikiRightServiceImpl: void <clinit>()>
+方法的参数个数：0
+call-site个数： 13
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.AbstractXWikiAuthService: void <clinit>()>
+方法的参数个数：0
+call-site个数： 13
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.objects.BaseElement: void <clinit>()>
+方法的参数个数：0
+call-site个数： 13
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.XWikiAuthServiceImpl: void <clinit>()>
+方法的参数个数：0
+call-site个数： 12
+
+方法名：getComponent
+方法签名：<com.xpn.xwiki.web.Utils: java.lang.Object getComponent(java.lang.reflect.Type,java.lang.String)>
+方法的参数个数：2
+call-site个数： 10
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.objects.BaseCollection: void <clinit>()>
+方法的参数个数：0
+call-site个数： 9
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.XWikiException: void <clinit>()>
+方法的参数个数：0
+call-site个数： 7
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: void <clinit>()>
+方法的参数个数：0
+call-site个数： 7
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.XWikiException: void <init>(int,int,java.lang.String,java.lang.Throwable)>
+方法的参数个数：4
+call-site个数： 6
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.objects.classes.PropertyClass: void <clinit>()>
+方法的参数个数：0
+call-site个数： 6
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.user.api.XWikiUser: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 6
+
+方法名：getComponent
+方法签名：<com.xpn.xwiki.web.Utils: java.lang.Object getComponent(java.lang.reflect.Type)>
+方法的参数个数：1
+call-site个数： 6
+
+方法名：getComponent
+方法签名：<com.xpn.xwiki.web.Utils: java.lang.Object getComponent(java.lang.Class)>
+方法的参数个数：1
+call-site个数： 5
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.XWikiGroupServiceImpl: void <clinit>()>
+方法的参数个数：0
+call-site个数： 5
+
+方法名：isBlank
+方法签名：<org.apache.commons.lang3.StringUtils: boolean isBlank(java.lang.CharSequence)>
+方法的参数个数：1
+call-site个数： 4
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.util.Util: void <clinit>()>
+方法的参数个数：0
+call-site个数： 4
+
+方法名：<init>
+方法签名：<org.xwiki.model.reference.EntityReference: void <init>(java.lang.String,org.xwiki.model.EntityType,org.xwiki.model.reference.EntityReference)>
+方法的参数个数：3
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.stats.impl.XWikiStatsServiceImpl: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.xwiki.model.reference.EntityReference: void <init>(java.lang.String,org.xwiki.model.EntityType)>
+方法的参数个数：2
+call-site个数： 3
+
+方法名：safeget
+方法签名：<com.xpn.xwiki.objects.BaseCollection: com.xpn.xwiki.objects.PropertyInterface safeget(java.lang.String)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：setIntValue
+方法签名：<com.xpn.xwiki.objects.BaseCollection: void setIntValue(java.lang.String,int)>
+方法的参数个数：2
+call-site个数： 3
+
+方法名：setName
+方法签名：<com.xpn.xwiki.objects.BaseElement: void setName(java.lang.String)>
+方法的参数个数：1
+call-site个数： 3
+
+方法名：<init>
+方法签名：<org.xwiki.model.reference.DocumentReference: void <init>(java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：3
+call-site个数： 3
+
+方法名：serializeUserAndGroupReferences
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: java.lang.String serializeUserAndGroupReferences()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.stats.impl.DocumentStats: void <init>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getMessage
+方法签名：<com.xpn.xwiki.XWikiException: java.lang.String getMessage()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getName
+方法签名：<com.xpn.xwiki.util.Util: java.lang.String getName(java.lang.String,com.xpn.xwiki.XWikiContext)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.web.XWikiURLFactoryServiceImpl: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getDocumentReference
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: org.xwiki.model.reference.DocumentReference getDocumentReference()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：setDocumentReference
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: void setDocumentReference(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.BaseProperty: void <init>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：equalsIgnoreCase
+方法签名：<org.apache.commons.lang3.StringUtils: boolean equalsIgnoreCase(java.lang.CharSequence,java.lang.CharSequence)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：split
+方法签名：<org.apache.commons.lang3.StringUtils: java.lang.String[] split(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：forPattern
+方法签名：<org.joda.time.format.DateTimeFormat: org.joda.time.format.DateTimeFormatter forPattern(java.lang.String)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：getUserPrincipal
+方法签名：<org.securityfilter.filter.SecurityRequestWrapper: java.security.Principal getUserPrincipal()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：replace
+方法签名：<org.apache.commons.lang3.StringUtils: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：3
+call-site个数： 2
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.BaseCollection: void <init>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：getNext
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: java.lang.Object getNext()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：isEmpty
+方法签名：<org.apache.commons.lang3.StringUtils: boolean isEmpty(java.lang.CharSequence)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.objects.classes.GroupsClass: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.securityfilter.filter.SecurityRequestWrapper: void <init>(javax.servlet.http.HttpServletRequest,org.securityfilter.filter.SavedRequest,org.securityfilter.realm.SecurityRealmInterface,java.lang.String)>
+方法的参数个数：4
+call-site个数： 2
+
+方法名：safeput
+方法签名：<com.xpn.xwiki.objects.BaseCollection: void safeput(java.lang.String,com.xpn.xwiki.objects.PropertyInterface)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：setValueDirty
+方法签名：<com.xpn.xwiki.objects.BaseProperty: void setValueDirty(boolean)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：substringBeforeLast
+方法签名：<org.apache.commons.lang3.StringUtils: java.lang.String substringBeforeLast(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.objects.classes.PasswordClass: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.util.AbstractXWikiRunnable: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.BaseElement: void <init>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：setStringValue
+方法签名：<com.xpn.xwiki.objects.BaseCollection: void setStringValue(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：<init>
+方法签名：<org.xwiki.model.reference.LocalDocumentReference: void <init>(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 2
+
+方法名：equals
+方法签名：<org.xwiki.model.reference.DocumentReference: boolean equals(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 2
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: void <clinit>()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：isNotEmpty
+方法签名：<org.apache.commons.lang3.StringUtils: boolean isNotEmpty(java.lang.CharSequence)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.AppServerTrustedAuthServiceImpl: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：extractFromSuperadmin
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.ReferenceUserDataExtractor: org.xwiki.model.reference.DocumentReference extractFromSuperadmin(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.criteria.impl.RangeFactory: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.criteria.impl.PeriodFactory: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setDisabled
+方法签名：<com.xpn.xwiki.objects.classes.PropertyClass: void setDisabled(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getCurrentMixedDocumentReferenceResolver
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: org.xwiki.model.reference.DocumentReferenceResolver getCurrentMixedDocumentReferenceResolver()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setValidationKey
+方法签名：<org.securityfilter.authenticator.persistent.DefaultPersistentLoginManager: void setValidationKey(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：randomAlphanumeric
+方法签名：<org.apache.commons.lang3.RandomStringUtils: java.lang.String randomAlphanumeric(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：isWikiStatsEnabled
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: boolean isWikiStatsEnabled(com.xpn.xwiki.XWikiContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setModule
+方法签名：<com.xpn.xwiki.XWikiException: void setModule(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.ReferenceUserIterator: void <init>(org.xwiki.model.reference.DocumentReference,org.xwiki.model.reference.DocumentReferenceResolver,com.xpn.xwiki.XWikiContext)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：initialize
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: void initialize(org.xwiki.model.reference.DocumentReference,com.xpn.xwiki.internal.plugin.rightsmanager.UserDataExtractor,org.xwiki.model.reference.DocumentReferenceResolver)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：init
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: void init(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setOwnerDocument
+方法签名：<com.xpn.xwiki.objects.BaseProperty: void setOwnerDocument(com.xpn.xwiki.doc.XWikiDocument)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.criteria.impl.ScopeFactory: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getSpace
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: java.lang.String getSpace()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.securityfilter.filter.URLPatternMatcher: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：addCookie
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: javax.servlet.http.Cookie addCookie(com.xpn.xwiki.XWikiContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：isGuest
+方法签名：<com.xpn.xwiki.user.api.XWikiRightService: boolean isGuest(org.xwiki.model.reference.EntityReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：isSuperAdmin
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: boolean isSuperAdmin(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getXwikiContext
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: com.xpn.xwiki.XWikiContext getXwikiContext()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setEncryptionMode
+方法签名：<org.securityfilter.authenticator.persistent.DefaultPersistentLoginManager: void setEncryptionMode(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.securityfilter.config.SecurityConfig: void <init>(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setPersistentLoginManager
+方法签名：<org.securityfilter.config.SecurityConfig: void setPersistentLoginManager(org.securityfilter.authenticator.persistent.PersistentLoginManagerInterface)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getInstance
+方法签名：<com.xpn.xwiki.plugin.rightsmanager.RightsManager: com.xpn.xwiki.plugin.rightsmanager.RightsManager getInstance()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.criteria.impl.Duration: void <init>(int,int,int,int)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：setSize
+方法签名：<com.xpn.xwiki.objects.classes.StringClass: void setSize(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：equals
+方法签名：<org.xwiki.text.StringUtils: boolean equals(java.lang.CharSequence,java.lang.CharSequence)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyFilterConfig: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyPersistentLoginManager: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyBasicAuthenticator: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setCode
+方法签名：<com.xpn.xwiki.XWikiException: void setCode(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setOwnerDocument
+方法签名：<com.xpn.xwiki.objects.BaseElement: void setOwnerDocument(com.xpn.xwiki.doc.XWikiDocument)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.criteria.impl.Range: void <init>(int,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setPrettyName
+方法签名：<com.xpn.xwiki.objects.classes.PropertyClass: void setPrettyName(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.securityfilter.realm.SimplePrincipal: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：createRange
+方法签名：<com.xpn.xwiki.criteria.impl.RangeFactory: com.xpn.xwiki.criteria.impl.Range createRange(int,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：chop
+方法签名：<org.apache.commons.lang3.StringUtils: java.lang.String chop(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getStorageFilteredUsers
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: java.util.Collection getStorageFilteredUsers(com.xpn.xwiki.XWikiContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：extractFromGuest
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.ReferenceUserDataExtractor: org.xwiki.model.reference.DocumentReference extractFromGuest(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getCookie
+方法签名：<com.xpn.xwiki.util.Util: javax.servlet.http.Cookie getCookie(java.lang.String,javax.servlet.http.HttpServletRequest)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.xwiki.model.internal.reference.LocalStringEntityReferenceSerializer: void <init>(org.xwiki.model.internal.reference.SymbolScheme)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.NumberProperty: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.classes.PropertyClass: void <init>(java.lang.String,java.lang.String,com.xpn.xwiki.objects.meta.PropertyMetaClass)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyFormAuthenticator: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.stats.impl.XWikiStatsServiceImpl$1: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getCookieExpirationDate
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: java.util.Date getCookieExpirationDate()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setName
+方法签名：<com.xpn.xwiki.objects.classes.PropertyClass: void setName(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.criteria.impl.Period: void <init>(long,long)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setEncryptionKey
+方法签名：<org.securityfilter.authenticator.persistent.DefaultPersistentLoginManager: void setEncryptionKey(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.joda.time.DateTime: void <init>(int,int,int,int,int,int,int)>
+方法的参数个数：7
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.user.api.XWikiUser: void <init>(java.lang.String,boolean)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.xwiki.bridge.event.DocumentCreatedEvent: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：removeField
+方法签名：<com.xpn.xwiki.objects.BaseCollection: void removeField(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setErrorPage
+方法签名：<org.securityfilter.config.SecurityConfig: void setErrorPage(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getCurrentReferenceDocumentReferenceResolver
+方法签名：<com.xpn.xwiki.objects.BaseCollection: org.xwiki.model.reference.DocumentReferenceResolver getCurrentReferenceDocumentReferenceResolver()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setInitParameter
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyFilterConfig: void setInitParameter(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.criteria.impl.DurationFactory: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getAlgorithmFromPassword
+方法签名：<com.xpn.xwiki.objects.classes.PasswordClass: java.lang.String getAlgorithmFromPassword(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setCookieDomains
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyPersistentLoginManager: void setCookieDomains(java.lang.String[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.securityfilter.authenticator.FormAuthenticator: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：substringAfter
+方法签名：<org.apache.commons.lang3.StringUtils: java.lang.String substringAfter(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.GroovyAuthServiceImpl: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：createDuration
+方法签名：<com.xpn.xwiki.criteria.impl.DurationFactory: com.xpn.xwiki.criteria.impl.Duration createDuration(int,int,int,int)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：setCookieLife
+方法签名：<org.securityfilter.authenticator.persistent.DefaultPersistentLoginManager: void setCookieLife(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.internal.skin.AbstractResource: void <init>(java.lang.String,java.lang.String,java.lang.String,org.xwiki.skin.ResourceRepository)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：getFilteredUsers
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: java.util.Collection getFilteredUsers(java.lang.String,java.lang.String,com.xpn.xwiki.XWikiContext)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：getEntityReferenceFactory
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: org.xwiki.model.internal.reference.EntityReferenceFactory getEntityReferenceFactory()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getListFromString
+方法签名：<com.xpn.xwiki.objects.classes.ListClass: java.util.List getListFromString(java.lang.String,java.lang.String,boolean)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.internal.skin.AbstractInputSourceResource: void <init>(java.lang.String,java.lang.String,org.xwiki.skin.ResourceRepository,org.xwiki.filter.input.InputSource)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：setArgs
+方法签名：<com.xpn.xwiki.XWikiException: void setArgs(java.lang.Object[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getFullName
+方法签名：<com.xpn.xwiki.user.api.XWikiUser: java.lang.String getFullName()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setUserPrincipal
+方法签名：<org.securityfilter.filter.SecurityRequestWrapper: void setUserPrincipal(java.security.Principal)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.classes.PasswordClass: void <init>(com.xpn.xwiki.objects.meta.PropertyMetaClass)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setCookiePrefix
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyPersistentLoginManager: void setCookiePrefix(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.joda.time.Interval: void <init>(long,long)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.stats.impl.xwiki.XWikiStatsStoreService: void <init>(com.xpn.xwiki.XWikiContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.stats.impl.xwiki.XWikiStatsReader: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setEncryptionPadding
+方法签名：<org.securityfilter.authenticator.persistent.DefaultPersistentLoginManager: void setEncryptionPadding(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.xwiki.bridge.event.ActionExecutedEvent: void <init>(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：resolveUsers
+方法签名：<com.xpn.xwiki.plugin.rightsmanager.RightsManager: java.util.Collection resolveUsers(java.lang.String,com.xpn.xwiki.XWikiContext)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.XWikiException: void <init>(int,int,java.lang.String,java.lang.Throwable,java.lang.Object[])>
+方法的参数个数：5
+call-site个数： 1
+
+方法名：resolveUsers
+方法签名：<com.xpn.xwiki.plugin.rightsmanager.RightsManager: java.util.Collection resolveUsers(org.xwiki.model.reference.DocumentReference,com.xpn.xwiki.XWikiContext)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.classes.StringClass: void <init>(java.lang.String,java.lang.String,com.xpn.xwiki.objects.meta.PropertyMetaClass)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyFormAuthenticator: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.xwiki.bridge.event.DocumentUpdatedEvent: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getRootComponentManager
+方法签名：<com.xpn.xwiki.web.Utils: org.xwiki.component.manager.ComponentManager getRootComponentManager()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.securityfilter.authenticator.persistent.DefaultPersistentLoginManager: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getName
+方法签名：<com.xpn.xwiki.objects.classes.PropertyClass: java.lang.String getName()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：convertToDocumentReferences
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: java.util.Collection convertToDocumentReferences(java.util.List,org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setRealmName
+方法签名：<org.securityfilter.config.SecurityConfig: void setRealmName(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setUser
+方法签名：<com.xpn.xwiki.user.api.XWikiUser: void setUser(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getValue
+方法签名：<com.xpn.xwiki.objects.NumberProperty: java.lang.Object getValue()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.criteria.impl.Scope: void <init>(int,java.lang.String,boolean)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：getDocumentReference
+方法签名：<com.xpn.xwiki.objects.BaseElement: org.xwiki.model.reference.DocumentReference getDocumentReference()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getModuleName
+方法签名：<com.xpn.xwiki.XWikiException: java.lang.String getModuleName()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setMetaDataDirty
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: void setMetaDataDirty(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：conformCookieDomain
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyPersistentLoginManager: java.lang.String conformCookieDomain(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.util.AbstractXWikiRunnable: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.stats.impl.xwiki.XWikiStatsStoreService: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setCookiePath
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyPersistentLoginManager: void setCookiePath(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getContextComponentManager
+方法签名：<com.xpn.xwiki.web.Utils: org.xwiki.component.manager.ComponentManager getContextComponentManager()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.IntegerProperty: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：initialize
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: void initialize(java.util.List,java.util.List,com.xpn.xwiki.internal.plugin.rightsmanager.UserDataExtractor,org.xwiki.model.reference.DocumentReferenceResolver)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.BaseStringProperty: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：createPeriod
+方法签名：<com.xpn.xwiki.criteria.impl.PeriodFactory: com.xpn.xwiki.criteria.impl.Period createPeriod(long,long)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：addField
+方法签名：<com.xpn.xwiki.objects.BaseCollection: void addField(java.lang.String,com.xpn.xwiki.objects.PropertyInterface)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.plugin.rightsmanager.RightsManager: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.apache.oro.text.PatternCacheLRU: void <init>(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getLocalEntityReferenceSerializer
+方法签名：<com.xpn.xwiki.user.api.XWikiUser: org.xwiki.model.reference.EntityReferenceSerializer getLocalEntityReferenceSerializer()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setValueDirty
+方法签名：<com.xpn.xwiki.objects.BaseProperty: void setValueDirty(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：isWhitespace
+方法签名：<org.apache.commons.lang3.StringUtils: boolean isWhitespace(java.lang.CharSequence)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：intern
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: org.xwiki.model.reference.EntityReference intern(org.xwiki.model.reference.EntityReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getEquivalentPassword
+方法签名：<com.xpn.xwiki.objects.classes.PasswordClass: java.lang.String getEquivalentPassword(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: void <init>(org.xwiki.model.reference.DocumentReference,com.xpn.xwiki.internal.plugin.rightsmanager.UserDataExtractor,org.xwiki.model.reference.DocumentReferenceResolver,com.xpn.xwiki.XWikiContext)>
+方法的参数个数：4
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.xwiki.model.internal.document.DefaultDocumentAuthors: void <init>(com.xpn.xwiki.doc.XWikiDocument)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setFullName
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: void setFullName(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setRecentActionsFromSession
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: void setRecentActionsFromSession(com.xpn.xwiki.XWikiContext,java.lang.String,java.util.Collection)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：resolveType
+方法签名：<org.xwiki.component.util.ReflectionUtils: java.lang.reflect.Type resolveType(java.lang.reflect.Type,java.lang.reflect.Type)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：getSaltFromPassword
+方法签名：<com.xpn.xwiki.objects.classes.PasswordClass: java.lang.String getSaltFromPassword(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getValue
+方法签名：<com.xpn.xwiki.objects.BaseStringProperty: java.lang.String getValue()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.XWikiGroupServiceImpl$1: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.internal.template.ClassloaderResource: void <init>(java.net.URL,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：resolveUsers
+方法签名：<com.xpn.xwiki.plugin.rightsmanager.RightsManager: java.util.Collection resolveUsers(java.util.List,com.xpn.xwiki.XWikiContext)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setProtection
+方法签名：<org.securityfilter.authenticator.persistent.DefaultPersistentLoginManager: void setProtection(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：createScope
+方法签名：<com.xpn.xwiki.criteria.impl.ScopeFactory: com.xpn.xwiki.criteria.impl.Scope createScope(int,java.lang.String,boolean)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：split
+方法签名：<org.apache.commons.lang3.StringUtils: java.lang.String[] split(java.lang.String,char)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: void <init>(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.apache.commons.collections4.queue.CircularFifoQueue: void <init>(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getOwnerDocument
+方法签名：<com.xpn.xwiki.objects.BaseElement: com.xpn.xwiki.doc.XWikiDocument getOwnerDocument()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getPasswordHash
+方法签名：<com.xpn.xwiki.objects.classes.PasswordClass: java.lang.String getPasswordHash(java.lang.String,java.lang.String,java.lang.String)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.criteria.impl.ScopeFactory: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.AppServerTrustedKerberosAuthServiceImpl: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setMain
+方法签名：<com.xpn.xwiki.user.api.XWikiUser: void setMain(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：equals
+方法签名：<org.apache.commons.lang3.ObjectUtils: boolean equals(java.lang.Object,java.lang.Object)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.joda.time.Period: void <init>(int,int,int,int,int,int,int,int)>
+方法的参数个数：8
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.criteria.impl.PeriodFactory: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.ReferenceUserDataExtractor: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setAuthMethod
+方法签名：<org.securityfilter.config.SecurityConfig: void setAuthMethod(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setValue
+方法签名：<com.xpn.xwiki.objects.NumberProperty: void setValue(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：findCookie
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: boolean findCookie(com.xpn.xwiki.XWikiContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getRelativeXClassReference
+方法签名：<com.xpn.xwiki.objects.BaseCollection: org.xwiki.model.reference.EntityReference getRelativeXClassReference()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：randomSalt
+方法签名：<com.xpn.xwiki.objects.classes.PasswordClass: java.lang.String randomSalt()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setValue
+方法签名：<com.xpn.xwiki.objects.BaseStringProperty: void setValue(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getRecentVisitSize
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: int getRecentVisitSize(com.xpn.xwiki.XWikiContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.user.impl.xwiki.MyPersistentLoginManager: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.StringProperty: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：serialize
+方法签名：<org.xwiki.model.internal.reference.LocalStringEntityReferenceSerializer: java.lang.String serialize(org.xwiki.model.reference.EntityReference,java.lang.Object[])>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setObject
+方法签名：<com.xpn.xwiki.objects.BaseProperty: void setObject(com.xpn.xwiki.objects.BaseCollection)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.internal.template.InternalTemplateManager$AbtractTemplate: void <init>(org.xwiki.skin.Resource)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：hasNext
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: boolean hasNext()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getRootCauseMessage
+方法签名：<org.apache.commons.lang3.exception.ExceptionUtils: java.lang.String getRootCauseMessage(java.lang.Throwable)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<clinit>
+方法签名：<com.xpn.xwiki.criteria.impl.Period: void <clinit>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.xwiki.model.internal.reference.DefaultSymbolScheme: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setxWikiClass
+方法签名：<com.xpn.xwiki.objects.classes.PropertyClass: void setxWikiClass(com.xpn.xwiki.objects.classes.BaseClass)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getCode
+方法签名：<com.xpn.xwiki.XWikiException: int getCode()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：extract
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.ReferenceUserDataExtractor: org.xwiki.model.reference.DocumentReference extract(org.xwiki.model.reference.DocumentReference,com.xpn.xwiki.doc.XWikiDocument,com.xpn.xwiki.objects.BaseObject)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.user.api.XWikiRightNotFoundException: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：convert
+方法签名：<com.xpn.xwiki.objects.NumberProperty: java.lang.Number convert(java.lang.Object)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：isStatsEnabled
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: boolean isStatsEnabled(com.xpn.xwiki.XWikiContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getNextUser
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: java.lang.Object getNextUser(java.util.Iterator)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：cleanStackIfNeeded
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: void cleanStackIfNeeded(java.util.Iterator)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：isValueDirty
+方法签名：<com.xpn.xwiki.objects.BaseProperty: boolean isValueDirty()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.xwiki.model.reference.DocumentReference: void <init>(org.xwiki.model.reference.EntityReference,java.util.Locale)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：getXClassReference
+方法签名：<com.xpn.xwiki.objects.BaseCollection: org.xwiki.model.reference.DocumentReference getXClassReference()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setUnmodifiable
+方法签名：<com.xpn.xwiki.objects.classes.PropertyClass: void setUnmodifiable(boolean)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：contains
+方法签名：<org.apache.commons.lang3.ArrayUtils: boolean contains(java.lang.Object[],java.lang.Object)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：join
+方法签名：<org.apache.commons.lang3.StringUtils: java.lang.String join(java.lang.Object[],java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：getCookie
+方法签名：<com.xpn.xwiki.util.Util: javax.servlet.http.Cookie getCookie(java.lang.String,com.xpn.xwiki.XWikiContext)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：removeStart
+方法签名：<org.apache.commons.lang3.StringUtils: java.lang.String removeStart(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：getListFromString
+方法签名：<com.xpn.xwiki.objects.classes.GroupsClass: java.util.List getListFromString(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getCookieDomains
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: java.lang.String[] getCookieDomains(com.xpn.xwiki.XWikiContext)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setEncryptionAlgorithm
+方法签名：<org.securityfilter.authenticator.persistent.DefaultPersistentLoginManager: void setEncryptionAlgorithm(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.stats.impl.xwiki.XWikiStatsReader: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setUseIP
+方法签名：<org.securityfilter.authenticator.persistent.DefaultPersistentLoginManager: void setUseIP(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.criteria.impl.RangeFactory: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setLogoutPage
+方法签名：<org.securityfilter.config.SecurityConfig: void setLogoutPage(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getRecentActionFromSessions
+方法签名：<com.xpn.xwiki.stats.impl.StatsUtil: java.util.Collection getRecentActionFromSessions(com.xpn.xwiki.XWikiContext,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.criteria.impl.DurationFactory: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getTypeClass
+方法签名：<org.xwiki.component.util.ReflectionUtils: java.lang.Class getTypeClass(java.lang.reflect.Type)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.stats.impl.XWikiStats: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getFailsafeDocument
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: com.xpn.xwiki.doc.XWikiDocument getFailsafeDocument(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getStringValue
+方法签名：<com.xpn.xwiki.objects.BaseCollection: java.lang.String getStringValue(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.securityfilter.authenticator.BasicAuthenticator: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.objects.classes.PasswordClass: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getFields
+方法签名：<com.xpn.xwiki.objects.BaseCollection: java.util.Map getFields()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：isGuest
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: boolean isGuest(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.xwiki.filter.input.DefaultURLInputSource: void <init>(java.net.URL)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.xwiki.bridge.event.DocumentDeletedEvent: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getPasswordCrypt
+方法签名：<com.xpn.xwiki.objects.classes.PasswordClass: java.lang.String getPasswordCrypt(java.lang.String,java.lang.String)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：containsAny
+方法签名：<org.apache.commons.lang3.StringUtils: boolean containsAny(java.lang.CharSequence,char[])>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：next
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: java.lang.Object next()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：setDefaultPage
+方法签名：<org.securityfilter.config.SecurityConfig: void setDefaultPage(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.criteria.impl.RevisionCriteriaFactory: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.apache.commons.collections4.list.AbstractListDecorator: void <init>(java.util.List)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.internal.template.InternalTemplateManager$ClassloaderTemplate: void <init>(com.xpn.xwiki.internal.template.InternalTemplateManager,com.xpn.xwiki.internal.template.ClassloaderResource)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：toFullName
+方法签名：<com.xpn.xwiki.user.api.XWikiUser: java.lang.String toFullName(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：getConverterManager
+方法签名：<com.xpn.xwiki.objects.BaseStringProperty: org.xwiki.properties.ConverterManager getConverterManager()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：handleUserOrGroupReference
+方法签名：<com.xpn.xwiki.internal.plugin.rightsmanager.UserIterator: java.lang.Object handleUserOrGroupReference(org.xwiki.model.reference.DocumentReference,com.xpn.xwiki.doc.XWikiDocument)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：setDocumentReferenceInternal
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: void setDocumentReferenceInternal(org.xwiki.model.reference.DocumentReference)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setFullName
+方法签名：<com.xpn.xwiki.doc.XWikiDocument: void setFullName(java.lang.String,com.xpn.xwiki.XWikiContext)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：getUser
+方法签名：<com.xpn.xwiki.user.api.XWikiUser: java.lang.String getUser()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<com.xpn.xwiki.internal.doc.XWikiAttachmentList: void <init>(com.xpn.xwiki.doc.XWikiDocument)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：setLoginPage
+方法签名：<org.securityfilter.config.SecurityConfig: void setLoginPage(java.lang.String)>
+方法的参数个数：1
+call-site个数： 1
+

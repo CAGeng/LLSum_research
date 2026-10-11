@@ -1,0 +1,1 @@
+<org.elasticsearch.action.search.TransportSearchHelper: org.elasticsearch.action.search.ParsedScrollId parseScrollId(java.lang.String)>

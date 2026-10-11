@@ -1,0 +1,839 @@
+2025-04-15 16:56:42,258 main ERROR Unable to locate appender "ROLLING_FILE" for logger config "root"
+2025-04-15 16:56:42,259 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "root"
+2025-04-15 16:56:42,259 main ERROR Unable to locate appender "WARN_ROLLING_FILE" for logger config "root"
+2025-04-15 16:56:42,259 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "exception"
+2025-04-15 16:56:42,425 main ERROR Unable to locate appender "ROLLING_FILE" for logger config "root"
+2025-04-15 16:56:42,425 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "root"
+2025-04-15 16:56:42,425 main ERROR Unable to locate appender "WARN_ROLLING_FILE" for logger config "root"
+2025-04-15 16:56:42,425 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "exception"
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.15)
+
+2025-04-15 16:56:42.448 - INFO  [           main] o.s.b.StartupInfoLogger        : Starting IFDSApplication using Java 1.8.0_362 on FortdeMacBook-Pro.local with PID 53970 (/Users/fortsun/Desktop/git/restfuzz-sast/alligator-ifds/target/classes started by fortsun in /Users/fortsun/Desktop/git/restfuzz-sast)
+2025-04-15 16:56:42.449 - INFO  [           main] o.s.b.SpringApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-15 16:56:42.628 - INFO  [           main] epositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 16:56:42.646 - INFO  [           main] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.17.2/log4j-slf4j-impl-2.17.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.core/1.0.0/sootup.core-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.java.core/1.0.0/sootup.java.core-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.java.sourcecode/1.0.0/sootup.java.sourcecode-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.java.bytecode/1.0.0/sootup.java.bytecode-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.jimple.parser/1.0.0/sootup.jimple.parser-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.callgraph/1.0.0/sootup.callgraph-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.analysis/1.0.0/sootup.analysis-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+2025-04-15 16:56:42.809 - INFO  [           main] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 16:56:42.830 - INFO  [           main] o.h.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-04-15 16:56:42.903 - INFO  [           main] .a.c.r.j.JavaReflectionManager : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-04-15 16:56:42.944 - INFO  [           main] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2025-04-15 16:56:43.118 - INFO  [           main] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2025-04-15 16:56:43.125 - INFO  [           main] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-04-15 16:56:43.404 - INFO  [           main] e.t.j.p.i.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-15 16:56:43.410 - INFO  [           main] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+class path : /Users/fortsun/Desktop/test/WebGoat/target/classes:/Users/fortsun/Library/Java/JavaVirtualMachines/corretto-1.8.0_362/Contents/Home/jre/lib/rt.jar:/Users/fortsun/Library/Java/JavaVirtualMachines/corretto-1.8.0_362/Contents/Home/jre/lib/jce.jar:::
+total class count： 1533
+total application class count： 281
+2025-04-15 16:56:43.766 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.util.MultiValueMap
+2025-04-15 16:56:43.766 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.util.MultiValueMap
+2025-04-15 16:56:43.766 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.webwolf.mailbox.Email
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.container.users.UserForm
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.validation.BindingResult
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletResponse
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.767 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletResponse
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.lessons.idor.UserProfile
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletResponse
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.lessons.missingac.User
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.ui.Model
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.validation.BindingResult
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletResponse
+2025-04-15 16:56:43.768 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:43.769 - WARN  [           main] d.k.e.s.SpringEntrySet         : 结构化payload信息提取结束
+2025-04-15 16:56:43.769 - WARN  [           main] d.k.e.s.SpringEntrySet         : 为 30个entry提取结构信息
+2025-04-15 16:56:43.769 -ERROR  [           main] d.k.e.w.ServletEntrySet        : Servlet class 总数: 0
+2025-04-15 16:56:44.536 -ERROR  [           main] a.i.RuleImporter               : 导入source rule: 738
+2025-04-15 16:56:44.536 -ERROR  [           main] a.i.RuleImporter               : 导入sink rule: 3952
+2025-04-15 16:56:44.537 -ERROR  [           main] a.i.RuleImporter               : 导入propagation rule: 2534
+2025-04-15 16:56:44.706 - INFO  [           main] o.s.b.StartupInfoLogger        : Started IFDSApplication in 2.396 seconds (JVM running for 2.859)
+2025-04-15 16:56:44.707 - INFO  [           main] a.r.VulDetectRunner            : VulDetectRunner is running
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.util.MultiValueMap
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.util.MultiValueMap
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.webwolf.mailbox.Email
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.container.users.UserForm
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.validation.BindingResult
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletResponse
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.708 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletResponse
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.lessons.idor.UserProfile
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletResponse
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.lessons.missingac.User
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.ui.Model
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.validation.BindingResult
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:44.709 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:44.710 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: org.springframework.web.multipart.MultipartFile
+2025-04-15 16:56:44.710 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletResponse
+2025-04-15 16:56:44.710 -ERROR  [           main] d.k.e.s.SpringEntrySet         : Non-primitive parameter: jakarta.servlet.http.HttpServletRequest
+2025-04-15 16:56:44.710 - WARN  [           main] d.k.e.s.SpringEntrySet         : 结构化payload信息提取结束
+2025-04-15 16:56:44.710 - WARN  [           main] d.k.e.s.SpringEntrySet         : 为 30个entry提取结构信息
+2025-04-15 16:56:44.710 -ERROR  [           main] d.k.e.w.ServletEntrySet        : Servlet class 总数: 0
+从文件中指定的entry: 0
+2025-04-15 16:56:44.816 - INFO  [           main] d.VulDetector                  : entry count: 229
+2025-04-15 16:56:44.817 - WARN  [           main] d.VulDetector                  : using spark
+constructCG
+Enable Spark
+constructCG finish
+指定的路径不是有效的目录: $以下4个文件必须存在，需要提前下载
+Code has been written to missed-method.txt successfully.
+add sink: sdafadsf
+2025-04-15 16:56:46.567 - INFO  [           main] d.VulDetector                  : entry count: 229
+2025-04-15 16:56:46.567 - INFO  [           main] d.VulDetector                  : sink count: 553
+sinkDetector检测sink后：
+2025-04-15 16:56:46.700 - INFO  [           main] d.VulDetector                  : sink count: 553
+2025-04-15 16:56:46.702 -ERROR  [           main] d.VulDetector                  : 调用链总数: 129
+2025-04-15 16:56:46.702 -ERROR  [           main] d.VulDetector                  : 去重后调用链总数: 91
+开始分割call graph(先统计每个detectContext， 1-n层调用的方法有哪些)...
+2025-04-15 16:56:46.711 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:46.713 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.HammerHead: org.springframework.web.servlet.ModelAndView attack()>
+2025-04-15 16:56:46.818 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.web.servlet.ModelAndView: void <init>(java.lang.String)>
+2025-04-15 16:56:46.821 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 attack -> <init>
+2025-04-15 16:56:46.822 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:46.822 - WARN  [           main] d.VulDetector                  : 检测完成: 1/91
+2025-04-15 16:56:46.823 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:46.824 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.controller.StartLesson: org.springframework.web.servlet.ModelAndView lessonPage(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:46.966 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 lessonPage -> <init>
+2025-04-15 16:56:46.966 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:46.966 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.container.controller.StartLesson: org.springframework.web.servlet.ModelAndView lessonPage(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:46.966 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:46.966 - WARN  [           main] d.VulDetector                  : 检测完成: 2/91
+2025-04-15 16:56:46.967 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:46.968 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.WebWolfRedirect: org.springframework.web.servlet.ModelAndView openWebWolf()>
+2025-04-15 16:56:46.979 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.web.servlet.ModelAndView: void <init>(java.lang.String)>
+2025-04-15 16:56:46.979 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 openWebWolf -> <init>
+2025-04-15 16:56:46.979 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:46.979 - WARN  [           main] d.VulDetector                  : 检测完成: 3/91
+2025-04-15 16:56:46.980 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:46.980 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTController: org.springframework.web.servlet.ModelAndView jwt()>
+2025-04-15 16:56:46.984 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 jwt -> <init>
+2025-04-15 16:56:46.984 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:46.984 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.jwt.JWTController: org.springframework.web.servlet.ModelAndView jwt()>
+2025-04-15 16:56:46.984 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:46.984 - WARN  [           main] d.VulDetector                  : 检测完成: 4/91
+2025-04-15 16:56:46.984 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:46.985 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson13: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:47.186 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>
+2025-04-15 16:56:47.186 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 completed -> prepareStatement
+2025-04-15 16:56:47.186 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:47.187 - WARN  [           main] d.VulDetector                  : 检测完成: 5/91
+2025-04-15 16:56:47.187 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:47.188 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallenge: org.owasp.webgoat.container.assignments.AttackResult registerNewUser(java.lang.String,java.lang.String,java.lang.String)>
+2025-04-15 16:56:47.343 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>
+2025-04-15 16:56:47.343 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 registerNewUser -> prepareStatement
+2025-04-15 16:56:47.343 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:47.343 - WARN  [           main] d.VulDetector                  : 检测完成: 6/91
+2025-04-15 16:56:47.344 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:47.345 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallengeLogin: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>
+2025-04-15 16:56:47.356 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>
+2025-04-15 16:56:47.356 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 login -> prepareStatement
+2025-04-15 16:56:47.356 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:47.356 - WARN  [           main] d.VulDetector                  : 检测完成: 7/91
+2025-04-15 16:56:47.357 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:47.357 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.sqlinjection.mitigation.Servers: java.util.List sort(java.lang.String)>
+2025-04-15 16:56:47.390 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>
+2025-04-15 16:56:47.390 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 sort -> prepareStatement
+2025-04-15 16:56:47.390 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:47.390 - WARN  [           main] d.VulDetector                  : 检测完成: 8/91
+2025-04-15 16:56:47.391 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:47.391 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.xss.DOMCrossSiteScripting: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:47.538 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> <init>
+2025-04-15 16:56:47.538 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:47.538 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.xss.DOMCrossSiteScripting: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:47.538 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:47.538 - WARN  [           main] d.VulDetector                  : 检测完成: 9/91
+2025-04-15 16:56:47.539 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:47.540 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.SigningAssignment: java.lang.String getPrivateKey(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:47.640 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getPrivateKey -> generateKeyPair -> <init>
+2025-04-15 16:56:47.640 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:47.640 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.cryptography.SigningAssignment: java.lang.String getPrivateKey(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:47.640 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:47.640 - WARN  [           main] d.VulDetector                  : 检测完成: 10/91
+2025-04-15 16:56:47.641 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:47.641 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.jwt.JWTSecretKeyEndpoint: java.lang.String getSecretToken()>
+2025-04-15 16:56:47.702 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getSecretToken -> <clinit> -> <init>
+2025-04-15 16:56:47.702 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:47.702 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.jwt.JWTSecretKeyEndpoint: java.lang.String getSecretToken()>
+2025-04-15 16:56:47.703 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:47.703 - WARN  [           main] d.VulDetector                  : 检测完成: 11/91
+2025-04-15 16:56:47.703 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:47.704 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.HashingAssignment: java.lang.String getSha256(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:47.757 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getSha256 -> <init>
+2025-04-15 16:56:47.757 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:47.757 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.cryptography.HashingAssignment: java.lang.String getSha256(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:47.757 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:47.757 - WARN  [           main] d.VulDetector                  : 检测完成: 12/91
+2025-04-15 16:56:47.758 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:47.758 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge1.Assignment1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>
+2025-04-15 16:56:48.043 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> <clinit> -> <init>
+2025-04-15 16:56:48.043 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:48.043 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.challenges.challenge1.Assignment1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>
+2025-04-15 16:56:48.043 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:48.043 - WARN  [           main] d.VulDetector                  : 检测完成: 13/91
+2025-04-15 16:56:48.044 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:48.045 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.HashingAssignment: java.lang.String getMd5(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:48.093 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getMd5 -> <init>
+2025-04-15 16:56:48.093 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:48.093 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.cryptography.HashingAssignment: java.lang.String getMd5(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:48.093 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:48.093 - WARN  [           main] d.VulDetector                  : 检测完成: 14/91
+2025-04-15 16:56:48.094 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:48.095 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.csrf.CSRFGetFlag: java.util.Map invoke(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:48.719 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 invoke -> <init>
+2025-04-15 16:56:48.719 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:48.719 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.csrf.CSRFGetFlag: java.util.Map invoke(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:48.719 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:48.719 - WARN  [           main] d.VulDetector                  : 检测完成: 15/91
+2025-04-15 16:56:48.720 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:48.721 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson4: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:48.728 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>
+2025-04-15 16:56:48.728 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> replaceAll
+2025-04-15 16:56:48.728 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:48.728 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson4: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:48.728 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:48.729 - WARN  [           main] d.VulDetector                  : 检测完成: 16/91
+2025-04-15 16:56:48.729 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:48.730 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10b: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:48.764 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>
+2025-04-15 16:56:48.764 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> replaceAll
+2025-04-15 16:56:48.764 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:48.764 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10b: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:48.764 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:48.764 - WARN  [           main] d.VulDetector                  : 检测完成: 17/91
+2025-04-15 16:56:48.765 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:48.766 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.service.LabelDebugService: org.springframework.http.ResponseEntity checkDebuggingStatus()>
+2025-04-15 16:56:48.795 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.slf4j.Logger: void debug(java.lang.String,java.lang.Object)>
+2025-04-15 16:56:48.796 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 checkDebuggingStatus -> debug
+2025-04-15 16:56:48.796 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:48.797 - WARN  [           main] d.VulDetector                  : 检测完成: 18/91
+2025-04-15 16:56:48.797 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:48.798 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.service.LabelDebugService: org.springframework.http.ResponseEntity setDebuggingStatus(java.lang.Boolean)>
+2025-04-15 16:56:48.823 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.slf4j.Logger: void debug(java.lang.String,java.lang.Object)>
+2025-04-15 16:56:48.823 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 setDebuggingStatus -> debug
+2025-04-15 16:56:48.823 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:48.823 - WARN  [           main] d.VulDetector                  : 检测完成: 19/91
+2025-04-15 16:56:48.823 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:48.824 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.SigningAssignment: java.lang.String getPrivateKey(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:48.836 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.CryptoUtil: java.lang.String getPrivateKeyInPEM(java.security.KeyPair)>
+2025-04-15 16:56:48.855 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: void <init>(byte[],java.nio.charset.Charset)>
+2025-04-15 16:56:48.856 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getPrivateKey -> getPrivateKeyInPEM -> <init>
+2025-04-15 16:56:48.856 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 1 层调用栈
+2025-04-15 16:56:48.856 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.cryptography.CryptoUtil: java.lang.String getPrivateKeyInPEM(java.security.KeyPair)>
+2025-04-15 16:56:48.856 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:48.856 - WARN  [           main] d.VulDetector                  : 检测完成: 20/91
+2025-04-15 16:56:48.857 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:48.857 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.031 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> <clinit> -> compile
+2025-04-15 16:56:49.031 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.031 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.032 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.032 - WARN  [           main] d.VulDetector                  : 检测完成: 21/91
+2025-04-15 16:56:49.033 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.034 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge1.Assignment1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.060 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>
+2025-04-15 16:56:49.067 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String,int)>
+2025-04-15 16:56:49.067 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 completed -> replace -> compile
+2025-04-15 16:56:49.068 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.068 - WARN  [           main] d.VulDetector                  : 检测完成: 22/91
+2025-04-15 16:56:49.068 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.069 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallenge: org.owasp.webgoat.container.assignments.AttackResult registerNewUser(java.lang.String,java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.108 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>
+2025-04-15 16:56:49.108 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 registerNewUser -> executeQuery
+2025-04-15 16:56:49.108 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.108 - WARN  [           main] d.VulDetector                  : 检测完成: 23/91
+2025-04-15 16:56:49.109 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.109 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.service.LabelService: org.springframework.http.ResponseEntity fetchLabels()>
+2025-04-15 16:56:49.154 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 fetchLabels -> <init>
+2025-04-15 16:56:49.155 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.155 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.container.service.LabelService: org.springframework.http.ResponseEntity fetchLabels()>
+2025-04-15 16:56:49.155 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.155 - WARN  [           main] d.VulDetector                  : 检测完成: 24/91
+2025-04-15 16:56:49.155 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.156 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.service.LabelDebugService: org.springframework.http.ResponseEntity checkDebuggingStatus()>
+2025-04-15 16:56:49.201 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.http.ResponseEntity: void <init>(java.lang.Object,org.springframework.http.HttpStatusCode)>
+2025-04-15 16:56:49.201 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 checkDebuggingStatus -> <init>
+2025-04-15 16:56:49.201 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.201 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.container.service.LabelDebugService: org.springframework.http.ResponseEntity checkDebuggingStatus()>
+2025-04-15 16:56:49.201 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.201 - WARN  [           main] d.VulDetector                  : 检测完成: 25/91
+2025-04-15 16:56:49.202 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.202 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.service.LabelDebugService: org.springframework.http.ResponseEntity setDebuggingStatus(java.lang.Boolean)>
+2025-04-15 16:56:49.246 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.http.ResponseEntity: void <init>(java.lang.Object,org.springframework.http.HttpStatusCode)>
+2025-04-15 16:56:49.246 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 setDebuggingStatus -> <init>
+2025-04-15 16:56:49.246 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.246 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.container.service.LabelDebugService: org.springframework.http.ResponseEntity setDebuggingStatus(java.lang.Boolean)>
+2025-04-15 16:56:49.246 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.246 - WARN  [           main] d.VulDetector                  : 检测完成: 26/91
+2025-04-15 16:56:49.247 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.248 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.csrf.CSRFFeedback: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String)>
+2025-04-15 16:56:49.281 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(byte[],java.lang.Class)>
+2025-04-15 16:56:49.281 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 completed -> readValue
+2025-04-15 16:56:49.281 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.281 - WARN  [           main] d.VulDetector                  : 检测完成: 27/91
+2025-04-15 16:56:49.282 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.282 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.xss.DOMCrossSiteScripting: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:49.307 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String valueOf(int)>
+2025-04-15 16:56:49.308 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> valueOf
+2025-04-15 16:56:49.308 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.308 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.xss.DOMCrossSiteScripting: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:49.308 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.308 - WARN  [           main] d.VulDetector                  : 检测完成: 28/91
+2025-04-15 16:56:49.308 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.309 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.clientsidefiltering.Salaries: java.util.List invoke()>
+2025-04-15 16:56:49.385 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <javax.xml.xpath.XPath: java.lang.Object evaluate(java.lang.String,org.xml.sax.InputSource,javax.xml.namespace.QName)>
+2025-04-15 16:56:49.386 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 invoke -> evaluate
+2025-04-15 16:56:49.386 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.386 - WARN  [           main] d.VulDetector                  : 检测完成: 29/91
+2025-04-15 16:56:49.387 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.387 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge1.Assignment1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.410 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>
+2025-04-15 16:56:49.410 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> format
+2025-04-15 16:56:49.410 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.410 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.challenges.challenge1.Assignment1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.410 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.410 - WARN  [           main] d.VulDetector                  : 检测完成: 30/91
+2025-04-15 16:56:49.410 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.411 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.xxe.Ping: java.lang.String logRequest(java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.430 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>
+2025-04-15 16:56:49.430 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 logRequest -> format
+2025-04-15 16:56:49.430 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.430 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.xxe.Ping: java.lang.String logRequest(java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.431 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.431 - WARN  [           main] d.VulDetector                  : 检测完成: 31/91
+2025-04-15 16:56:49.431 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.431 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson13: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:49.470 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.sql.PreparedStatement: void setString(int,java.lang.String)>
+2025-04-15 16:56:49.470 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 completed -> setString
+2025-04-15 16:56:49.470 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.470 - WARN  [           main] d.VulDetector                  : 检测完成: 32/91
+2025-04-15 16:56:49.471 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.471 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallenge: org.owasp.webgoat.container.assignments.AttackResult registerNewUser(java.lang.String,java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.564 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.sql.PreparedStatement: void setString(int,java.lang.String)>
+2025-04-15 16:56:49.564 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 registerNewUser -> setString
+2025-04-15 16:56:49.564 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.565 - WARN  [           main] d.VulDetector                  : 检测完成: 33/91
+2025-04-15 16:56:49.566 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.566 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallengeLogin: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.585 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.sql.PreparedStatement: void setString(int,java.lang.String)>
+2025-04-15 16:56:49.585 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 login -> setString
+2025-04-15 16:56:49.585 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.585 - WARN  [           main] d.VulDetector                  : 检测完成: 34/91
+2025-04-15 16:56:49.586 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.586 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson6a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:49.591 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: boolean matches(java.lang.String)>
+2025-04-15 16:56:49.591 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> matches
+2025-04-15 16:56:49.591 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.591 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson6a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:49.591 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.591 - WARN  [           main] d.VulDetector                  : 检测完成: 35/91
+2025-04-15 16:56:49.592 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.592 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>
+2025-04-15 16:56:49.608 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: boolean matches(java.lang.String)>
+2025-04-15 16:56:49.608 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> matches
+2025-04-15 16:56:49.608 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.608 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>
+2025-04-15 16:56:49.608 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.608 - WARN  [           main] d.VulDetector                  : 检测完成: 36/91
+2025-04-15 16:56:49.609 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.609 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.csrf.CSRFLogin: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:49.618 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: boolean startsWith(java.lang.String)>
+2025-04-15 16:56:49.618 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> startsWith
+2025-04-15 16:56:49.618 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.618 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.csrf.CSRFLogin: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:49.618 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.618 - WARN  [           main] d.VulDetector                  : 检测完成: 37/91
+2025-04-15 16:56:49.619 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.619 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:49.619 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.pathtraversal.ProfileZipSlip: org.owasp.webgoat.container.assignments.AttackResult uploadFileHandler(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:49.628 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: boolean endsWith(java.lang.String)>
+2025-04-15 16:56:49.628 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 uploadFileHandler -> endsWith
+2025-04-15 16:56:49.628 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.628 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.pathtraversal.ProfileZipSlip: org.owasp.webgoat.container.assignments.AttackResult uploadFileHandler(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:49.628 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.628 - WARN  [           main] d.VulDetector                  : 检测完成: 38/91
+2025-04-15 16:56:49.629 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.629 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.SigningAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.691 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.CryptoUtil: boolean verifyMessage(java.lang.String,java.lang.String,java.security.PublicKey)>
+2025-04-15 16:56:49.805 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.slf4j.Logger: void info(java.lang.String,java.lang.Object)>
+2025-04-15 16:56:49.805 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 completed -> verifyMessage -> info
+2025-04-15 16:56:49.805 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.806 - WARN  [           main] d.VulDetector                  : 检测完成: 39/91
+2025-04-15 16:56:49.807 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.807 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.idor.IDORViewOwnProfileAltUrl: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:49.841 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String[] split(java.lang.String)>
+2025-04-15 16:56:49.841 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> split
+2025-04-15 16:56:49.841 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.841 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.idor.IDORViewOwnProfileAltUrl: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:49.841 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.841 - WARN  [           main] d.VulDetector                  : 检测完成: 40/91
+2025-04-15 16:56:49.842 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.843 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.idor.IDORDiffAttributes: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:49.852 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String[] split(java.lang.String)>
+2025-04-15 16:56:49.852 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> split
+2025-04-15 16:56:49.852 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.852 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.idor.IDORDiffAttributes: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:49.852 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.852 - WARN  [           main] d.VulDetector                  : 检测完成: 41/91
+2025-04-15 16:56:49.852 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.853 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.csrf.ForgedReviews: org.owasp.webgoat.container.assignments.AttackResult createNewReview(java.lang.String,java.lang.Integer,java.lang.String,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:49.877 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String[] split(java.lang.String)>
+2025-04-15 16:56:49.877 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 createNewReview -> split
+2025-04-15 16:56:49.877 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.877 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.csrf.ForgedReviews: org.owasp.webgoat.container.assignments.AttackResult createNewReview(java.lang.String,java.lang.Integer,java.lang.String,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:49.877 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.877 - WARN  [           main] d.VulDetector                  : 检测完成: 42/91
+2025-04-15 16:56:49.878 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.878 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.csrf.CSRFGetFlag: java.util.Map invoke(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:49.906 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String[] split(java.lang.String)>
+2025-04-15 16:56:49.906 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 invoke -> split
+2025-04-15 16:56:49.906 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.906 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.csrf.CSRFGetFlag: java.util.Map invoke(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:49.906 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.906 - WARN  [           main] d.VulDetector                  : 检测完成: 43/91
+2025-04-15 16:56:49.907 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.907 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson3: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:49.927 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String[] split(java.lang.String)>
+2025-04-15 16:56:49.927 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> split
+2025-04-15 16:56:49.927 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.927 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson3: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:49.927 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.927 - WARN  [           main] d.VulDetector                  : 检测完成: 44/91
+2025-04-15 16:56:49.928 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.928 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.xxe.Ping: java.lang.String logRequest(java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.964 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.io.File: void <init>(java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.964 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 logRequest -> <init>
+2025-04-15 16:56:49.964 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:49.964 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.xxe.Ping: java.lang.String logRequest(java.lang.String,java.lang.String)>
+2025-04-15 16:56:49.964 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:49.964 - WARN  [           main] d.VulDetector                  : 检测完成: 45/91
+2025-04-15 16:56:49.965 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:49.965 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.clientsidefiltering.Salaries: java.util.List invoke()>
+2025-04-15 16:56:50.068 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 invoke -> <init>
+2025-04-15 16:56:50.068 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.068 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.clientsidefiltering.Salaries: java.util.List invoke()>
+2025-04-15 16:56:50.068 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:50.068 - WARN  [           main] d.VulDetector                  : 检测完成: 46/91
+2025-04-15 16:56:50.069 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:50.070 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.clientsidefiltering.Salaries: java.util.List invoke()>
+2025-04-15 16:56:50.107 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.io.FileInputStream: void <init>(java.io.File)>
+2025-04-15 16:56:50.107 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 invoke -> <init>
+2025-04-15 16:56:50.107 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.107 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.clientsidefiltering.Salaries: java.util.List invoke()>
+2025-04-15 16:56:50.107 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:50.107 - WARN  [           main] d.VulDetector                  : 检测完成: 47/91
+2025-04-15 16:56:50.108 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:50.108 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:50.108 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.springframework.web.servlet.ModelAndView resetPassword(java.lang.String,org.springframework.ui.Model)>
+2025-04-15 16:56:50.169 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 resetPassword -> <init>
+2025-04-15 16:56:50.169 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.169 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.springframework.web.servlet.ModelAndView resetPassword(java.lang.String,org.springframework.ui.Model)>
+2025-04-15 16:56:50.169 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:50.169 - WARN  [           main] d.VulDetector                  : 检测完成: 48/91
+2025-04-15 16:56:50.170 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:50.170 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers: org.springframework.web.servlet.ModelAndView listUsers()>
+2025-04-15 16:56:50.409 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 listUsers -> <init>
+2025-04-15 16:56:50.409 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.409 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers: org.springframework.web.servlet.ModelAndView listUsers()>
+2025-04-15 16:56:50.409 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:50.409 - WARN  [           main] d.VulDetector                  : 检测完成: 49/91
+2025-04-15 16:56:50.410 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:50.411 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.controller.StartLesson: org.springframework.web.servlet.ModelAndView start()>
+2025-04-15 16:56:50.430 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 start -> <init>
+2025-04-15 16:56:50.430 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.430 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.container.controller.StartLesson: org.springframework.web.servlet.ModelAndView start()>
+2025-04-15 16:56:50.430 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:50.430 - WARN  [           main] d.VulDetector                  : 检测完成: 50/91
+2025-04-15 16:56:50.431 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:50.431 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.container.controller.Welcome: org.springframework.web.servlet.ModelAndView welcome(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:50.446 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 welcome -> <init>
+2025-04-15 16:56:50.446 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.446 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.container.controller.Welcome: org.springframework.web.servlet.ModelAndView welcome(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:50.446 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:50.446 - WARN  [           main] d.VulDetector                  : 检测完成: 51/91
+2025-04-15 16:56:50.447 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 11
+2025-04-15 16:56:50.447 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:50.447 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:50.447 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.springframework.web.servlet.ModelAndView changePassword(org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm,org.springframework.validation.BindingResult)>
+2025-04-15 16:56:50.549 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 changePassword -> <init>
+2025-04-15 16:56:50.549 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.549 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.springframework.web.servlet.ModelAndView changePassword(org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm,org.springframework.validation.BindingResult)>
+2025-04-15 16:56:50.549 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:50.549 - WARN  [           main] d.VulDetector                  : 检测完成: 52/91
+2025-04-15 16:56:50.550 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 1
+2025-04-15 16:56:50.551 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.webwolfintroduction.LandingAssignment: org.springframework.web.servlet.ModelAndView openPasswordReset(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:50.580 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 openPasswordReset -> <init>
+2025-04-15 16:56:50.580 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.580 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.webwolfintroduction.LandingAssignment: org.springframework.web.servlet.ModelAndView openPasswordReset(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:50.580 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:50.580 - WARN  [           main] d.VulDetector                  : 检测完成: 53/91
+2025-04-15 16:56:50.580 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:50.581 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.webwolfintroduction.MailAssignment: org.owasp.webgoat.container.assignments.AttackResult sendEmail(java.lang.String)>
+2025-04-15 16:56:50.715 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity postForEntity(java.lang.String,java.lang.Object,java.lang.Class,java.lang.Object[])>
+2025-04-15 16:56:50.716 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 sendEmail -> postForEntity
+2025-04-15 16:56:50.716 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.716 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.webwolfintroduction.MailAssignment: org.owasp.webgoat.container.assignments.AttackResult sendEmail(java.lang.String)>
+2025-04-15 16:56:50.716 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:50.716 - WARN  [           main] d.VulDetector                  : 检测完成: 54/91
+2025-04-15 16:56:50.717 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 20
+2025-04-15 16:56:50.717 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:50.819 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getFiles -> <init>
+2025-04-15 16:56:50.819 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.819 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:50.819 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 3
+2025-04-15 16:56:50.819 - WARN  [           main] d.VulDetector                  : 检测完成: 55/91
+2025-04-15 16:56:50.820 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 10
+2025-04-15 16:56:50.820 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.mailbox.MailboxController: org.springframework.web.servlet.ModelAndView mail()>
+2025-04-15 16:56:50.992 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 mail -> <init>
+2025-04-15 16:56:50.992 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:50.992 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.mailbox.MailboxController: org.springframework.web.servlet.ModelAndView mail()>
+2025-04-15 16:56:50.992 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:50.992 - WARN  [           main] d.VulDetector                  : 检测完成: 56/91
+2025-04-15 16:56:50.993 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 2
+2025-04-15 16:56:50.993 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge8.Assignment8: org.springframework.http.ResponseEntity vote(int,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.087 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>
+2025-04-15 16:56:51.087 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 vote -> body
+2025-04-15 16:56:51.087 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:51.087 - WARN  [           main] d.VulDetector                  : 检测完成: 57/91
+2025-04-15 16:56:51.088 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 2
+2025-04-15 16:56:51.089 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.springframework.http.ResponseEntity resetPassword(java.lang.String)>
+2025-04-15 16:56:51.104 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>
+2025-04-15 16:56:51.104 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 resetPassword -> body
+2025-04-15 16:56:51.104 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:51.104 - WARN  [           main] d.VulDetector                  : 检测完成: 58/91
+2025-04-15 16:56:51.105 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 7
+2025-04-15 16:56:51.105 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.pathtraversal.ProfileUploadRetrieval: org.springframework.http.ResponseEntity getProfilePicture(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.316 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>
+2025-04-15 16:56:51.316 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getProfilePicture -> body
+2025-04-15 16:56:51.316 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.316 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.pathtraversal.ProfileUploadRetrieval: org.springframework.http.ResponseEntity getProfilePicture(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.316 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 6
+2025-04-15 16:56:51.317 - WARN  [           main] d.VulDetector                  : 检测完成: 59/91
+2025-04-15 16:56:51.317 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:51.318 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.pathtraversal.ProfileUploadRetrieval: org.springframework.http.ResponseEntity getProfilePicture(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.493 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.io.File: void <init>(java.io.File,java.lang.String)>
+2025-04-15 16:56:51.493 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getProfilePicture -> <init>
+2025-04-15 16:56:51.493 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.493 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.pathtraversal.ProfileUploadRetrieval: org.springframework.http.ResponseEntity getProfilePicture(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.493 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:51.493 - WARN  [           main] d.VulDetector                  : 检测完成: 60/91
+2025-04-15 16:56:51.494 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 15
+2025-04-15 16:56:51.494 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.512 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.io.File: void <init>(java.lang.String,java.lang.String)>
+2025-04-15 16:56:51.512 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getFiles -> <init>
+2025-04-15 16:56:51.512 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.512 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.512 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:51.512 - WARN  [           main] d.VulDetector                  : 检测完成: 61/91
+2025-04-15 16:56:51.513 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 8
+2025-04-15 16:56:51.513 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:51.513 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:51.531 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.io.File: void <init>(java.lang.String,java.lang.String)>
+2025-04-15 16:56:51.531 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 importFile -> <init>
+2025-04-15 16:56:51.531 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.531 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:51.531 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:51.531 - WARN  [           main] d.VulDetector                  : 检测完成: 62/91
+2025-04-15 16:56:51.532 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 3
+2025-04-15 16:56:51.533 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint: org.owasp.webgoat.container.assignments.AttackResult resetVotes(java.lang.String)>
+2025-04-15 16:56:51.592 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String valueOf(java.lang.Object)>
+2025-04-15 16:56:51.592 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 resetVotes -> valueOf
+2025-04-15 16:56:51.592 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.592 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint: org.owasp.webgoat.container.assignments.AttackResult resetVotes(java.lang.String)>
+2025-04-15 16:56:51.592 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 2
+2025-04-15 16:56:51.593 - WARN  [           main] d.VulDetector                  : 检测完成: 63/91
+2025-04-15 16:56:51.593 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:51.594 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.jwt.JWTSecretKeyEndpoint: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String)>
+2025-04-15 16:56:51.709 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 login -> <clinit> -> <init>
+2025-04-15 16:56:51.709 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.710 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.jwt.JWTSecretKeyEndpoint: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String)>
+2025-04-15 16:56:51.710 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:51.710 - WARN  [           main] d.VulDetector                  : 检测完成: 64/91
+2025-04-15 16:56:51.710 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 54
+2025-04-15 16:56:51.711 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.843 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity postForEntity(java.lang.String,java.lang.Object,java.lang.Class,java.lang.Object[])>
+2025-04-15 16:56:51.843 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 sendPasswordResetLink -> postForEntity
+2025-04-15 16:56:51.843 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.843 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.843 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 9
+2025-04-15 16:56:51.843 - WARN  [           main] d.VulDetector                  : 检测完成: 65/91
+2025-04-15 16:56:51.844 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 1
+2025-04-15 16:56:51.845 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge1.ImageServlet: byte[] logo()>
+2025-04-15 16:56:51.850 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 logo -> format
+2025-04-15 16:56:51.850 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.850 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.challenges.challenge1.ImageServlet: byte[] logo()>
+2025-04-15 16:56:51.850 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:51.850 - WARN  [           main] d.VulDetector                  : 检测完成: 66/91
+2025-04-15 16:56:51.851 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:51.851 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge1.ImageServlet: byte[] logo()>
+2025-04-15 16:56:51.896 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 logo -> <clinit> -> <init>
+2025-04-15 16:56:51.896 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.896 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.challenges.challenge1.ImageServlet: byte[] logo()>
+2025-04-15 16:56:51.896 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:51.896 - WARN  [           main] d.VulDetector                  : 检测完成: 67/91
+2025-04-15 16:56:51.897 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 10
+2025-04-15 16:56:51.898 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.977 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>
+2025-04-15 16:56:51.978 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getFiles -> format
+2025-04-15 16:56:51.978 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:51.978 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:51.978 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 3
+2025-04-15 16:56:51.978 - WARN  [           main] d.VulDetector                  : 检测完成: 68/91
+2025-04-15 16:56:51.978 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 44
+2025-04-15 16:56:51.979 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:52.113 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>
+2025-04-15 16:56:52.113 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 sendPasswordResetLink -> format
+2025-04-15 16:56:52.113 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.113 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:52.114 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 5
+2025-04-15 16:56:52.114 - WARN  [           main] d.VulDetector                  : 检测完成: 69/91
+2025-04-15 16:56:52.114 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 1
+2025-04-15 16:56:52.115 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.vulnerablecomponents.VulnerableComponentsLesson: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:52.184 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> fromXML
+2025-04-15 16:56:52.184 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.184 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.vulnerablecomponents.VulnerableComponentsLesson: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>
+2025-04-15 16:56:52.184 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:52.184 - WARN  [           main] d.VulDetector                  : 检测完成: 70/91
+2025-04-15 16:56:52.185 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:52.185 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderJKUEndpoint: org.owasp.webgoat.container.assignments.AttackResult resetVotes(java.lang.String)>
+2025-04-15 16:56:52.261 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.net.URL: void <init>(java.lang.String)>
+2025-04-15 16:56:52.261 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 resetVotes -> <init>
+2025-04-15 16:56:52.261 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:52.261 - WARN  [           main] d.VulDetector                  : 检测完成: 71/91
+2025-04-15 16:56:52.262 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 6
+2025-04-15 16:56:52.262 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:52.262 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:52.309 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.springframework.web.servlet.ModelAndView: void <init>(org.springframework.web.servlet.View,java.util.Map)>
+2025-04-15 16:56:52.309 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 importFile -> <init>
+2025-04-15 16:56:52.310 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:52.310 - WARN  [           main] d.VulDetector                  : 检测完成: 72/91
+2025-04-15 16:56:52.310 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 5
+2025-04-15 16:56:52.311 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:52.342 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.io.File: void <init>(java.io.File,java.lang.String)>
+2025-04-15 16:56:52.342 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getFiles -> <init>
+2025-04-15 16:56:52.342 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.342 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:52.342 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:52.342 - WARN  [           main] d.VulDetector                  : 检测完成: 73/91
+2025-04-15 16:56:52.343 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 4
+2025-04-15 16:56:52.343 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:52.343 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:52.367 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.io.File: void <init>(java.io.File,java.lang.String)>
+2025-04-15 16:56:52.367 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 importFile -> <init>
+2025-04-15 16:56:52.367 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.367 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:52.367 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:52.367 - WARN  [           main] d.VulDetector                  : 检测完成: 74/91
+2025-04-15 16:56:52.367 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 3
+2025-04-15 16:56:52.368 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:52.368 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:52.414 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 importFile -> <init>
+2025-04-15 16:56:52.414 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.414 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:52.414 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:52.414 - WARN  [           main] d.VulDetector                  : 检测完成: 75/91
+2025-04-15 16:56:52.415 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 2
+2025-04-15 16:56:52.416 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:52.416 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:52.461 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 importFile -> mkdirs
+2025-04-15 16:56:52.461 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.461 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:52.461 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:52.462 - WARN  [           main] d.VulDetector                  : 检测完成: 76/91
+2025-04-15 16:56:52.462 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 1
+2025-04-15 16:56:52.463 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:52.463 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:52.467 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 importFile -> debug
+2025-04-15 16:56:52.467 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.467 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile)>
+2025-04-15 16:56:52.467 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:52.467 - WARN  [           main] d.VulDetector                  : 检测完成: 77/91
+2025-04-15 16:56:52.467 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:52.468 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.requests.Requests: org.springframework.web.servlet.ModelAndView get()>
+2025-04-15 16:56:52.540 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 get -> <init>
+2025-04-15 16:56:52.540 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.540 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.requests.Requests: org.springframework.web.servlet.ModelAndView get()>
+2025-04-15 16:56:52.540 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:52.540 - WARN  [           main] d.VulDetector                  : 检测完成: 78/91
+2025-04-15 16:56:52.541 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 8
+2025-04-15 16:56:52.542 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:52.542 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:52.542 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.springframework.web.servlet.ModelAndView changePassword(org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm,org.springframework.validation.BindingResult)>
+2025-04-15 16:56:52.605 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>
+2025-04-15 16:56:52.605 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 changePassword -> put
+2025-04-15 16:56:52.605 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.605 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.springframework.web.servlet.ModelAndView changePassword(org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm,org.springframework.validation.BindingResult)>
+2025-04-15 16:56:52.605 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:52.605 - WARN  [           main] d.VulDetector                  : 检测完成: 79/91
+2025-04-15 16:56:52.606 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 1
+2025-04-15 16:56:52.607 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.EncodingAssignment: java.lang.String getBasicAuth(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:52.634 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getBasicAuth -> <init>
+2025-04-15 16:56:52.634 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:52.634 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.cryptography.EncodingAssignment: java.lang.String getBasicAuth(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:52.634 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:52.634 - WARN  [           main] d.VulDetector                  : 检测完成: 80/91
+2025-04-15 16:56:52.635 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:52.636 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.EncodingAssignment: java.lang.String getBasicAuth(jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:52.683 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String concat(java.lang.String)>
+2025-04-15 16:56:52.703 - INFO  [           main] T.R.GenericPropagationRule     : will support this case when outArgument is 'other' : 9663B35D-2715-4BBF-AC4C-164710C24654
+2025-04-15 16:56:52.709 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: void <init>(char[],boolean)>
+2025-04-15 16:56:52.709 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 getBasicAuth -> concat -> <init>
+2025-04-15 16:56:52.709 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 1 层调用栈
+2025-04-15 16:56:52.709 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <java.lang.String: java.lang.String concat(java.lang.String)>
+2025-04-15 16:56:52.709 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:52.709 - WARN  [           main] d.VulDetector                  : 检测完成: 81/91
+2025-04-15 16:56:52.710 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 1
+2025-04-15 16:56:52.710 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.SigningAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>
+2025-04-15 16:56:52.745 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String toUpperCase()>
+2025-04-15 16:56:52.751 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String toUpperCase(java.util.Locale)>
+2025-04-15 16:56:52.854 - INFO  [           main] T.R.GenericPropagationRule     : will support this case when outArgument is 'other' : 9663B35D-2715-4BBF-AC4C-164710C24654
+2025-04-15 16:56:53.021 - INFO  [           main] T.R.GenericPropagationRule     : will support this case when outArgument is 'other' : 9663B35D-2715-4BBF-AC4C-164710C24654
+2025-04-15 16:56:53.030 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> toUpperCase -> toUpperCase -> <init>
+2025-04-15 16:56:53.030 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 2 层调用栈
+2025-04-15 16:56:53.030 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <java.lang.String: java.lang.String toUpperCase(java.util.Locale)>
+2025-04-15 16:56:53.030 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:53.032 - WARN  [           main] d.VulDetector                  : 检测完成: 82/91
+2025-04-15 16:56:53.032 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:53.033 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.cryptography.SigningAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>
+2025-04-15 16:56:53.232 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 completed -> concat -> <init>
+2025-04-15 16:56:53.232 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 0 层调用栈
+2025-04-15 16:56:53.232 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.cryptography.SigningAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>
+2025-04-15 16:56:53.232 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:53.233 - WARN  [           main] d.VulDetector                  : 检测完成: 83/91
+2025-04-15 16:56:53.233 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 7
+2025-04-15 16:56:53.234 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge5.Assignment5: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>
+2025-04-15 16:56:53.290 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>
+2025-04-15 16:56:53.291 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 login -> prepareStatement
+2025-04-15 16:56:53.291 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 1
+2025-04-15 16:56:53.291 - WARN  [           main] d.VulDetector                  : 检测完成: 84/91
+2025-04-15 16:56:53.292 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 35
+2025-04-15 16:56:53.292 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:53.339 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String createPasswordReset(java.lang.String,java.lang.String)>
+2025-04-15 16:56:53.365 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.util.Random: void setSeed(long)>
+2025-04-15 16:56:53.366 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 sendPasswordResetLink -> createPasswordReset -> setSeed
+2025-04-15 16:56:53.366 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 2
+2025-04-15 16:56:53.366 - WARN  [           main] d.VulDetector                  : 检测完成: 85/91
+2025-04-15 16:56:53.366 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 19
+2025-04-15 16:56:53.367 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:53.413 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String createPasswordReset(java.lang.String,java.lang.String)>
+2025-04-15 16:56:53.468 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String scramble(java.util.Random,java.lang.String)>
+2025-04-15 16:56:53.478 - INFO  [           main] T.R.GenericPropagationRule     : will support this case when outArgument is 'other' : 9663B35D-2715-4BBF-AC4C-164710C24654
+2025-04-15 16:56:53.496 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: void <init>(char[])>
+2025-04-15 16:56:53.496 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 sendPasswordResetLink -> createPasswordReset -> scramble -> <init>
+2025-04-15 16:56:53.496 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 2 层调用栈
+2025-04-15 16:56:53.496 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String scramble(java.util.Random,java.lang.String)>
+2025-04-15 16:56:53.496 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 3
+2025-04-15 16:56:53.496 - WARN  [           main] d.VulDetector                  : 检测完成: 86/91
+2025-04-15 16:56:53.497 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 4
+2025-04-15 16:56:53.498 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>
+2025-04-15 16:56:53.563 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String createPasswordReset(java.lang.String,java.lang.String)>
+2025-04-15 16:56:53.849 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 sendPasswordResetLink -> createPasswordReset -> <init>
+2025-04-15 16:56:53.849 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 1 层调用栈
+2025-04-15 16:56:53.849 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String createPasswordReset(java.lang.String,java.lang.String)>
+2025-04-15 16:56:53.849 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:53.850 - WARN  [           main] d.VulDetector                  : 检测完成: 87/91
+2025-04-15 16:56:53.851 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 33
+2025-04-15 16:56:53.851 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:53.851 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTController: org.owasp.webgoat.webwolf.jwt.JWTToken encode(org.springframework.util.MultiValueMap)>
+2025-04-15 16:56:53.878 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken encode(java.lang.String,java.lang.String,java.lang.String)>
+2025-04-15 16:56:53.889 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTToken: java.util.Map parse(java.lang.String)>
+2025-04-15 16:56:53.896 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>
+2025-04-15 16:56:53.897 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 encode -> encode -> parse -> readValue
+2025-04-15 16:56:53.897 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:53.897 - WARN  [           main] d.VulDetector                  : 检测完成: 88/91
+2025-04-15 16:56:53.897 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 32
+2025-04-15 16:56:53.898 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:53.898 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTController: org.owasp.webgoat.webwolf.jwt.JWTToken decode(org.springframework.util.MultiValueMap)>
+2025-04-15 16:56:53.910 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken decode(java.lang.String,java.lang.String)>
+2025-04-15 16:56:53.963 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken parseToken(java.lang.String)>
+2025-04-15 16:56:53.972 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: java.lang.String[] split(java.lang.String)>
+2025-04-15 16:56:53.972 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 decode -> decode -> parseToken -> split
+2025-04-15 16:56:53.972 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 2 层调用栈
+2025-04-15 16:56:53.972 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken parseToken(java.lang.String)>
+2025-04-15 16:56:53.972 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:53.972 - WARN  [           main] d.VulDetector                  : 检测完成: 89/91
+2025-04-15 16:56:53.973 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 15
+2025-04-15 16:56:53.973 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:53.973 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTController: org.owasp.webgoat.webwolf.jwt.JWTToken decode(org.springframework.util.MultiValueMap)>
+2025-04-15 16:56:53.987 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken decode(java.lang.String,java.lang.String)>
+2025-04-15 16:56:54.028 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken parseToken(java.lang.String)>
+2025-04-15 16:56:54.094 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTToken: java.util.Map parse(java.lang.String)>
+2025-04-15 16:56:54.106 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>
+2025-04-15 16:56:54.106 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 decode -> decode -> parseToken -> parse -> readValue
+2025-04-15 16:56:54.106 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 3
+2025-04-15 16:56:54.106 - WARN  [           main] d.VulDetector                  : 检测完成: 90/91
+2025-04-15 16:56:54.107 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-04-15 16:56:54.109 -ERROR  [           main] d.d.DataFlowTrack              : 加入结构化的污点源：{}
+2025-04-15 16:56:54.109 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTController: org.owasp.webgoat.webwolf.jwt.JWTToken decode(org.springframework.util.MultiValueMap)>
+2025-04-15 16:56:54.129 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken decode(java.lang.String,java.lang.String)>
+2025-04-15 16:56:54.146 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken parseToken(java.lang.String)>
+2025-04-15 16:56:54.189 - INFO  [           main] d.d.DataFlowTrack              : not support this unit : virtualinvoke $r3.<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder validToken(boolean)>(0)
+2025-04-15 16:56:54.196 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.String: void <init>(byte[],java.nio.charset.Charset)>
+2025-04-15 16:56:54.197 - WARN  [           main] d.d.DataFlowTrack              : 无数据透传 decode -> decode -> parseToken -> <init>
+2025-04-15 16:56:54.197 - WARN  [           main] d.d.DataFlowTrack              : 数据传播到 2 层调用栈
+2025-04-15 16:56:54.197 - INFO  [           main] d.d.DataFlowTrack              : 数据传播到的最后一层方法： <org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken parseToken(java.lang.String)>
+2025-04-15 16:56:54.197 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-04-15 16:56:54.197 - WARN  [           main] d.VulDetector                  : 检测完成: 91/91
+2025-04-15 16:56:54.197 - WARN  [           main] d.VulDetector                  : 有多少hazard的detectContext需要修正 0
+摘要复用次数: 0
+2025-04-15 16:56:54.243 - WARN  [           main] d.VulDetector                  : 摘要总数: 354
+2025-04-15 16:56:54.243 - INFO  [           main] i.IntelligentLogger            : LLM产生函数摘要个数： 0
+2025-04-15 16:56:54.244 - INFO  [           main] i.IntelligentLogger            : LLM产生函数摘要失败数： 0
+2025-04-15 16:56:54.244 - INFO  [           main] i.IntelligentLogger            : 涉及多个incoming的摘要个数: 0
+2025-04-15 16:56:54.244 - WARN  [           main] d.VulDetector                  : 有条件满足的链路：0
+2025-04-15 16:56:54.244 - WARN  [           main] d.VulDetector                  : 有条件和摘要比不满足的链路：0
+2025-04-15 16:56:54.244 - WARN  [           main] d.VulDetector                  : 所有有条件不满足的链路数（和摘要比，和路径约束比),(经过检查)：0 , 3
+2025-04-15 16:56:54.244 - WARN  [           main] d.VulDetector                  : 所有有条件满足的链路数（和摘要比，和路径约束比）：0
+2025-04-15 16:56:54.246 - WARN  [           main] d.VulDetector                  : CHA产生的假调用栈: 0
+2025-04-15 16:56:54.246 -ERROR  [           main] d.VulDetector                  : 共计调用链： 91
+2025-04-15 16:56:54.246 -ERROR  [           main] d.VulDetector                  : 有数据流： 24
+2025-04-15 16:56:54.246 -ERROR  [           main] d.VulDetector                  : 删除的dummy sink(没有数据流不显示，防止过多): 0/91
+2025-04-15 16:56:54.290 - INFO  [           main] d.k.Knows                      : Destroy Knows when it's a WebApplication

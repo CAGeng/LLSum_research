@@ -1,0 +1,306 @@
+方法名：reset方法签名：<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void reset(byte[],int,int)>
+初始被污染的参数：参数0参数1
+初始污点集合（参数被污染到局部变量)：r0; r1; 
+数据流传播过程： 
+在这条语句：r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes> = r1
+在这条语句中,污点从变量r1 传播到变量 r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>;在这条语句中,污点从变量r1 传播到变量 r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; r1; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：readByte方法签名：<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte readByte()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>
+在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes> 传播到变量 $r1;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>; $r1; 
+
+-----------------------------------
+在这条语句：$i0 = r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos>
+在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos> 传播到变量 $i0;在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos> 传播到变量 $i0;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>; $r1; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos>; $i0; 
+
+-----------------------------------
+在这条语句：$b2 = $r1[$i0]
+在这条语句中,污点从变量$r1 传播到变量 $b2;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>; $r1; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos>; $i0; $b2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：throwOnBrokenVInt方法签名：<org.elasticsearch.common.io.stream.StreamInput: void throwOnBrokenVInt(byte,int)>
+初始被污染的参数：参数1
+初始污点集合（参数被污染到局部变量)：b0; 
+数据流传播过程： 
+在这条语句：$i2 = (int) b0
+在这条语句中,污点从变量b0 传播到变量 $i2;
+此时的污点集合：b0; $i2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：readVIntSlow方法签名：<org.elasticsearch.common.io.stream.StreamInput: int readVIntSlow()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$b0 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: byte readByte()>()
+在这条语句中,污点从变量r0 传播到变量 $b0;在这句的方法调用中，返回值被污染，它被反应在变量$b0上；
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; 
+
+-----------------------------------
+在这条语句：$s23 = (short) $b0
+在这条语句中,污点从变量$b0 传播到变量 $s23;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; $b0; $s23; 
+
+-----------------------------------
+在这条语句：$b2 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: byte readByte()>()
+在这条语句中,污点从变量r0 传播到变量 $b2;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; $b0; $s23; $b2; 
+
+-----------------------------------
+在这条语句：$s27 = (short) $b2
+在这条语句中,污点从变量$b2 传播到变量 $s27;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; $b0; $s23; $b2; $s27; 
+
+-----------------------------------
+在这条语句：$b6 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: byte readByte()>()
+在这条语句中,污点从变量r0 传播到变量 $b6;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; $b0; $s23; $b2; $s27; $b6; 
+
+-----------------------------------
+在这条语句：$s29 = (short) $b6
+在这条语句中,污点从变量$b6 传播到变量 $s29;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; $b0; $s23; $b2; $s27; $b6; $s29; 
+
+-----------------------------------
+在这条语句：$b10 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: byte readByte()>()
+在这条语句中,污点从变量r0 传播到变量 $b10;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; $b0; $s23; $b2; $s27; $b6; $s29; $b10; 
+
+-----------------------------------
+在这条语句：$s31 = (short) $b10
+在这条语句中,污点从变量$b10 传播到变量 $s31;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; $b0; $s23; $b2; $s27; $b6; $s29; $b10; $s31; 
+
+-----------------------------------
+在这条语句：$b14 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: byte readByte()>()
+在这条语句中,污点从变量r0 传播到变量 $b14;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; $b0; $s23; $b2; $s27; $b6; $s29; $b10; $s31; $b14; 
+
+-----------------------------------
+在这条语句：$s32 = (short) $b14
+在这条语句中,污点从变量$b14 传播到变量 $s32;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $b0; $b0; $s23; $b2; $s27; $b6; $s29; $b10; $s31; $b14; $s32; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：readVInt方法签名：<org.elasticsearch.common.io.stream.StreamInput: int readVInt()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$i0 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: int readVIntSlow()>()
+在这条语句中,污点从变量r0 传播到变量 $i0;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $i0; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：readArraySize方法签名：<org.elasticsearch.common.io.stream.StreamInput: int readArraySize()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$i0 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: int readVInt()>()
+在这条语句中,污点从变量r0 传播到变量 $i0;在这句的方法调用中，返回值被污染，它被反应在变量$i0上；
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $i0; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：readBytes方法签名：<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void readBytes(byte[],int,int)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r2 = r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>
+在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes> 传播到变量 $r2;
+
+此时：被污染的变量别名信息包括: [[root]->bytes, [root]->largeSpare->length]
+此时的污点集合：r0; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>; $r2; 
+
+-----------------------------------
+在这条语句：$i2 = r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos>
+在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos> 传播到变量 $i2;在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos> 传播到变量 $i2;
+
+此时：被污染的变量别名信息包括: [[root]->bytes, [root]->largeSpare->length]
+此时的污点集合：r0; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>; $r2; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos>; $i2; 
+
+-----------------------------------
+在这条语句：$i3 = r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos>
+在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos> 传播到变量 $i3;在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos> 传播到变量 $i3;
+
+此时：被污染的变量别名信息包括: [[root]->bytes, [root]->largeSpare->length]
+此时的污点集合：r0; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte[] bytes>; $r2; r0.<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int pos>; $i2; $i3; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：readString方法签名：<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$i0 = virtualinvoke r0.<org.elasticsearch.common.io.stream.StreamInput: int readArraySize()>()
+在这条语句中,污点从变量r0 传播到变量 $i0;在这句的方法调用中，返回值被污染，它被反应在变量$i0上；
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $i0; 
+
+-----------------------------------
+在这条语句：$r7 = r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>
+在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare> 传播到变量 $r7;在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare> 传播到变量 $r7;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $i0; $i0; r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>; $r7; 
+
+-----------------------------------
+在这条语句：$r8 = r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>
+在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare> 传播到变量 $r8;在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare> 传播到变量 $r8;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $i0; $i0; r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>; $r7; $r8; 
+
+-----------------------------------
+在这条语句：$r9 = $r8.<org.apache.lucene.util.CharsRef: char[] chars>
+在这条语句中,污点从变量$r8.<org.apache.lucene.util.CharsRef: char[] chars> 传播到变量 $r9;在这条语句中,污点从变量$r8.<org.apache.lucene.util.CharsRef: char[] chars> 传播到变量 $r9;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $i0; $i0; r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>; $r7; $r8; $r8.<org.apache.lucene.util.CharsRef: char[] chars>; $r9; 
+
+-----------------------------------
+在这条语句：$r12 = r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>
+在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare> 传播到变量 $r12;在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare> 传播到变量 $r12;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $i0; $i0; r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>; $r7; $r8; $r8.<org.apache.lucene.util.CharsRef: char[] chars>; $r9; $r12; 
+
+-----------------------------------
+在这条语句：r15 = r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>
+在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare> 传播到变量 r15;在这条语句中,污点从变量r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare> 传播到变量 r15;
+
+此时：被污染的变量别名信息包括: [[root]->bytes]
+此时的污点集合：r0; $i0; $i0; r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>; $r7; $r8; $r8.<org.apache.lucene.util.CharsRef: char[] chars>; $r9; $r12; r15; 
+
+-----------------------------------
+在这条语句：r15.<org.apache.lucene.util.CharsRef: int length> = $i0
+在这条语句中,污点从变量$i0 传播到变量 r15.<org.apache.lucene.util.CharsRef: int length>;在这条语句中,污点从变量$i0 传播到变量 r15.<org.apache.lucene.util.CharsRef: int length>;
+
+此时：被污染的变量别名信息包括: [[root]->bytes, [root]->largeSpare->length]
+此时的污点集合：r0; $i0; $i0; r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>; $r7; $r8; $r8.<org.apache.lucene.util.CharsRef: char[] chars>; $r9; $r12; r15; r15.<org.apache.lucene.util.CharsRef: int length>; 
+
+-----------------------------------
+在这条语句：$r11 = r15.<org.apache.lucene.util.CharsRef: char[] chars>
+在这条语句中,污点从变量r15.<org.apache.lucene.util.CharsRef: char[] chars> 传播到变量 $r11;在这条语句中,污点从变量r15.<org.apache.lucene.util.CharsRef: char[] chars> 传播到变量 $r11;
+
+此时：被污染的变量别名信息包括: [[root]->bytes, [root]->largeSpare->length]
+此时的污点集合：r0; $i0; $i0; r0.<org.elasticsearch.common.io.stream.StreamInput: org.apache.lucene.util.CharsRef largeSpare>; $r7; $r8; $r8.<org.apache.lucene.util.CharsRef: char[] chars>; $r9; $r12; r15; r15.<org.apache.lucene.util.CharsRef: int length>; r15.<org.apache.lucene.util.CharsRef: char[] chars>; $r11; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：equals方法签名：<java.lang.String: boolean equals(java.lang.Object)>
+初始被污染的参数：参数1
+初始污点集合（参数被污染到局部变量)：r1; 
+数据流传播过程： 
+在这条语句：r2 = (java.lang.String) r1
+在这条语句中,污点从变量r1 传播到变量 r2;
+此时的污点集合：r1; r2; 
+
+-----------------------------------
+在这条语句：$r4 = r2.<java.lang.String: char[] value>
+在这条语句中,污点从变量r2.<java.lang.String: char[] value> 传播到变量 $r4;在这条语句中,污点从变量r2.<java.lang.String: char[] value> 传播到变量 $r4;
+此时的污点集合：r1; r2; r2.<java.lang.String: char[] value>; $r4; 
+
+-----------------------------------
+在这条语句：r6 = r2.<java.lang.String: char[] value>
+在这条语句中,污点从变量r2.<java.lang.String: char[] value> 传播到变量 r6;在这条语句中,污点从变量r2.<java.lang.String: char[] value> 传播到变量 r6;
+此时的污点集合：r1; r2; r2.<java.lang.String: char[] value>; $r4; r6; 
+
+-----------------------------------
+在这条语句：$c2 = r6[i5]
+在这条语句中,污点从变量r6 传播到变量 $c2;
+此时的污点集合：r1; r2; r2.<java.lang.String: char[] value>; $r4; r6; $c2; 
+
+-----------------------------------
+在这条语句：$i9 = (int) $c2
+在这条语句中,污点从变量$c2 传播到变量 $i9;
+此时的污点集合：r1; r2; r2.<java.lang.String: char[] value>; $r4; r6; $c2; $i9; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：<init>方法签名：<org.elasticsearch.action.search.ParsedScrollId: void <init>(java.lang.String,java.lang.String,org.elasticsearch.action.search.SearchContextIdForNode[])>
+初始被污染的参数：参数1
+初始污点集合（参数被污染到局部变量)：r1; 
+数据流传播过程： 
+在这条语句：r0.<org.elasticsearch.action.search.ParsedScrollId: java.lang.String source> = r1
+在这条语句中,污点从变量r1 传播到变量 r0.<org.elasticsearch.action.search.ParsedScrollId: java.lang.String source>;在这条语句中,污点从变量r1 传播到变量 r0.<org.elasticsearch.action.search.ParsedScrollId: java.lang.String source>;
+
+此时：被污染的变量别名信息包括: [[root]->source]
+此时的污点集合：r1; r0.<org.elasticsearch.action.search.ParsedScrollId: java.lang.String source>; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+

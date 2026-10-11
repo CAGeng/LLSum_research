@@ -1,0 +1,15 @@
+com.amazonaws:aws-java-sdk-core
+com.amazonaws:aws-java-sdk
+org.apache.hadoop:hadoop-aws
+org.mongodb:mongodb-driver-core
+org.springframework.cloud:spring-cloud-config-server
+com.google.crypto.tink:tink
+org.modeshape:modeshape-jcr
+com.amazonaws:DynamoDBLocal
+com.amazonaws:amazon-kinesis-producer
+org.jumpmind.metl:metl-core
+com.amazonaws:aws-xray-recorder-sdk-core
+org.jenkins-ci.plugins.aws-java-sdk:aws-java-sdk-minimal
+com.amazon.redshift:redshift-jdbc42
+edu.internet2.middleware.grouper:grouper
+org.springframework.vault:spring-vault-core

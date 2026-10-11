@@ -1,0 +1,105 @@
+soot:
+  output:
+    path: /Users/fortsun/Desktop/git/restfuzz-sast/output/24-1-9
+#    path: /home/sft/nothing/output/benchmark2700
+    filename: Analyze_result.json
+    insFilename: Instructions.json
+  additional:
+    path: "$无需"
+  rt:
+    dir:
+  jce:
+    dir:
+
+list:
+  sootInputPaths:
+    # "$被测项目class文件目录"
+#    - /Users/fortsun/Desktop/test/WebGoat/target/classes
+#    - /home/sft/FlowDroidMao/TestData/benchmark2700/classes
+#    - /Users/fortsun/Desktop/test/java-sast-testcases/Java_SAST_TestCase_Suite-master-1/target/classes
+#    - /Users/fortsun/Desktop/git/IntelligentSAST-TestCase/target/classes
+#    - /Users/fortsun/Desktop/test/java-sast-testcases/2015-10-27-elasticsearch-v1-0-0/153885-v1.0.0/install/classes
+#    - /Users/fortsun/Desktop/test/赛题材料/micro_service_seclab-main/target/classes
+#    - /Users/fortsun/Desktop/git/BenchmarkJava/target/classes
+#    - /Users/fortsun/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/6c3cc71e9d133d0059d21555ce9e402d/Message/MessageTemp/8199a423b42ba40d2643d727f5ed9823/File/2.0
+#    - /Users/fortsun/Desktop/ppt/可利用性/test_case/CVE-2022-25845
+
+    # 测试漏洞可利用性分析工具
+#    - /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/jackson-databind
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/termed-core
+#    - /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/core/target/classes
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/authas-tunnel-server
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/netty
+#    - /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/tunnel-client/target/classes
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/embedded-redis
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/commons-io
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/retrofit
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/guava
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/logback-classic
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/reactor-netty-core
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/netty
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/tomcat-embedded-core
+
+    - "$以下4个文件必须存在，需要提前下载"
+    - /Users/fortsun/Desktop/git/restfuzz-sast/dependency_path/package-dependency
+    - /Users/fortsun/Desktop/git/restfuzz-sast/dependencies/httpclient-4.5.13.jar
+    - /Users/fortsun/Desktop/git/restfuzz-sast/dependencies/fluent-hc-4.5.13.jar
+    - /Users/fortsun/Desktop/git/restfuzz-sast/dependencies/okhttp-2.7.5.jar
+  scannedMybatisXmlDirs:
+    #    - /Users/fortsun/Downloads/题目2：源码自动化审计与自动化评估验证/赛题材料/micro_service_seclab-main/src/main/resources/mappers
+    - /Users/fortsun/Downloads/题目2：源码自动化审计与自动化评估验证-1/赛题材料/micro_service_seclab-main/src/main/resources/mappers
+#  sourceCode: "/Users/fortsun/Desktop/test/WebGoat/src/main/java"
+  sourceCode: "/Users/fortsun/Desktop/test/java-sast-testcases/2015-10-27-elasticsearch-v1-0-0/153885-v1.0.0/src/src/main/java"
+
+logging:
+  config: classpath:log4j2.yml
+
+
+rules:
+  core:
+    path: rules/core.xml
+    pathSwitcher: on
+    thirdPartyPath: rules/java-core.xml
+    thirdPartyPathSwitcher: on
+  extend:
+    path: rules/extend.xml
+    pathSwitcher: on
+    thirdPartyPath: rules/java-extend.xml
+    thirdPartyPathSwitcher: on
+  conditional: on
+  taintFlag: on
+
+
+analysis:
+  taintSanitizeSwitcher: off
+  simpleDataPathSwitcher: off
+  onlyDataflowCallStackInter: off
+  fieldSensitiveSwitcher: on
+  sparkSwitcher: on
+  conditionSummarySwitcher: on
+
+vulexp:
+  downstream:
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package/arthas-tunnel-server-3.7.1-fatjar.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/termed-core/termd-core-1.1.7.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/embedded-redis/embedded-redis-0.7.3.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/core/target/arthas-core.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/tunnel-client/target/arthas-tunnel-client.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/retrofit/retrofit-2.4.0.jar
+    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/authas-tunnel-server/arthas-tunnel-server-3.7.1.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/reactor-netty-core/reactor-netty-core-1.0.31.jar
+  upstream:
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package/arthas-tunnel-server-3.7.1-fatjar.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/jackson-databind/jackson-databind-2.9.3.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/netty/netty-handler-4.1.92.Final.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/guava/guava-21.0.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/commons-io/commons-io-2.5.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/netty/netty-handler-4.1.92.Final.jar
+    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/tomcat-embedded-core/tomcat-embed-core-9.0.74.jar
+  #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/retrofit/retrofit-2.4.0.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/logback-classic/logback-classic-1.2.11.jar
+
+
+sink:
+  classPath: /Users/luca/dev/2025/pterosaur/output/popular-components/z-sink-class/sink.jar

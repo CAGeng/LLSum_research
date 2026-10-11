@@ -1,0 +1,103 @@
+[
+  {
+    "project": "Tomcat",
+    "instructions": "output/1-paper/tomcat-all/Instructions.json",
+    "classpath": "/Users/fortsun/Desktop/ppt/程序分析/ai/test-set/tomcat-9.0.74",
+    "total": 1605,
+    "mapped": 1542,
+    "mapping_rate": 0.9607476635514018,
+    "counts": {
+      "CT1": 251,
+      "CT2": 800,
+      "CT3": 32,
+      "CT4": 184,
+      "CT5": 275,
+      "Other": 0,
+      "Unresolved": 63
+    },
+    "percentages": {
+      "CT1": 15.638629283489097,
+      "CT2": 49.84423676012461,
+      "CT3": 1.9937694704049844,
+      "CT4": 11.46417445482866,
+      "CT5": 17.133956386292834,
+      "Other": 0.0,
+      "Unresolved": 3.925233644859813
+    },
+    "overall_coverage": 96.07476635514018,
+    "diagnostics": {
+      "generalized_executable_site": 357,
+      "no_line_match": 61,
+      "generalized_exception_edge": 111,
+      "generalized_extra_record": 18,
+      "missing_class": 2
+    }
+  },
+  {
+    "project": "Jetty",
+    "instructions": "output/1-paper/jetty-all/Instructions.json",
+    "classpath": "/Users/fortsun/Desktop/ppt/程序分析/ai/test-set/jetty-12.0.17",
+    "total": 824,
+    "mapped": 747,
+    "mapping_rate": 0.9065533980582524,
+    "counts": {
+      "CT1": 191,
+      "CT2": 402,
+      "CT3": 4,
+      "CT4": 99,
+      "CT5": 51,
+      "Other": 0,
+      "Unresolved": 77
+    },
+    "percentages": {
+      "CT1": 23.179611650485437,
+      "CT2": 48.786407766990294,
+      "CT3": 0.4854368932038835,
+      "CT4": 12.014563106796116,
+      "CT5": 6.189320388349515,
+      "Other": 0.0,
+      "Unresolved": 9.344660194174757
+    },
+    "overall_coverage": 90.65533980582525,
+    "diagnostics": {
+      "generalized_extra_record": 39,
+      "generalized_exception_edge": 44,
+      "generalized_executable_site": 145,
+      "no_line_match": 77
+    }
+  },
+  {
+    "project": "Elasticsearch",
+    "instructions": "output/1-paper/es-all/Instructions.json",
+    "classpath": "/Users/fortsun/Desktop/ppt/程序分析/ai/test-set/elasticsearch-6.5.3-part",
+    "total": 2123,
+    "mapped": 1946,
+    "mapping_rate": 0.9166274140367404,
+    "counts": {
+      "CT1": 277,
+      "CT2": 1079,
+      "CT3": 60,
+      "CT4": 165,
+      "CT5": 365,
+      "Other": 0,
+      "Unresolved": 177
+    },
+    "percentages": {
+      "CT1": 13.04757418747056,
+      "CT2": 50.82430522845031,
+      "CT3": 2.826189354686764,
+      "CT4": 7.772020725388601,
+      "CT5": 17.192651907677813,
+      "Other": 0.0,
+      "Unresolved": 8.337258596325954
+    },
+    "overall_coverage": 91.66274140367405,
+    "diagnostics": {
+      "generalized_executable_site": 440,
+      "generalized_extra_record": 55,
+      "no_line_match": 173,
+      "generalized_exception_edge": 119,
+      "missing_class": 4
+    }
+  }
+]

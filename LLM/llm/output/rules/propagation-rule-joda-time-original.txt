@@ -1,0 +1,2241 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AbstractInstant</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getZone</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method retrieves the `Chronology` from `this` and calls `getZone()` on it to obtain the `DateTimeZone`.
+    - The flow is from `this` to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeZone</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>forTimeZone</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.TimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null && p1.getID() != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.util.TimeZone`) is used to determine the `DateTimeZone` to return.
+    - The flow is conditional on `p1` not being null and `p1.getID()` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>org.joda.time.DateTimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iChronology</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to derive the `Chronology` which is assigned to `this.iChronology`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>org.joda.time.DateTimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to derive the `InstantMillis` which is assigned to `this.iMillis`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFormatter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>withZone</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>org.joda.time.DateTimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.iZone</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`org.joda.time.DateTimeZone`) is transferred into the `iZone` field of the returned `org.joda.time.format.DateTimeFormatter` object.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDate</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iChronology</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the `Chronology` which is then assigned to `this.iChronology`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDate</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iLocalMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to calculate `int[]` values which are then used to set `this.iLocalMillis`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iChronology</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the object passed) is used to determine the chronology, which is assigned to `this.iChronology`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iLocalMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the object passed) is used to compute date-time values, which are then used to calculate `iLocalMillis` assigned to `this.iLocalMillis`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFormatter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>withLocale</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Locale</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != this.getLocale()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.iLocale</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (Locale) is conditionally transferred into the `iLocale` field of the returned `DateTimeFormatter` instance.
+    - The flow occurs if `p1` is different from the current locale of `this`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFormatter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseLocalDate</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is transformed into a `LocalDate` object, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeZone</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getDefault</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>cDefault</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the method retrieves the default DateTimeZone from a static AtomicReference and may update it.
+    - The return value is influenced by system properties, the system default TimeZone, and a fallback to UTC.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFormatter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getZone</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.iZone</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.iZone` is transferred into the return value.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BaseInterval</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getStartMillis</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.iStartMillis</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.iStartMillis` is transferred into 'return'
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>BaseInterval</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getEndMillis</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.iEndMillis</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.iEndMillis` is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFormatter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseLocalDateTime</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used to parse and create a `LocalDateTime` object which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFormatter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseLocalTime</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is used to produce a `LocalDateTime` object, which is then converted to a `LocalTime` object and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iChronology</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (parameter) is used to determine the `iChronology` field of `this` (DateTime instance).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (parameter) is used to determine the `iMillis` field of `this` (DateTime instance).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISODateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>date</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>N/A</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the return value of the method is directly obtained from the static method call to `yearMonthDay()`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISODateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>time</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>access$1100()</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the result of `access$1100()` is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISODateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>dateTime</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method does not involve any parameter data flow.
+    - It returns the result of a static method call without any conditions.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISODateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>localTimeParser</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a DateTimeFormatter obtained from a static method call without involving any parameters or fields.
+    - There is no data flow from parameters or fields to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISODateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>localDateOptionalTimeParser</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>staticinvoke</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the return value is obtained from a static method call `access$1000()`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>forPattern</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input pattern string) is used to create or retrieve a `DateTimeFormatter`, which is then returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateMidnight</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (long) is transferred into `this.iMillis` through the superclass constructor.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeZone</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>forID</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is directly used to determine the return value when it is null, resulting in the default DateTimeZone.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeZone</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>forID</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.equals("UTC") || p1.equals("UT") || p1.equals("GMT") || p1.equals("Z")</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is checked against specific string values to return the UTC instance.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeZone</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>forID</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>provider.getZone(p1) != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to look up a DateTimeZone from a provider, which is returned if found.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeZone</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>forID</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1.startsWith("UTC+") || p1.startsWith("UTC-") || p1.startsWith("GMT+") || p1.startsWith("GMT-") || p1.startsWith("UT+") || p1.startsWith("UT-")</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transformed into a fixed offset DateTimeZone based on its offset part.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Period</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toStandardDuration</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the fields of `this` (org.joda.time.Period) are used to compute the return value (org.joda.time.Duration).
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.base</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>AbstractInterval</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getStart</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.iStartMillis</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.iStartMillis` and `this.iChronology` are used to construct the return `DateTime` object.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value><init></Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the long parameter) is transferred into the `this` instance of `LocalTime` through a constructor call.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFieldType</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>monthOfYear</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a static field `MONTH_OF_YEAR_TYPE` of type `org.joda.time.DateTimeFieldType`.
+    - There is no data flow from parameters to fields or fields to return as there are no parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFieldType</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>dayOfMonth</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a constant static field `DAY_OF_MONTH_TYPE`.
+    - There is no data flow from parameters or fields to the return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISODateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>forFields</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.util.Collection</ParamType>
+        <ParamType>boolean</ParamType>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the collection) is used to determine the structure of the `DateTimeFormatter`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISODateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>dateTimeParser</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a DateTimeFormatter object obtained from a static method call.
+    - There is no parameter data flow as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISOPeriodFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>standard</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method constructs a PeriodFormatter using a PeriodFormatterBuilder and assigns it to a static field if it is null.
+    - There is no parameter-based data flow or propagation.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISODateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>yearMonth</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a DateTimeFormatter obtained from a static method call.
+    - There is no parameter-based data flow or conditions involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>forStyle</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the return value.
+    - The flow is no condition within `forStyle`, but `createFormatterForStyle` handles validation and processing.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateMidnight</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>org.joda.time.DateTimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1`, `p2`, `p3`, and `p4` are transferred into the constructor of `BaseDateTime`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value><init></Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>org.joda.time.DateTimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (long) is transferred into `this.iMillis`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value><init></Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>org.joda.time.DateTimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.iChronology</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (DateTimeZone) is transferred into `this.iChronology`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeZone</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>forOffsetHours</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (hours) is transferred into the return value through the method chain `forOffsetHoursMinutes` and `forOffsetMillis`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Duration</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the long parameter) is transferred into `this.iMillis` in the `BaseDuration` class.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Instant</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>org.joda.time.format.DateTimeFormatter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used to parse a `DateTime` through `p2` (`DateTimeFormatter`), and the resulting `DateTime` is converted to an `Instant` which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Instant</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the long parameter) is transferred into `this.iMillis`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Interval</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseWithOffset</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is parsed and transformed into an `Interval` object, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Interval</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iStartMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.iStartMillis`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Interval</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.iEndMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `this.iEndMillis`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Interval</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>long</ParamType>
+        <ParamType>org.joda.time.DateTimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` and `p2` are transferred into the `BaseInterval` initialization.
+    - The `p3` is used to obtain an `ISOChronology` instance, which is then used in the `BaseInterval` initialization.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDate</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The parameters `p1`, `p2`, and `p3` are used to initialize the `LocalDate` object with a chronology instance.
+    - There is no further data flow from these parameters to other fields or objects within this method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDate</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>org.joda.time.DateTimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `long` parameter) is directly used in initializing the `LocalDate` instance.
+    - The `p2` (`DateTimeZone` parameter) is used to derive an `ISOChronology` instance, which is then used in the initialization.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method initializes a LocalDateTime object using the provided parameters and an ISOChronology instance.
+    - There is no explicit data flow to other parameters, fields of this, or return values within this method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalDateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+        <ParamType>org.joda.time.DateTimeZone</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the `long` parameter) is directly used in the initialization of `this`.
+    - The data flow shows that `p2` (the `DateTimeZone` parameter) is used to derive a `Chronology` instance, which is then used in the initialization of `this`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>LocalTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="false" overrides="false" extends="false"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The parameters p1, p2, p3, and p4 are used to initialize the LocalTime object with specified time values and a chronology instance.
+    - There is no data flow to fields of this or any return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>MonthDay</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>org.joda.time.format.DateTimeFormatter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input `java.lang.String`) is parsed into a `LocalDate` and then used to construct a `MonthDay` object, which is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Period</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>long</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iValues</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`l0`) is transferred into `this.iValues` of the `Period` instance.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Seconds</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>seconds</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != -2147483648 && p1 != 0 && p1 != 1 && p1 != 2 && p1 != 3 && p1 != 2147483647</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.iPeriod</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into the field `iPeriod` of the newly created `Seconds` instance when `p1` does not match any predefined constants.
+    - The flow is conditional on `p1` not being one of the predefined constants.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Minutes</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>minutes</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == -2147483648 || p1 == 0 || p1 == 1 || p1 == 2 || p1 == 3 || p1 == 2147483647</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, which is a predefined static instance of `Minutes` or a new instance.
+    - The flow is conditional based on the specific value of `p1`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Minutes</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>minutes</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to initialize a new `Minutes` instance when it does not match any predefined static instance.
+    - The flow is unconditional for values not matching the predefined cases.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Hours</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>hours</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == -2147483648</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Hours.MIN_VALUE` when `p1` is -2147483648.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Hours</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>hours</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Hours.ZERO` when `p1` is 0.
+    </Comment>
+</PropagationRule>
+
+<!-- Additional rules for each specific case (1, 2, 3, ..., 8, 2147483647) -->
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000012</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Hours</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>hours</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>default</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to create a new `Hours` object when it does not match any specific case, and this object is returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == -2147483648</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.MIN_VALUE` when `p1` is -2147483648.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 0</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.ZERO` when `p1` is 0.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 1</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.ONE` when `p1` is 1.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000004</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 2</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.TWO` when `p1` is 2.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000005</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 3</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.THREE` when `p1` is 3.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000006</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 4</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.FOUR` when `p1` is 4.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000007</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 5</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.FIVE` when `p1` is 5.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000008</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 6</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.SIX` when `p1` is 6.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000009</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 7</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.SEVEN` when `p1` is 7.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000010</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == 2147483647</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value, specifically returning `Days.MAX_VALUE` when `p1` is 2147483647.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000011</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Days</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>days</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to create a new `Days` instance when it does not match any predefined constant.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Weeks</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>weeks</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 == -2147483648 || p1 == 0 || p1 == 1 || p1 == 2 || p1 == 3 || p1 == 2147483647</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used to determine the return value based on predefined constants.
+    - The flow is conditional on `p1` matching specific integer values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Weeks</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>weeks</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is passed to the constructor of a new `Weeks` object in the default case.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Months</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>months</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the integer parameter) influences the return value.
+    - The flow is conditional based on the value of `p1`, determining whether a predefined constant or a new `Months` object is returned.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Years</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>years</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>int</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != -2147483648 && p1 != 0 && p1 != 1 && p1 != 2 && p1 != 3 && p1 != 2147483647</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return.iPeriod</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`i0`) is transferred into the `iPeriod` field of the newly created `Years` instance when `p1` does not match any predefined constant values.
+    - The flow is conditional on `p1` not being one of the predefined constant values.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>YearMonth</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>org.joda.time.format.DateTimeFormatter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (a `java.lang.String`) is used to create a `LocalDate` object, from which the year and month are extracted to construct the `YearMonth` object that is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTime</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is used to parse a `DateTime` object, which is then returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time.format</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ISODateTimeFormat</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>localDateParser</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters/>
+    <HasPropagation>false</HasPropagation>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The method returns a DateTimeFormatter object obtained from a static method call.
+    - There is no parameter data flow as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>DateTimeZone</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getProvider</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>cProvider</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the static field `cProvider` is accessed and potentially updated with a default provider if it is null.
+    - The method returns a `Provider` instance, either from `cProvider` or from `getDefaultProvider()`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>org.joda.time</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>Instant</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.iMillis</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (parameter) is used to compute a long value which is assigned to `this.iMillis`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+

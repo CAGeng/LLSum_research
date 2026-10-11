@@ -1,0 +1,1 @@
+<com.amazonaws.services.redshift.model.GetClusterCredentialsRequest: void setAutoCreate(java.lang.Boolean)><---<com.amazon.redshift.core.IamHelper: com.amazonaws.services.redshift.model.GetClusterCredentialsRequest constructRequestForGetClusterCredentials(com.amazon.redshift.core.RedshiftJDBCSettings,boolean,com.amazon.redshift.logger.RedshiftLogger)>

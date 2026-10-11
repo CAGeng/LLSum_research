@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RulePack xmlns="xmlns://www.fortifysoftware.com/schema/rules">
+    <RulePackID>D5305033-4FF6-4026-B409-2B1CA871094D</RulePackID>
+    <SKU>SKU-C:\Users\MAOSHUO\Desktop\sql-extend-rule</SKU>
+    <Name><![CDATA[C:\Users\MAOSHUO\Desktop\sql-extend-rule]]></Name>
+    <Version>1.0</Version>
+    <Description><![CDATA[]]></Description>
+    <Rules version="20.1">
+        <RuleDefinitions>
+            <DataflowSinkRule formatVersion="3.2" language="java">
+                <MetaInfo>
+                    <Group name="altcategoryCWE">CWE ID 89</Group>
+                    <Group name="altcategoryOWASP2004">A6 Injection Flaws</Group>
+                    <Group name="altcategoryOWASP2007">A2 Injection Flaws</Group>
+                    <Group name="altcategoryPCI1.1">Requirement 6.5.6</Group>
+                    <Group name="altcategoryPCI1.2">Requirement 6.3.1.1, 6.5.2</Group>
+                    <Group name="altcategorySTIG2">APP3510 CAT I, APP3540.1 CAT, APP3540.3 CAT II</Group>
+                    <Group name="altcategoryWASC24+2">SQL Injection</Group>
+                    <Group name="coveredRTA">Protected</Group>
+                    <Group name="Accuracy">5</Group>
+                    <Group name="Impact">5</Group>
+                    <Group name="RemediationEffort">1</Group>
+                    <Group name="Probability">5</Group>
+                    <Group name="audience">targeted,medium,broad,dev,fod</Group>
+                </MetaInfo>
+                <RuleID>733299C9-A995-4416-A7F7-EC1CAAFF7604</RuleID>
+                <VulnKingdom>Input Validation and Representation</VulnKingdom>
+                <VulnCategory>SQL Injection</VulnCategory>
+                <DefaultSeverity>4.0</DefaultSeverity>
+                <Description ref="desc.dataflow.java.sql_injection">
+                    <Explanation append="true"><![CDATA[This issue is being reported by a custom rule.]]></Explanation>
+                </Description>
+                <Sink>
+                    <InArguments>0</InArguments>
+                    <Conditional>
+                        <And>
+                            <Not>
+                                <TaintFlagSet taintFlag="VALIDATED_SQL_INJECTION"/>
+                            </Not>
+                            <Not>
+                                <TaintFlagSet taintFlag="NUMBER"/>
+                            </Not>
+                        </And>
+                    </Conditional>
+                </Sink>
+                <FunctionIdentifier>
+                    <NamespaceName>
+                        <Pattern>java.sql</Pattern>
+                    </NamespaceName>
+                    <ClassName>
+                        <Pattern>Connection</Pattern>
+                    </ClassName>
+                    <FunctionName>
+                        <Pattern>prepareCall</Pattern>
+                    </FunctionName>
+                    <ApplyTo implements="true" overrides="true" extends="true"/>
+                </FunctionIdentifier>
+            </DataflowSinkRule>
+            <DataflowSinkRule formatVersion="3.2" language="java">
+                <MetaInfo>
+                    <Group name="altcategoryCWE">CWE ID 566</Group>
+                    <Group name="altcategoryOWASP2004">A2 Broken Access Control</Group>
+                    <Group name="altcategoryOWASP2007">A4 Insecure Direct Object Reference</Group>
+                    <Group name="altcategoryPCI1.1">Requirement 6.5.2</Group>
+                    <Group name="altcategoryPCI1.2">Requirement 6.5.4</Group>
+                    <Group name="altcategorySTIG2">APP3510 CAT I</Group>
+                    <Group name="altcategoryWASC24+2">Insufficient Authorization</Group>
+                    <Group name="coveredRTA">Not Protected</Group>
+                    <Group name="Accuracy">1</Group>
+                    <Group name="Impact">4</Group>
+                    <Group name="RemediationEffort">1</Group>
+                    <Group name="Probability">3</Group>
+                    <Group name="audience">targeted,medium,broad,dev,fod</Group>
+                </MetaInfo>
+                <RuleID>733299C9-A995-4416-A7F7-EC1CAAFF76041</RuleID>
+                <VulnKingdom>Security Features</VulnKingdom>
+                <VulnCategory>Access Control</VulnCategory>
+                <VulnSubcategory>Database</VulnSubcategory>
+                <DefaultSeverity>2.0</DefaultSeverity>
+                <Description ref="desc.dataflow.java.access_control_database">
+                    <Explanation append="true"><![CDATA[This issue is being reported by a custom rule.]]></Explanation>
+                </Description>
+                <Sink>
+                    <InArguments>0</InArguments>
+                    <Conditional>
+                        <And>
+                            <Not>
+                                <TaintFlagSet taintFlag="VALIDATED_ACCESS_CONTROL_DATABASE"/>
+                            </Not>
+                            <TaintFlagSet taintFlag="NUMBER"/>
+                        </And>
+                    </Conditional>
+                </Sink>
+                <FunctionIdentifier>
+                    <NamespaceName>
+                        <Pattern>java.sql</Pattern>
+                    </NamespaceName>
+                    <ClassName>
+                        <Pattern>Connection</Pattern>
+                    </ClassName>
+                    <FunctionName>
+                        <Pattern>prepareCall</Pattern>
+                    </FunctionName>
+                    <ApplyTo implements="true" overrides="true" extends="true"/>
+                </FunctionIdentifier>
+            </DataflowSinkRule>
+            <DataflowSinkRule formatVersion="3.2" language="java">
+                <MetaInfo>
+                    <Group name="altcategoryCWE">CWE ID 89</Group>
+                    <Group name="altcategoryOWASP2004">A6 Injection Flaws</Group>
+                    <Group name="altcategoryOWASP2007">A2 Injection Flaws</Group>
+                    <Group name="altcategoryPCI1.1">Requirement 6.5.6</Group>
+                    <Group name="altcategoryPCI1.2">Requirement 6.3.1.1, 6.5.2</Group>
+                    <Group name="altcategorySTIG2">APP3510 CAT I, APP3540.1 CAT, APP3540.3 CAT II</Group>
+                    <Group name="altcategoryWASC24+2">SQL Injection</Group>
+                    <Group name="coveredRTA">Protected</Group>
+                    <Group name="Accuracy">5</Group>
+                    <Group name="Impact">5</Group>
+                    <Group name="RemediationEffort">1</Group>
+                    <Group name="Probability">5</Group>
+                    <Group name="audience">targeted,medium,broad,dev,fod</Group>
+                </MetaInfo>
+                <RuleID>6CE85EE3-CAF2-4980-9727-F357DF58B957</RuleID>
+                <VulnKingdom>Input Validation and Representation</VulnKingdom>
+                <VulnCategory>SQL Injection</VulnCategory>
+                <DefaultSeverity>4.0</DefaultSeverity>
+                <Description ref="desc.dataflow.java.sql_injection">
+                    <Explanation append="true"><![CDATA[This issue is being reported by a custom rule.]]></Explanation>
+                </Description>
+                <Sink>
+                    <InArguments>0</InArguments>
+                    <Conditional>
+                        <And>
+                            <Not>
+                                <TaintFlagSet taintFlag="VALIDATED_SQL_INJECTION"/>
+                            </Not>
+                            <Not>
+                                <TaintFlagSet taintFlag="NUMBER"/>
+                            </Not>
+                        </And>
+                    </Conditional>
+                </Sink>
+                <FunctionIdentifier>
+                    <NamespaceName>
+                        <Pattern>java.sql</Pattern>
+                    </NamespaceName>
+                    <ClassName>
+                        <Pattern>Connection</Pattern>
+                    </ClassName>
+                    <FunctionName>
+                        <Pattern>prepareStatement</Pattern>
+                    </FunctionName>
+                    <ApplyTo implements="true" overrides="true" extends="true"/>
+                </FunctionIdentifier>
+            </DataflowSinkRule>
+            <DataflowSinkRule formatVersion="3.2" language="java">
+                <MetaInfo>
+                    <Group name="altcategoryCWE">CWE ID 566</Group>
+                    <Group name="altcategoryOWASP2004">A2 Broken Access Control</Group>
+                    <Group name="altcategoryOWASP2007">A4 Insecure Direct Object Reference</Group>
+                    <Group name="altcategoryPCI1.1">Requirement 6.5.2</Group>
+                    <Group name="altcategoryPCI1.2">Requirement 6.5.4</Group>
+                    <Group name="altcategorySTIG2">APP3510 CAT I</Group>
+                    <Group name="altcategoryWASC24+2">Insufficient Authorization</Group>
+                    <Group name="coveredRTA">Not Protected</Group>
+                    <Group name="Accuracy">1</Group>
+                    <Group name="Impact">4</Group>
+                    <Group name="RemediationEffort">1</Group>
+                    <Group name="Probability">3</Group>
+                    <Group name="audience">targeted,medium,broad,dev,fod</Group>
+                </MetaInfo>
+                <RuleID>6CE85EE3-CAF2-4980-9727-F357DF58B9571</RuleID>
+                <VulnKingdom>Security Features</VulnKingdom>
+                <VulnCategory>Access Control</VulnCategory>
+                <VulnSubcategory>Database</VulnSubcategory>
+                <DefaultSeverity>2.0</DefaultSeverity>
+                <Description ref="desc.dataflow.java.access_control_database">
+                    <Explanation append="true"><![CDATA[This issue is being reported by a custom rule.]]></Explanation>
+                </Description>
+                <Sink>
+                    <InArguments>0</InArguments>
+                    <Conditional>
+                        <And>
+                            <Not>
+                                <TaintFlagSet taintFlag="VALIDATED_ACCESS_CONTROL_DATABASE"/>
+                            </Not>
+                            <TaintFlagSet taintFlag="NUMBER"/>
+                        </And>
+                    </Conditional>
+                </Sink>
+                <FunctionIdentifier>
+                    <NamespaceName>
+                        <Pattern>java.sql</Pattern>
+                    </NamespaceName>
+                    <ClassName>
+                        <Pattern>Connection</Pattern>
+                    </ClassName>
+                    <FunctionName>
+                        <Pattern>prepareStatement</Pattern>
+                    </FunctionName>
+                    <ApplyTo implements="true" overrides="true" extends="true"/>
+                </FunctionIdentifier>
+            </DataflowSinkRule>
+            <DataflowPassthroughRule formatVersion="3.2" language="java">
+                <RuleID>8D2B8ECB-7135-4D50-93FD-664B230863BE</RuleID>
+                <FunctionIdentifier>
+                    <NamespaceName>
+                        <Pattern>org.apache.commons.codec.binary</Pattern>
+                    </NamespaceName>
+                    <ClassName>
+                        <Pattern>Base64</Pattern>
+                    </ClassName>
+                    <FunctionName>
+                        <Pattern>encodeBase64</Pattern>
+                    </FunctionName>
+                    <ApplyTo implements="true" overrides="true" extends="true"/>
+                </FunctionIdentifier>
+                <InArguments>0</InArguments>
+                <OutArguments>return</OutArguments>
+            </DataflowPassthroughRule>
+            <DataflowPassthroughRule formatVersion="3.2" language="java">
+                <RuleID>37C2BAA7-49B3-4A94-8BF6-018EEF53816F</RuleID>
+                <FunctionIdentifier>
+                    <NamespaceName>
+                        <Pattern>org.apache.commons.codec.binary</Pattern>
+                    </NamespaceName>
+                    <ClassName>
+                        <Pattern>Base64</Pattern>
+                    </ClassName>
+                    <FunctionName>
+                        <Pattern>decodeBase64</Pattern>
+                    </FunctionName>
+                    <ApplyTo implements="true" overrides="true" extends="true"/>
+                </FunctionIdentifier>
+                <InArguments>0</InArguments>
+                <OutArguments>return</OutArguments>
+            </DataflowPassthroughRule>
+            <DataflowPassthroughRule formatVersion="3.2" language="java">
+                <RuleID>FDEAC430-43E9-4E46-A001-13E462967A48</RuleID>
+                <FunctionIdentifier>
+                    <NamespaceName>
+                        <Value>javax.servlet.http</Value>
+                    </NamespaceName>
+                    <ClassName>
+                        <Value>HttpServletRequest</Value>
+                    </ClassName>
+                    <FunctionName>
+                        <Pattern>get(Reader|InputStream)</Pattern>
+                    </FunctionName>
+                    <ApplyTo implements="true" overrides="true" extends="true"/>
+                </FunctionIdentifier>
+                <InArguments>this</InArguments>
+                <OutArguments>return</OutArguments>
+            </DataflowPassthroughRule>
+            <DataflowPassthroughRule formatVersion="3.2" language="java">
+                <RuleID>CB14560C-8DC1-4031-8944-EEDD45DB4C91</RuleID>
+                <FunctionIdentifier>
+                    <NamespaceName>
+                        <Value>java.util</Value>
+                    </NamespaceName>
+                    <ClassName>
+                        <Value>Scanner</Value>
+                    </ClassName>
+                    <FunctionName>
+                        <Value>init</Value>
+                    </FunctionName>
+                    <ApplyTo implements="true" overrides="true" extends="true"/>
+                </FunctionIdentifier>
+                <InArguments>this</InArguments>
+                <OutArguments>return</OutArguments>
+            </DataflowPassthroughRule>
+        </RuleDefinitions>
+    </Rules>
+</RulePack>

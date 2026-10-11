@@ -1,0 +1,1076 @@
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>
+[    protected void saveRequest(Request request, Session session) throws IOException {
+
+        // Create and populate a SavedRequest object for this request
+        SavedRequest saved = new SavedRequest();
+        Cookie cookies[] = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                saved.addCookie(cookie) // [dataflow in this line] This line involves dataflow from [0] to [[0]]； ;
+            }
+        }
+        Enumeration<String> names = request.getHeaderNames();
+        while (names.hasMoreElements()) {
+            String name = names.nextElement();
+            Enumeration<String> values = request.getHeaders(name);
+            while (values.hasMoreElements()) {
+                String value = values.nextElement();
+                saved.addHeader(name, value);
+            }
+        }
+        Enumeration<Locale> locales = request.getLocales();
+        while (locales.hasMoreElements()) {
+            Locale locale = locales.nextElement();
+            saved.addLocale(locale);
+        }
+
+        // May need to acknowledge a 100-continue expectation
+        request.getResponse().sendAcknowledgement(ContinueResponseTiming.ALWAYS);
+
+        int maxSavePostSize = request.getConnector().getMaxSavePostSize();
+        if (maxSavePostSize != 0) {
+            ByteChunk body = new ByteChunk();
+            body.setLimit(maxSavePostSize);
+
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            InputStream is = request.getInputStream();
+
+            while ((bytesRead = is.read(buffer)) >= 0) {
+                body.append(buffer, 0, bytesRead);
+            }
+
+            // Only save the request body if there is something to save
+            if (body.getLength() > 0) {
+                saved.setContentType(request.getContentType());
+                saved.setBody(body);
+            }
+        }
+
+        saved.setMethod(request.getMethod());
+        saved.setQueryString(request.getQueryString());
+        saved.setRequestURI(request.getRequestURI());
+        saved.setDecodedRequestURI(request.getDecodedRequestURI());
+
+        if (session instanceof HttpSession && ((HttpSession) session).isNew()) {
+            int originalMaxInactiveInterval = session.getMaxInactiveInterval();
+            if (originalMaxInactiveInterval > getAuthenticationSessionTimeout()) {
+                saved.setOriginalMaxInactiveInterval(originalMaxInactiveInterval);
+                session.setMaxInactiveInterval(getAuthenticationSessionTimeout());
+            }
+        }
+
+        // Stash the SavedRequest in our session for later use
+        session.setNote(Constants.FORM_REQUEST_NOTE, saved);
+    }]
+---------------其他相关的方法-------------
+方法：<org.apache.catalina.connector.Request: java.lang.String getQueryString()>
+[    @Override
+    public String getQueryString() {
+        return coyoteRequest.queryString().toString();
+    }]
+方法：<org.apache.catalina.connector.Request: java.lang.String getMethod()>
+[    @Override
+    public String getMethod() {
+        return coyoteRequest.method().toString();
+    }]
+;
+[0, 1]
+[param0-param1-]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='this.requestedSessionId != null', inArguments=[-1.requestedSessionId], outArguments=[-1.session]}
+
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>
+[    protected void saveRequest(Request request, Session session) throws IOException {
+
+        // Create and populate a SavedRequest object for this request
+        SavedRequest saved = new SavedRequest();
+        Cookie cookies[] = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                saved.addCookie(cookie) // [dataflow in this line] This line involves dataflow from [0] to [[0]]； ;
+            }
+        }
+        Enumeration<String> names = request.getHeaderNames();
+        while (names.hasMoreElements()) {
+            String name = names.nextElement();
+            Enumeration<String> values = request.getHeaders(name);
+            while (values.hasMoreElements()) {
+                String value = values.nextElement();
+                saved.addHeader(name, value);
+            }
+        }
+        Enumeration<Locale> locales = request.getLocales();
+        while (locales.hasMoreElements()) {
+            Locale locale = locales.nextElement();
+            saved.addLocale(locale);
+        }
+
+        // May need to acknowledge a 100-continue expectation
+        request.getResponse().sendAcknowledgement(ContinueResponseTiming.ALWAYS);
+
+        int maxSavePostSize = request.getConnector().getMaxSavePostSize();
+        if (maxSavePostSize != 0) {
+            ByteChunk body = new ByteChunk();
+            body.setLimit(maxSavePostSize);
+
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            InputStream is = request.getInputStream();
+
+            while ((bytesRead = is.read(buffer)) >= 0) {
+                body.append(buffer, 0, bytesRead);
+            }
+
+            // Only save the request body if there is something to save
+            if (body.getLength() > 0) {
+                saved.setContentType(request.getContentType());
+                saved.setBody(body);
+            }
+        }
+
+        saved.setMethod(request.getMethod());
+        saved.setQueryString(request.getQueryString());
+        saved.setRequestURI(request.getRequestURI());
+        saved.setDecodedRequestURI(request.getDecodedRequestURI());
+
+        if (session instanceof HttpSession && ((HttpSession) session).isNew()) {
+            int originalMaxInactiveInterval = session.getMaxInactiveInterval();
+            if (originalMaxInactiveInterval > getAuthenticationSessionTimeout()) {
+                saved.setOriginalMaxInactiveInterval(originalMaxInactiveInterval);
+                session.setMaxInactiveInterval(getAuthenticationSessionTimeout());
+            }
+        }
+
+        // Stash the SavedRequest in our session for later use
+        session.setNote(Constants.FORM_REQUEST_NOTE, saved);
+    }]
+---------------其他相关的方法-------------
+方法：<org.apache.catalina.connector.Request: java.lang.String getQueryString()>
+[    @Override
+    public String getQueryString() {
+        return coyoteRequest.queryString().toString();
+    }]
+方法：<org.apache.catalina.connector.Request: java.lang.String getMethod()>
+[    @Override
+    public String getMethod() {
+        return coyoteRequest.method().toString();
+    }]
+;
+[0, 1]
+[param0-param1-]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='p1 == true', inArguments=[0], outArguments=[-1.session]}
+
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>
+[    protected void saveRequest(Request request, Session session) throws IOException {
+
+        // Create and populate a SavedRequest object for this request
+        SavedRequest saved = new SavedRequest();
+        Cookie cookies[] = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                saved.addCookie(cookie) // [dataflow in this line] This line involves dataflow from [0] to [[0]]； ;
+            }
+        }
+        Enumeration<String> names = request.getHeaderNames();
+        while (names.hasMoreElements()) {
+            String name = names.nextElement();
+            Enumeration<String> values = request.getHeaders(name);
+            while (values.hasMoreElements()) {
+                String value = values.nextElement();
+                saved.addHeader(name, value);
+            }
+        }
+        Enumeration<Locale> locales = request.getLocales();
+        while (locales.hasMoreElements()) {
+            Locale locale = locales.nextElement();
+            saved.addLocale(locale);
+        }
+
+        // May need to acknowledge a 100-continue expectation
+        request.getResponse().sendAcknowledgement(ContinueResponseTiming.ALWAYS);
+
+        int maxSavePostSize = request.getConnector().getMaxSavePostSize();
+        if (maxSavePostSize != 0) {
+            ByteChunk body = new ByteChunk();
+            body.setLimit(maxSavePostSize);
+
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            InputStream is = request.getInputStream();
+
+            while ((bytesRead = is.read(buffer)) >= 0) {
+                body.append(buffer, 0, bytesRead);
+            }
+
+            // Only save the request body if there is something to save
+            if (body.getLength() > 0) {
+                saved.setContentType(request.getContentType());
+                saved.setBody(body);
+            }
+        }
+
+        saved.setMethod(request.getMethod());
+        saved.setQueryString(request.getQueryString());
+        saved.setRequestURI(request.getRequestURI());
+        saved.setDecodedRequestURI(request.getDecodedRequestURI());
+
+        if (session instanceof HttpSession && ((HttpSession) session).isNew()) {
+            int originalMaxInactiveInterval = session.getMaxInactiveInterval();
+            if (originalMaxInactiveInterval > getAuthenticationSessionTimeout()) {
+                saved.setOriginalMaxInactiveInterval(originalMaxInactiveInterval);
+                session.setMaxInactiveInterval(getAuthenticationSessionTimeout());
+            }
+        }
+
+        // Stash the SavedRequest in our session for later use
+        session.setNote(Constants.FORM_REQUEST_NOTE, saved);
+    }]
+---------------其他相关的方法-------------
+方法：<org.apache.catalina.connector.Request: java.lang.String getQueryString()>
+[    @Override
+    public String getQueryString() {
+        return coyoteRequest.queryString().toString();
+    }]
+方法：<org.apache.catalina.connector.Request: java.lang.String getMethod()>
+[    @Override
+    public String getMethod() {
+        return coyoteRequest.method().toString();
+    }]
+;
+[0, 1]
+[param0-param1-]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='NOC', inArguments=[-1.session], outArguments=[return]}
+
+record LLM summary: c0->r-1 
+in condition: Param0 == true
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>
+[    protected Session doGetSession(boolean create) {
+
+        // There cannot be a session if no context has been assigned yet
+        Context context = getContext();
+        if (context == null) {
+            return null;
+        }
+
+        // Return the current session if it exists and is valid
+        if ((session != null) && !session.isValid()) {
+            session = null;
+        }
+        if (session != null) {
+            return session;
+        }
+
+        // Return the requested session if it exists and is valid
+        Manager manager = context.getManager();
+        if (manager == null) {
+            return null; // Sessions are not supported
+        }
+        if (requestedSessionId != null) {
+            try {
+                session = manager.findSession(requestedSessionId);
+            } catch (IOException e) {
+                if (log.isDebugEnabled()) {
+                    log.debug(sm.getString("request.session.failed", requestedSessionId, e.getMessage()), e);
+                } else {
+                    log.info(sm.getString("request.session.failed", requestedSessionId, e.getMessage()));
+                }
+                session = null;
+            }
+            if ((session != null) && !session.isValid()) {
+                session = null;
+            }
+            if (session != null) {
+                session.access();
+                return session;
+            }
+        }
+
+        // Create a new session if requested and the response is not committed
+        if (!create) {
+            return null;
+        }
+        boolean trackModesIncludesCookie = context.getServletContext().getEffectiveSessionTrackingModes()
+                .contains(SessionTrackingMode.COOKIE);
+        if (trackModesIncludesCookie && response.getResponse().isCommitted()) {
+            throw new IllegalStateException(sm.getString("coyoteRequest.sessionCreateCommitted"));
+        }
+
+        // Re-use session IDs provided by the client in very limited
+        // circumstances.
+        String sessionId = getRequestedSessionId();
+        if (requestedSessionSSL) {
+            // If the session ID has been obtained from the SSL handshake then
+            // use it.
+        } else if (("/".equals(context.getSessionCookiePath()) && isRequestedSessionIdFromCookie())) {
+            /*
+             * This is the common(ish) use case: using the same session ID with multiple web applications on the same
+             * host. Typically this is used by Portlet implementations. It only works if sessions are tracked via
+             * cookies. The cookie must have a path of "/" else it won't be provided for requests to all web
+             * applications.
+             *
+             * Any session ID provided by the client should be for a session that already exists somewhere on the host.
+             * Check if the context is configured for this to be confirmed.
+             */
+            if (context.getValidateClientProvidedNewSessionId()) {
+                boolean found = false;
+                for (Container container : getHost().findChildren()) {
+                    Manager m = ((Context) container).getManager();
+                    if (m != null) {
+                        try {
+                            if (m.findSession(sessionId) != null) {
+                                found = true;
+                                break;
+                            }
+                        } catch (IOException e) {
+                            // Ignore. Problems with this manager will be
+                            // handled elsewhere.
+                        }
+                    }
+                }
+                if (!found) {
+                    sessionId = null;
+                }
+            }
+        } else {
+            sessionId = null;
+        }
+        session = manager.createSession(sessionId);
+
+        // Creating a new session cookie based on that session
+        if (session != null && trackModesIncludesCookie) {
+            Cookie cookie = ApplicationSessionCookieConfig.createSessionCookie(context, session.getIdInternal(),
+                    isSecure());
+
+            response.addSessionCookieInternal(cookie);
+        }
+
+        if (session == null) {
+            return null;
+        }
+
+        session.access();
+        return session;
+    }]
+---------------其他相关的方法-------------
+方法：<org.apache.catalina.connector.Request: boolean isRequestedSessionIdFromCookie()>
+[    @Override
+    public boolean isRequestedSessionIdFromCookie() {
+
+        if (requestedSessionId == null) {
+            return false;
+        }
+
+        return requestedSessionCookie;
+    }]
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>
+[    public Context getContext() {
+        return mappingData.context;
+    }]
+方法：<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()>
+[    @Override
+    public String getRequestedSessionId() {
+        return requestedSessionId;
+    }]
+
+[-1]
+[param0-(type boolean) is false, param0-(type boolean) is true]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='this.requestedSessionId != null', inArguments=[-1.requestedSessionId], outArguments=[-1.session]}
+
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>
+[    protected Session doGetSession(boolean create) {
+
+        // There cannot be a session if no context has been assigned yet
+        Context context = getContext();
+        if (context == null) {
+            return null;
+        }
+
+        // Return the current session if it exists and is valid
+        if ((session != null) && !session.isValid()) {
+            session = null;
+        }
+        if (session != null) {
+            return session;
+        }
+
+        // Return the requested session if it exists and is valid
+        Manager manager = context.getManager();
+        if (manager == null) {
+            return null; // Sessions are not supported
+        }
+        if (requestedSessionId != null) {
+            try {
+                session = manager.findSession(requestedSessionId);
+            } catch (IOException e) {
+                if (log.isDebugEnabled()) {
+                    log.debug(sm.getString("request.session.failed", requestedSessionId, e.getMessage()), e);
+                } else {
+                    log.info(sm.getString("request.session.failed", requestedSessionId, e.getMessage()));
+                }
+                session = null;
+            }
+            if ((session != null) && !session.isValid()) {
+                session = null;
+            }
+            if (session != null) {
+                session.access();
+                return session;
+            }
+        }
+
+        // Create a new session if requested and the response is not committed
+        if (!create) {
+            return null;
+        }
+        boolean trackModesIncludesCookie = context.getServletContext().getEffectiveSessionTrackingModes()
+                .contains(SessionTrackingMode.COOKIE);
+        if (trackModesIncludesCookie && response.getResponse().isCommitted()) {
+            throw new IllegalStateException(sm.getString("coyoteRequest.sessionCreateCommitted"));
+        }
+
+        // Re-use session IDs provided by the client in very limited
+        // circumstances.
+        String sessionId = getRequestedSessionId();
+        if (requestedSessionSSL) {
+            // If the session ID has been obtained from the SSL handshake then
+            // use it.
+        } else if (("/".equals(context.getSessionCookiePath()) && isRequestedSessionIdFromCookie())) {
+            /*
+             * This is the common(ish) use case: using the same session ID with multiple web applications on the same
+             * host. Typically this is used by Portlet implementations. It only works if sessions are tracked via
+             * cookies. The cookie must have a path of "/" else it won't be provided for requests to all web
+             * applications.
+             *
+             * Any session ID provided by the client should be for a session that already exists somewhere on the host.
+             * Check if the context is configured for this to be confirmed.
+             */
+            if (context.getValidateClientProvidedNewSessionId()) {
+                boolean found = false;
+                for (Container container : getHost().findChildren()) {
+                    Manager m = ((Context) container).getManager();
+                    if (m != null) {
+                        try {
+                            if (m.findSession(sessionId) != null) {
+                                found = true;
+                                break;
+                            }
+                        } catch (IOException e) {
+                            // Ignore. Problems with this manager will be
+                            // handled elsewhere.
+                        }
+                    }
+                }
+                if (!found) {
+                    sessionId = null;
+                }
+            }
+        } else {
+            sessionId = null;
+        }
+        session = manager.createSession(sessionId);
+
+        // Creating a new session cookie based on that session
+        if (session != null && trackModesIncludesCookie) {
+            Cookie cookie = ApplicationSessionCookieConfig.createSessionCookie(context, session.getIdInternal(),
+                    isSecure());
+
+            response.addSessionCookieInternal(cookie);
+        }
+
+        if (session == null) {
+            return null;
+        }
+
+        session.access();
+        return session;
+    }]
+---------------其他相关的方法-------------
+方法：<org.apache.catalina.connector.Request: boolean isRequestedSessionIdFromCookie()>
+[    @Override
+    public boolean isRequestedSessionIdFromCookie() {
+
+        if (requestedSessionId == null) {
+            return false;
+        }
+
+        return requestedSessionCookie;
+    }]
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>
+[    public Context getContext() {
+        return mappingData.context;
+    }]
+方法：<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()>
+[    @Override
+    public String getRequestedSessionId() {
+        return requestedSessionId;
+    }]
+
+[-1]
+[param0-(type boolean) is false, param0-(type boolean) is true]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='p1 == true', inArguments=[0], outArguments=[-1.session]}
+
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>
+[    protected Session doGetSession(boolean create) {
+
+        // There cannot be a session if no context has been assigned yet
+        Context context = getContext();
+        if (context == null) {
+            return null;
+        }
+
+        // Return the current session if it exists and is valid
+        if ((session != null) && !session.isValid()) {
+            session = null;
+        }
+        if (session != null) {
+            return session;
+        }
+
+        // Return the requested session if it exists and is valid
+        Manager manager = context.getManager();
+        if (manager == null) {
+            return null; // Sessions are not supported
+        }
+        if (requestedSessionId != null) {
+            try {
+                session = manager.findSession(requestedSessionId);
+            } catch (IOException e) {
+                if (log.isDebugEnabled()) {
+                    log.debug(sm.getString("request.session.failed", requestedSessionId, e.getMessage()), e);
+                } else {
+                    log.info(sm.getString("request.session.failed", requestedSessionId, e.getMessage()));
+                }
+                session = null;
+            }
+            if ((session != null) && !session.isValid()) {
+                session = null;
+            }
+            if (session != null) {
+                session.access();
+                return session;
+            }
+        }
+
+        // Create a new session if requested and the response is not committed
+        if (!create) {
+            return null;
+        }
+        boolean trackModesIncludesCookie = context.getServletContext().getEffectiveSessionTrackingModes()
+                .contains(SessionTrackingMode.COOKIE);
+        if (trackModesIncludesCookie && response.getResponse().isCommitted()) {
+            throw new IllegalStateException(sm.getString("coyoteRequest.sessionCreateCommitted"));
+        }
+
+        // Re-use session IDs provided by the client in very limited
+        // circumstances.
+        String sessionId = getRequestedSessionId();
+        if (requestedSessionSSL) {
+            // If the session ID has been obtained from the SSL handshake then
+            // use it.
+        } else if (("/".equals(context.getSessionCookiePath()) && isRequestedSessionIdFromCookie())) {
+            /*
+             * This is the common(ish) use case: using the same session ID with multiple web applications on the same
+             * host. Typically this is used by Portlet implementations. It only works if sessions are tracked via
+             * cookies. The cookie must have a path of "/" else it won't be provided for requests to all web
+             * applications.
+             *
+             * Any session ID provided by the client should be for a session that already exists somewhere on the host.
+             * Check if the context is configured for this to be confirmed.
+             */
+            if (context.getValidateClientProvidedNewSessionId()) {
+                boolean found = false;
+                for (Container container : getHost().findChildren()) {
+                    Manager m = ((Context) container).getManager();
+                    if (m != null) {
+                        try {
+                            if (m.findSession(sessionId) != null) {
+                                found = true;
+                                break;
+                            }
+                        } catch (IOException e) {
+                            // Ignore. Problems with this manager will be
+                            // handled elsewhere.
+                        }
+                    }
+                }
+                if (!found) {
+                    sessionId = null;
+                }
+            }
+        } else {
+            sessionId = null;
+        }
+        session = manager.createSession(sessionId);
+
+        // Creating a new session cookie based on that session
+        if (session != null && trackModesIncludesCookie) {
+            Cookie cookie = ApplicationSessionCookieConfig.createSessionCookie(context, session.getIdInternal(),
+                    isSecure());
+
+            response.addSessionCookieInternal(cookie);
+        }
+
+        if (session == null) {
+            return null;
+        }
+
+        session.access();
+        return session;
+    }]
+---------------其他相关的方法-------------
+方法：<org.apache.catalina.connector.Request: boolean isRequestedSessionIdFromCookie()>
+[    @Override
+    public boolean isRequestedSessionIdFromCookie() {
+
+        if (requestedSessionId == null) {
+            return false;
+        }
+
+        return requestedSessionCookie;
+    }]
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>
+[    public Context getContext() {
+        return mappingData.context;
+    }]
+方法：<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()>
+[    @Override
+    public String getRequestedSessionId() {
+        return requestedSessionId;
+    }]
+
+[-1]
+[param0-(type boolean) is false, param0-(type boolean) is true]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='NOC', inArguments=[-1.session], outArguments=[return]}
+
+record LLM summary: c0->r-1 
+in condition: Param0 == true
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.authenticator.SavedRequest: void addHeader(java.lang.String,java.lang.String)>
+[    public void addHeader(String name, String value) {
+        headers.computeIfAbsent(name, k -> new ArrayList<>()).add(value);
+    }]
+---------------其他相关的方法-------------
+
+[-1]
+[param0-param1-]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='this.requestedSessionId != null', inArguments=[-1.requestedSessionId], outArguments=[-1.session]}
+
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.authenticator.SavedRequest: void addHeader(java.lang.String,java.lang.String)>
+[    public void addHeader(String name, String value) {
+        headers.computeIfAbsent(name, k -> new ArrayList<>()).add(value);
+    }]
+---------------其他相关的方法-------------
+
+[-1]
+[param0-param1-]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='p1 == true', inArguments=[0], outArguments=[-1.session]}
+
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.authenticator.SavedRequest: void addHeader(java.lang.String,java.lang.String)>
+[    public void addHeader(String name, String value) {
+        headers.computeIfAbsent(name, k -> new ArrayList<>()).add(value);
+    }]
+---------------其他相关的方法-------------
+
+[-1]
+[param0-param1-]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='NOC', inArguments=[-1.session], outArguments=[return]}
+
+record LLM summary: c0->r-1 
+in condition: Param0 == true
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>
+[    public Session getSessionInternal() {
+        return doGetSession(true);
+    },     public Session getSessionInternal(boolean create) {
+        return doGetSession(create);
+    }]
+---------------其他相关的方法-------------
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>
+[    protected Session doGetSession(boolean create) {
+
+        // There cannot be a session if no context has been assigned yet
+        Context context = getContext();
+        if (context == null) {
+            return null;
+        }
+
+        // Return the current session if it exists and is valid
+        if ((session != null) && !session.isValid()) {
+            session = null;
+        }
+        if (session != null) {
+            return session;
+        }
+
+        // Return the requested session if it exists and is valid
+        Manager manager = context.getManager();
+        if (manager == null) {
+            return null; // Sessions are not supported
+        }
+        if (requestedSessionId != null) {
+            try {
+                session = manager.findSession(requestedSessionId);
+            } catch (IOException e) {
+                if (log.isDebugEnabled()) {
+                    log.debug(sm.getString("request.session.failed", requestedSessionId, e.getMessage()), e);
+                } else {
+                    log.info(sm.getString("request.session.failed", requestedSessionId, e.getMessage()));
+                }
+                session = null;
+            }
+            if ((session != null) && !session.isValid()) {
+                session = null;
+            }
+            if (session != null) {
+                session.access();
+                return session;
+            }
+        }
+
+        // Create a new session if requested and the response is not committed
+        if (!create) {
+            return null;
+        }
+        boolean trackModesIncludesCookie = context.getServletContext().getEffectiveSessionTrackingModes()
+                .contains(SessionTrackingMode.COOKIE);
+        if (trackModesIncludesCookie && response.getResponse().isCommitted()) {
+            throw new IllegalStateException(sm.getString("coyoteRequest.sessionCreateCommitted"));
+        }
+
+        // Re-use session IDs provided by the client in very limited
+        // circumstances.
+        String sessionId = getRequestedSessionId();
+        if (requestedSessionSSL) {
+            // If the session ID has been obtained from the SSL handshake then
+            // use it.
+        } else if (("/".equals(context.getSessionCookiePath()) && isRequestedSessionIdFromCookie())) {
+            /*
+             * This is the common(ish) use case: using the same session ID with multiple web applications on the same
+             * host. Typically this is used by Portlet implementations. It only works if sessions are tracked via
+             * cookies. The cookie must have a path of "/" else it won't be provided for requests to all web
+             * applications.
+             *
+             * Any session ID provided by the client should be for a session that already exists somewhere on the host.
+             * Check if the context is configured for this to be confirmed.
+             */
+            if (context.getValidateClientProvidedNewSessionId()) {
+                boolean found = false;
+                for (Container container : getHost().findChildren()) {
+                    Manager m = ((Context) container).getManager();
+                    if (m != null) {
+                        try {
+                            if (m.findSession(sessionId) != null) {
+                                found = true;
+                                break;
+                            }
+                        } catch (IOException e) {
+                            // Ignore. Problems with this manager will be
+                            // handled elsewhere.
+                        }
+                    }
+                }
+                if (!found) {
+                    sessionId = null;
+                }
+            }
+        } else {
+            sessionId = null;
+        }
+        session = manager.createSession(sessionId);
+
+        // Creating a new session cookie based on that session
+        if (session != null && trackModesIncludesCookie) {
+            Cookie cookie = ApplicationSessionCookieConfig.createSessionCookie(context, session.getIdInternal(),
+                    isSecure());
+
+            response.addSessionCookieInternal(cookie);
+        }
+
+        if (session == null) {
+            return null;
+        }
+
+        session.access();
+        return session;
+    }]
+
+[-1]
+[param0-(type boolean) is false, param0-(type boolean) is true]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='this.requestedSessionId != null', inArguments=[-1.requestedSessionId], outArguments=[-1.session]}
+
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>
+[    public Session getSessionInternal() {
+        return doGetSession(true);
+    },     public Session getSessionInternal(boolean create) {
+        return doGetSession(create);
+    }]
+---------------其他相关的方法-------------
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>
+[    protected Session doGetSession(boolean create) {
+
+        // There cannot be a session if no context has been assigned yet
+        Context context = getContext();
+        if (context == null) {
+            return null;
+        }
+
+        // Return the current session if it exists and is valid
+        if ((session != null) && !session.isValid()) {
+            session = null;
+        }
+        if (session != null) {
+            return session;
+        }
+
+        // Return the requested session if it exists and is valid
+        Manager manager = context.getManager();
+        if (manager == null) {
+            return null; // Sessions are not supported
+        }
+        if (requestedSessionId != null) {
+            try {
+                session = manager.findSession(requestedSessionId);
+            } catch (IOException e) {
+                if (log.isDebugEnabled()) {
+                    log.debug(sm.getString("request.session.failed", requestedSessionId, e.getMessage()), e);
+                } else {
+                    log.info(sm.getString("request.session.failed", requestedSessionId, e.getMessage()));
+                }
+                session = null;
+            }
+            if ((session != null) && !session.isValid()) {
+                session = null;
+            }
+            if (session != null) {
+                session.access();
+                return session;
+            }
+        }
+
+        // Create a new session if requested and the response is not committed
+        if (!create) {
+            return null;
+        }
+        boolean trackModesIncludesCookie = context.getServletContext().getEffectiveSessionTrackingModes()
+                .contains(SessionTrackingMode.COOKIE);
+        if (trackModesIncludesCookie && response.getResponse().isCommitted()) {
+            throw new IllegalStateException(sm.getString("coyoteRequest.sessionCreateCommitted"));
+        }
+
+        // Re-use session IDs provided by the client in very limited
+        // circumstances.
+        String sessionId = getRequestedSessionId();
+        if (requestedSessionSSL) {
+            // If the session ID has been obtained from the SSL handshake then
+            // use it.
+        } else if (("/".equals(context.getSessionCookiePath()) && isRequestedSessionIdFromCookie())) {
+            /*
+             * This is the common(ish) use case: using the same session ID with multiple web applications on the same
+             * host. Typically this is used by Portlet implementations. It only works if sessions are tracked via
+             * cookies. The cookie must have a path of "/" else it won't be provided for requests to all web
+             * applications.
+             *
+             * Any session ID provided by the client should be for a session that already exists somewhere on the host.
+             * Check if the context is configured for this to be confirmed.
+             */
+            if (context.getValidateClientProvidedNewSessionId()) {
+                boolean found = false;
+                for (Container container : getHost().findChildren()) {
+                    Manager m = ((Context) container).getManager();
+                    if (m != null) {
+                        try {
+                            if (m.findSession(sessionId) != null) {
+                                found = true;
+                                break;
+                            }
+                        } catch (IOException e) {
+                            // Ignore. Problems with this manager will be
+                            // handled elsewhere.
+                        }
+                    }
+                }
+                if (!found) {
+                    sessionId = null;
+                }
+            }
+        } else {
+            sessionId = null;
+        }
+        session = manager.createSession(sessionId);
+
+        // Creating a new session cookie based on that session
+        if (session != null && trackModesIncludesCookie) {
+            Cookie cookie = ApplicationSessionCookieConfig.createSessionCookie(context, session.getIdInternal(),
+                    isSecure());
+
+            response.addSessionCookieInternal(cookie);
+        }
+
+        if (session == null) {
+            return null;
+        }
+
+        session.access();
+        return session;
+    }]
+
+[-1]
+[param0-(type boolean) is false, param0-(type boolean) is true]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='p1 == true', inArguments=[0], outArguments=[-1.session]}
+
+LLM query代码: ---------------入口方法-------------
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>
+[    public Session getSessionInternal() {
+        return doGetSession(true);
+    },     public Session getSessionInternal(boolean create) {
+        return doGetSession(create);
+    }]
+---------------其他相关的方法-------------
+方法：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>
+[    protected Session doGetSession(boolean create) {
+
+        // There cannot be a session if no context has been assigned yet
+        Context context = getContext();
+        if (context == null) {
+            return null;
+        }
+
+        // Return the current session if it exists and is valid
+        if ((session != null) && !session.isValid()) {
+            session = null;
+        }
+        if (session != null) {
+            return session;
+        }
+
+        // Return the requested session if it exists and is valid
+        Manager manager = context.getManager();
+        if (manager == null) {
+            return null; // Sessions are not supported
+        }
+        if (requestedSessionId != null) {
+            try {
+                session = manager.findSession(requestedSessionId);
+            } catch (IOException e) {
+                if (log.isDebugEnabled()) {
+                    log.debug(sm.getString("request.session.failed", requestedSessionId, e.getMessage()), e);
+                } else {
+                    log.info(sm.getString("request.session.failed", requestedSessionId, e.getMessage()));
+                }
+                session = null;
+            }
+            if ((session != null) && !session.isValid()) {
+                session = null;
+            }
+            if (session != null) {
+                session.access();
+                return session;
+            }
+        }
+
+        // Create a new session if requested and the response is not committed
+        if (!create) {
+            return null;
+        }
+        boolean trackModesIncludesCookie = context.getServletContext().getEffectiveSessionTrackingModes()
+                .contains(SessionTrackingMode.COOKIE);
+        if (trackModesIncludesCookie && response.getResponse().isCommitted()) {
+            throw new IllegalStateException(sm.getString("coyoteRequest.sessionCreateCommitted"));
+        }
+
+        // Re-use session IDs provided by the client in very limited
+        // circumstances.
+        String sessionId = getRequestedSessionId();
+        if (requestedSessionSSL) {
+            // If the session ID has been obtained from the SSL handshake then
+            // use it.
+        } else if (("/".equals(context.getSessionCookiePath()) && isRequestedSessionIdFromCookie())) {
+            /*
+             * This is the common(ish) use case: using the same session ID with multiple web applications on the same
+             * host. Typically this is used by Portlet implementations. It only works if sessions are tracked via
+             * cookies. The cookie must have a path of "/" else it won't be provided for requests to all web
+             * applications.
+             *
+             * Any session ID provided by the client should be for a session that already exists somewhere on the host.
+             * Check if the context is configured for this to be confirmed.
+             */
+            if (context.getValidateClientProvidedNewSessionId()) {
+                boolean found = false;
+                for (Container container : getHost().findChildren()) {
+                    Manager m = ((Context) container).getManager();
+                    if (m != null) {
+                        try {
+                            if (m.findSession(sessionId) != null) {
+                                found = true;
+                                break;
+                            }
+                        } catch (IOException e) {
+                            // Ignore. Problems with this manager will be
+                            // handled elsewhere.
+                        }
+                    }
+                }
+                if (!found) {
+                    sessionId = null;
+                }
+            }
+        } else {
+            sessionId = null;
+        }
+        session = manager.createSession(sessionId);
+
+        // Creating a new session cookie based on that session
+        if (session != null && trackModesIncludesCookie) {
+            Cookie cookie = ApplicationSessionCookieConfig.createSessionCookie(context, session.getIdInternal(),
+                    isSecure());
+
+            response.addSessionCookieInternal(cookie);
+        }
+
+        if (session == null) {
+            return null;
+        }
+
+        session.access();
+        return session;
+    }]
+
+[-1]
+[param0-(type boolean) is false, param0-(type boolean) is true]
+
+LLM query结果：
+RuleInfo{namespace='org.apache.catalina.connector', className='Request', methodName='doGetSession', condition='NOC', inArguments=[-1.session], outArguments=[return]}
+
+record LLM summary: c0->r-1 
+in condition: Param0 == true

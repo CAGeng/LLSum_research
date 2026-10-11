@@ -1,0 +1,214 @@
+方法：<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder ok()> 一共有3个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.springframework.http.MediaType: org.springframework.http.MediaType parseMediaType(java.lang.String)> 一共有3个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity$BodyBuilder badRequest()> 一共有3个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.apache.commons.lang3.RandomUtils: int nextInt(int,int)> 一共有3个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String createPasswordReset(java.lang.String,java.lang.String)> 一共有3个incoming states
+[其他incoming] taintedParams: [0]
+[其他incoming] taintedParams: [0]
+[其他incoming] taintedParams: [0]
+参数-1的状态：一定不出现
+参数0的状态：一定出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.owasp.webgoat.lessons.challenges.challenge7.PasswordResetLink: java.lang.String scramble(java.util.Random,java.lang.String)> 一共有4个incoming states
+[其他incoming] taintedParams: [0, 1]
+[其他incoming] taintedParams: [0, 1]
+[其他incoming] taintedParams: [0, 1]
+[其他incoming] taintedParams: [0, 1]
+参数-1的状态：一定不出现
+参数0的状态：一定出现
+参数-2的状态：一定不出现
+参数1的状态：一定出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.apache.commons.lang3.StringUtils: boolean isEmpty(java.lang.CharSequence)> 一共有4个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()> 一共有13个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.owasp.webgoat.lessons.cryptography.EncodingAssignment: java.lang.String getBasicAuth(java.lang.String,java.lang.String)> 一共有3个incoming states
+[其他incoming] taintedParams: [0]
+[其他incoming] taintedParams: [0]
+[其他incoming] taintedParams: [0]
+参数-1的状态：一定不出现
+参数0的状态：一定出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.owasp.webgoat.lessons.challenges.Email: org.owasp.webgoat.lessons.challenges.Email$EmailBuilder builder()> 一共有6个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.owasp.webgoat.lessons.challenges.Email$EmailBuilder: org.owasp.webgoat.lessons.challenges.Email$EmailBuilder title(java.lang.String)> 一共有6个incoming states
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+参数-1的状态：一定出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.owasp.webgoat.lessons.challenges.challenge7.MD5: java.lang.String getHashString(java.lang.String)> 一共有4个incoming states
+[其他incoming] taintedParams: [0]
+[其他incoming] taintedParams: [0]
+[其他incoming] taintedParams: [0]
+[其他incoming] taintedParams: [0]
+参数-1的状态：一定不出现
+参数0的状态：一定出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.owasp.webgoat.webwolf.jwt.JWTToken: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder builder()> 一共有3个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder encoded(java.lang.String)> 一共有3个incoming states
+[其他incoming] taintedParams: [-1, 0]
+[其他incoming] taintedParams: [-1, 0]
+[其他incoming] taintedParams: [-1, 0]
+参数-1的状态：一定出现
+参数0的状态：一定出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder: org.owasp.webgoat.webwolf.jwt.JWTToken$JWTTokenBuilder validToken(boolean)> 一共有3个incoming states
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+参数-1的状态：一定出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现

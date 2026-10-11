@@ -1,0 +1,128 @@
+2025-03-31 16:06:43,070 main ERROR Unable to locate appender "ROLLING_FILE" for logger config "root"
+2025-03-31 16:06:43,073 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "root"
+2025-03-31 16:06:43,074 main ERROR Unable to locate appender "WARN_ROLLING_FILE" for logger config "root"
+2025-03-31 16:06:43,074 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "exception"
+2025-03-31 16:06:43,338 main ERROR Unable to locate appender "ROLLING_FILE" for logger config "root"
+2025-03-31 16:06:43,339 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "root"
+2025-03-31 16:06:43,339 main ERROR Unable to locate appender "WARN_ROLLING_FILE" for logger config "root"
+2025-03-31 16:06:43,339 main ERROR Unable to locate appender "EXCEPTION_ROLLING_FILE" for logger config "exception"
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.15)
+
+2025-03-31 16:06:43.375 - INFO  [           main] o.s.b.StartupInfoLogger        : Starting IFDSApplication using Java 1.8.0_362 on FortdeMacBook-Pro.local with PID 66309 (/Users/fortsun/Desktop/git/restfuzz-sast/alligator-ifds/target/classes started by fortsun in /Users/fortsun/Desktop/git/restfuzz-sast)
+2025-03-31 16:06:43.378 - INFO  [           main] o.s.b.SpringApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-03-31 16:06:43.602 - INFO  [           main] epositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-31 16:06:43.622 - INFO  [           main] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interfaces.
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.17.2/log4j-slf4j-impl-2.17.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.core/1.0.0/sootup.core-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.java.core/1.0.0/sootup.java.core-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.java.sourcecode/1.0.0/sootup.java.sourcecode-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.java.bytecode/1.0.0/sootup.java.bytecode-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.jimple.parser/1.0.0/sootup.jimple.parser-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.callgraph/1.0.0/sootup.callgraph-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/fortsun/.m2/repository/org/soot-oss/sootup.analysis/1.0.0/sootup.analysis-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+2025-03-31 16:06:43.797 - INFO  [           main] o.h.j.i.u.LogHelper            : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-31 16:06:43.816 - INFO  [           main] o.h.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-03-31 16:06:43.877 - INFO  [           main] .a.c.r.j.JavaReflectionManager : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-03-31 16:06:43.911 - INFO  [           main] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
+2025-03-31 16:06:44.073 - INFO  [           main] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2025-03-31 16:06:44.079 - INFO  [           main] o.h.d.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-03-31 16:06:44.300 - INFO  [           main] e.t.j.p.i.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-03-31 16:06:44.305 - INFO  [           main] stractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+class path : /Users/fortsun/Desktop/ppt/程序分析/ai/test-set/n-day-commit/xwifi-14.1-rc-1:/Users/fortsun/Library/Java/JavaVirtualMachines/corretto-1.8.0_362/Contents/Home/jre/lib/rt.jar:/Users/fortsun/Library/Java/JavaVirtualMachines/corretto-1.8.0_362/Contents/Home/jre/lib/jce.jar:::
+total class count： 2959
+total application class count： 773
+2025-03-31 16:06:44.810 - WARN  [           main] d.k.e.s.SpringEntrySet         : 结构化payload信息提取结束
+2025-03-31 16:06:44.810 - WARN  [           main] d.k.e.s.SpringEntrySet         : 为 0个entry提取结构信息
+2025-03-31 16:06:44.811 -ERROR  [           main] d.k.e.w.ServletEntrySet        : Servlet class 总数: 0
+2025-03-31 16:06:44.876 -ERROR  [           main] a.i.RuleImporter               : 导入source rule: 1
+2025-03-31 16:06:44.876 -ERROR  [           main] a.i.RuleImporter               : 导入sink rule: 2
+2025-03-31 16:06:44.876 -ERROR  [           main] a.i.RuleImporter               : 导入propagation rule: 1
+2025-03-31 16:06:45.033 - INFO  [           main] o.s.b.StartupInfoLogger        : Started IFDSApplication in 1.877 seconds (JVM running for 2.717)
+2025-03-31 16:06:45.034 - INFO  [           main] a.r.VulDetectRunner            : VulDetectRunner is running
+2025-03-31 16:06:45.038 - WARN  [           main] d.k.e.s.SpringEntrySet         : 结构化payload信息提取结束
+2025-03-31 16:06:45.038 - WARN  [           main] d.k.e.s.SpringEntrySet         : 为 0个entry提取结构信息
+2025-03-31 16:06:45.038 -ERROR  [           main] d.k.e.w.ServletEntrySet        : Servlet class 总数: 0
+从文件中指定的entry: 0
+从xml导入entry: <com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>
+2025-03-31 16:06:45.144 - INFO  [           main] d.VulDetector                  : entry count: 113
+2025-03-31 16:06:45.144 - WARN  [           main] d.VulDetector                  : using spark
+constructCG
+Enable Spark
+constructCG finish
+指定的路径不是有效的目录: $以下4个文件必须存在，需要提前下载
+Code has been written to missed-method.txt successfully.
+add sink: sdafadsf
+2025-03-31 16:06:50.386 - INFO  [           main] d.VulDetector                  : entry count: 113
+2025-03-31 16:06:50.386 - INFO  [           main] d.VulDetector                  : sink count: 1
+sinkDetector检测sink后：
+2025-03-31 16:06:50.783 - INFO  [           main] d.VulDetector                  : sink count: 1
+2025-03-31 16:06:50.784 -ERROR  [           main] d.VulDetector                  : 调用链总数: 1
+2025-03-31 16:06:50.784 -ERROR  [           main] d.VulDetector                  : 去重后调用链总数: 1
+2025-03-31 16:06:50.784 - WARN  [           main] d.VulDetector                  : 没有开启hazard模式，跳过cg segment
+2025-03-31 16:06:50.791 - WARN  [           main] d.d.DataFlowTrack              : 这个detectContext下需要hazard的方法个数: 0
+2025-03-31 16:06:50.792 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>
+2025-03-31 16:06:50.794 - WARN  [           main] d.d.DataFlowTrack              : r8 := @this: com.xpn.xwiki.internal.template.InternalTemplateManager
+2025-03-31 16:06:50.794 - WARN  [           main] d.d.DataFlowTrack              : r6 := @parameter0: java.lang.ClassLoader
+2025-03-31 16:06:50.794 - WARN  [           main] d.d.DataFlowTrack              : r0 := @parameter1: java.lang.String
+2025-03-31 16:06:50.794 - WARN  [           main] d.d.DataFlowTrack              : r1 := @parameter2: java.lang.String
+2025-03-31 16:06:50.795 - WARN  [           main] d.d.DataFlowTrack              : $r2 = dynamicinvoke "makeConcatWithConstants" <java.lang.String (java.lang.String,java.lang.String)>(r0, r1) <java.lang.invoke.StringConcatFactory: java.lang.invoke.CallSite makeConcatWithConstants(java.lang.invoke.MethodHandles$Lookup,java.lang.String,java.lang.invoke.MethodType,java.lang.String,java.lang.Object[])>("\u0001\u0001")
+[DEBUG] invoke1: <soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>
+[DEBUG] invoke2: <soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>
+2025-03-31 16:06:50.796 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <soot.dummy.InvokeDynamic: java.lang.String makeConcatWithConstants(java.lang.String,java.lang.String)>
+2025-03-31 16:06:50.796 - WARN  [           main] d.d.DataFlowTrack              : $r3 = newarray (java.lang.String)[0]
+[DEBUG] invoke1: <java.lang.String: void <clinit>()>
+[DEBUG] invoke2: <java.lang.String: void <clinit>()>
+2025-03-31 16:06:50.796 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.String: void <clinit>()>
+[DEBUG] invoke1: <java.lang.Object: void <clinit>()>
+[DEBUG] invoke2: <java.lang.Object: void <clinit>()>
+2025-03-31 16:06:50.796 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.lang.Object: void <clinit>()>
+2025-03-31 16:06:50.797 - WARN  [           main] d.d.DataFlowTrack              : $r4 = staticinvoke <java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>($r2, $r3)
+[DEBUG] invoke1: <java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>
+[DEBUG] invoke2: <java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>
+2025-03-31 16:06:50.797 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>
+2025-03-31 16:06:50.797 - WARN  [           main] d.d.DataFlowTrack              : $r5 = interfaceinvoke $r4.<java.nio.file.Path: java.nio.file.Path normalize()>()
+[DEBUG] invoke1: <java.nio.file.Path: java.nio.file.Path normalize()>
+[DEBUG] invoke2: <java.nio.file.Path: java.nio.file.Path normalize()>
+2025-03-31 16:06:50.797 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.nio.file.Path: java.nio.file.Path normalize()>
+2025-03-31 16:06:50.797 - WARN  [           main] d.d.DataFlowTrack              : $z0 = interfaceinvoke $r5.<java.nio.file.Path: boolean startsWith(java.lang.String)>(r0)
+[DEBUG] invoke1: <java.nio.file.Path: boolean startsWith(java.lang.String)>
+[DEBUG] invoke2: <java.nio.file.Path: boolean startsWith(java.lang.String)>
+2025-03-31 16:06:50.797 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <java.nio.file.Path: boolean startsWith(java.lang.String)>
+2025-03-31 16:06:50.798 - WARN  [           main] d.d.DataFlowTrack              : if $z0 != 0 goto $r7 = virtualinvoke r6.<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>($r2)
+2025-03-31 16:06:50.798 - WARN  [           main] d.d.DataFlowTrack              : $r10 = r8.<com.xpn.xwiki.internal.template.InternalTemplateManager: org.slf4j.Logger logger>
+2025-03-31 16:06:50.798 - WARN  [           main] d.d.DataFlowTrack              : interfaceinvoke $r10.<org.slf4j.Logger: void warn(java.lang.String,java.lang.Object)>("Direct access to skin file [{}] refused. Possible break-in attempt!", $r5)
+[DEBUG] invoke1: <org.slf4j.Logger: void warn(java.lang.String,java.lang.Object)>
+[DEBUG] invoke2: <org.slf4j.Logger: void warn(java.lang.String,java.lang.Object)>
+2025-03-31 16:06:50.798 -ERROR  [           main] d.d.DataFlowTrack              : track recurse: <org.slf4j.Logger: void warn(java.lang.String,java.lang.Object)>
+2025-03-31 16:06:50.799 - WARN  [           main] d.d.DataFlowTrack              : $r7 = virtualinvoke r6.<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>($r2)
+[DEBUG] invoke1: <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+[DEBUG] invoke2: <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+2025-03-31 16:06:50.799 -ERROR  [           main] d.d.DataFlowTrack              : trackDataFlow_recurse: <java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>
+2025-03-31 16:06:50.799 - WARN  [           main] d.d.DataFlowTrack              : 有数据透传 getClassloaderTemplate -> getResource
+2025-03-31 16:06:50.799 - WARN  [           main] d.d.DataFlowTrack              : 实际hazard的方法个数: 0
+2025-03-31 16:06:50.800 - WARN  [           main] d.VulDetector                  : 检测完成: 1/1
+2025-03-31 16:06:50.800 - WARN  [           main] d.VulDetector                  : 有多少hazard的detectContext需要修正 0
+摘要复用次数: 0
+2025-03-31 16:06:50.814 - WARN  [           main] d.VulDetector                  : 摘要总数: 7
+2025-03-31 16:06:50.814 - INFO  [           main] i.IntelligentLogger            : LLM产生函数摘要个数： 0
+2025-03-31 16:06:50.814 - INFO  [           main] i.IntelligentLogger            : LLM产生函数摘要失败数： 0
+2025-03-31 16:06:50.815 - INFO  [           main] i.IntelligentLogger            : 涉及多个incoming的摘要个数: 0
+2025-03-31 16:06:50.815 - WARN  [           main] d.VulDetector                  : 有条件满足的链路：0
+2025-03-31 16:06:50.815 - WARN  [           main] d.VulDetector                  : 有条件和摘要比不满足的链路：0
+2025-03-31 16:06:50.815 - WARN  [           main] d.VulDetector                  : 所有有条件不满足的链路数（和摘要比，和路径约束比, 经过检查）：01
+2025-03-31 16:06:50.815 - WARN  [           main] d.VulDetector                  : 所有有条件满足的链路数（和摘要比，和路径约束比）：0
+2025-03-31 16:06:50.815 - WARN  [           main] d.VulDetector                  : CHA产生的假调用栈: 0
+2025-03-31 16:06:50.815 -ERROR  [           main] d.VulDetector                  : 共计调用链： 1
+2025-03-31 16:06:50.815 -ERROR  [           main] d.VulDetector                  : 有数据流： 1
+2025-03-31 16:06:50.815 -ERROR  [           main] d.VulDetector                  : 删除的dummy sink(没有数据流不显示，防止过多): 0/1
+2025-03-31 16:06:50.825 - INFO  [           main] d.k.Knows                      : Destroy Knows when it's a WebApplication

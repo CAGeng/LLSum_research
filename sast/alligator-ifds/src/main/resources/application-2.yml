@@ -1,0 +1,72 @@
+soot:
+  output:
+    path: /Users/fortsun/Desktop/git/restfuzz-sast/output/11-11
+    filename: Analyze_result.json
+    insFilename: Instructions.json
+  additional:
+    path: "$无需"
+  rt:
+    dir:
+  jce:
+    dir:
+
+list:
+  sootInputPaths:
+    - "$被测项目class文件目录"
+    - /Users/fortsun/Desktop/test/WebGoat/target/classes
+    - "$以下4个文件必须存在，需要提前下载"
+    - /Users/fortsun/Desktop/git/restfuzz-sast/dependency_path/package-dependency
+    - /Users/fortsun/Desktop/git/restfuzz-sast/dependencies/httpclient-4.5.13.jar
+    - /Users/fortsun/Desktop/git/restfuzz-sast/dependencies/fluent-hc-4.5.13.jar
+    - /Users/fortsun/Desktop/git/restfuzz-sast/dependencies/okhttp-2.7.5.jar
+  scannedMybatisXmlDirs:
+#    - /Users/fortsun/Downloads/题目2：源码自动化审计与自动化评估验证/赛题材料/micro_service_seclab-main/src/main/resources/mappers
+    - /Users/fortsun/Downloads/题目2：源码自动化审计与自动化评估验证-1/赛题材料/micro_service_seclab-main/src/main/resources/mappers
+
+logging:
+  config: classpath:log4j2.yml
+
+
+rules:
+  core:
+    path: rules/core.xml
+    pathSwitcher: on
+    thirdPartyPath: rules/java-core.xml
+    thirdPartyPathSwitcher: on
+  extend:
+    path: rules/extend.xml
+    pathSwitcher: on
+    thirdPartyPath: rules/java-extend.xml
+    thirdPartyPathSwitcher: on
+  conditional: on
+  taintFlag: on
+
+
+analysis:
+  taintSanitizeSwitcher: off
+  simpleDataPathSwitcher: off
+  onlyDataflowCallStackInter: off
+  fieldSensitiveSwitcher: on
+  sparkSwitcher: on
+  conditionSummarySwitcher: on
+
+vulexp:
+  downstream:
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package/arthas-tunnel-server-3.7.1-fatjar.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/termed-core/termd-core-1.1.7.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/embedded-redis/embedded-redis-0.7.3.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/core/target/arthas-core.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/tunnel-client/target/arthas-tunnel-client.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/retrofit/retrofit-2.4.0.jar
+    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/authas-tunnel-server/arthas-tunnel-server-3.7.1.jar
+  #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/reactor-netty-core/reactor-netty-core-1.0.31.jar
+  upstream:
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package/arthas-tunnel-server-3.7.1-fatjar.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/jackson-databind/jackson-databind-2.9.3.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/netty/netty-handler-4.1.92.Final.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/guava/guava-21.0.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/commons-io/commons-io-2.5.jar
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/netty/netty-handler-4.1.92.Final.jar
+    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/tomcat-embedded-core/tomcat-embed-core-9.0.74.jar
+  #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/retrofit/retrofit-2.4.0.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/logback-classic/logback-classic-1.2.11.jar

@@ -1,0 +1,1198 @@
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>$r2 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the key) is used to retrieve a value from the JSON object, which is then converted to a string and returned.
+    - The flow is conditional on the retrieved object not being `null`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.map.key</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transferred into the key of `this.map`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>this.map.value</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`java.lang.Object`) is transferred into the value of `this.map`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>return</InArguments>
+    <OutArguments>this.map</OutArguments>
+    <Comment>
+    - The data flow shows that the return value is influenced by the `put` operation on `this.map`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null && !p1.isEmpty()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (String) is parsed into a `JSONObject` which is returned.
+    - The flow is conditional on `p1` not being `null` and not being empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSONString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input object) is serialized into a JSON string and returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>get</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is used as a key to retrieve a value from `this.map`, and the retrieved value is returned after potential type conversion.
+    - The flow has no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null && !p1.isEmpty()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used to parse and create an object of type `p2` (`java.lang.Class`), which is then returned.
+    - The flow is conditional on `p1` not being `null` and not empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getJSONObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>this.map.get(p1) instanceof com.alibaba.fastjson.JSONObject</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r1`) is used to retrieve an object from `this.map`.
+    - If the retrieved object is a `com.alibaba.fastjson.JSONObject`, it is returned.
+    - The flow is conditional on the retrieved object being an instance of `com.alibaba.fastjson.JSONObject`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getJSONObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>this.map.get(p1) instanceof java.util.Map</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r1`) is used to retrieve an object from `this.map`.
+    - If the retrieved object is a `java.util.Map`, a new `JSONObject` is created and returned.
+    - The flow is conditional on the retrieved object being an instance of `java.util.Map`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getJSONObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>this.map.get(p1) instanceof java.lang.String && !((java.lang.String)this.map.get(p1)).isEmpty() && !"null".equalsIgnoreCase((java.lang.String)this.map.get(p1))</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r1`) is used to retrieve an object from `this.map`.
+    - If the retrieved object is a non-empty `java.lang.String` not equal to "null", it is parsed into a `JSONObject` and returned.
+    - The flow is conditional on the retrieved object being a non-empty string not equal to "null".
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSONString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this` (the current instance of `com.alibaba.fastjson.JSON`) is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>com.alibaba.fastjson.parser.Feature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null && !p1.isEmpty()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is used to create a `JSONReader` and influences the return value.
+    - The flow is conditional on `p1` not being `null` and not empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getInnerMap</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.map</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.map` is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parse</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null && !p1.isEmpty()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the input string) is parsed and influences the return value.
+    - The flow is conditional on `p1` not being `null` and not being empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SerializeConfig</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getGlobalInstance</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>N/A</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that the static field `global` is transferred into the return value.
+    - The flow is no condition as it directly returns the static field.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SerializeConfig</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>com.alibaba.fastjson.serializer.ObjectSerializer</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`r1`) is used in the `register` method call, affecting the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SerializeConfig</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>put</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>com.alibaba.fastjson.serializer.ObjectSerializer</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`r3`) is encapsulated in `$r2` and used in the `register` method call, affecting the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The constructor initializes the JSONObject instance.
+    - It sets up the internal map based on the boolean parameter `z0` and integer parameter `i0` from the overloaded constructor.
+    - There is no parameter or return data flow involved.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONSerializer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>write</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.raw.writeAny</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `this.raw.writeAny`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>entrySet</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this.map.entrySet</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `this.map.entrySet()` is transferred into the return value.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSONStringWithDateFormat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>com.alibaba.fastjson.serializer.SerializerFeature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is transferred into `$r3` and then into the return value.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSONStringWithDateFormat</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>com.alibaba.fastjson.serializer.SerializerFeature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>$r2</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` is transferred into `$r2` via `setDateFormat`.
+    - The flow has no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.parser</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ParserConfig</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>getGlobalInstance</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method returns a static field 'global' of type 'com.alibaba.fastjson.parser.ParserConfig'.
+    - There is no parameter data flow as the method does not take any parameters.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.parser</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>ParserConfig</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>setSafeMode</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>boolean</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - There is no data flow from parameter p1 to fields of this or return values.
+    - The method primarily performs a conditional check and may throw an exception based on the condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSONString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>com.alibaba.fastjson.serializer.SerializerFeature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the object to be serialized) is transferred into the return value as a JSON string.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson2</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSONString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>com.alibaba.fastjson2.JSONWriter$Feature[]</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - This is an abstract method, so there is no direct data flow analysis possible within this method itself.
+    - The data flow will be determined by the specific implementations in subclasses.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseArray</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null && !p1.isEmpty()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) and `p2` (`java.lang.Class`) are used to construct the return value `java.util.List`.
+    - The flow is conditional on `p1` not being `null` or empty.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SerializeWriter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this constructor -->
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>this</InArguments>
+    <OutArguments>this.raw</OutArguments>
+    <Comment>
+    - The data flow shows that a `JSONWriter` instance is created and assigned to `this.raw`.
+    - Several `ListWrapper` instances are initialized and associated with `this`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONSerializer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.alibaba.fastjson.serializer.SerializeWriter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.out</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`SerializeWriter`) is transferred into `this.out`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONSerializer</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.alibaba.fastjson.serializer.SerializeWriter</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0.raw</InArguments>
+    <OutArguments>this.raw</OutArguments>
+    <Comment>
+    - The data flow shows that `p1.raw` is transferred into `this.raw`.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SerializeWriter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>writeTo</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.Writer</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The parameter `p1` (`java.io.Writer`) is used in a method call to `flushTo`, but there is no direct data propagation to fields of `this` or any return value.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SerializeWriter</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>close</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <!-- No parameters for this method -->
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method does not involve any parameter or return data flow.
+    - It closes the JSONWriter associated with the SerializeWriter instance.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSONString</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>com.alibaba.fastjson.serializer.SerializeConfig</ParamType>
+        <ParamType>com.alibaba.fastjson.serializer.SerializerFeature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the first parameter) is transferred into the return value.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSON</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>com.alibaba.fastjson.serializer.SerializeConfig</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 instanceof com.alibaba.fastjson.JSON</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is directly returned if it is an instance of `com.alibaba.fastjson.JSON`.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSON</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+        <ParamType>com.alibaba.fastjson.serializer.SerializeConfig</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>!(p1 instanceof com.alibaba.fastjson.JSON)</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` is serialized and parsed, potentially transformed into a `JSONArray` if it represents a `List`, otherwise returned as a parsed object.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson.serializer</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>SerializeConfig</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>&lt;init&gt;</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>com.alibaba.fastjson2.writer.ObjectWriterProvider</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>this.provider</OutArguments>
+    <Comment>
+    - The data flow shows that the parameter `r1` (of type `ObjectWriterProvider`) is transferred into `this.provider`.
+    - The flow is no condition.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSONObject</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>remove</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (the parameter) is used in the `remove` method of the `map` field of `this` (`JSONObject`), and the result is returned.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson2</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>toJSON</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.Object</ParamType>
+    </Parameters>
+    <HasPropagation>false</HasPropagation>
+    <Comment>
+    - The method is abstract, so there is no direct data flow to analyze.
+    - The parameter p1 does not flow to other parameters, fields of this, or the return value within this method.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>com.alibaba.fastjson.parser.Feature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`InputStream`) is transferred into the return value through a method call.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000002</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>com.alibaba.fastjson.parser.Feature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p2` (`Type`) is transferred into the return value through a method call.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000003</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.io.InputStream</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>com.alibaba.fastjson.parser.Feature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>NOC</Condition>
+    <InArguments>2</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p3` (`Feature[]`) is transferred into the return value through a method call.
+    - The flow is no condition
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>byte[]</ParamType>
+        <ParamType>java.lang.reflect.Type</ParamType>
+        <ParamType>com.alibaba.fastjson.parser.Feature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null</Condition>
+    <InArguments>0, 1</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (byte array) and `p2` (Type) are used to read and create an object that is returned.
+    - The flow is conditional on `p1` not being null.
+    </Comment>
+</PropagationRule>
+
+<PropagationRule>
+    <RuleID>RULE-ID-PROPAGATION-00000001</RuleID>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Value>com.alibaba.fastjson</Value>
+        </NamespaceName>
+        <ClassName>
+            <Value>JSON</Value>
+        </ClassName>
+        <FunctionName>
+            <Value>parseObject</Value>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Parameters>
+        <ParamType>java.lang.String</ParamType>
+        <ParamType>java.lang.Class</ParamType>
+        <ParamType>com.alibaba.fastjson.parser.Feature[]</ParamType>
+    </Parameters>
+    <HasPropagation>true</HasPropagation>
+    <Condition>p1 != null && !p1.isEmpty()</Condition>
+    <InArguments>0</InArguments>
+    <OutArguments>return</OutArguments>
+    <Comment>
+    - The data flow shows that `p1` (`java.lang.String`) is transformed into the return value through JSON parsing.
+    - The flow is conditional on `p1` not being `null` or empty.
+    </Comment>
+</PropagationRule>
+

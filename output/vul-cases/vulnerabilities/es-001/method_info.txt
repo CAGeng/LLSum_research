@@ -1,0 +1,125 @@
+方法名：<clinit>
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: void <clinit>()>
+方法的参数个数：0
+call-site个数： 3
+
+方法名：readVInt
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: int readVInt()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：readByte
+方法签名：<org.elasticsearch.common.io.stream.ByteArrayStreamInput: byte readByte()>
+方法的参数个数：0
+call-site个数： 2
+
+方法名：reset
+方法签名：<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void reset(byte[],int,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.apache.lucene.util.CharsRef: void <init>(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.elasticsearch.common.io.stream.StreamInput$lambda_static_1__332: java.util.function.Supplier bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：readString
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: java.lang.String readString()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：bootstrap$
+方法签名：<org.elasticsearch.common.io.stream.StreamInput$lambda_static_0__331: java.util.function.Supplier bootstrap$()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：throwOnBrokenChar
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: void throwOnBrokenChar(int)>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.elasticsearch.common.io.stream.StreamInput$lambda_static_1__332: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.elasticsearch.action.search.SearchContextIdForNode: void <init>(java.lang.String,java.lang.String,org.elasticsearch.search.internal.ShardSearchContextId)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：readBytes
+方法签名：<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void readBytes(byte[],int,int)>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：readArraySize
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: int readArraySize()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void <init>(byte[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.elasticsearch.common.io.stream.StreamInput$lambda_static_0__331: void <init>()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：throwOnBrokenVInt
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: void throwOnBrokenVInt(byte,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.elasticsearch.search.internal.ShardSearchContextId: void <init>(java.lang.String,long)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：reset
+方法签名：<org.elasticsearch.common.io.stream.ByteArrayStreamInput: void reset(byte[])>
+方法的参数个数：1
+call-site个数： 1
+
+方法名：readVIntSlow
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: int readVIntSlow()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：getPosition
+方法签名：<org.elasticsearch.common.io.stream.ByteArrayStreamInput: int getPosition()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：<init>
+方法签名：<org.elasticsearch.action.search.ParsedScrollId: void <init>(java.lang.String,java.lang.String,org.elasticsearch.action.search.SearchContextIdForNode[])>
+方法的参数个数：3
+call-site个数： 1
+
+方法名：readLong
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: long readLong()>
+方法的参数个数：0
+call-site个数： 1
+
+方法名：oversize
+方法签名：<org.apache.lucene.util.ArrayUtil: int oversize(int,int)>
+方法的参数个数：2
+call-site个数： 1
+
+方法名：readInt
+方法签名：<org.elasticsearch.common.io.stream.StreamInput: int readInt()>
+方法的参数个数：0
+call-site个数： 1
+

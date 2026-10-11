@@ -1,0 +1,228 @@
+{
+  "classLoader_getResource": [
+    {
+      "id": 1,
+      "conditionNotSatisfy": false,
+      "conditionSatisfy": false,
+      "conditionNotSatisfyReason": "",
+      "conditionSatisfyReason": "",
+      "method_argInd_to_CT": {},
+      "payloadStructures": null,
+      "dataFlowResult": {
+        "conditionNodes": [
+          {
+            "badConditionFlag": false,
+            "methodSig": "<com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>",
+            "values": [
+              {
+                "entryParamId": 1,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ],
+            "paramInds": [],
+            "defSources": [
+              "$z0 = interfaceinvoke $r5.<java.nio.file.Path: boolean startsWith(java.lang.String)>(r0)"
+            ],
+            "constants": {
+              "int": "0"
+            },
+            "comparison": "NO_EQUAL_TO",
+            "basic": true,
+            "usedSite": {
+              "key": "com.xpn.xwiki.internal.template.InternalTemplateManager",
+              "value": 913
+            },
+            "satisfyFlag": true,
+            "type": 0,
+            "hashCode": 1702290598,
+            "complexity": 1,
+            "ctinfo": null
+          }
+        ],
+        "conditionHashCodes": [
+          1702290598
+        ],
+        "usedSiteRecords": [
+          {
+            "inClassName": "com.xpn.xwiki.internal.template.InternalTemplateManager",
+            "site": 908,
+            "srcMessages": [
+              {
+                "entryParamId": 2,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "com.xpn.xwiki.internal.template.InternalTemplateManager",
+            "site": 911,
+            "srcMessages": [
+              {
+                "entryParamId": 1,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "com.xpn.xwiki.internal.template.InternalTemplateManager",
+            "site": 908,
+            "srcMessages": [
+              {
+                "entryParamId": 1,
+                "isStructure": false,
+                "accessPath": null
+              },
+              {
+                "entryParamId": 2,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "com.xpn.xwiki.internal.template.InternalTemplateManager",
+            "site": 914,
+            "srcMessages": [
+              {
+                "entryParamId": 1,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "com.xpn.xwiki.internal.template.InternalTemplateManager",
+            "site": 913,
+            "srcMessages": [
+              {
+                "entryParamId": 1,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "com.xpn.xwiki.internal.template.InternalTemplateManager",
+            "site": 911,
+            "srcMessages": [
+              {
+                "entryParamId": 1,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          },
+          {
+            "inClassName": "com.xpn.xwiki.internal.template.InternalTemplateManager",
+            "site": 919,
+            "srcMessages": [
+              {
+                "entryParamId": 1,
+                "isStructure": false,
+                "accessPath": null
+              }
+            ]
+          }
+        ],
+        "complexity": 0,
+        "srcs": [
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "1",
+            "valueStr": "r0",
+            "methodStr": "<com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>",
+            "typeStr": "java.lang.String"
+          },
+          {
+            "srcMessage": {
+              "entryParamId": 2,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": null,
+            "taintFlags_2": null,
+            "paramInd": "2",
+            "valueStr": "r1",
+            "methodStr": "<com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>",
+            "typeStr": "java.lang.String"
+          }
+        ],
+        "sinks": [
+          {
+            "srcMessage": {
+              "entryParamId": 1,
+              "isStructure": false,
+              "accessPath": null
+            },
+            "assignUnit": "$r7 = virtualinvoke r6.<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>($r2)",
+            "taintFlags_2": null,
+            "paramInd": "0",
+            "valueStr": "$r2",
+            "methodStr": "<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>",
+            "typeStr": "java.lang.String"
+          }
+        ],
+        "hasDataFlow": true,
+        "hasBoundaryCheck": false,
+        "boundaryCheckConditionNode": null,
+        "hasFilePathCheck": true,
+        "dataPaths": [
+          [
+            {
+              "srcMessage": {
+                "entryParamId": 1,
+                "isStructure": false,
+                "accessPath": null
+              },
+              "assignUnit": null,
+              "taintFlags_2": null,
+              "paramInd": "1",
+              "valueStr": "r0",
+              "methodStr": "<com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>",
+              "typeStr": "java.lang.String"
+            },
+            {
+              "srcMessage": {
+                "entryParamId": 1,
+                "isStructure": false,
+                "accessPath": null
+              },
+              "assignUnit": "$r7 = virtualinvoke r6.<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>($r2)",
+              "taintFlags_2": null,
+              "paramInd": "0",
+              "valueStr": "$r2",
+              "methodStr": "<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>",
+              "typeStr": "java.lang.String"
+            }
+          ]
+        ]
+      },
+      "vulType": "classLoader_getResource",
+      "entryMethod": "<com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>",
+      "sinkMethod": "<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>",
+      "URL": null,
+      "payloads": null,
+      "reachableEntries": [
+        "<com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>"
+      ],
+      "callStackMethods": [
+        "<com.xpn.xwiki.internal.template.InternalTemplateManager: org.xwiki.template.Template getClassloaderTemplate(java.lang.ClassLoader,java.lang.String,java.lang.String)>",
+        "<java.lang.ClassLoader: java.net.URL getResource(java.lang.String)>"
+      ],
+      "callStackToString": null,
+      "singleChainVulExpResult": null,
+      "url": null,
+      "llmexpRank": -1,
+      "callStackLength": 2
+    }
+  ]
+}

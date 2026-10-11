@@ -1,0 +1,5 @@
+<com.aliyuncs.http.HttpRequest: void setSysConnectTimeout(java.lang.Integer)><---<com.aliyun.oss.common.auth.HttpCredentialsFetcher: com.aliyun.oss.common.auth.Credentials fetch()>
+<com.aliyuncs.http.HttpRequest: void setSysConnectTimeout(java.lang.Integer)><---<com.aliyuncs.CommonRequest: void fillParams(com.aliyuncs.AcsRequest)>
+<com.aliyuncs.http.HttpRequest: void setSysReadTimeout(java.lang.Integer)><---<com.aliyun.oss.common.auth.HttpCredentialsFetcher: com.aliyun.oss.common.auth.Credentials fetch()>
+<com.aliyuncs.http.HttpRequest: void setSysReadTimeout(java.lang.Integer)><---<com.aliyuncs.CommonRequest: void fillParams(com.aliyuncs.AcsRequest)>
+<com.aliyuncs.auth.sts.GetSessionAccessKeyRequest: void setDurationSeconds(int)><---<com.aliyun.oss.common.auth.STSKeyPairSessionCredentialsProvider: com.aliyun.oss.common.auth.BasicCredentials getNewSessionCredentials()>

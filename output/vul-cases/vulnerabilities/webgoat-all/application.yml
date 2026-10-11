@@ -1,0 +1,217 @@
+soot:
+  output:
+    path: /Users/fortsun/Desktop/git/restfuzz-sast/output/25-4-15
+#    path: /home/sft/nothing/output/benchmark2700
+    filename: Analyze_result.json
+    insFilename: Instructions.json
+  additional:
+    path: "$无需"
+  rt:
+    dir:
+  jce:
+    dir:
+
+list:
+  sootInputPaths:
+    # "$被测项目class文件目录"
+#    - /Users/fortsun/Documents/huawei/jarSet/nexus/nexus-3.0.4/nexus
+#    - /Users/fortsun/Documents/huawei/soot-input/nifi/nifi
+#    - /Users/fortsun/Documents/huawei/soot-input/seata
+#    - /Users/fortsun/Downloads/apache-tomcat-9.0.85/test-input/catalina
+#    - /Users/fortsun/Desktop/ppt/程序分析/ai/test-set/n-day-commit/xwifi-14.1-rc-1
+#    - /Users/fortsun/Documents/huawei/4-8测试/skywalking-bin
+#    - /Users/fortsun/Documents/huawei/4-8测试/seatunnel
+#    - /Users/fortsun/Documents/huawei/4-8测试/jenkins
+#    - /Users/fortsun/Documents/huawei/4-8测试/dolphinscheduler
+#    - /Users/fortsun/Documents/huawei/4-8测试/dolphin-api
+#    - /Users/fortsun/Documents/huawei/4-8测试/rocketmq-完整/rocketmq
+#    - /Users/fortsun/Documents/huawei/4-8测试/inlong
+#    - /Users/fortsun/Documents/huawei/4-8测试/hertzbeat
+#    - /Users/fortsun/Documents/huawei/4-8测试/camel3-22-0
+#    - /Users/fortsun/Documents/huawei/4-8测试/pulsar3-2-1
+#    - /Users/fortsun/Documents/huawei/4-8测试/undertow
+#    - /Users/fortsun/Desktop/ppt/程序分析/ai/test-set/elasticsearch-6.5.3-part
+#    - /Users/fortsun/Desktop/ppt/程序分析/ai/test-set/es-7.17.28-part
+#    - /Users/fortsun/Desktop/ppt/程序分析/ai/test-set/es-8.6.1-part
+#    - /Users/fortsun/Desktop/ppt/程序分析/ai/test-set/tomcat-9.0.74
+#    - /Users/fortsun/Desktop/ppt/程序分析/ai/test-set/jetty-12.0.17
+#    - /Users/fortsun/Desktop/ppt/程序分析/ai/test-set
+#    - /Users/fortsun/Downloads/post42-2-5
+#    - /Users/fortsun/Downloads/test/dataset/components/druid-spring-boot-starter-1.1.10
+#    - /Users/fortsun/Downloads/druid
+#    - /Users/fortsun/Desktop/test/java-sast-testcases/Java_SAST_TestCase_Suite-master-1/target/classes
+#    - /Users/fortsun/Downloads/test/dataset/components/rocketmq-test-4.4.0
+#    - /Users/fortsun/Downloads/test/dataset/components/rocketmq-broker-4.4.0
+#    - /Users/fortsun/Downloads/test/dataset/components/defibus-broker-1.0.1
+#    - /Users/fortsun/Downloads/rockermq-common
+#    - /Users/fortsun/Downloads/test/dataset/components/atlassian-bamboo-web-5.10.0-m64
+#    - /Users/fortsun/Downloads/test/dataset/components/struts2-core-2.1.8.1
+#    - /Users/fortsun/Downloads/test/dataset/components/tomcat-catalina-8.0.51
+#    - /Users/fortsun/Downloads/test/dataset/components/logback-access-1.3.12
+#    - /Users/fortsun/Downloads/test/dataset/components/derby-10.8.3.0
+#    - /Users/fortsun/Downloads/test/dataset/components/spring-jdbc-5.0.16.RELEASE
+    - /Users/fortsun/Desktop/test/WebGoat/target/classes
+#    - /home/sft/FlowDroidMao/TestData/benchmark2700/classes
+#    - /Users/fortsun/Desktop/test/java-sast-testcases/Java_SAST_TestCase_Suite-master-1/target/classes
+#    - /Users/fortsun/Desktop/git/IntelligentSAST-TestCase/target/classes
+#    - /Users/fortsun/Desktop/test/java-sast-testcases/2015-10-27-elasticsearch-v1-0-0/153885-v1.0.0/install/classes
+#    - /Users/fortsun/Desktop/test/赛题材料/micro_service_seclab-main/target/classes
+#    - /Users/fortsun/Desktop/git/BenchmarkJava/target/classes
+#    - /Users/fortsun/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/6c3cc71e9d133d0059d21555ce9e402d/Message/MessageTemp/8199a423b42ba40d2643d727f5ed9823/File/2.0
+#    - /Users/fortsun/Desktop/ppt/可利用性/test_case/CVE-2022-25845
+#    - /Users/fortsun/Desktop/code/labweb_new/labWeb_new/ruoyi-system/target/classes
+#    - /Users/fortsun/Documents/数据/maven的jar包/top50/jar_package/storm-core-1.2.4
+#    - /Users/fortsun/Desktop/git/gpt-prompt-engineer/tools/affected_versions/hbase_jars
+#    - /Users/fortsun/Desktop/git/gpt-prompt-engineer/tools/affected_versions/hadoop_jars/hadoop-0.23.9/unzipped
+#    - /Users/fortsun/Desktop/git/gpt-prompt-engineer/tools/affected_versions/neo4j_jars/4.2.0/unzipped
+#    - /Users/fortsun/Desktop/git/gpt-prompt-engineer/tools/affected_versions/tmp/flink
+    # 测试漏洞可利用性分析工具
+#    - /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/jackson-databind
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/termed-core
+#    - /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/core/target/classes
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/authas-tunnel-server
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/netty
+#    - /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/tunnel-client/target/classes
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/embedded-redis
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/commons-io
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/retrofit
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/guava
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/logback-classic
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/reactor-netty-core
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/netty
+#    - /Users/fortsun/Desktop/test/sca-testcases/components/tomcat-embedded-core
+
+    - "$以下4个文件必须存在，需要提前下载"
+#    - /Users/fortsun/Desktop/git/restfuzz-sast/dependency_path/package-dependency
+#    - /Users/fortsun/Desktop/git/restfuzz-sast/dependencies/httpclient-4.5.13.jar
+#    - /Users/fortsun/Desktop/git/restfuzz-sast/dependencies/fluent-hc-4.5.13.jar
+#    - /Users/fortsun/Desktop/git/restfuzz-sast/dependencies/okhttp-2.7.5.jar
+  scannedMybatisXmlDirs:
+    #    - /Users/fortsun/Downloads/题目2：源码自动化审计与自动化评估验证/赛题材料/micro_service_seclab-main/src/main/resources/mappers
+#    - /Users/fortsun/Downloads/题目2：源码自动化审计与自动化评估验证-1/赛题材料/micro_service_seclab-main/src/main/resources/mappers
+#  sourceCode: "/Users/fortsun/Desktop/test/WebGoat/src/main/java"
+#  sourceCode: "/Users/fortsun/Desktop/git/gpt-prompt-engineer/tools/workdirs/hadoop_0.23.1_workdir/hadoop-release-0.23.1"
+  sourceCode: "/Users/fortsun/Downloads/tomcat-9.0.74"
+  additionalSinks:
+    - "sdafadsf"
+
+logging:
+  config: classpath:log4j2.yml
+
+
+rules:
+  core:
+    path: rules/core.xml
+    pathSwitcher: off
+    thirdPartyPath: rules/java-core.xml
+    thirdPartyPathSwitcher: on
+  added:
+    path: rules/risky_funcs.xml
+    pathSwitcher: on
+    thirdPartyPath: rules/sources.xml
+    thirdPartyPathSwitcher: off
+  extend:
+    path: rules/extend.xml
+    pathSwitcher: off
+    thirdPartyPath: rules/java-extend.xml
+    thirdPartyPathSwitcher: on
+  entry:
+    path: rules/EntrySet_vul.xml
+    switcher: on
+  conditional: on
+  taintFlag: on
+
+
+analysis:
+  taintSanitizeSwitcher: off
+  simpleDataPathSwitcher: on
+  onlyDataflowCallStackInter: off
+  fieldSensitiveSwitcher: on
+  sparkSwitcher: on
+  conditionSummarySwitcher: on
+  chainTrackMode: off
+
+chainTrack:
+  entryClassName: "org.apache.coyote.AbstractProcessor"
+  entryMethodName: "action"
+  sinkClassName: "org.apache.coyote.http11.Http11Processor"
+  sinkMethodName: "prepareSendfile"
+
+vulexp:
+  downstream:
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package/arthas-tunnel-server-3.7.1-fatjar.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/termed-core/termd-core-1.1.7.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/embedded-redis/embedded-redis-0.7.3.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/core/target/arthas-core.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/arthas-arthas-all-3.7.1/tunnel-client/target/arthas-tunnel-client.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/retrofit/retrofit-2.4.0.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/authas-tunnel-server/arthas-tunnel-server-3.7.1.jar
+#    jarPath: /Users/fortsun/Downloads/druid-1.1.11.jar
+    jarPath: /Users/fortsun/Downloads/test/dataset/components/druid-spring-boot-starter-1.1.10.jar
+#    jarPath: /Users/fortsun/Downloads/test/dataset/components/atlassian-bamboo-web-5.10.0-m64.jar
+#    jarPath: /Users/fortsun/Downloads/test/dataset/components/logback-access-1.3.12.jar
+#    jarPath: /Users/fortsun/Downloads/test/dataset/components/spring-jdbc-5.0.16.RELEASE.jar
+#    jarPath: /Users/fortsun/Downloads/test/dataset/components/rocketmq-test-4.4.0.jar
+#    jarPath: /Users/fortsun/Downloads/test/dataset/components/defibus-broker-1.0.1.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/reactor-netty-core/reactor-netty-core-1.0.31.jar
+  upstream:
+    #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/arthas-3.7.1/jar-package/arthas-tunnel-server-3.7.1-fatjar.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/jackson-databind/jackson-databind-2.9.3.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/netty/netty-handler-4.1.92.Final.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/guava/guava-21.0.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/commons-io/commons-io-2.5.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/netty/netty-handler-4.1.92.Final.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/tomcat-embedded-core/tomcat-embed-core-9.0.74.jar
+#    jarPath: /Users/fortsun/Downloads/postgresql-42.2.5.jar
+    jarPath: /Users/fortsun/Downloads/druid-1.1.11.jar
+#    jarPath: /Users/fortsun/Downloads/test/dataset/components/struts2-core-2.1.8.1.jar
+#    jarPath: /Users/fortsun/Downloads/test/dataset/components/tomcat-catalina-8.0.51.jar
+#    jarPath: /Users/fortsun/Downloads/test/dataset/components/derby-10.8.3.0.jar
+#    jarPath: /Users/fortsun/Downloads/test/dataset/components/rocketmq-broker-4.4.0.jar
+  #    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/retrofit/retrofit-2.4.0.jar
+#    jarPath: /Users/fortsun/Desktop/test/sca-testcases/components/logback-classic/logback-classic-1.2.11.jar
+    riskyfuncs:
+#      - org.postgresql.core.SocketFactoryFactory:getSocketFactory
+#      - org.postgresql.core.SocketFactoryFactory:getSslSocketFactory
+#      - org.postgresql.ssl.MakeSSL:verifyPeerName
+#      - org.postgresql.util.ObjectFactory:instantiate
+#      - org.apache.rocketmq.broker.processor.AbstractSendMessageProcessor:msgCheck
+#      - org.apache.rocketmq.broker.topic.TopicConfigManager:isTopicCanSendMessage
+#      - org.apache.rocketmq.broker.processor.AdminBrokerProcessor:updateAndCreateTopic
+#      - org.apache.struts2.dispatcher.mapper.DefaultActionMapper:handleSpecialParameters
+#      - org.apache.struts2.dispatcher.mapper.DefaultActionMapper:<init>
+#      - org.apache.struts2.dispatcher.mapper.DefaultActionMapper:setAllowDynamicMethodCalls
+#      - org.apache.derby.authentication.UserAuthenticator:authenticateUser
+#      - org.apache.derby.impl.jdbc.authentication.AuthenticationServiceBase:authenticate
+#      - org.apache.derby.impl.jdbc.authentication.LDAPAuthenticationSchemeImpl:authenticateUser
+#      - org.apache.catalina.filters.CorsFilter:parseAndStore
+#      - org.apache.catalina.filters.CorsFilter:handleSimpleCORS
+      - com.alibaba.druid.filter.FilterChainImpl:connection_connect
+      - com.alibaba.druid.pool.ha.selector.RandomDataSourceValidateThread:check
+      - com.alibaba.druid.pool.ha.selector.RandomDataSourceSelector:<init>
+      - com.alibaba.druid.pool.DruidAbstractDataSource:createPhysicalConnection
+    addEntrySet: tomcat
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb
+    username: newuser
+    password: newpassword
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10  # 配置连接池大小，可以根据实际情况调整
+      idle-timeout: 600000  # 连接池空闲连接最大存活时间
+      max-lifetime: 1800000  # 连接池最大生命周期
+      connection-timeout: 30000  # 获取连接的超时时间
+  jpa:
+    hibernate:
+      ddl-auto: create  # 自动更新数据库结构，开发阶段可以使用 create/update，生产环境用 validate 或 none
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: false  # 显示 SQL 语句，方便调试
+    properties:
+      hibernate:
+        format_sql: true  # 格式化输出 SQL 语句
+        jdbc:
+          lob:
+            non_contextual_creation: true  # 解决某些情况下对 LOB 类型的处理问题

@@ -1,0 +1,159 @@
+r0 := @this: org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest
+z0 := @parameter0: boolean
+$r1 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+if $r1 == null goto (branch)
+$r19 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+if $r19 == null goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r21 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$z3 = virtualinvoke $r21.<org.eclipse.jetty.session.ManagedSession: boolean isValid()>()
+if $z3 != 0 goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession> = null
+goto [?= (branch)]
+if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+return null
+$r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+$r3 = virtualinvoke $r2.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+$z1 = virtualinvoke $r3.<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>()
+if $z1 == 0 goto $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r23 = new java.lang.IllegalStateException
+$r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+if $r4 != null goto $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r5 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+$r24 = new java.lang.IllegalStateException
+specialinvoke $r24.<java.lang.IllegalStateException: void <init>(java.lang.String)>("No SessionManager")
+throw $r24
+specialinvoke $r23.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Response is committed")
+throw $r23
+$r26 = (org.eclipse.jetty.server.Session) $r20
+return $r26
+if $r5 != null goto $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+$r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+$r22 = null
+goto [?= $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)]
+$r22 = virtualinvoke $r6.<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>()
+$r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+interfaceinvoke $r7.<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>(r0, $r22, $r8)
+$r9 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+if $r9 != null goto $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r25 = new java.lang.IllegalStateException
+$r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r11 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+specialinvoke $r25.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Create session failed")
+throw $r25
+$z2 = virtualinvoke r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: boolean isSecure()>()
+$r12 = interfaceinvoke $r10.<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>($r11, $z2)
+if $r12 == null goto $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r14 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+$r15 = virtualinvoke $r14.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+virtualinvoke $r15.<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>($r12)
+$r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r27 = (org.eclipse.jetty.server.Session) $r13
+return $r27
+r0 := @this: org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest
+z0 := @parameter0: boolean
+$r1 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+if $r1 == null goto (branch)
+$r19 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+if $r19 == null goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r21 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$z3 = virtualinvoke $r21.<org.eclipse.jetty.session.ManagedSession: boolean isValid()>()
+if $z3 != 0 goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession> = null
+goto [?= (branch)]
+if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+return null
+$r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+$r3 = virtualinvoke $r2.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+$z1 = virtualinvoke $r3.<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>()
+if $z1 == 0 goto $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r23 = new java.lang.IllegalStateException
+$r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+if $r4 != null goto $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r5 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+$r24 = new java.lang.IllegalStateException
+specialinvoke $r24.<java.lang.IllegalStateException: void <init>(java.lang.String)>("No SessionManager")
+throw $r24
+specialinvoke $r23.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Response is committed")
+throw $r23
+$r26 = (org.eclipse.jetty.server.Session) $r20
+return $r26
+if $r5 != null goto $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+$r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+$r22 = null
+goto [?= $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)]
+$r22 = virtualinvoke $r6.<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>()
+$r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+interfaceinvoke $r7.<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>(r0, $r22, $r8)
+$r9 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+if $r9 != null goto $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r25 = new java.lang.IllegalStateException
+$r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r11 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+specialinvoke $r25.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Create session failed")
+throw $r25
+$z2 = virtualinvoke r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: boolean isSecure()>()
+$r12 = interfaceinvoke $r10.<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>($r11, $z2)
+if $r12 == null goto $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r14 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+$r15 = virtualinvoke $r14.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+virtualinvoke $r15.<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>($r12)
+$r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r27 = (org.eclipse.jetty.server.Session) $r13
+return $r27
+r0 := @this: org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest
+z0 := @parameter0: boolean
+$r1 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+if $r1 == null goto (branch)
+$r19 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+if $r19 == null goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r21 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$z3 = virtualinvoke $r21.<org.eclipse.jetty.session.ManagedSession: boolean isValid()>()
+if $z3 != 0 goto $r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession> = null
+goto [?= (branch)]
+if z0 != 0 goto $r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+return null
+$r20 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r2 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+$r3 = virtualinvoke $r2.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+$z1 = virtualinvoke $r3.<org.eclipse.jetty.ee9.nested.Response: boolean isCommitted()>()
+if $z1 == 0 goto $r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r23 = new java.lang.IllegalStateException
+$r4 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+if $r4 != null goto $r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r7 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r5 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+$r24 = new java.lang.IllegalStateException
+specialinvoke $r24.<java.lang.IllegalStateException: void <init>(java.lang.String)>("No SessionManager")
+throw $r24
+specialinvoke $r23.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Response is committed")
+throw $r23
+$r26 = (org.eclipse.jetty.server.Session) $r20
+return $r26
+if $r5 != null goto $r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+$r6 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.AbstractSessionManager$RequestedSession _requestedSession>
+$r22 = null
+goto [?= $r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)]
+$r22 = virtualinvoke $r6.<org.eclipse.jetty.session.AbstractSessionManager$RequestedSession: java.lang.String sessionId()>()
+$r8 = staticinvoke <org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest$setManagedSession__221: java.util.function.Consumer bootstrap$(org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest)>(r0)
+interfaceinvoke $r7.<org.eclipse.jetty.session.SessionManager: void newSession(org.eclipse.jetty.server.Request,java.lang.String,java.util.function.Consumer)>(r0, $r22, $r8)
+$r9 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+if $r9 != null goto $r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r25 = new java.lang.IllegalStateException
+$r10 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.SessionManager _sessionManager>
+$r11 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+specialinvoke $r25.<java.lang.IllegalStateException: void <init>(java.lang.String)>("Create session failed")
+throw $r25
+$z2 = virtualinvoke r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: boolean isSecure()>()
+$r12 = interfaceinvoke $r10.<org.eclipse.jetty.session.SessionManager: org.eclipse.jetty.http.HttpCookie getSessionCookie(org.eclipse.jetty.session.ManagedSession,boolean)>($r11, $z2)
+if $r12 == null goto $r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r14 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.ee9.nested.HttpChannel _httpChannel>
+$r15 = virtualinvoke $r14.<org.eclipse.jetty.ee9.nested.HttpChannel: org.eclipse.jetty.ee9.nested.Response getResponse()>()
+virtualinvoke $r15.<org.eclipse.jetty.ee9.nested.Response: void replaceCookie(org.eclipse.jetty.http.HttpCookie)>($r12)
+$r13 = r0.<org.eclipse.jetty.ee9.nested.ContextHandler$CoreContextRequest: org.eclipse.jetty.session.ManagedSession _managedSession>
+$r27 = (org.eclipse.jetty.server.Session) $r13
+return $r27

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rules>
+    <SourceRules>
+        <SourceRule language="java">
+            <RuleID>467DCCCF-D988-4CE4-8941-81A7D9E08E57</RuleID>
+            <TaintFlags>+PROPERTY</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.util</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Properties</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>load</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>this</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>3FC580A0-2485-4CE1-A3F5-E518B2643A9F</RuleID>
+            <TaintFlags>+STREAM</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Reader</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>read</Value>
+                </FunctionName>
+                <Parameters>
+                    <ParamType>char[]</ParamType>
+                    <ParamType>int</ParamType>
+                    <ParamType>int</ParamType>
+                </Parameters>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>0</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>C49C6238-E0FE-46FF-B556-C62A05F17A3A</RuleID>
+            <TaintFlags>+ZIP_ENTRY_NAME</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.util.zip</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ZipEntry</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getName</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>92CAA9A2-435A-425D-A32F-F09A61DED21D</RuleID>
+            <TaintFlags>+SYSTEMINFO</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.lang</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ClassLoader</Value>
+                </ClassName>
+                <FunctionName>
+                    <Pattern>findLibrary|findResource(s)?|getResource(s)?|getSystemResource(s)?|getSystemResourceAsStream|getPackage(s)?</Pattern>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>CB71E144-24E4-4F5E-B1D2-20AEA9E8379C</RuleID>
+            <TaintFlags>+STREAM</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Pattern>InputStream|RandomAccessFile</Pattern>
+                </ClassName>
+                <FunctionName>
+                    <Pattern>read|readAllBytes</Pattern>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>5BCAB759-C8BA-48A6-89A9-E2E135DC259D</RuleID>
+            <TaintFlags>+PRIVATE</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.security</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>KeyStore$PasswordProtection</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getPassword</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+        <SourceRule language="java">
+            <RuleID>467FFFFF-D988-4CE4-8941-81Q7D9E08E57</RuleID>
+            <TaintFlags>+PROPERTY</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.l4yn3.microserviceseclab.controller.common</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Dataflow</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>source</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>this</OutArguments>
+        </SourceRule>
+    </SourceRules>
+    <SinkRules>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">Java Core Networking</Group>
+            </MetaInfo>
+            <RuleID>A768D264C-D0FC-43CA-9DDR-E5DD1K7C9CF5</RuleID>
+            <VulnCategory>RCE</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+                <Conditional>
+                    <And>
+                        <TaintFlagSet taintFlag="RCE"/>
+                        <Not>
+                            <TaintFlagSet taintFlag="VALIDATED_COMMAND_INJECTION"/>
+                        </Not>
+                    </And>
+                </Conditional>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.lang</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Runtime</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>exec</Value>
+                </FunctionName>
+                <Parameters>
+                    <ParamType>java.lang.String</ParamType>
+                </Parameters>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <RuleID>6C54B94F-52EA-4C03-B4AB-F7DD566A636E</RuleID>
+            <VulnCategory>Password Management</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>javax.security.auth.callback</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>PasswordCallback</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>setPassword</Value>
+                </FunctionName>
+                <Parameters>
+                    <ParamType>char[]</ParamType>
+                </Parameters>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+                <SinkRule language="java">
+                    <MetaInfo>
+                        <Group name="package">Java Core Networking</Group>
+                    </MetaInfo>
+                    <RuleID>A768D264C-D0FC-43CA-9DDR-E5DD1K7R9CF9</RuleID>
+                    <VulnCategory>Insecure Deserialization</VulnCategory>
+                    <Sink>
+                        <InArguments>this</InArguments>
+                        <Conditional>
+                            <And>
+                                <TaintFlagSet taintFlag="Insecure Deserialization"/>
+                                <Not>
+                                    <TaintFlagSet taintFlag="Insecure_Deserialization"/>
+                                </Not>
+                            </And>
+                        </Conditional>
+                    </Sink>
+                    <FunctionIdentifier>
+                        <NamespaceName>
+                            <Value>java.io</Value>
+                        </NamespaceName>
+                        <ClassName>
+                            <Value>ObjectInput</Value>
+                        </ClassName>
+                        <FunctionName>
+                            <Value>readObject</Value>
+                        </FunctionName>
+                        <ApplyTo implements="true" overrides="true" extends="true"/>
+                    </FunctionIdentifier>
+                </SinkRule>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">Java Core Networking</Group>
+            </MetaInfo>
+            <RuleID>A768D264C-D0FC-43CA-9DDR-E5DD1K7R9CF9</RuleID>
+            <VulnCategory>Insecure Deserialization</VulnCategory>
+            <Sink>
+                <InArguments>this</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ObjectInputStream</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>readObject</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <RuleID>6C54FFFF-52EA-4C03-B4AB-F7DD566A636E</RuleID>
+            <VulnCategory>Password Management</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>com.l4yn3.microserviceseclab.controller.common</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Dataflow</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>sink</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <RuleID>A0G969A3-AF69-413A-BA96-CDAC757B1001</RuleID>
+            <VulnCategory>SQL</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.sql</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Statement</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>executeUpdate</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <RuleID>A0G969A3-AF69-413A-BA96-CDAC757B1002</RuleID>
+            <VulnCategory>SQL</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.sql</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>PreparedStatement</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>executeQuery</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <RuleID>A0G969A3-AF69-413A-BA96-CDAC757B1003</RuleID>
+            <VulnCategory>PATH</VulnCategory>
+            <Sink>
+                <InArguments>1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.springframework.util</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>FileCopyUtils</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>copy</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <RuleID>A0G969A3-AF69-413A-BA96-CDAC757B1004</RuleID>
+            <VulnCategory>XXE</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>javax.xml.stream</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>XMLInputFactory</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>createXMLStreamReader</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+
+
+        <SinkRule formatVersion="3.2" language="java">
+            <MetaInfo>
+            </MetaInfo>
+            <RuleID>SFThaha-tomcat-sink-02</RuleID>
+            <VulnKingdom>TEST</VulnKingdom>
+            <VulnCategory>TEST</VulnCategory>
+            <DefaultSeverity>4.0</DefaultSeverity>
+            <Description ref="">
+                <Explanation append="true"></Explanation></Description>
+            <Sink>
+            <InArguments>1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Pattern>org.apache.catalina.session</Pattern>
+                </NamespaceName>
+                <ClassName>
+                    <Pattern>StandardSession</Pattern>
+                </ClassName>
+                <FunctionName>
+                    <Pattern>setNote</Pattern>
+                </FunctionName><ApplyTo implements="true" overrides="true" extends="true"/></FunctionIdentifier>
+        </SinkRule>
+
+
+        <SinkRule formatVersion="3.2" language="java">
+            <MetaInfo>
+            </MetaInfo>
+            <RuleID>A0G999A3-KF69-413A-B346-CDAC757B1004</RuleID>
+            <VulnKingdom>TEST</VulnKingdom>
+            <VulnCategory>TEST</VulnCategory>
+            <DefaultSeverity>4.0</DefaultSeverity>
+            <Description ref="">
+                <Explanation append="true"></Explanation></Description>
+            <Sink>
+                <InArguments>1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Pattern>com.example.splitting</Pattern>
+                </NamespaceName>
+                <ClassName>
+                    <Pattern>Sink</Pattern>
+                </ClassName>
+                <FunctionName>
+                    <Pattern>sink</Pattern>
+                </FunctionName><ApplyTo implements="true" overrides="true" extends="true"/></FunctionIdentifier>
+        </SinkRule>
+
+        <SinkRule language="java">
+            <RuleID>A0G969A3-AF69-413A-BA96-CDAC757B1005</RuleID>
+            <VulnCategory>RI</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.net</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>URI</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>init</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+        <SinkRule language="java">
+            <RuleID>A0G969A3-AF69-413A-BA96-CDAC757B1006</RuleID>
+            <VulnCategory>Path Manipulation</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>FileInputStream</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>init</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+    </SinkRules>
+    <PropagationRules>
+        <PropagationRule>
+            <RuleID>AAE960A3-AF61-419A-BA96-CDAC757B5E33</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.net</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>URI</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>create</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <InArguments>0</InArguments>
+            <OutArguments>return</OutArguments>
+        </PropagationRule>
+        <PropagationRule>
+            <RuleID>891CB643-5DA6-4F24-8791-E893E8B7ECF1</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.lang</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>String</Value>
+                </ClassName>
+                <FunctionName>
+                    <Pattern>repeat|strip|stripLeading|stripTrailing</Pattern>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <InArguments>this</InArguments>
+            <OutArguments>return</OutArguments>
+        </PropagationRule>
+        <PropagationRule>
+            <RuleID>AAE960A3-AF61-419A-BA96-CDAC757B5E00</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.util</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Base64$Decoder</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>decode</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <InArguments>0</InArguments>
+            <OutArguments>return</OutArguments>
+        </PropagationRule>
+        <PropagationRule>
+            <RuleID>AAE960A3-AF61-419A-BA96-CDAC757B5E11</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ByteArrayInputStream</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>init</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <InArguments>0</InArguments>
+            <OutArguments>this</OutArguments>
+        </PropagationRule>
+        <PropagationRule>
+            <RuleID>A0G969A3-AF69-413A-BA96-CDAC757B5E55</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.io</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ObjectInputStream</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>init</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <InArguments>0</InArguments>
+            <OutArguments>this</OutArguments>
+        </PropagationRule>
+        <PropagationRule>
+            <RuleID>A0G969A3-AF69-413A-BA96-CDAC757B1000</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.springframework.data.repository</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>CrudRepository</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>save</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <InArguments>0</InArguments>
+            <OutArguments>return</OutArguments>
+        </PropagationRule>
+    </PropagationRules>
+</Rules>

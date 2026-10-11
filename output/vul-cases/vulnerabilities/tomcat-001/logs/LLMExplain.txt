@@ -1,0 +1,1973 @@
+方法名：register方法签名：<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>
+初始被污染的参数：参数1参数2参数3参数4参数5参数6参数7参数8
+初始污点集合（参数被污染到局部变量)：r1; r2; r3; r4; r5; r6; z0; z1; 
+初始污点集合(从Val_m_taintNode读)：r6; r5; r2; z1; r1; r4; z0; r3; 
+数据流传播过程： 
+在这条语句：$r7 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(0)
+在这条语句中,污点从变量r1 传播到变量 $r7;
+此时的污点集合：r1; r2; r3; r4; r5; r6; z0; z1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：register方法签名：<org.apache.catalina.authenticator.FormAuthenticator: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>
+初始被污染的参数：参数1参数2参数3参数4参数5参数6参数7参数8
+初始污点集合（参数被污染到局部变量)：r1; r2; r3; r4; r5; r6; z0; z1; 
+初始污点集合(从Val_m_taintNode读)：r6; r5; r2; z1; r1; r4; z0; r3; 
+数据流传播过程： 
+在这条语句：$r7 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(0)
+在这条语句中,污点从变量r1 传播到变量 $r7;
+此时的污点集合：r1; r2; r3; r4; r5; r6; z0; z1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getCoyoteRequest方法签名：<org.apache.catalina.connector.Request: org.apache.coyote.Request getCoyoteRequest()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getRequest方法签名：<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest getRequest()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade>; $r1; 
+
+-----------------------------------
+在这条语句：$r2 = r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest> 传播到变量 $r2;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade>; $r1; r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest>; $r2; 
+
+-----------------------------------
+在这条语句：$r4 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade> 传播到变量 $r4;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade> 传播到变量 $r4;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade>; $r1; r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest>; $r2; $r4; 
+
+-----------------------------------
+在这条语句：r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest> = $r4
+在这条语句中,污点从变量$r4 传播到变量 r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest>;在这条语句中,污点从变量$r4 传播到变量 r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest>;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade>; $r1; r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest>; $r2; $r4; 
+
+-----------------------------------
+在这条语句：$r3 = r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest> 传播到变量 $r3;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest> 传播到变量 $r3;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.RequestFacade facade>; $r1; r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest applicationRequest>; $r2; $r4; $r3; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：notifyAttributeRemoved方法签名：<org.apache.catalina.connector.Request: void notifyAttributeRemoved(java.lang.String,java.lang.Object)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r11 = r0.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r11;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r11;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r11; 
+
+-----------------------------------
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>()
+在这条语句中,污点从变量r0 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r11; 
+
+-----------------------------------
+在这条语句：$r5 = virtualinvoke r0.<org.apache.catalina.connector.Request: javax.servlet.http.HttpServletRequest getRequest()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r5上；
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r11; $r1; 
+
+-----------------------------------
+在这条语句：$r16 = (javax.servlet.ServletRequest) $r5
+在这条语句中,污点从变量$r5 传播到变量 $r16;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r11; $r1; $r5; $r16; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：removeAttribute方法签名：<org.apache.catalina.connector.Request: void removeAttribute(java.lang.String)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r1; 
+数据流传播过程： 
+在这条语句：$r6 = r1.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r1.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r6;在这条语句中,污点从变量r1.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r6;
+此时的污点集合：r1; r1.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r6; 
+
+-----------------------------------
+在这条语句：$r2 = r1.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r1.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r2;在这条语句中,污点从变量r1.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r2;
+此时的污点集合：r1; r1.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r6; r1.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r2; 
+
+-----------------------------------
+在这条语句：$r3 = r1.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r1.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r3;在这条语句中,污点从变量r1.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r3;
+此时的污点集合：r1; r1.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r6; r1.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r2; $r3; 
+
+-----------------------------------
+在这条语句：$r5 = r1.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r1.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r5;在这条语句中,污点从变量r1.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r5;
+此时的污点集合：r1; r1.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r6; r1.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r2; $r3; $r5; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：notifyAttributeAssigned方法签名：<org.apache.catalina.connector.Request: void notifyAttributeAssigned(java.lang.String,java.lang.Object,java.lang.Object)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r15 = r0.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r15;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r15;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r15; 
+
+-----------------------------------
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>()
+在这条语句中,污点从变量r0 传播到变量 $r1;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r15; 
+
+-----------------------------------
+在这条语句：$r22 = (javax.servlet.ServletRequest) $r13
+在这条语句中,污点从变量$r13 传播到变量 $r22;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r15; $r1; $r13; $r22; 
+
+-----------------------------------
+在这条语句：$r23 = (javax.servlet.ServletRequest) $r6
+在这条语句中,污点从变量$r6 传播到变量 $r23;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r15; $r1; $r13; $r22; $r6; $r23; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：setAttribute方法签名：<org.apache.catalina.connector.Request: void setAttribute(java.lang.String,java.lang.Object)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r4; 
+数据流传播过程： 
+在这条语句：$r19 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r19;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r19;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r19; 
+
+-----------------------------------
+在这条语句：$r5 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r5;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r5;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r19; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r5; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：forwardToLoginPage方法签名：<org.apache.catalina.authenticator.FormAuthenticator: void forwardToLoginPage(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,org.apache.tomcat.util.descriptor.web.LoginConfig)>
+初始被污染的参数：参数1参数2参数3
+初始污点集合（参数被污染到局部变量)：r11; r10; r2; 
+初始污点集合(从Val_m_taintNode读)：r11; r10; r2; 
+数据流传播过程： 
+在这条语句：$r35 = virtualinvoke r11.<org.apache.catalina.connector.Request: org.apache.coyote.Request getCoyoteRequest()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r35上；
+此时的污点集合：r11; r10; r2; 
+
+-----------------------------------
+在这条语句：$r28 = virtualinvoke r11.<org.apache.catalina.connector.Request: java.lang.String getRequestURI()>()
+在这条语句中,污点从变量r11 传播到变量 $r28;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; 
+
+-----------------------------------
+在这条语句：$r25[0] = $r28
+在这条语句中,污点从变量$r28 传播到变量 $r25[0];在这条语句中,污点从变量$r28 传播到变量 $r25;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; $r28; $r25[0]; $r25; 
+
+-----------------------------------
+在这条语句：$r29 = virtualinvoke r11.<org.apache.catalina.connector.Request: java.lang.String getMethod()>()
+在这条语句中,污点从变量r11 传播到变量 $r29;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; $r28; $r25[0]; $r25; 
+
+-----------------------------------
+在这条语句：$r25[1] = $r29
+在这条语句中,污点从变量$r29 传播到变量 $r25[1];在这条语句中,污点从变量$r29 传播到变量 $r25;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; $r28; $r25[0]; $r25; $r29; $r25[1]; 
+
+-----------------------------------
+在这条语句：$r17 = virtualinvoke r11.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(0)
+在这条语句中,污点从变量r11 传播到变量 $r17;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; $r28; $r25[0]; $r25; $r29; $r25[1]; 
+
+-----------------------------------
+在这条语句：$r43 = virtualinvoke r11.<org.apache.catalina.connector.Request: java.lang.String getMethod()>()
+在这条语句中,污点从变量r11 传播到变量 $r43;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; $r28; $r25[0]; $r25; $r29; $r25[1]; $r17; 
+
+-----------------------------------
+在这条语句：$r51 = (javax.servlet.ServletRequest) $r50
+在这条语句中,污点从变量$r50 传播到变量 $r51;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; $r28; $r25[0]; $r25; $r29; $r25[1]; $r17; $r43; $r44; $r50; $r51; 
+
+-----------------------------------
+在这条语句：$r52 = (javax.servlet.ServletRequest) $r14
+在这条语句中,污点从变量$r14 传播到变量 $r52;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; $r28; $r25[0]; $r25; $r29; $r25[1]; $r17; $r43; $r44; $r50; $r51; $r14; $r52; 
+
+-----------------------------------
+在这条语句：$r53 = (javax.servlet.ServletResponse) r10
+在这条语句中,污点从变量r10 传播到变量 $r53;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; $r28; $r25[0]; $r25; $r29; $r25[1]; $r17; $r43; $r44; $r50; $r51; $r14; $r52; $r53; 
+
+-----------------------------------
+在这条语句：$r54 = (javax.servlet.ServletRequest) $r16
+在这条语句中,污点从变量$r16 传播到变量 $r54;
+
+此时：被污染的变量别名信息包括: [[root]->applicationRequest]
+此时的污点集合：r11; r10; r2; $r35; $r41; $r28; $r25[0]; $r25; $r29; $r25[1]; $r17; $r43; $r44; $r50; $r51; $r14; $r52; $r53; $r16; $r54; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getSessionInternal方法签名：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>(z0)
+在这条语句中,污点从变量r0 传播到变量 $r1;
+此时的污点集合：r0; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getSessionInternal方法签名：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>(z0)
+在这条语句中,污点从变量r0 传播到变量 $r1;
+此时的污点集合：r0; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：equals方法签名：<java.lang.String: boolean equals(java.lang.Object)>
+初始被污染的参数：参数1
+初始污点集合（参数被污染到局部变量)：r1; 
+数据流传播过程： 
+在这条语句：r2 = (java.lang.String) r1
+在这条语句中,污点从变量r1 传播到变量 r2;
+此时的污点集合：r1; r2; 
+
+-----------------------------------
+在这条语句：$r4 = r2.<java.lang.String: char[] value>
+在这条语句中,污点从变量r2.<java.lang.String: char[] value> 传播到变量 $r4;在这条语句中,污点从变量r2.<java.lang.String: char[] value> 传播到变量 $r4;
+此时的污点集合：r1; r2; r2.<java.lang.String: char[] value>; $r4; 
+
+-----------------------------------
+在这条语句：r6 = r2.<java.lang.String: char[] value>
+在这条语句中,污点从变量r2.<java.lang.String: char[] value> 传播到变量 r6;在这条语句中,污点从变量r2.<java.lang.String: char[] value> 传播到变量 r6;
+此时的污点集合：r1; r2; r2.<java.lang.String: char[] value>; $r4; r6; 
+
+-----------------------------------
+在这条语句：$c2 = r6[i5]
+在这条语句中,污点从变量r6 传播到变量 $c2;
+此时的污点集合：r1; r2; r2.<java.lang.String: char[] value>; $r4; r6; $c2; 
+
+-----------------------------------
+在这条语句：$i9 = (int) $c2
+在这条语句中,污点从变量$c2 传播到变量 $i9;
+此时的污点集合：r1; r2; r2.<java.lang.String: char[] value>; $r4; r6; $c2; $i9; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getContextPath方法签名：<org.apache.catalina.connector.Request: java.lang.String getContextPath()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; 
+
+-----------------------------------
+在这条语句：i6 = $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>
+在这条语句中,污点从变量$r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount> 传播到变量 i6;在这条语句中,污点从变量$r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount> 传播到变量 i6;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; 
+
+-----------------------------------
+在这条语句：$r2 = virtualinvoke r0.<org.apache.catalina.connector.Request: javax.servlet.ServletContext getServletContext()>()
+在这条语句中,污点从变量r0 传播到变量 $r2;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; 
+
+-----------------------------------
+在这条语句：$r4 = virtualinvoke r0.<org.apache.catalina.connector.Request: java.lang.String getRequestURI()>()
+在这条语句中,污点从变量r0 传播到变量 $r4;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; 
+
+-----------------------------------
+在这条语句：r21 = $r4
+在这条语句中,污点从变量$r4 传播到变量 r21;在这条语句中,污点从变量$r4 传播到变量 r21;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; 
+
+-----------------------------------
+在这条语句：$r5 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>()
+在这条语句中,污点从变量r0 传播到变量 $r5;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; 
+
+-----------------------------------
+在这条语句：$i3 = specialinvoke r0.<org.apache.catalina.connector.Request: int nextSlash(char[],int)>($r22, $i2)
+在这条语句中,污点从变量r0 传播到变量 $i3;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; 
+
+-----------------------------------
+在这条语句：i7 = $i3
+在这条语句中,污点从变量$i3 传播到变量 i7;在这条语句中,污点从变量$i3 传播到变量 i7;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; 
+
+-----------------------------------
+在这条语句：r23 = r21
+在这条语句中,污点从变量r21 传播到变量 r23;在这条语句中,污点从变量r21 传播到变量 r23;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; r23; 
+
+-----------------------------------
+在这条语句：$r6 = specialinvoke r0.<org.apache.catalina.connector.Request: java.lang.String removePathParameters(java.lang.String)>(r23)
+在这条语句中,污点从变量r0 传播到变量 $r6;在这条语句中,污点从变量r23 传播到变量 $r6;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; r23; 
+
+-----------------------------------
+在这条语句：$r7 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector> 传播到变量 $r7;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector> 传播到变量 $r7;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; r23; $r6; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r7; 
+
+-----------------------------------
+在这条语句：$i1 = specialinvoke r0.<org.apache.catalina.connector.Request: int nextSlash(char[],int)>($r22, $i0)
+在这条语句中,污点从变量r0 传播到变量 $i1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; r23; $r6; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r7; 
+
+-----------------------------------
+在这条语句：i7 = $i1
+在这条语句中,污点从变量$i1 传播到变量 i7;在这条语句中,污点从变量$i1 传播到变量 i7;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; r23; $r6; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r7; $i1; 
+
+-----------------------------------
+在这条语句：r24 = r21
+在这条语句中,污点从变量r21 传播到变量 r24;在这条语句中,污点从变量r21 传播到变量 r24;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; r23; $r6; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r7; $i1; r24; 
+
+-----------------------------------
+在这条语句：$r16 = specialinvoke r0.<org.apache.catalina.connector.Request: java.lang.String removePathParameters(java.lang.String)>(r24)
+在这条语句中,污点从变量r0 传播到变量 $r16;在这条语句中,污点从变量r24 传播到变量 $r16;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; r23; $r6; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r7; $i1; r24; 
+
+-----------------------------------
+在这条语句：$r17 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector> 传播到变量 $r17;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector> 传播到变量 $r17;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; r23; $r6; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r7; $i1; r24; $r16; $r17; 
+
+-----------------------------------
+在这条语句：$r12[1] = r21
+在这条语句中,污点从变量r21 传播到变量 $r12[1];在这条语句中,污点从变量r21 传播到变量 $r12;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: int contextSlashCount>; i6; $r2; $r4; r21; $r5; $i3; i7; r23; $r6; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r7; $i1; r24; $r16; $r17; $r12[1]; $r12; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：doAuthenticate方法签名：<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>
+初始被污染的参数：参数1参数2
+初始污点集合（参数被污染到局部变量)：r1; r2; 
+初始污点集合(从Val_m_taintNode读)：r1; r2; 
+数据流传播过程： 
+在这条语句：$r102 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这条语句中,污点从变量r1 传播到变量 $r102;
+此时的污点集合：r1; r2; 
+
+-----------------------------------
+在这条语句：r129 = $r102
+在这条语句中,污点从变量$r102 传播到变量 r129;在这条语句中,污点从变量$r102 传播到变量 r129;
+此时的污点集合：r1; r2; $r102; r129; 
+
+-----------------------------------
+在这条语句：$r89 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这条语句中,污点从变量r1 传播到变量 $r89;
+此时的污点集合：r1; r2; $r102; r129; 
+
+-----------------------------------
+在这条语句：$r3 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getContextPath()>()
+在这条语句中,污点从变量r1 传播到变量 $r3;
+此时的污点集合：r1; r2; $r102; r129; $r89; 
+
+-----------------------------------
+在这条语句：$r4 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getDecodedRequestURI()>()
+在这条语句中,污点从变量r1 传播到变量 $r4;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; 
+
+-----------------------------------
+在这条语句：$r5 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>()
+在这条语句中,污点从变量r1 传播到变量 $r5;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; 
+
+-----------------------------------
+在这条语句：$r73 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getServletPath()>()
+在这条语句中,污点从变量r1 传播到变量 $r73;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; 
+
+-----------------------------------
+在这条语句：$r83 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getPathInfo()>()
+在这条语句中,污点从变量r1 传播到变量 $r83;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; 
+
+-----------------------------------
+在这条语句：$r74 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这条语句中,污点从变量r1 传播到变量 $r74;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; 
+
+-----------------------------------
+在这条语句：specialinvoke $r84.<java.lang.StringBuilder: void <init>(java.lang.String)>($r4)
+在这条语句中,污点从变量$r4 传播到变量 $r84;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; 
+
+-----------------------------------
+在这条语句：$r85 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getQueryString()>()
+在这条语句中,污点从变量r1 传播到变量 $r85;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; 
+
+-----------------------------------
+在这条语句：$r88 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getQueryString()>()
+在这条语句中,污点从变量r1 传播到变量 $r88;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; 
+
+-----------------------------------
+在这条语句：$r10 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getParameter(java.lang.String)>("j_username")
+在这条语句中,污点从变量r1 传播到变量 $r10;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; 
+
+-----------------------------------
+在这条语句：$r11 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getParameter(java.lang.String)>("j_password")
+在这条语句中,污点从变量r1 传播到变量 $r11;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; $r10; 
+
+-----------------------------------
+在这条语句：r129 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(0)
+在这句的方法调用中，返回值被污染，它被反应在变量r129上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; $r10; $r11; 
+
+-----------------------------------
+在这条语句：$r59 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()>()
+在这条语句中,污点从变量r1 传播到变量 $r59;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; $r10; $r11; r129; 
+
+-----------------------------------
+在这条语句：$r41 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getContextPath()>()
+在这条语句中,污点从变量r1 传播到变量 $r41;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; $r10; $r11; r129; $r59; 
+
+-----------------------------------
+在这条语句：$r47 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这句的方法调用中，返回值被污染，它被反应在变量$r47上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; $r10; $r11; r129; $r59; $r41; 
+
+-----------------------------------
+在这条语句：$r17 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>()
+在这条语句中,污点从变量r1 传播到变量 $r17;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; $r10; $r11; r129; $r59; $r41; $r47; 
+
+-----------------------------------
+在这条语句：$r20 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getProtocol()>()
+在这条语句中,污点从变量r1 传播到变量 $r20;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; $r10; $r11; r129; $r59; $r41; $r47; $r17; 
+
+-----------------------------------
+在这条语句：$r23 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getContextPath()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r23上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; $r10; $r11; r129; $r59; $r41; $r47; $r17; $r20; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getSessionInternal方法签名：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>(z0)
+在这条语句中,污点从变量r0 传播到变量 $r1;
+此时的污点集合：r0; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getParameter方法签名：<org.apache.catalina.connector.Request: java.lang.String getParameter(java.lang.String)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$z0 = r0.<org.apache.catalina.connector.Request: boolean parametersParsed>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean parametersParsed> 传播到变量 $z0;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean parametersParsed> 传播到变量 $z0;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean parametersParsed>; $z0; 
+
+-----------------------------------
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean parametersParsed>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getSessionInternal方法签名：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>(z0)
+在这条语句中,污点从变量r0 传播到变量 $r1;
+此时的污点集合：r0; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：doGetSession方法签名：<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r39 = r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r39;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r39;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; 
+
+-----------------------------------
+在这条语句：$r38[0] = $r39
+在这条语句中,污点从变量$r39 传播到变量 $r38[0];在这条语句中,污点从变量$r39 传播到变量 $r38;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; 
+
+-----------------------------------
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>()
+在这条语句中,污点从变量r0 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; 
+
+-----------------------------------
+在这条语句：$r2 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r2;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; 
+
+-----------------------------------
+在这条语句：$r34 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r34;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r34;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; 
+
+-----------------------------------
+在这条语句：$r45 = r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r45;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r45;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; 
+
+-----------------------------------
+在这条语句：$r50 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r50;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r50;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; 
+
+-----------------------------------
+在这条语句：$r33 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r33;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r33;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; 
+
+-----------------------------------
+在这条语句：$r4 = r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r4;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r4;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; 
+
+-----------------------------------
+在这条语句：$r28 = r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r28;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r28;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; 
+
+-----------------------------------
+在这条语句：$r44[0] = $r45
+在这条语句中,污点从变量$r45 传播到变量 $r44[0];在这条语句中,污点从变量$r45 传播到变量 $r44;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; 
+
+-----------------------------------
+在这条语句：$r51 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r51;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r51;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; 
+
+-----------------------------------
+在这条语句：$r32 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r32;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r32;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; 
+
+-----------------------------------
+在这条语句：$r52 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r52;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r52;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; 
+
+-----------------------------------
+在这条语句：$r30 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r30;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r30;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; 
+
+-----------------------------------
+在这条语句：$r31 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r31;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r31;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; 
+
+-----------------------------------
+在这条语句：$r23 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response> 传播到变量 $r23;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response> 传播到变量 $r23;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; 
+
+-----------------------------------
+在这条语句：$r8 = virtualinvoke r0.<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()>()
+在这条语句中,污点从变量r0 传播到变量 $r8;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; 
+
+-----------------------------------
+在这条语句：r53 = $r8
+在这条语句中,污点从变量$r8 传播到变量 r53;在这条语句中,污点从变量$r8 传播到变量 r53;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; 
+
+-----------------------------------
+在这条语句：$z2 = r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL> 传播到变量 $z2;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL> 传播到变量 $z2;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; 
+
+-----------------------------------
+在这条语句：$z5 = virtualinvoke r0.<org.apache.catalina.connector.Request: boolean isRequestedSessionIdFromCookie()>()
+在这条语句中,污点从变量r0 传播到变量 $z5;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; 
+
+-----------------------------------
+在这条语句：$r17 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Host getHost()>()
+在这条语句中,污点从变量r0 传播到变量 $r17;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; $z5; 
+
+-----------------------------------
+在这条语句：$r55 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r55;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r55;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; $z5; $r17; $r55; 
+
+-----------------------------------
+在这条语句：$r13 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r13;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r13;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; $z5; $r17; $r55; $r13; 
+
+-----------------------------------
+在这条语句：$z4 = virtualinvoke r0.<org.apache.catalina.connector.Request: boolean isSecure()>()
+在这条语句中,污点从变量r0 传播到变量 $z4;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; $z5; $r17; $r55; $r13; 
+
+-----------------------------------
+在这条语句：$r16 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response> 传播到变量 $r16;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response> 传播到变量 $r16;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; $z5; $r17; $r55; $r13; $z4; $r16; 
+
+-----------------------------------
+在这条语句：$r56 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r56;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r56;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; $z5; $r17; $r55; $r13; $z4; $r16; $r56; 
+
+-----------------------------------
+在这条语句：$r11 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r11;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r11;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; $z5; $r17; $r55; $r13; $z4; $r16; $r56; $r11; 
+
+-----------------------------------
+在这条语句：$r12 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r12;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session> 传播到变量 $r12;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r39; $r38[0]; $r38; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session session>; $r2; $r34; $r45; $r50; $r33; $r4; $r28; $r44[0]; $r44; $r51; $r32; $r52; $r30; $r31; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r23; $r8; r53; r0.<org.apache.catalina.connector.Request: boolean requestedSessionSSL>; $z2; $z5; $r17; $r55; $r13; $z4; $r16; $r56; $r11; $r12; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getSessionInternal方法签名：<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>(z0)
+在这句的方法调用中，返回值被污染，它被反应在变量$r1上；
+此时的污点集合：r0; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：doAuthenticate方法签名：<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>
+初始被污染的参数：参数1参数2
+初始污点集合（参数被污染到局部变量)：r1; r2; 
+初始污点集合(从Val_m_taintNode读)：r1; r2; 
+数据流传播过程： 
+在这条语句：$r102 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这条语句中,污点从变量r1 传播到变量 $r102;
+此时的污点集合：r1; r2; 
+
+-----------------------------------
+在这条语句：r129 = $r102
+在这条语句中,污点从变量$r102 传播到变量 r129;在这条语句中,污点从变量$r102 传播到变量 r129;
+此时的污点集合：r1; r2; $r102; r129; 
+
+-----------------------------------
+在这条语句：$r89 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这条语句中,污点从变量r1 传播到变量 $r89;
+此时的污点集合：r1; r2; $r102; r129; 
+
+-----------------------------------
+在这条语句：$r4 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getDecodedRequestURI()>()
+在这条语句中,污点从变量r1 传播到变量 $r4;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; 
+
+-----------------------------------
+在这条语句：$r5 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>()
+在这条语句中,污点从变量r1 传播到变量 $r5;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; 
+
+-----------------------------------
+在这条语句：$r73 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getServletPath()>()
+在这条语句中,污点从变量r1 传播到变量 $r73;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; 
+
+-----------------------------------
+在这条语句：$r83 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getPathInfo()>()
+在这条语句中,污点从变量r1 传播到变量 $r83;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; 
+
+-----------------------------------
+在这条语句：$r74 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这句的方法调用中，返回值被污染，它被反应在变量$r74上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; 
+
+-----------------------------------
+在这条语句：specialinvoke $r84.<java.lang.StringBuilder: void <init>(java.lang.String)>($r4)
+在这条语句中,污点从变量$r4 传播到变量 $r84;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; 
+
+-----------------------------------
+在这条语句：$r85 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getQueryString()>()
+在这条语句中,污点从变量r1 传播到变量 $r85;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; 
+
+-----------------------------------
+在这条语句：$r88 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getQueryString()>()
+在这条语句中,污点从变量r1 传播到变量 $r88;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; 
+
+-----------------------------------
+在这条语句：$r96 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r96;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r96;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; 
+
+-----------------------------------
+在这条语句：$r91 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r91;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r91;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; 
+
+-----------------------------------
+在这条语句：$r92 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r92;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r92;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; 
+
+-----------------------------------
+在这条语句：$r93 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r93;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r93;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; 
+
+-----------------------------------
+在这条语句：$r94 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r94;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r94;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; 
+
+-----------------------------------
+在这条语句：$r9 = r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding> 传播到变量 $r9;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding> 传播到变量 $r9;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; 
+
+-----------------------------------
+在这条语句：$r72 = r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding> 传播到变量 $r72;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding> 传播到变量 $r72;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; 
+
+-----------------------------------
+在这条语句：$r10 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getParameter(java.lang.String)>("j_username")
+在这条语句中,污点从变量r1 传播到变量 $r10;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; 
+
+-----------------------------------
+在这条语句：$r12 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r12;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r12;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; 
+
+-----------------------------------
+在这条语句：$r67 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r67;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r67;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; 
+
+-----------------------------------
+在这条语句：$r14 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r14;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r14;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; 
+
+-----------------------------------
+在这条语句：$r61 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r61;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r61;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; 
+
+-----------------------------------
+在这条语句：r129 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(0)
+在这句的方法调用中，返回值被污染，它被反应在变量r129上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; 
+
+-----------------------------------
+在这条语句：$r59 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()>()
+在这条语句中,污点从变量r1 传播到变量 $r59;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; 
+
+-----------------------------------
+在这条语句：$r53 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r53;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r53;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; 
+
+-----------------------------------
+在这条语句：$r55 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r55;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r55;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; 
+
+-----------------------------------
+在这条语句：$r38 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog> 传播到变量 $r38;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog> 传播到变量 $r38;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; 
+
+-----------------------------------
+在这条语句：$r51 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog> 传播到变量 $r51;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog> 传播到变量 $r51;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; 
+
+-----------------------------------
+在这条语句：$r16 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r16;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r16;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; $r16; 
+
+-----------------------------------
+在这条语句：$r39 = r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage> 传播到变量 $r39;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage> 传播到变量 $r39;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; $r16; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>; $r39; 
+
+-----------------------------------
+在这条语句：$r43 = r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage> 传播到变量 $r43;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage> 传播到变量 $r43;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; $r16; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>; $r39; $r41; $r43; 
+
+-----------------------------------
+在这条语句：$r47 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这句的方法调用中，返回值被污染，它被反应在变量$r47上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; $r16; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>; $r39; $r41; $r43; 
+
+-----------------------------------
+在这条语句：$r33 = r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r33;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log> 传播到变量 $r33;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; $r16; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>; $r39; $r41; $r43; $r47; $r33; 
+
+-----------------------------------
+在这条语句：$r21 = r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage> 传播到变量 $r21;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage> 传播到变量 $r21;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; $r16; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>; $r39; $r41; $r43; $r47; $r33; $r21; 
+
+-----------------------------------
+在这条语句：$r17 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>()
+在这条语句中,污点从变量r1 传播到变量 $r17;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; $r16; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>; $r39; $r41; $r43; $r47; $r33; $r21; 
+
+-----------------------------------
+在这条语句：$r20 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getProtocol()>()
+在这条语句中,污点从变量r1 传播到变量 $r20;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; $r16; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>; $r39; $r41; $r43; $r47; $r33; $r21; $r17; 
+
+-----------------------------------
+在这条语句：$r25 = r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage> 传播到变量 $r25;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage> 传播到变量 $r25;
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r4; $r5; $r73; $r83; $r74; $r84; $r85; $r88; r0; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log log>; $r96; $r91; $r92; $r93; $r94; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String characterEncoding>; $r9; $r72; $r10; $r12; $r67; $r14; $r61; r129; $r59; $r53; $r55; r0.<org.apache.catalina.authenticator.FormAuthenticator: org.apache.juli.logging.Log containerLog>; $r38; $r51; $r16; r0.<org.apache.catalina.authenticator.FormAuthenticator: java.lang.String landingPage>; $r39; $r41; $r43; $r47; $r33; $r21; $r17; $r20; $r23; $r25; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：setAuthType方法签名：<org.apache.catalina.connector.Request: void setAuthType(java.lang.String)>
+初始被污染的参数：参数0参数1
+初始污点集合（参数被污染到局部变量)：r0; r1; 
+数据流传播过程： 
+在这条语句：r0.<org.apache.catalina.connector.Request: java.lang.String authType> = r1
+在这条语句中,污点从变量r1 传播到变量 r0.<org.apache.catalina.connector.Request: java.lang.String authType>;在这条语句中,污点从变量r1 传播到变量 r0.<org.apache.catalina.connector.Request: java.lang.String authType>;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r0; r1; r0.<org.apache.catalina.connector.Request: java.lang.String authType>; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getSession方法签名：<org.apache.catalina.connector.Request: javax.servlet.http.HttpSession getSession(boolean)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Session doGetSession(boolean)>(z0)
+在这条语句中,污点从变量r0 传播到变量 $r1;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r0; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：newSubject方法签名：<org.apache.catalina.connector.Request: javax.security.auth.Subject newSubject(java.security.Principal)>
+初始被污染的参数：参数0参数1
+初始污点集合（参数被污染到局部变量)：r3; r2; 
+数据流传播过程： 
+在这条语句：interfaceinvoke $r1.<java.util.Set: boolean add(java.lang.Object)>(r2)
+在这条语句中,污点从变量r2 传播到变量 $r1;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r3; r2; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：setUserPrincipal方法签名：<org.apache.catalina.connector.Request: void setUserPrincipal(java.security.Principal)>
+初始被污染的参数：参数0参数1
+初始污点集合（参数被污染到局部变量)：r0; r1; 
+数据流传播过程： 
+在这条语句：$r2 = r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r2;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r0; r1; r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>; $r2; 
+
+-----------------------------------
+在这条语句：$r3 = r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r3;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r3;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r0; r1; r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>; $r2; $r3; 
+
+-----------------------------------
+在这条语句：interfaceinvoke $r4.<java.util.Set: boolean add(java.lang.Object)>(r1)
+在这条语句中,污点从变量r1 传播到变量 $r4;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r0; r1; r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>; $r2; $r3; $r4; 
+
+-----------------------------------
+在这条语句：$r8 = r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r8;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r8;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r0; r1; r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>; $r2; $r3; $r4; $r8; 
+
+-----------------------------------
+在这条语句：$r9 = r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r9;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r9;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r0; r1; r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>; $r2; $r3; $r4; $r8; $r9; 
+
+-----------------------------------
+在这条语句：interfaceinvoke $r10.<java.util.Set: boolean add(java.lang.Object)>(r1)
+在这条语句中,污点从变量r1 传播到变量 $r10;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r0; r1; r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>; $r2; $r3; $r4; $r8; $r9; $r10; 
+
+-----------------------------------
+在这条语句：$r12 = r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r12;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject> 传播到变量 $r12;
+
+此时：被污染的变量别名信息包括: [[root]->authType]
+此时的污点集合：r0; r1; r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>; $r2; $r3; $r4; $r8; $r9; $r10; $r12; 
+
+-----------------------------------
+在这条语句：r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal> = r1
+在这条语句中,污点从变量r1 传播到变量 r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal>;在这条语句中,污点从变量r1 传播到变量 r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal>;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r0; r1; r0.<org.apache.catalina.connector.Request: javax.security.auth.Subject subject>; $r2; $r3; $r4; $r8; $r9; $r10; $r12; r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal>; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getAttribute方法签名：<org.apache.catalina.connector.Request: java.lang.Object getAttribute(java.lang.String)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r4; 
+数据流传播过程： 
+在这条语句：$r5 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r5;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r5;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; 
+
+-----------------------------------
+在这条语句：$r7 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r7;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r7;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; 
+
+-----------------------------------
+在这条语句：$z0 = r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed> 传播到变量 $z0;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed> 传播到变量 $z0;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; 
+
+-----------------------------------
+在这条语句：$r11 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r11;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r11;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; 
+
+-----------------------------------
+在这条语句：$r9 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r9;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r9;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; 
+
+-----------------------------------
+在这条语句：$r12 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r12;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r12;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; 
+
+-----------------------------------
+在这条语句：$r36 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r36;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r36;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; 
+
+-----------------------------------
+在这条语句：$r14 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r14;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r14;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; 
+
+-----------------------------------
+在这条语句：$r35 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r35;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r35;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; 
+
+-----------------------------------
+在这条语句：$r16 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r16;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r16;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; 
+
+-----------------------------------
+在这条语句：$r34 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r34;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r34;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; 
+
+-----------------------------------
+在这条语句：$r18 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r18;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r18;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; 
+
+-----------------------------------
+在这条语句：$r33 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r33;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r33;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; 
+
+-----------------------------------
+在这条语句：$r20 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r20;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r20;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; $r20; 
+
+-----------------------------------
+在这条语句：$r32 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r32;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r32;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; $r20; $r32; 
+
+-----------------------------------
+在这条语句：$r22 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r22;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r22;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; $r20; $r32; $r22; 
+
+-----------------------------------
+在这条语句：$r31 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r31;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r31;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; $r20; $r32; $r22; $r31; 
+
+-----------------------------------
+在这条语句：$r24 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r24;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r24;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; $r20; $r32; $r22; $r31; $r24; 
+
+-----------------------------------
+在这条语句：$r30 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r30;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r30;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; $r20; $r32; $r22; $r31; $r24; $r30; 
+
+-----------------------------------
+在这条语句：$r26 = r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r26;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r26;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; $r20; $r32; $r22; $r31; $r24; $r30; $r26; 
+
+-----------------------------------
+在这条语句：$r29 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r29;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r29;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; $r20; $r32; $r22; $r31; $r24; $r30; $r26; $r29; 
+
+-----------------------------------
+在这条语句：$r28 = r4.<org.apache.catalina.connector.Request: java.util.Map attributes>
+在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r28;在这条语句中,污点从变量r4.<org.apache.catalina.connector.Request: java.util.Map attributes> 传播到变量 $r28;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r4; r4.<org.apache.catalina.connector.Request: java.util.Map attributes>; $r5; r4.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r7; r4.<org.apache.catalina.connector.Request: boolean sslAttributesParsed>; $z0; $r11; $r9; $r12; $r36; $r14; $r35; $r16; $r34; $r18; $r33; $r20; $r32; $r22; $r31; $r24; $r30; $r26; $r29; $r28; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getRemoteUser方法签名：<org.apache.catalina.connector.Request: java.lang.String getRemoteUser()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal> 传播到变量 $r1;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal>; $r1; 
+
+-----------------------------------
+在这条语句：$r2 = r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal> 传播到变量 $r2;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.security.Principal userPrincipal>; $r1; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getAuthType方法签名：<org.apache.catalina.connector.Request: java.lang.String getAuthType()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: java.lang.String authType>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String authType> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String authType> 传播到变量 $r1;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String authType>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getNote方法签名：<org.apache.catalina.connector.Request: java.lang.Object getNote(java.lang.String)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r2 = r0.<org.apache.catalina.connector.Request: java.util.HashMap notes>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.HashMap notes> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.HashMap notes> 传播到变量 $r2;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.HashMap notes>; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：removeNote方法签名：<org.apache.catalina.connector.Request: void removeNote(java.lang.String)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r2 = r0.<org.apache.catalina.connector.Request: java.util.HashMap notes>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.HashMap notes> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.HashMap notes> 传播到变量 $r2;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.HashMap notes>; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：setNote方法签名：<org.apache.catalina.connector.Request: void setNote(java.lang.String,java.lang.Object)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r3 = r0.<org.apache.catalina.connector.Request: java.util.HashMap notes>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.HashMap notes> 传播到变量 $r3;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.HashMap notes> 传播到变量 $r3;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.HashMap notes>; $r3; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：register方法签名：<org.apache.catalina.authenticator.AuthenticatorBase: void register(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse,java.security.Principal,java.lang.String,java.lang.String,java.lang.String,boolean,boolean)>
+初始被污染的参数：参数1参数2参数3参数4参数5参数6参数7参数8
+初始污点集合（参数被污染到局部变量)：r2; r20; r4; r3; r6; r7; z1; z5; 
+初始污点集合(从Val_m_taintNode读)：z5; r7; r4; r20; z1; r3; r6; r2; 
+数据流传播过程： 
+在这条语句：$r27 = virtualinvoke r2.<org.apache.catalina.connector.Request: java.lang.String getAuthType()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r27上；
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r2; r20; r4; r3; r6; r7; z1; z5; 
+
+-----------------------------------
+在这条语句：$r37 = virtualinvoke r2.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(0)
+在这条语句中,污点从变量r2 传播到变量 $r37;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r2; r20; r4; r3; r6; r7; z1; z5; $r27; 
+
+-----------------------------------
+在这条语句：r38 = $r37
+在这条语句中,污点从变量$r37 传播到变量 r38;在这条语句中,污点从变量$r37 传播到变量 r38;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r2; r20; r4; r3; r6; r7; z1; z5; $r27; $r37; r38; 
+
+-----------------------------------
+在这条语句：r38 = virtualinvoke r2.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这句的方法调用中，返回值被污染，它被反应在变量r38上；
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r2; r20; r4; r3; r6; r7; z1; z5; $r27; $r37; r38; 
+
+-----------------------------------
+在这条语句：$z2 = virtualinvoke r2.<org.apache.catalina.connector.Request: boolean isSecure()>()
+在这条语句中,污点从变量r2 传播到变量 $z2;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r2; r20; r4; r3; r6; r7; z1; z5; $r27; $r37; r38; r38; 
+
+-----------------------------------
+在这条语句：$r18 = virtualinvoke r2.<org.apache.catalina.connector.Request: javax.servlet.ServletContext getServletContext()>()
+在这条语句中,污点从变量r2 传播到变量 $r18;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r2; r20; r4; r3; r6; r7; z1; z5; $r27; $r37; r38; r38; $z2; 
+
+-----------------------------------
+在这条语句：$r21 = virtualinvoke r2.<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>()
+在这条语句中,污点从变量r2 传播到变量 $r21;
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r2; r20; r4; r3; r6; r7; z1; z5; $r27; $r37; r38; r38; $z2; $r18; 
+
+-----------------------------------
+在这条语句：r38 = virtualinvoke r2.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这句的方法调用中，返回值被污染，它被反应在变量r38上；
+
+此时：被污染的变量别名信息包括: [[root]->authType, [root]->userPrincipal]
+此时的污点集合：r2; r20; r4; r3; r6; r7; z1; z5; $r27; $r37; r38; r38; $z2; $r18; $r21; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：saveRequest方法签名：<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>
+初始被污染的参数：参数1参数2
+初始污点集合（参数被污染到局部变量)：r1; r8; 
+初始污点集合(从Val_m_taintNode读)：r1; r8; 
+数据流传播过程： 
+在这条语句：$r2 = virtualinvoke r1.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] getCookies()>()
+在这条语句中,污点从变量r1 传播到变量 $r2;
+此时的污点集合：r1; r8; 
+
+-----------------------------------
+在这条语句：r19 = $r2[i7]
+在这条语句中,污点从变量$r2 传播到变量 r19;
+此时的污点集合：r1; r8; $r2; r19; 
+
+-----------------------------------
+在这条语句：virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void addCookie(javax.servlet.http.Cookie)>(r19)
+在这条语句中,污点从变量r19 传播到变量 $r27;在这条语句中,污点从变量r19 传播到变量 $r27;
+此时的污点集合：r1; r8; $r2; r19; $r27; 
+
+-----------------------------------
+在这条语句：$r3 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.util.Enumeration getHeaderNames()>()
+在这条语句中,污点从变量r1 传播到变量 $r3;
+此时的污点集合：r1; r8; $r2; r19; $r27; 
+
+-----------------------------------
+在这条语句：$r4 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.util.Enumeration getLocales()>()
+在这条语句中,污点从变量r1 传播到变量 $r4;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; 
+
+-----------------------------------
+在这条语句：$r17 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.util.Enumeration getHeaders(java.lang.String)>(r20)
+在这条语句中,污点从变量r1 传播到变量 $r17;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; 
+
+-----------------------------------
+在这条语句：$r5 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>()
+在这条语句中,污点从变量r1 传播到变量 $r5;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; 
+
+-----------------------------------
+在这条语句：$r7 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector getConnector()>()
+在这条语句中,污点从变量r1 传播到变量 $r7;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; $r5; 
+
+-----------------------------------
+在这条语句：$r13 = virtualinvoke r1.<org.apache.catalina.connector.Request: javax.servlet.ServletInputStream getInputStream()>()
+在这条语句中,污点从变量r1 传播到变量 $r13;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; $r5; $r7; 
+
+-----------------------------------
+在这条语句：$r29 = (java.io.InputStream) $r13
+在这条语句中,污点从变量$r13 传播到变量 $r29;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; $r5; $r7; $r13; $r29; 
+
+-----------------------------------
+在这条语句：$r14 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getContentType()>()
+在这条语句中,污点从变量r1 传播到变量 $r14;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; $r5; $r7; $r13; $r29; 
+
+-----------------------------------
+在这条语句：$r23 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getMethod()>()
+在这条语句中,污点从变量r1 传播到变量 $r23;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; $r5; $r7; $r13; $r29; $r14; 
+
+-----------------------------------
+在这条语句：$r24 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getQueryString()>()
+在这条语句中,污点从变量r1 传播到变量 $r24;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; $r5; $r7; $r13; $r29; $r14; $r23; 
+
+-----------------------------------
+在这条语句：$r25 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getRequestURI()>()
+在这条语句中,污点从变量r1 传播到变量 $r25;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; $r5; $r7; $r13; $r29; $r14; $r23; $r24; 
+
+-----------------------------------
+在这条语句：$r26 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getDecodedRequestURI()>()
+在这条语句中,污点从变量r1 传播到变量 $r26;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; $r5; $r7; $r13; $r29; $r14; $r23; $r24; $r25; 
+
+-----------------------------------
+在这条语句：$r9 = (javax.servlet.http.HttpSession) r8
+在这条语句中,污点从变量r8 传播到变量 $r9;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r3; $r4; $r17; $r5; $r7; $r13; $r29; $r14; $r23; $r24; $r25; $r26; $r9; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getDecodedRequestURI方法签名：<org.apache.catalina.connector.Request: java.lang.String getDecodedRequestURI()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getResponse方法签名：<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response response>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getServletPath方法签名：<org.apache.catalina.connector.Request: java.lang.String getServletPath()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; 
+
+-----------------------------------
+在这条语句：$r2 = $r1.<org.apache.catalina.mapper.MappingData: org.apache.tomcat.util.buf.MessageBytes wrapperPath>
+在这条语句中,污点从变量$r1.<org.apache.catalina.mapper.MappingData: org.apache.tomcat.util.buf.MessageBytes wrapperPath> 传播到变量 $r2;在这条语句中,污点从变量$r1.<org.apache.catalina.mapper.MappingData: org.apache.tomcat.util.buf.MessageBytes wrapperPath> 传播到变量 $r2;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: org.apache.tomcat.util.buf.MessageBytes wrapperPath>; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getPathInfo方法签名：<org.apache.catalina.connector.Request: java.lang.String getPathInfo()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; 
+
+-----------------------------------
+在这条语句：$r2 = $r1.<org.apache.catalina.mapper.MappingData: org.apache.tomcat.util.buf.MessageBytes pathInfo>
+在这条语句中,污点从变量$r1.<org.apache.catalina.mapper.MappingData: org.apache.tomcat.util.buf.MessageBytes pathInfo> 传播到变量 $r2;在这条语句中,污点从变量$r1.<org.apache.catalina.mapper.MappingData: org.apache.tomcat.util.buf.MessageBytes pathInfo> 传播到变量 $r2;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: org.apache.tomcat.util.buf.MessageBytes pathInfo>; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getQueryString方法签名：<org.apache.catalina.connector.Request: java.lang.String getQueryString()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getContext方法签名：<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; 
+
+-----------------------------------
+在这条语句：$r2 = $r1.<org.apache.catalina.mapper.MappingData: org.apache.catalina.Context context>
+在这条语句中,污点从变量$r1.<org.apache.catalina.mapper.MappingData: org.apache.catalina.Context context> 传播到变量 $r2;在这条语句中,污点从变量$r1.<org.apache.catalina.mapper.MappingData: org.apache.catalina.Context context> 传播到变量 $r2;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.mapper.MappingData mappingData>; $r1; $r1.<org.apache.catalina.mapper.MappingData: org.apache.catalina.Context context>; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getCookieProcessor方法签名：<org.apache.catalina.connector.Request: org.apache.tomcat.util.http.CookieProcessor getCookieProcessor()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = virtualinvoke r0.<org.apache.catalina.connector.Request: org.apache.catalina.Context getContext()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r1上；
+此时的污点集合：r0; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：parseCookies方法签名：<org.apache.catalina.connector.Request: void parseCookies()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$z0 = r0.<org.apache.catalina.connector.Request: boolean cookiesParsed>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean cookiesParsed> 传播到变量 $z0;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean cookiesParsed> 传播到变量 $z0;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesParsed>; $z0; 
+
+-----------------------------------
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesParsed>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+在这条语句：$r3 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector> 传播到变量 $r3;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector> 传播到变量 $r3;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesParsed>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r3; 
+
+-----------------------------------
+在这条语句：$r5 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r5;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r5;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesParsed>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r3; $r5; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：convertCookies方法签名：<org.apache.catalina.connector.Request: void convertCookies()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$z0 = r0.<org.apache.catalina.connector.Request: boolean cookiesConverted>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean cookiesConverted> 传播到变量 $z0;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean cookiesConverted> 传播到变量 $z0;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesConverted>; $z0; 
+
+-----------------------------------
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesConverted>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+在这条语句：$r4 = r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies> 传播到变量 $r4;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies> 传播到变量 $r4;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesConverted>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies>; $r4; 
+
+-----------------------------------
+在这条语句：$r23 = r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies> 传播到变量 $r23;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies> 传播到变量 $r23;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesConverted>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies>; $r4; $r23; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getCookies方法签名：<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] getCookies()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$z0 = r0.<org.apache.catalina.connector.Request: boolean cookiesConverted>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean cookiesConverted> 传播到变量 $z0;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean cookiesConverted> 传播到变量 $z0;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesConverted>; $z0; 
+
+-----------------------------------
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean cookiesConverted>; $z0; r0.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] cookies>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：addCookie方法签名：<org.apache.catalina.authenticator.SavedRequest: void addCookie(javax.servlet.http.Cookie)>
+初始被污染的参数：参数0参数1
+初始污点集合（参数被污染到局部变量)：r0; r1; 
+数据流传播过程： 
+在这条语句：$r2 = r0.<org.apache.catalina.authenticator.SavedRequest: java.util.List cookies>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.SavedRequest: java.util.List cookies> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.SavedRequest: java.util.List cookies> 传播到变量 $r2;
+此时的污点集合：r0; r1; r0.<org.apache.catalina.authenticator.SavedRequest: java.util.List cookies>; $r2; 
+
+-----------------------------------
+在这条语句：interfaceinvoke $r2.<java.util.List: boolean add(java.lang.Object)>(r1)
+在这条语句中,污点从变量r1 传播到变量 $r2;
+此时的污点集合：r0; r1; r0.<org.apache.catalina.authenticator.SavedRequest: java.util.List cookies>; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getHeaderNames方法签名：<org.apache.catalina.connector.Request: java.util.Enumeration getHeaderNames()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getHeaders方法签名：<org.apache.catalina.connector.Request: java.util.Enumeration getHeaders(java.lang.String)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：addLocale方法签名：<org.apache.catalina.connector.Request: void addLocale(java.util.Locale)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r2 = r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales> 传播到变量 $r2;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales>; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getLocales方法签名：<org.apache.catalina.connector.Request: java.util.Enumeration getLocales()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$z0 = r0.<org.apache.catalina.connector.Request: boolean localesParsed>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean localesParsed> 传播到变量 $z0;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean localesParsed> 传播到变量 $z0;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean localesParsed>; $z0; 
+
+-----------------------------------
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean localesParsed>; $z0; r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales>; $r1; 
+
+-----------------------------------
+在这条语句：$r5 = r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales> 传播到变量 $r5;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales> 传播到变量 $r5;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean localesParsed>; $z0; r0.<org.apache.catalina.connector.Request: java.util.ArrayList locales>; $r1; $r5; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：addLocale方法签名：<org.apache.catalina.authenticator.SavedRequest: void addLocale(java.util.Locale)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r2 = r0.<org.apache.catalina.authenticator.SavedRequest: java.util.List locales>
+在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.SavedRequest: java.util.List locales> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.authenticator.SavedRequest: java.util.List locales> 传播到变量 $r2;
+此时的污点集合：r0; r0.<org.apache.catalina.authenticator.SavedRequest: java.util.List locales>; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getConnector方法签名：<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector getConnector()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector connector>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getInputStream方法签名：<org.apache.catalina.connector.Request: javax.servlet.ServletInputStream getInputStream()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$z0 = r0.<org.apache.catalina.connector.Request: boolean usingReader>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean usingReader> 传播到变量 $z0;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean usingReader> 传播到变量 $z0;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean usingReader>; $z0; 
+
+-----------------------------------
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.CoyoteInputStream inputStream>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.CoyoteInputStream inputStream> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.CoyoteInputStream inputStream> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean usingReader>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.CoyoteInputStream inputStream>; $r1; 
+
+-----------------------------------
+在这条语句：$r4 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.InputBuffer inputBuffer>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.InputBuffer inputBuffer> 传播到变量 $r4;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.InputBuffer inputBuffer> 传播到变量 $r4;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean usingReader>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.CoyoteInputStream inputStream>; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.InputBuffer inputBuffer>; $r4; 
+
+-----------------------------------
+在这条语句：$r2 = r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.CoyoteInputStream inputStream>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.CoyoteInputStream inputStream> 传播到变量 $r2;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.CoyoteInputStream inputStream> 传播到变量 $r2;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean usingReader>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.CoyoteInputStream inputStream>; $r1; r0.<org.apache.catalina.connector.Request: org.apache.catalina.connector.InputBuffer inputBuffer>; $r4; $r2; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getContentType方法签名：<org.apache.catalina.connector.Request: java.lang.String getContentType()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getMethod方法签名：<org.apache.catalina.connector.Request: java.lang.String getMethod()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getRequestURI方法签名：<org.apache.catalina.connector.Request: java.lang.String getRequestURI()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：saveRequest方法签名：<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>
+初始被污染的参数：参数1参数2
+初始污点集合（参数被污染到局部变量)：r1; r8; 
+初始污点集合(从Val_m_taintNode读)：r8; r1; 
+数据流传播过程： 
+在这条语句：$r2 = virtualinvoke r1.<org.apache.catalina.connector.Request: javax.servlet.http.Cookie[] getCookies()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r2上；
+此时的污点集合：r1; r8; 
+
+-----------------------------------
+在这条语句：r19 = $r2[i7]
+在这条语句中,污点从变量$r2 传播到变量 r19;
+此时的污点集合：r1; r8; $r2; r19; 
+
+-----------------------------------
+在这条语句：virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void addCookie(javax.servlet.http.Cookie)>(r19)
+在这条语句中,污点从变量r19 传播到变量 $r27;
+此时的污点集合：r1; r8; $r2; r19; $r27; 
+
+-----------------------------------
+在这条语句：$r7 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Connector getConnector()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r7上；
+此时的污点集合：r1; r8; $r2; r19; $r27; $r5; 
+
+-----------------------------------
+在这条语句：$r13 = virtualinvoke r1.<org.apache.catalina.connector.Request: javax.servlet.ServletInputStream getInputStream()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r13上；
+此时的污点集合：r1; r8; $r2; r19; $r27; $r5; $r7; 
+
+-----------------------------------
+在这条语句：$r29 = (java.io.InputStream) $r13
+在这条语句中,污点从变量$r13 传播到变量 $r29;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r5; $r7; $r13; $r29; 
+
+-----------------------------------
+在这条语句：$r9 = (javax.servlet.http.HttpSession) r8
+在这条语句中,污点从变量r8 传播到变量 $r9;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r5; $r7; $r13; $r29; $r9; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：saveRequest方法签名：<org.apache.catalina.authenticator.FormAuthenticator: void saveRequest(org.apache.catalina.connector.Request,org.apache.catalina.Session)>
+初始被污染的参数：参数1参数2
+初始污点集合（参数被污染到局部变量)：r1; r8; $r2; r19; $r27; $r5; $r7; $r13; $r29; $r9; 
+数据流传播过程： 
+在这条语句：r19 = $r2[i7]
+在这条语句中,污点从变量$r2 传播到变量 r19;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r5; $r7; $r13; $r29; $r9; 
+
+-----------------------------------
+在这条语句：virtualinvoke $r27.<org.apache.catalina.authenticator.SavedRequest: void addCookie(javax.servlet.http.Cookie)>(r19)
+在这条语句中,污点从变量r19 传播到变量 $r27;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r5; $r7; $r13; $r29; $r9; 
+
+-----------------------------------
+在这条语句：$r29 = (java.io.InputStream) $r13
+在这条语句中,污点从变量$r13 传播到变量 $r29;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r5; $r7; $r13; $r29; $r9; 
+
+-----------------------------------
+在这条语句：$r9 = (javax.servlet.http.HttpSession) r8
+在这条语句中,污点从变量r8 传播到变量 $r9;
+此时的污点集合：r1; r8; $r2; r19; $r27; $r5; $r7; $r13; $r29; $r9; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：setCharacterEncoding方法签名：<org.apache.catalina.connector.Request: void setCharacterEncoding(java.lang.String)>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$z0 = r0.<org.apache.catalina.connector.Request: boolean usingReader>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean usingReader> 传播到变量 $z0;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: boolean usingReader> 传播到变量 $z0;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean usingReader>; $z0; 
+
+-----------------------------------
+在这条语句：$r3 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r3;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r3;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: boolean usingReader>; $z0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r3; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getRequestedSessionId方法签名：<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: java.lang.String requestedSessionId>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：getProtocol方法签名：<org.apache.catalina.connector.Request: java.lang.String getProtocol()>
+初始被污染的参数：参数0
+初始污点集合（参数被污染到局部变量)：r0; 
+数据流传播过程： 
+在这条语句：$r1 = r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>
+在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;在这条语句中,污点从变量r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest> 传播到变量 $r1;
+此时的污点集合：r0; r0.<org.apache.catalina.connector.Request: org.apache.coyote.Request coyoteRequest>; $r1; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+
+方法名：doAuthenticate方法签名：<org.apache.catalina.authenticator.FormAuthenticator: boolean doAuthenticate(org.apache.catalina.connector.Request,javax.servlet.http.HttpServletResponse)>
+初始被污染的参数：参数1参数2
+初始污点集合（参数被污染到局部变量)：r1; r2; 
+初始污点集合(从Val_m_taintNode读)：r1; r2; 
+数据流传播过程： 
+在这条语句：$r102 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这句的方法调用中，返回值被污染，它被反应在变量$r102上；
+此时的污点集合：r1; r2; 
+
+-----------------------------------
+在这条语句：r129 = $r102
+在这条语句中,污点从变量$r102 传播到变量 r129;在这条语句中,污点从变量$r102 传播到变量 r129;
+此时的污点集合：r1; r2; $r102; r129; 
+
+-----------------------------------
+在这条语句：$r89 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这句的方法调用中，返回值被污染，它被反应在变量$r89上；
+此时的污点集合：r1; r2; $r102; r129; 
+
+-----------------------------------
+在这条语句：$r5 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.connector.Response getResponse()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r5上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; 
+
+-----------------------------------
+在这条语句：$r74 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(1)
+在这句的方法调用中，返回值被污染，它被反应在变量$r74上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r5; 
+
+-----------------------------------
+在这条语句：r129 = virtualinvoke r1.<org.apache.catalina.connector.Request: org.apache.catalina.Session getSessionInternal(boolean)>(0)
+在这句的方法调用中，返回值被污染，它被反应在变量r129上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r5; $r74; 
+
+-----------------------------------
+在这条语句：$r59 = virtualinvoke r1.<org.apache.catalina.connector.Request: java.lang.String getRequestedSessionId()>()
+在这句的方法调用中，返回值被污染，它被反应在变量$r59上；
+此时的污点集合：r1; r2; $r102; r129; $r89; $r3; $r5; $r74; r129; 
+
+-----------------------------------
+
+<<<<<<<<<<<<< 方法结束 >>>>>>>>>>>>>
+
+

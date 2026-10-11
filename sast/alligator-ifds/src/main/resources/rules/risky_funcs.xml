@@ -1,0 +1,200 @@
+<Rules>
+    <SinkRules>
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">Java Core Networking</Group>
+            </MetaInfo>
+            <RuleID>setNote-vul</RuleID>
+            <VulnCategory>TestSet-Tomcat-1</VulnCategory>
+            <Sink>
+                <InArguments>1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.catalina</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Session</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>setNote</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">Java Core Networking</Group>
+            </MetaInfo>
+            <RuleID>CorsFilter-safe</RuleID>
+            <VulnCategory>TestSet-Tomcat-2-safe</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.catalina.filters</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>CorsFilter</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>handleInvalidCORS</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">Java Core Networking</Group>
+            </MetaInfo>
+            <RuleID>CorsFilter-vul</RuleID>
+            <VulnCategory>TestSet-Tomcat-2-vul</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.catalina.filters</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>CorsFilter</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>handleSimpleCORS</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+
+        <SinkRule language="java">
+            <MetaInfo>
+                <Group name="package">Java Core Networking</Group>
+            </MetaInfo>
+            <RuleID>formauth</RuleID>
+            <VulnCategory>TestSet-Jetty-1</VulnCategory>
+            <Sink>
+                <InArguments>1</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>jakarta.servlet.http</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>HttpSession</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>setAttribute</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+
+        <SinkRule language="java">
+            <RuleID>es-1-parseScrollId</RuleID>
+            <VulnCategory>es-1-parse</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>jakarta.servlet.http</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>HttpSession</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>setAttribute</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+
+        <SinkRule language="java">
+            <RuleID>xwiki-1-getResource</RuleID>
+            <VulnCategory>classLoader_getResource</VulnCategory>
+            <Sink>
+                <InArguments>0</InArguments>
+            </Sink>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.lang</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ClassLoader</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>getResource</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+        </SinkRule>
+
+    </SinkRules>
+
+    <SourceRules>
+        <SourceRule language="java">
+            <RuleID>es-1-scrollId</RuleID>
+            <TaintFlags>+STREAM</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.elasticsearch.common.io.stream</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>StreamInput</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>readVInt</Value>
+                </FunctionName>
+                <Parameters>
+                </Parameters>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+    </SourceRules>
+
+    <SourceRules>
+        <SourceRule language="java">
+            <RuleID>es-1-scrollId</RuleID>
+            <TaintFlags>+STREAM</TaintFlags>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>org.apache.lucene.store</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>ByteArrayDataInput</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>readVInt</Value>
+                </FunctionName>
+                <Parameters>
+                </Parameters>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <OutArguments>return</OutArguments>
+        </SourceRule>
+    </SourceRules>
+
+    <PropagationRules>
+        <PropagationRule>
+            <RuleID>AAE960A3-AF61-419A-BA96-CDAC757B5E00</RuleID>
+            <FunctionIdentifier>
+                <NamespaceName>
+                    <Value>java.util</Value>
+                </NamespaceName>
+                <ClassName>
+                    <Value>Base64$Decoder</Value>
+                </ClassName>
+                <FunctionName>
+                    <Value>decode</Value>
+                </FunctionName>
+                <ApplyTo implements="true" overrides="true" extends="true"/>
+            </FunctionIdentifier>
+            <InArguments>0</InArguments>
+            <OutArguments>return</OutArguments>
+        </PropagationRule>
+    </PropagationRules>
+</Rules>

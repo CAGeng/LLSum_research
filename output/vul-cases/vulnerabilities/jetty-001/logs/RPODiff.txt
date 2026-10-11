@@ -1,0 +1,108 @@
+方法：<org.eclipse.jetty.util.StringUtil: java.lang.String printable(java.lang.String)> 一共有4个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.eclipse.jetty.ee9.security.authentication.DeferredAuthentication: boolean isDeferred(jakarta.servlet.http.HttpServletResponse)> 一共有7个incoming states
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+[其他incoming] taintedParams: []
+参数-1的状态：一定不出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有13个incoming states
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+参数-1的状态：一定出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有16个incoming states
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+参数-1的状态：一定出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现
+方法：<org.eclipse.jetty.ee9.nested.Request: jakarta.servlet.http.HttpSession getSession(boolean)> 一共有18个incoming states
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+[其他incoming] taintedParams: [-1]
+参数-1的状态：一定出现
+参数0的状态：一定不出现
+参数-2的状态：一定不出现
+参数1的状态：一定不出现
+参数2的状态：一定不出现
+参数3的状态：一定不出现
+参数4的状态：一定不出现
+参数5的状态：一定不出现
+参数6的状态：一定不出现

@@ -1,0 +1,3 @@
+方法：<org.apache.lucene.util.CharsRef: void <init>(int)>
+方法：<org.elasticsearch.search.internal.ShardSearchContextId: void <init>(java.lang.String,long)>
+方法：<org.apache.lucene.util.ArrayUtil: int oversize(int,int)>
